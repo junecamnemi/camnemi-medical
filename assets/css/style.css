@@ -246,6 +246,9 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 
 @media (max-width: 960px) {
   .nav-toggle { display: flex; }
+  /* nav becomes an overlay and loses margin-left:auto, so push the CTA
+     cluster (which holds the hamburger) to the right instead */
+  .site-header__cta { margin-left: auto; }
   .site-nav {
     /* anchor flush under the whole header (inner + agency strip), so we
        never hardcode the header height — robust when the strip wraps */
@@ -664,62 +667,6 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
   .proc__media { min-height: 12rem; }
 }
 
-/* --- 15. Specialties ---------------------------------------------------- */
-.spec-grid {
-  display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
-}
-/* photo-backed card: image fills the card, icon + labels overlay on top */
-.spec {
-  position: relative; isolation: isolate; overflow: hidden;
-  display: flex; flex-direction: column; justify-content: flex-end;
-  min-height: 12.5rem;
-  padding: 1.15rem 1.2rem 1.2rem;
-  border-radius: var(--r-lg);
-  border: 1px solid var(--line);
-  color: #fff;
-  transition: transform .22s ease, box-shadow .22s ease;
-}
-.spec::before {
-  content: ""; position: absolute; inset: 0; z-index: -2;
-  background-image: var(--spec-img);
-  background-size: cover; background-position: center;
-  transform: scale(1.02);
-  transition: transform .5s ease;
-}
-.spec::after {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(to top,
-    oklch(0.12 0.04 262 / .92) 0%,
-    oklch(0.14 0.05 262 / .62) 42%,
-    oklch(0.16 0.05 262 / .18) 100%);
-}
-.spec:hover { transform: translateY(-4px); box-shadow: var(--sh-lg); }
-.spec:hover::before { transform: scale(1.08); }
-.spec__icon {
-  position: absolute; top: 1rem; left: 1rem;
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 2.7rem; height: 2.7rem;
-  border-radius: 12px; font-size: 1.3rem;
-  color: #fff; background: oklch(1 0 0 / .16);
-  border: 1px solid oklch(1 0 0 / .28);
-  backdrop-filter: blur(6px);
-}
-.spec__name {
-  font-family: var(--font-display);
-  font-size: 1.22rem; font-weight: 700; line-height: 1.15;
-  color: #fff;
-  text-shadow: 0 1px 12px oklch(0.12 0.04 262 / .6);
-}
-.spec__kr { font-size: .84rem; color: oklch(1 0 0 / .82); margin-top: .1rem; }
-.spec__rank {
-  position: absolute; top: 1rem; right: 1rem;
-  font-size: .72rem; font-weight: 700; white-space: nowrap;
-  color: oklch(0.16 0.05 262); background: oklch(0.9 0.13 88);
-  padding: .28rem .65rem; border-radius: 999px;
-  box-shadow: 0 2px 8px oklch(0.12 0.04 262 / .35);
-}
-
 /* --- 16. Contact / form ------------------------------------------------- */
 .section--cta { position: relative; isolation: isolate; overflow: hidden; }
 .cta__bg {
@@ -896,6 +843,10 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 /* dialog */
 .modal-layer { position: static; }
 .modal {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
   width: min(92vw, 34rem);
   max-height: 88vh;
   padding: 0;
@@ -912,7 +863,10 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
   -webkit-overflow-scrolling: touch;
   animation: modal-in .22s ease;
 }
-@keyframes modal-in { from { opacity: 0; transform: translateY(12px) scale(.98); } }
+@keyframes modal-in {
+  from { opacity: 0; transform: translate(-50%, -50%) translateY(12px) scale(.98); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
 
 .modal__close-form { position: absolute; top: .6rem; right: .6rem; z-index: 2; margin: 0; }
 .modal__close {
