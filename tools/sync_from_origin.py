@@ -7,7 +7,7 @@ comparing the asset filenames its shell references. This script:
 
   1. fetches the upstream index.html and discovers the bundle + CSS names
   2. downloads the bundle, the CSS and every image the bundle references
-     into assets/img/
+     into assets/img/   (both public.readdy.ai AND static.readdy.ai CDNs)
   3. rewrites the bundle so images load locally and the router basename is
      resolved at runtime (so it works under a GitHub Pages project subpath)
   4. regenerates index.html/404.html from the upstream shell with the
@@ -27,8 +27,14 @@ import urllib.request
 from pathlib import Path
 
 ORIGIN = "https://mfbcbt.readdy.co/"
-IMG_RE = re.compile(
-    r"https://public\.readdy\.ai/(ai/img_res|gen_page)/([A-Za-z0-9_.\-]+\.(?:webp|jpg|jpeg|png|svg))"
+
+# Any image served off a Readdy CDN. The origin uses two hosts:
+#   public.readdy.ai/{ai/img_res,gen_page}/file
+#   static.readdy.ai/image/<project-id>/file
+# Matching only public.readdy.ai silently leaves the hero background
+# (static.readdy.ai) pointing at Readdy — match both.
+CDN_RE = re.compile(
+    r"https://((?:public|static)\.readdy\.ai)/([A-Za-z0-9_./-]+?\.(?:webp|jpg|jpeg|png|svg|gif))"
 )
 ASSET_RE = re.compile(r'(?:src|href)="/assets/(index-[A-Za-z0-9_-]+\.(?:js|css))"')
 
@@ -53,7 +59,7 @@ BASE_SCRIPT = """    <script>
 
 def get(url: str) -> bytes:
     req = urllib.request.Request(url, headers={"User-Agent": "mirror-sync"})
-    with urllib.request.urlopen(req, timeout=60) as r:
+    with urllib.request.urlopen(req, timeout=90) as r:
         return r.read()
 
 
@@ -104,25 +110,42 @@ def main() -> int:
     js = get(ORIGIN + "assets/" + js_name).decode("utf-8")
     css = get(ORIGIN + "assets/" + css_name)
 
-    # images: download every one the bundle references, keep the set exact
-    wanted = {m.group(2): m.group(1) for m in IMG_RE.finditer(js)}   # filename -> cdn path
-    print(f"  images referenced: {len(wanted)}")
-    for fname, prefix in sorted(wanted.items()):
-        blob = get(f"https://public.readdy.ai/{prefix}/{fname}")
+    # ---- images: download every CDN image the bundle references ----
+    # filename -> full remote URL; guard against two remote files sharing a basename
+    sources: dict[str, str] = {}
+    for host, path in CDN_RE.findall(js):
+        url = f"https://{host}/{path}"
+        fname = path.rsplit("/", 1)[1]
+        if fname in sources and sources[fname] != url:
+            stem, _, ext = fname.rpartition(".")
+            fname = f"{stem}-{abs(hash(host + path)) % 0xFFFF:04x}.{ext}"
+        sources[fname] = url
+    print(f"  images referenced: {len(sources)}")
+    for fname, url in sorted(sources.items()):
+        blob = get(url)
         (img_dir / fname).write_bytes(blob)  # binary: no newline translation
-    for old in list(img_dir.iterdir()):
-        if old.name not in wanted:
+        print(f"    {len(blob):>9,}  {fname}")
+    for old in sorted(p for p in img_dir.iterdir() if p.is_file()):
+        if old.name not in sources:
             print(f"  removing unreferenced {old.name}")
             old.unlink()
 
-    # patch the bundle: localize images + runtime basename
-    patched = IMG_RE.sub(lambda m: "assets/img/" + m.group(2), js)
-    count = patched.count("basename:`/`")
-    if count != 1:
-        sys.exit(f'expected exactly one `basename:`/`` in the bundle, found {count}')
-    patched = patched.replace("basename:`/`", "basename:window.__APP_BASE__||`/`")
+    # ---- patch the bundle: localize images + runtime basename ----
+    def localize(m: re.Match) -> str:
+        return "assets/img/" + m.group(2).rsplit("/", 1)[1]
 
-    # write everything in binary; drop bundles from previous builds
+    patched = CDN_RE.sub(localize, js)
+    if count := patched.count("basename:`/`"):
+        if count != 1:
+            sys.exit(f'expected one `basename:`/`` in the bundle, found {count}')
+        patched = patched.replace("basename:`/`", "basename:window.__APP_BASE__||`/`")
+    elif "basename:window.__APP_BASE__||`/`" not in patched:
+        sys.exit("basename patch target not found in the bundle")
+    leftover = CDN_RE.findall(patched)
+    if leftover:
+        sys.exit(f"unlocalized CDN references remain: {leftover}")
+
+    # ---- write everything (binary); drop bundles from previous builds ----
     for old in list(assets.glob("index-*.js")) + list(assets.glob("index-*.css")):
         if old.name not in (js_name, css_name):
             print(f"  removing superseded {old.name}")

@@ -15,7 +15,7 @@ front-end is three files plus imagery:
 | `index.html` | `/` (shell, modified — see below) |
 | `assets/index-6zuHScgl.js` | `/assets/index-6zuHScgl.js` |
 | `assets/index-gS4WCt3f.css` | `/assets/index-gS4WCt3f.css` |
-| `assets/img/*` | 13 images from `public.readdy.ai` |
+| `assets/img/*` | 14 images from the Readdy CDNs (`public.readdy.ai` and `static.readdy.ai`) |
 
 Rebranded to "Camnemi Korea" and collapsed to a single page (route `/`)
 in the build this mirror tracks — the earlier `/about-asan` and
@@ -23,9 +23,11 @@ in the build this mirror tracks — the earlier `/about-asan` and
 
 ## Changes made to the original
 
-1. **Images localized.** All 13 images were downloaded from
-   `public.readdy.ai` and rewritten to `assets/img/`, so the mirror has no
-   dependency on Readdy's CDN.
+1. **Images localized.** All 14 images were downloaded from the Readdy
+   CDNs and rewritten to `assets/img/`, so the mirror has no dependency on
+   Readdy for imagery. Note the origin uses **two** hosts — `public.readdy.ai`
+   *and* `static.readdy.ai` (the 1.3 MB hero background) — so a pattern that
+   only matches the first will silently leave the hero remote.
 2. **Runtime base path.** The original bundle hardcoded
    `basename: "/"`, which breaks under a GitHub Pages project subpath.
    The bundle now reads `basename: window.__APP_BASE__ || "/"`, and
