@@ -192,6 +192,17 @@
       openModal(opener.getAttribute("data-pkg"), opener);
       return;
     }
+    // "Every check-up includes" -> full-list modal
+    var incOpener = e.target.closest("[data-includes]");
+    if (incOpener) {
+      e.preventDefault();
+      var dlg = document.getElementById("modal-includes");
+      lastTrigger = incOpener;
+      if (dlg && typeof dlg.showModal === "function") dlg.showModal();
+      else if (dlg) dlg.setAttribute("open", "");
+      document.body.style.overflow = "hidden";
+      return;
+    }
     // click on the dialog's own backdrop (the element itself, outside content)
     if (e.target.tagName === "DIALOG" && e.target.classList.contains("modal")) {
       var r = e.target.getBoundingClientRect();

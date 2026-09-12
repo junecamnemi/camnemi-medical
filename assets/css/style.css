@@ -905,8 +905,11 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 .modal__desc,
 .modal .ticks,
 .modal__subhead,
-.modal__gender,
-.modal .btn--block { margin-left: 1.6rem; margin-right: 1.6rem; }
+.modal__gender { margin-left: 1.6rem; margin-right: 1.6rem; }
+.modal .btn--block {
+  display: flex; width: auto;
+  margin: 1.5rem 1.6rem 1.6rem;
+}
 .modal__desc { margin-top: 1.25rem; font-size: .92rem; color: var(--ink-500); }
 .modal__subhead {
   margin-top: 1.35rem; margin-bottom: .6rem;
@@ -920,10 +923,31 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
   font-size: .74rem; letter-spacing: .06em; text-transform: uppercase;
   color: var(--primary-700); margin-bottom: .35rem;
 }
-.modal .btn--block { margin-top: 1.5rem; margin-bottom: 1.6rem; }
 
-/* let the content area scroll while head/foot stay put */
-.modal__desc { }
 @media (max-width: 520px) {
   .modal__gender { grid-template-columns: 1fr; }
+}
+
+/* --- 21. Includes CTA + includes modal --------------------------------- */
+.includes--cta {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1.25rem 2rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--r);
+}
+.includes--cta .h3 { margin-bottom: .4rem; }
+.includes__lede { color: var(--ink-500); font-size: .94rem; max-width: 52ch; margin: 0; }
+.includes--cta .btn { flex-shrink: 0; }
+
+.modal--includes { width: min(92vw, 40rem); }
+.modal__includes-list {
+  columns: 2; column-gap: 2rem;
+  margin: 1.25rem 1.6rem 0;
+}
+.modal__includes-list li { break-inside: avoid; }
+@media (max-width: 560px) {
+  .modal__includes-list { columns: 1; }
 }
