@@ -1,88 +1,92 @@
-# Camnemi Korea × Asan Medical Center — Website
-
-A static mirror of the Camnemi Korea / Asan Medical Center platform
-(`https://mfbcbt.readdy.co`), published to GitHub Pages.
+# Camnemi Korea × Asan Medical Center — website
 
 **Live:** https://junecamnemi.github.io/camnemi-medical/
 
-## Source
-
-The original is a Readdy-built Vite/React single-page app. Its whole
-front-end is three files plus imagery:
-
-| File in this repo | Origin |
-|---|---|
-| `index.html` | `/` (shell, modified — see below) |
-| `assets/index-6zuHScgl.js` | `/assets/index-6zuHScgl.js` |
-| `assets/index-gS4WCt3f.css` | `/assets/index-gS4WCt3f.css` |
-| `assets/img/*` | 14 images from the Readdy CDNs (`public.readdy.ai` and `static.readdy.ai`) |
-
-Rebranded to "Camnemi Korea" and collapsed to a single page (route `/`)
-in the build this mirror tracks — the earlier `/about-asan` and
-`/plastic-surgery` routes no longer exist upstream.
-
-## Changes made to the original
-
-1. **Images localized.** All 14 images were downloaded from the Readdy
-   CDNs and rewritten to `assets/img/`, so the mirror has no dependency on
-   Readdy for imagery. Note the origin uses **two** hosts — `public.readdy.ai`
-   *and* `static.readdy.ai` (the 1.3 MB hero background) — so a pattern that
-   only matches the first will silently leave the hero remote.
-2. **Runtime base path.** The original bundle hardcoded
-   `basename: "/"`, which breaks under a GitHub Pages project subpath.
-   The bundle now reads `basename: window.__APP_BASE__ || "/"`, and
-   `index.html` sets `window.__APP_BASE__` (plus a `<base>` tag) from the
-   current URL before the bundle loads. The same files therefore work at a
-   domain root *or* under `/camnemi-medical/`.
-3. **Telemetry removed.** Readdy's `event-reporting.min.js`,
-   `EventReportingConfig` and the `readdy-project-version` meta tag were
-   dropped.
-4. **`404.html`** — a copy of `index.html`, so any stray path still boots
-   the app (GitHub Pages serves it for 404s under this project path).
-5. **Broken favicon link removed** — `/vite.svg` returns the SPA shell on
-   the origin, not an icon.
-
-Fonts (Google Fonts) and icon fonts (Font Awesome, Remixicon) still load
-from their public CDNs; YouTube embeds are untouched.
-
-## Still Readdy-dependent
-
-* The inquiry form posts to `readdy.ai/api/form/daieo3roh653ivfvoch0`.
-* The Readdy footer badge/watermark is retained.
-
-Repoint both if this mirror ever becomes the production site.
-
-## Local preview
+A hand-written static site: one HTML page, one stylesheet, one small script.
+No framework, no build step, no third-party platform.
 
 ```bash
-# run from the PARENT directory so the subpath matches GitHub Pages
-python -m http.server 8080
-# http://localhost:8080/camnemi-medical/
+python -m http.server 8080     # then: http://localhost:8080/
 ```
 
-## Re-syncing when the upstream site changes
+## Files
 
-The upstream bundle is content-hashed, so a stale mirror is detectable:
-
-```bash
-curl -s https://mfbcbt.readdy.co/ | grep -oE 'assets/index-[A-Za-z0-9_-]+\.(js|css)'
+```
+index.html                  the whole site (semantic sections + anchors)
+404.html                    branded not-found page
+assets/css/style.css        design system + all styling
+assets/js/main.js           nav, scroll spy, reveal, inquiry form
+assets/img/                 logo mark, hero, 7 procedure photos, doctor, og card
 ```
 
-If those differ from the filenames in this repo, the origin was rebuilt.
-Re-sync in one step:
+## Provenance
 
-```bash
-python tools/sync_from_origin.py   # then: git diff --stat, commit, push
-```
+The content (packages, prices, procedure copy, stats, specialties) was
+transcribed out of the site's previous Readdy/Vite build. That build is gone:
+the minified bundle, its stylesheet, its watermark/logo assets, its sync tool
+and every Readdy reference have been **deleted**. Nothing on this site calls
+Readdy, PostHog or any other third party at runtime.
 
-That script re-does steps 1–4 above from scratch: it discovers the new
-asset names, downloads the new bundle/CSS/images, re-applies the image
-localization and basename patch, regenerates `index.html` + `404.html`
-from the upstream shell, and deletes superseded files.
+Still loaded from public CDNs (not Readdy):
 
-> **Windows pitfall:** the script writes everything in *binary* mode on
-> purpose. A text-mode write translates `\n` → `\r\n` **inside the
-> minified JS string literals**, silently corrupting the bundle (it slipped
-> through once, adding 10 stray CR bytes). Keep it binary; `.gitattributes`
-> pins LF in the repo.
+* Google Fonts — **Playfair Display** (display) + **Noto Sans KR** (body)
+* Remixicon 4.5 — the `ri-*` icon font
 
+Everything else, including all imagery, is self-hosted.
+
+## Design system
+
+The brand palette is carried over from the client's existing tokens so this
+reads as the same brand — but the layout, hierarchy and components are new.
+
+| Token | Value | Use |
+|---|---|---|
+| `--primary` | `oklch(.455 .145 262)` | indigo — links, CTAs, prices |
+| `--accent` | `oklch(.468 .052 150)` | green — eyebrows, ticks, ranks |
+| `--brand-grad` | indigo → green, 135° | brand gradient |
+| `--font-display` | Playfair Display | headings, numerals |
+| `--font-body` | Noto Sans KR | body, UI |
+
+## What changed vs. the previous build
+
+**Design**
+* Real heading hierarchy (`h1` → `h4`) and semantic landmarks; the previous
+  build was a flat pile of `div`s.
+* Sticky header with a logo mark + wordmark and an "Official Agency of AMC"
+  strip; scroll-spy nav that marks the current section.
+* Package cards: the duplicated male/female screening lists that bloated every
+  card are now a collapsed `<details>`, plus a **comparison table** so the 8
+  packages can actually be compared.
+* Accessible by default: skip link, visible focus rings, `aria-*` on the
+  nav/form/status, `prefers-reduced-motion` respected, screen-reader captions
+  on the table.
+
+**Performance**
+* Hero image 1,279 KB → **129 KB** (`hero-asan.webp`).
+* Logo 385 KB PNG → **10 KB** mark; favicon 6 KB.
+* Below-the-fold images lazy-loaded; only the hero is eager/high-priority.
+* Removed a 394 KB JS bundle + 31 KB CSS of framework runtime.
+
+**Correctness**
+* A **1200×630 social card** (`og-cover.jpg`) was added — previously
+  `twitter:card=summary_large_image` had no image at all, so every share
+  rendered blank.
+* The broken `tel:+855****9079` click-to-call link (masked upstream) is now a
+  working `tel:+855969909079`.
+* The masked Telegram entry is now a real `https://t.me/` link.
+
+## The inquiry form
+
+There is no backend. The form composes a `mailto:` to
+**medical@camnemi.com** — subject and body pre-filled from the fields — and
+opens the visitor's own email app. Nothing is sent to any third party, and no
+data leaves the browser.
+
+Client-side it validates name and email, marks invalid fields with
+`aria-invalid`, and reports status through an `aria-live` region. Without JS
+the form still works as a plain HTML form fallback isn't available, so the
+page also lists the email address and phone number as direct links.
+
+To upgrade it later, replace the submit handler in `assets/js/main.js` with a
+POST to a real endpoint (Apps Script or Supabase) — the markup and validation
+already support it.

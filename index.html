@@ -1,61 +1,1113 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-        <script>
-      /*
-       * Resolve the SPA base path at runtime.
-       * The original build (Readdy) assumed it was served from a domain root.
-       * This lets the identical bundle run either at a root or under a
-       * GitHub Pages project subpath (e.g. /camnemi-medical/).
-       */
-      (function () {
-        var p = location.pathname;
-        var m = p.match(/^(\/[^\/]+\/)/);
-        window.__APP_BASE__ = m ? m[1] : (p.slice(-1) === "/" ? p : p + "/");
-        var b = document.createElement("base");
-        b.href = window.__APP_BASE__;
-        document.head.insertBefore(b, document.head.firstChild);
-      })();
-    </script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Camnemi Korea - Get Beautiful at Korea&apos;s No.1 Hospital | Plastic Surgery &amp; Aesthetic Services</title>
-    <meta name="description" content="Camnemi Korea connects you to Asan Medical Center&apos;s Plastic Surgery Department — Korea&apos;s largest team of board-certified surgeons with a 98.7% success rate. Premium beauty and aesthetic services including facial contouring, rhinoplasty, eye surgery, skin rejuvenation, and more at Korea&apos;s No.1 hospital." />
-    <meta name="keywords" content="Camnemi Korea, Korean plastic surgery, Asan Medical Center, beauty Korea, aesthetic surgery, facial contouring, rhinoplasty Korea, skin care Korea, K-beauty, cosmetic surgery Korea" />
-    <link rel="canonical" href="https://camnemi.com/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
-    <meta property="og:title" content="Camnemi Korea - Get Beautiful at Korea&apos;s No.1 Hospital | Plastic Surgery &amp; Aesthetic" />
-    <meta property="og:description" content="Premium beauty platform partnered with Korea&apos;s No.1 hospital — Asan Medical Center Plastic Surgery" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://camnemi.com/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Camnemi Korea - Get Beautiful at Korea&apos;s No.1 Hospital | Plastic Surgery" />
-    <meta name="twitter:description" content="Premium beauty platform partnered with Korea&apos;s No.1 hospital — Asan Medical Center Plastic Surgery" />
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5265;127.1082" />
-    <meta http-equiv="Last-Modified" content="2026-08-10T00:00:00Z" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MedicalOrganization",
-        "name": "Camnemi Korea",
-        "description": "Premium beauty and plastic surgery platform with official MoU with Asan Medical Center&apos;s Plastic Surgery Department",
-        "url": "https://camnemi.com",
-        "areaServed": {
-          "@type": "Country",
-          "name": "South Korea"
-        }
-      }
-    </script>
-          <script type="module" crossorigin src="assets/index-6zuHScgl.js"></script>
-          <link rel="stylesheet" crossorigin href="assets/index-gS4WCt3f.css">
-        </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camnemi Korea — Asan Medical Center, Seoul | Health Check-ups, Surgery &amp; Medical Coordination</title>
+<meta name="description" content="Camnemi Korea is the official agency connecting Cambodian patients to Asan Medical Center in Seoul — Korea's No.1 hospital. Comprehensive health check-ups, plastic &amp; reconstructive surgery, and full medical coordination in Khmer, Korean and English.">
+<link rel="canonical" href="https://camnemi.com/">
+<meta name="theme-color" content="#3c3a94">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Camnemi Korea">
+<meta property="og:title" content="Camnemi Korea — Asan Medical Center, Seoul">
+<meta property="og:description" content="Official agency connecting Cambodian patients to Korea's No.1 hospital. Health check-ups, plastic surgery, and end-to-end medical coordination.">
+<meta property="og:url" content="https://camnemi.com/">
+<meta property="og:image" content="assets/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Asan Medical Center, Seoul — Korea's No.1 hospital">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Camnemi Korea — Asan Medical Center, Seoul">
+<meta name="twitter:description" content="Official agency connecting Cambodian patients to Korea's No.1 hospital.">
+<meta name="twitter:image" content="assets/img/og-cover.jpg">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Camnemi Korea",
+  "description": "Official agency of Asan Medical Center, Seoul, for Cambodian patients.",
+  "url": "https://camnemi.com",
+  "email": "medical@camnemi.com",
+  "telephone": "+855969909079",
+  "areaServed": {"@type": "Country", "name": "Cambodia"},
+  "parentOrganization": {"@type": "Hospital", "name": "Asan Medical Center", "address": {"@type": "PostalAddress", "addressLocality": "Seoul", "addressCountry": "KR"}}
+}
+</script>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" data-header>
+  <div class="wrap site-header__inner">
+    <a class="brand" href="#top" aria-label="Camnemi Korea — home">
+      <img class="brand__mark" src="assets/img/camnemi-mark.webp" alt="" width="44" height="44">
+      <span class="brand__name">Camnemi Korea</span>
+    </a>
+    <nav class="site-nav" id="primary-nav" aria-label="Primary" data-nav>
+      <ul>
+          <li><a href="#about-asan">About Asan</a></li>
+          <li><a href="#health-checkup">Health Check-up</a></li>
+          <li><a href="#plastic-surgery">Plastic Surgery</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="site-header__cta">
+      <a class="btn btn--primary" href="#contact">Book Now</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu" data-nav-toggle>
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <p class="agency-strip"><span aria-hidden="true">★</span> Official Agency of Asan Medical Center (AMC), Seoul</p>
+</header>
+
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <img class="hero__bg" src="assets/img/hero-asan.webp" alt="Asan Medical Center, Seoul — Korea's No.1 hospital" width="1920" height="1080" fetchpriority="high" decoding="async">
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <p class="eyebrow">Asan Medical Center, Seoul</p>
+      <h1 class="hero__title">Korea's No.1 Hospital<br><em>Trusted by the World</em></h1>
+      <p class="lede">Asan Medical Center is Korea's largest tertiary hospital — 2,432 beds, over 11,000 outpatient visits daily, and ranked among the world's best hospitals. Camnemi Korea connects Cambodian patients directly to its world-class specialists.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg" href="#contact">Book a Free Consultation</a>
+        <a class="btn btn--outline btn--lg" href="#services">Explore Our Services</a>
+      </div>
+      <ul class="stat-row hero__stats">
+          <li class="stat">
+            <span class="stat__value">2,432</span>
+            <span class="stat__label">Hospital Beds</span>
+            <span class="stat__sub">Largest in Korea</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">11,402</span>
+            <span class="stat__label">Outpatients Daily</span>
+            <span class="stat__sub">Every single day</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">47,460</span>
+            <span class="stat__label">Surgeries Yearly</span>
+            <span class="stat__sub">World-class volume</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">6</span>
+            <span class="stat__label">Top-10 Specialties</span>
+            <span class="stat__sub">Global clinical rank</span>
+          </li>
+      </ul>
+      <ul class="badge-row">
+          <li class="badge-card">
+            <span class="badge-card__value">No.1</span>
+            <span class="badge-card__title">Korea&#x27;s Best Hospital</span>
+            <span class="badge-card__src">6 consecutive years</span>
+            <span class="badge-card__sub">Newsweek</span>
+          </li>
+          <li class="badge-card">
+            <span class="badge-card__value">No.25</span>
+            <span class="badge-card__title">World&#x27;s Best Hospital</span>
+            <span class="badge-card__src">Global ranking</span>
+            <span class="badge-card__sub">Newsweek 2025</span>
+          </li>
+          <li class="badge-card">
+            <span class="badge-card__value">19</span>
+            <span class="badge-card__title">Years Most Admired</span>
+            <span class="badge-card__src">Korea-wide</span>
+            <span class="badge-card__sub">KMAC</span>
+          </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================= SERVICE COORDINATOR ======================= -->
+  <section class="section section--surface">
+    <div class="wrap split">
+      <div class="split__media">
+        <img src="assets/img/edited_653ed32f4f124a4d6b92c338b6635f4d_0679aca6.jpg" alt="Chea Siek Ai, MD — medical service coordinator at Asan Medical Center" loading="lazy" decoding="async" width="720" height="880">
+      </div>
+      <div class="split__body">
+        <p class="eyebrow">Your medical service coordinator</p>
+        <h2 class="h2">Chea Siek Ai, MD</h2>
+        <p class="lede">A Cambodian medical doctor based in Korea, Dr. Chea Siek Ai personally guides Cambodian patients through every step of treatment at Asan Medical Center — from the first consultation to recovery and follow-up, in your own language.</p>
+        <dl class="facts">
+          <div><dt>Education</dt><dd>University of Ulsan, College of Medicine</dd></div>
+          <div><dt>Affiliation</dt><dd>Dept. of Plastic Surgery &amp; Reconstructive Surgery, Asan Medical Center</dd></div>
+          <div><dt>Languages</dt><dd>Khmer · Korean · English</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:medical@camnemi.com">medical@camnemi.com</a></dd></div>
+        </dl>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#contact">Talk to Dr. Chea</a>
+          <a class="btn btn--ghost" href="mailto:medical@camnemi.com">Send an Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ WHY ASAN ============================ -->
+  <section class="section" id="about-asan">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Why Asan</p>
+        <h2 class="h2">Why Asan Medical Center is Korea's No.1</h2>
+        <p class="lede">Inaugurated on June 23, 1989, Asan Medical Center stands as the largest tertiary hospital in Korea. It was established to embody the founding principle of founder Chung Ju-yung: &ldquo;Helping the underprivileged of our society.&rdquo;</p>
+      </header>
+      <div class="grid grid--4">
+          <article class="card">
+            <i class="ri-calendar-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Founded in 1989</h3>
+            <p class="card__body">Inaugurated on June 23, 1989, Asan Medical Center stands as the largest tertiary hospital in Korea. Established to embody the founding principles of Asan Foundation founder Chung Ju-yung: &quot;Helping the underprivileged of our society.&quot;</p>
+          </article>
+          <article class="card">
+            <i class="ri-award-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Korea&#x27;s Most Admired Hospital</h3>
+            <p class="card__body">Named Korea&#x27;s Most Admired Hospital for 19 consecutive years — a testament to the trust and respect Asan has earned from patients and the nation.</p>
+          </article>
+          <article class="card">
+            <i class="ri-trophy-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Korea&#x27;s No.1 for 6 Years</h3>
+            <p class="card__body">Ranked as the #1 hospital in Korea for 6 consecutive years. Also ranked 25th in the world among the best hospitals globally.</p>
+          </article>
+          <article class="card">
+            <i class="ri-medal-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Top 10 in 6 Specialties</h3>
+            <p class="card__body">World&#x27;s Top 10 in 6 Clinical Specialties: Endocrinology #3, Gastroenterology #4, Oncology #5, Urology #5, Neurology #8, and Orthopedics #8 in the world.</p>
+          </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ BY THE NUMBERS ============================ -->
+  <section class="section section--ink">
+    <div class="wrap">
+      <header class="section-head section-head--center">
+        <p class="eyebrow">By the numbers</p>
+        <h2 class="h2">Asan Medical Center at a Glance</h2>
+        <p class="lede">The sheer scale of Korea's leading hospital — from departments and staff to daily patients and life-saving surgeries.</p>
+      </header>
+      <ul class="stat-row stat-row--wide">
+          <li class="figure">
+            <span class="figure__value">8,743</span>
+            <span class="figure__label">Employees</span>
+            <span class="figure__sub">Dedicated healthcare staff</span>
+          </li>
+          <li class="figure">
+            <span class="figure__value">2,432</span>
+            <span class="figure__label">Beds</span>
+            <span class="figure__sub">Largest in Korea</span>
+          </li>
+          <li class="figure">
+            <span class="figure__value">11,402</span>
+            <span class="figure__label">Outpatients Daily</span>
+            <span class="figure__sub">Average per day</span>
+          </li>
+          <li class="figure">
+            <span class="figure__value">47,460</span>
+            <span class="figure__label">Surgeries Yearly</span>
+            <span class="figure__sub">World-class surgical volume</span>
+          </li>
+          <li class="figure">
+            <span class="figure__value">624,447</span>
+            <span class="figure__label">Inpatients Yearly</span>
+            <span class="figure__sub">Total per year</span>
+          </li>
+          <li class="figure">
+            <span class="figure__value">52</span>
+            <span class="figure__label">Centers</span>
+            <span class="figure__sub">Specialized care centers</span>
+          </li>
+          <li class="figure">
+            <span class="figure__value">56</span>
+            <span class="figure__label">Departments</span>
+            <span class="figure__sub">Comprehensive specialties</span>
+          </li>
+          <li class="figure">
+            <span class="figure__value">3</span>
+            <span class="figure__label">Institutes</span>
+            <span class="figure__sub">Cancer, Heart, Children</span>
+          </li>
+      </ul>
+      <div class="staff">
+        <h3 class="h3">Employee breakdown</h3>
+        <ul class="staff__row">
+            <li><span class="staff__value">1,640</span><span class="staff__label">Physicians</span></li>
+            <li><span class="staff__value">4,885</span><span class="staff__label">Nurses</span></li>
+            <li><span class="staff__value">2,218</span><span class="staff__label">Other Staff</span></li>
+        </ul>
+        <p class="staff__total">Total: 8,743 dedicated healthcare professionals</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TOP 10 ============================ -->
+  <section class="section section--surface">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Global excellence</p>
+        <h2 class="h2">World's Top 10 in 6 Clinical Specialties</h2>
+        <p class="lede">Asan Medical Center is ranked among the world's best in six major clinical specialties, according to Newsweek World's Best Specialized Hospitals 2025. From cancer treatment to endocrine care, our outcomes rival the most prestigious institutions globally.</p>
+      </header>
+      <div class="grid grid--3">
+          <article class="card card--rank">
+            <i class="ri-test-tube-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Endocrinology</h3>
+            <p class="rank-tag">World No.3</p>
+            <p class="card__body">Leading diabetes and thyroid treatment with advanced hormone research</p>
+          </article>
+          <article class="card card--rank">
+            <i class="ri-stethoscope-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Gastroenterology</h3>
+            <p class="rank-tag">World No.4</p>
+            <p class="card__body">World-class digestive disease care and advanced endoscopic procedures</p>
+          </article>
+          <article class="card card--rank">
+            <i class="ri-virus-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Oncology</h3>
+            <p class="rank-tag">World No.5</p>
+            <p class="card__body">Comprehensive cancer care with proton therapy and precision medicine</p>
+          </article>
+          <article class="card card--rank">
+            <i class="ri-drop-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Urology</h3>
+            <p class="rank-tag">World No.5</p>
+            <p class="card__body">Advanced robotic surgery and kidney transplant programs</p>
+          </article>
+          <article class="card card--rank">
+            <i class="ri-brain-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Neurology</h3>
+            <p class="rank-tag">World No.8</p>
+            <p class="card__body">Brain &amp; nervous system care with cutting-edge neuroimaging</p>
+          </article>
+          <article class="card card--rank">
+            <i class="ri-run-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Orthopedics</h3>
+            <p class="rank-tag">World No.8</p>
+            <p class="card__body">Joint replacement and spine surgery with outstanding outcomes</p>
+          </article>
+      </div>
+      <p class="note">Newsweek 2025 — ranked in the World's Top 10 across 6 clinical specialties.</p>
+    </div>
+  </section>
+
+  <!-- ============================ STRUCTURE ============================ -->
+  <section class="section">
+    <div class="wrap split split--reverse">
+      <div class="split__media">
+        <img src="assets/img/7bda2663782efe686ffde9e5666ecb33.webp" alt="Asan Medical Center, Seoul" loading="lazy" decoding="async" width="640" height="540">
+      </div>
+      <div class="split__body">
+        <p class="eyebrow">Structure &amp; organization</p>
+        <h2 class="h2">Departments &amp; Institutes</h2>
+        <dl class="facts facts--big">
+          <div><dt>56 Departments</dt><dd>Comprehensive medical departments covering every major specialty, from general internal medicine to highly specialized surgical fields.</dd></div>
+          <div><dt>3 Institutes</dt><dd>Cancer Institute, Heart Institute, and Children's Hospital — dedicated research and treatment centres pushing the boundaries of medicine.</dd></div>
+          <div><dt>52 Centers</dt><dd>52 specialized care centres with 2,432 beds — the largest hospital capacity in Korea, ensuring every patient receives timely world-class care.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ HEALTH CHECK-UP ============================ -->
+  <section class="section section--tint" id="health-checkup">
+    <div class="wrap">
+      <header class="section-head section-head--center">
+        <p class="eyebrow">Health check-up</p>
+        <h2 class="h2">Comprehensive Health Check-up Programs</h2>
+        <p class="lede">Asan Medical Center's Comprehensive Health Evaluation Program offers 9 tailored packages from Essential to Premium Plus, all performed by 50+ board-certified specialists with world-class diagnostic equipment.</p>
+      </header>
+      <ul class="stat-row stat-row--light">
+          <li class="stat stat--light">
+            <span class="stat__value">120+</span>
+            <span class="stat__label">Check-up Items</span>
+            <span class="stat__sub">Comprehensive Screening</span>
+          </li>
+          <li class="stat stat--light">
+            <span class="stat__value">50+</span>
+            <span class="stat__label">Board-certified Doctors</span>
+            <span class="stat__sub">Dedicated Medical Team</span>
+          </li>
+          <li class="stat stat--light">
+            <span class="stat__value">1 Day</span>
+            <span class="stat__label">Full-body Screening</span>
+            <span class="stat__sub">Same-day Results</span>
+          </li>
+          <li class="stat stat--light">
+            <span class="stat__value">24/7</span>
+            <span class="stat__label">Care Coordination</span>
+            <span class="stat__sub">Multilingual Support</span>
+          </li>
+      </ul>
+
+      <h3 class="h3 h3--center">Choose your check-up package</h3>
+      <div class="grid grid--3 grid--packages">
+          <article class="pkg" id="pkg-0">
+            <header class="pkg__head">
+              <i class="ri-health-book-line pkg__icon" aria-hidden="true"></i>
+              
+              <h3 class="pkg__name">Fundamental (Essential A)</h3>
+              <p class="pkg__duration"><i class="ri-time-line" aria-hidden="true"></i> 2 hours</p>
+            </header>
+            <div class="pkg__price"><span class="price__value">$1,500</span><span class="price__split">male</span><span class="price__value">$2,200</span><span class="price__split">female</span></div>
+            <p class="pkg__desc">Foundational health screening for all adults. Comprehensive basic assessment including blood tests, gastroscopy, imaging, and gender-specific cancer screenings. Ideal for first-time participants and young professionals.</p>
+            <ul class="ticks">
+              <li>Gastroscopy with conscious sedation</li>
+              <li>Chest X-ray (Front/Lateral), Abdominal ultrasonography</li>
+              <li>Blood tests: CBC, liver, kidney, lipid, diabetes, hepatitis A/B/C, blood type, electrolytes</li>
+              <li>Cancer markers (liver, lung, digestive), Thyroid function test</li>
+            </ul>
+            <details class="pkg__gender">
+              <summary>Gender-specific screening</summary>
+              <div class="pkg__gender-grid">
+                <div>
+                  <h4>Male</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Prostate ultrasonography</li>
+                <li>Digital rectal exam</li>
+                <li>Prostate-specific antigen (PSA)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Female</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Pap smear (cervical cytology)</li>
+                <li>HPV test</li>
+                <li>Breast ultrasonography</li>
+                <li>Pelvic ultrasonography</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+            <a class="btn btn--ghost btn--block" href="#contact">Book this package</a>
+          </article>
+          <article class="pkg" id="pkg-1">
+            <header class="pkg__head">
+              <i class="ri-star-line pkg__icon" aria-hidden="true"></i>
+              <span class="pill pill--accent">Most Popular</span>
+              <h3 class="pkg__name">Essential Program B</h3>
+              <p class="pkg__duration"><i class="ri-time-line" aria-hidden="true"></i> 3 hours</p>
+            </header>
+            <div class="pkg__price"><span class="price__value">$2,200</span><span class="price__split">male</span><span class="price__value">$2,400</span><span class="price__split">female</span></div>
+            <p class="pkg__desc">Advanced screening for adults 40 and older. Builds on Fundamental with colonoscopy, low-dose chest CT, echocardiography, bone densitometry, and vitamin D screening.</p>
+            <ul class="ticks">
+              <li>All Fundamental items plus colonoscopy with conscious sedation</li>
+              <li>Low-dose chest CT &amp; Bone densitometry (DEXA)</li>
+              <li>Echocardiography &amp; T-L Spine X-ray</li>
+              <li>Vitamin D &amp; Arterial stiffness test</li>
+            </ul>
+            <details class="pkg__gender">
+              <summary>Gender-specific screening</summary>
+              <div class="pkg__gender-grid">
+                <div>
+                  <h4>Male</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Prostate ultrasonography</li>
+                <li>Digital rectal exam</li>
+                <li>Prostate-specific antigen (PSA)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Female</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Pap smear (cervical cytology)</li>
+                <li>HPV test</li>
+                <li>Breast ultrasonography</li>
+                <li>Pelvic ultrasonography</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+            <a class="btn btn--ghost btn--block" href="#contact">Book this package</a>
+          </article>
+          <article class="pkg" id="pkg-2">
+            <header class="pkg__head">
+              <i class="ri-virus-line pkg__icon" aria-hidden="true"></i>
+              
+              <h3 class="pkg__name">Cancer Specialized</h3>
+              <p class="pkg__duration"><i class="ri-time-line" aria-hidden="true"></i> 5 hours</p>
+            </header>
+            <div class="pkg__price"><span class="price__value">$2,900</span></div>
+            <p class="pkg__desc">Advanced oncology-focused screening for individuals with cancer risk factors or family history. Includes all Essential B items plus abdominal/pelvic CT and comprehensive tumor marker panels.</p>
+            <ul class="ticks">
+              <li>All Essential B items included</li>
+              <li>Abdominal &amp; Pelvic CT imaging</li>
+              <li>Comprehensive tumor marker panel (AFP, CEA, PSA, CA-125)</li>
+              <li>Thyroid ultrasonography &amp; Cancer-risk biomarkers</li>
+            </ul>
+            <details class="pkg__gender">
+              <summary>Gender-specific screening</summary>
+              <div class="pkg__gender-grid">
+                <div>
+                  <h4>Male</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Prostate ultrasonography</li>
+                <li>Digital rectal exam</li>
+                <li>Prostate-specific antigen (PSA)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Female</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Pap smear (cervical cytology)</li>
+                <li>HPV test</li>
+                <li>Breast ultrasonography</li>
+                <li>Pelvic ultrasonography</li>
+                <li>Ovarian cancer marker</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+            <a class="btn btn--ghost btn--block" href="#contact">Book this package</a>
+          </article>
+          <article class="pkg" id="pkg-3">
+            <header class="pkg__head">
+              <i class="ri-heart-pulse-line pkg__icon" aria-hidden="true"></i>
+              
+              <h3 class="pkg__name">Heart Specialized</h3>
+              <p class="pkg__duration"><i class="ri-time-line" aria-hidden="true"></i> 4 hours</p>
+            </header>
+            <div class="pkg__price"><span class="price__value">$3,000</span><span class="price__split">male</span><span class="price__value">$3,400</span><span class="price__split">female</span></div>
+            <p class="pkg__desc">Comprehensive cardiovascular screening for those with heart disease risk factors. Includes coronary CT angiography, carotid ultrasound, treadmill stress test, and arterial stiffness assessment.</p>
+            <ul class="ticks">
+              <li>All Essential B items included</li>
+              <li>Coronary CT angiography with calcium scoring</li>
+              <li>Carotid artery ultrasonography &amp; Treadmill stress test</li>
+              <li>Arterial stiffness &amp; Peripheral artery stenosis test</li>
+            </ul>
+            <details class="pkg__gender">
+              <summary>Gender-specific screening</summary>
+              <div class="pkg__gender-grid">
+                <div>
+                  <h4>Male</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Prostate ultrasonography</li>
+                <li>Digital rectal exam</li>
+                <li>Prostate-specific antigen (PSA)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Female</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Pap smear (cervical cytology)</li>
+                <li>HPV test</li>
+                <li>Breast ultrasonography</li>
+                <li>Pelvic ultrasonography</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+            <a class="btn btn--ghost btn--block" href="#contact">Book this package</a>
+          </article>
+          <article class="pkg" id="pkg-4">
+            <header class="pkg__head">
+              <i class="ri-stethoscope-line pkg__icon" aria-hidden="true"></i>
+              
+              <h3 class="pkg__name">Intensive Program</h3>
+              <p class="pkg__duration"><i class="ri-time-line" aria-hidden="true"></i> 6 hours</p>
+            </header>
+            <div class="pkg__price"><span class="price__value">$3,600</span><span class="price__split">male</span><span class="price__value">$4,000</span><span class="price__split">female</span></div>
+            <p class="pkg__desc">Executive cancer &amp; heart screening combined. Covers all major advanced imaging from both cancer and cardiac protocols in one intensive session for maximum disease detection.</p>
+            <ul class="ticks">
+              <li>All Essential B items included</li>
+              <li>Abdominal &amp; Pelvic CT + Coronary CT angiography</li>
+              <li>Carotid ultrasonography + Treadmill stress test</li>
+              <li>Arterial stiffness &amp; Cardiac biomarkers</li>
+            </ul>
+            <details class="pkg__gender">
+              <summary>Gender-specific screening</summary>
+              <div class="pkg__gender-grid">
+                <div>
+                  <h4>Male</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Prostate ultrasonography</li>
+                <li>Digital rectal exam</li>
+                <li>Prostate-specific antigen (PSA)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Female</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Pap smear (cervical cytology)</li>
+                <li>HPV test</li>
+                <li>Breast ultrasonography</li>
+                <li>Pelvic ultrasonography</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+            <a class="btn btn--ghost btn--block" href="#contact">Book this package</a>
+          </article>
+          <article class="pkg" id="pkg-5">
+            <header class="pkg__head">
+              <i class="ri-vip-crown-line pkg__icon" aria-hidden="true"></i>
+              
+              <h3 class="pkg__name">Platinum Program</h3>
+              <p class="pkg__duration"><i class="ri-time-line" aria-hidden="true"></i> 7 hours</p>
+            </header>
+            <div class="pkg__price"><span class="price__value">$6,000</span><span class="price__split">male</span><span class="price__value">$6,300</span><span class="price__split">female</span></div>
+            <p class="pkg__desc">Maximum comprehensive screening including cancer, heart, and brain MRI/MRA. Brain imaging for stroke and dementia prevention, plus allergy, osteoporosis, and anemia panels.</p>
+            <ul class="ticks">
+              <li>Brain MRI/MRA with carotid imaging</li>
+              <li>Coronary CT, Abdominal &amp; Pelvic CT</li>
+              <li>Allergy panel (3 types), Osteoporosis risk (3 types), Anemia panel (3 types)</li>
+              <li>Treadmill test &amp; Carotid ultrasonography</li>
+            </ul>
+            <details class="pkg__gender">
+              <summary>Gender-specific screening</summary>
+              <div class="pkg__gender-grid">
+                <div>
+                  <h4>Male</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Prostate ultrasonography</li>
+                <li>Digital rectal exam</li>
+                <li>Prostate-specific antigen (PSA)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Female</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Pap smear (cervical cytology)</li>
+                <li>HPV test</li>
+                <li>Breast ultrasonography</li>
+                <li>Mammography (35+)</li>
+                <li>Pelvic ultrasonography</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+            <a class="btn btn--ghost btn--block" href="#contact">Book this package</a>
+          </article>
+          <article class="pkg" id="pkg-6">
+            <header class="pkg__head">
+              <i class="ri-home-heart-line pkg__icon" aria-hidden="true"></i>
+              <span class="pill pill--accent">Most Popular</span>
+              <h3 class="pkg__name">Premium Program</h3>
+              <p class="pkg__duration"><i class="ri-time-line" aria-hidden="true"></i> 2 Days / 1 Night</p>
+            </header>
+            <div class="pkg__price"><span class="price__value">$6,900</span><span class="price__split">male</span><span class="price__value">$7,300</span><span class="price__split">female</span><span class="price__plus">Premium Plus $11,200 male · $11,500 female</span></div>
+            <p class="pkg__desc">Most comprehensive screening in a luxurious hotel-style facility. Includes all Platinum diagnostics plus private room accommodation, nurse escort, and meals. Optional VIP suite upgrade available.</p>
+            <ul class="ticks">
+              <li>2 days &amp; 1 night with private room accommodation</li>
+              <li>All Platinum program items included</li>
+              <li>Brain MRI/MRA, Colonoscopy &amp; Gastroscopy</li>
+              <li>Dedicated nurse escort, meals, and English report</li>
+            </ul>
+            <details class="pkg__gender">
+              <summary>Gender-specific screening</summary>
+              <div class="pkg__gender-grid">
+                <div>
+                  <h4>Male</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Prostate ultrasonography</li>
+                <li>Digital rectal exam</li>
+                <li>Prostate-specific antigen (PSA)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Female</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Pap smear (cervical cytology)</li>
+                <li>HPV test</li>
+                <li>Breast ultrasonography</li>
+                <li>Mammography (35+)</li>
+                <li>Pelvic ultrasonography</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+            <a class="btn btn--ghost btn--block" href="#contact">Book this package</a>
+          </article>
+          <article class="pkg" id="pkg-7">
+            <header class="pkg__head">
+              <i class="ri-user-smile-line pkg__icon" aria-hidden="true"></i>
+              
+              <h3 class="pkg__name">Teen Health Screening</h3>
+              <p class="pkg__duration"><i class="ri-time-line" aria-hidden="true"></i> 2 hours</p>
+            </header>
+            <div class="pkg__price"><span class="price__value">$1,000</span></div>
+            <p class="pkg__desc">Specialized program for adolescents and young adults. Baseline health assessment with age-appropriate blood panels, infectious disease immunity testing, and lifestyle consultation.</p>
+            <ul class="ticks">
+              <li>Abdominal ultrasonography &amp; ECG</li>
+              <li>Chest X-ray &amp; Ophthalmic exam</li>
+              <li>Blood tests: anemia, diabetes, hepatitis, thyroid, vitamin D, allergy</li>
+              <li>Dental assessment &amp; Body measurement</li>
+            </ul>
+            <details class="pkg__gender">
+              <summary>Gender-specific screening</summary>
+              <div class="pkg__gender-grid">
+                <div>
+                  <h4>Male</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Testicular examination</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Female</h4>
+                  <ul class="ticks ticks--sm">
+                <li>Menstrual health consultation</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+            <a class="btn btn--ghost btn--block" href="#contact">Book this package</a>
+          </article>
+      </div>
+
+      <div class="table-wrap">
+        <h3 class="h3">Compare packages</h3>
+        <table class="compare">
+          <caption class="sr-only">Health check-up packages compared by duration, price in USD (male / female) and number of key inclusions.</caption>
+          <thead>
+            <tr><th scope="col">Package</th><th scope="col">Duration</th><th scope="col">Price (USD)</th><th scope="col">Highlights</th></tr>
+          </thead>
+          <tbody>
+              <tr>
+                <th scope="row"><a href="#pkg-0">Fundamental (Essential A)</a></th>
+                <td>2 hours</td>
+                <td>$1,500 / $2,200</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#pkg-1">Essential Program B</a></th>
+                <td>3 hours</td>
+                <td>$2,200 / $2,400</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#pkg-2">Cancer Specialized</a></th>
+                <td>5 hours</td>
+                <td>$2,900</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#pkg-3">Heart Specialized</a></th>
+                <td>4 hours</td>
+                <td>$3,000 / $3,400</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#pkg-4">Intensive Program</a></th>
+                <td>6 hours</td>
+                <td>$3,600 / $4,000</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#pkg-5">Platinum Program</a></th>
+                <td>7 hours</td>
+                <td>$6,000 / $6,300</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#pkg-6">Premium Program</a></th>
+                <td>2 Days / 1 Night</td>
+                <td>$6,900 / $7,300</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th scope="row"><a href="#pkg-7">Teen Health Screening</a></th>
+                <td>2 hours</td>
+                <td>$1,000</td>
+                <td>4</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="includes">
+        <h3 class="h3">Every check-up includes</h3>
+        <ul class="ticks ticks--cols">
+            <li>Health Questionnaire &amp; Medical Consultation</li>
+            <li>Comprehensive Lifestyle Assessment</li>
+            <li>Detailed Specialist Medical Consultation</li>
+            <li>English Medical Report &amp; Documentation</li>
+            <li>Medical Image CD Copy</li>
+            <li>Hospital Referral System</li>
+            <li>Body Composition Analysis &amp; Measurement</li>
+            <li>Blood Pressure Measurement</li>
+            <li>Visual Acuity &amp; Ophthalmic Eye Exam</li>
+            <li>Professional Dental Assessment</li>
+            <li>Electrocardiography (ECG)</li>
+            <li>Chest X-ray (Front &amp; Lateral Views)</li>
+            <li>Complete Urinalysis</li>
+            <li>Hepatitis A/B/C Antibody Testing</li>
+            <li>HIV/AIDS Screening</li>
+            <li>Syphilis Test (RPR/VDRL)</li>
+            <li>Blood Type Determination</li>
+            <li>Complete Blood Count (CBC)</li>
+            <li>Liver, Kidney &amp; Lipid Function Tests</li>
+            <li>Thyroid Function Test (TSH, T3, T4)</li>
+            <li>Fasting Blood Sugar &amp; Diabetes Screening</li>
+            <li>Uric Acid &amp; Electrolyte Panel</li>
+            <li>Inflammation Markers (CRP)</li>
+            <li>Rheumatoid Factor &amp; Autoimmune Screening</li>
+        </ul>
+      </div>
+
+      <div class="callout">
+        <p>Not sure which package is right for you? Our coordinators will design a personalised screening plan and arrange a consultation with our physician to support your decision.</p>
+        <a class="btn btn--primary" href="#contact">Book a Health Check-up Consultation</a>
+      </div>
+
+      <div class="contact-strip">
+        <a href="tel:+855969909079"><i class="ri-phone-line" aria-hidden="true"></i> +855 96 990 9079</a>
+        <a href="mailto:medical@camnemi.com"><i class="ri-mail-line" aria-hidden="true"></i> medical@camnemi.com</a>
+      </div>
+      <p class="note note--bordered"><strong>Exchange rate notice.</strong> All prices are displayed in USD for reference purposes only. Final pricing may vary based on current exchange rates at the time of booking and payment. For the most accurate pricing, please contact our coordinators directly.</p>
+    </div>
+  </section>
+
+  <!-- ============================ PLASTIC SURGERY ============================ -->
+  <section class="section" id="plastic-surgery">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Real results. Real reputation.</p>
+        <h2 class="h2">Asan Medical Center Plastic Surgery Excellence</h2>
+        <p class="lede">Not just Korea's No.1 — Asan's Plastic Surgery Department is a global destination for both reconstructive and aesthetic surgery. Over 4,500 procedures annually, with a 98.7% success rate and international patients from 100+ countries. This is where the world comes to get beautiful.</p>
+      </header>
+      <ul class="stat-row">
+          <li class="stat">
+            <span class="stat__value">4,500+</span>
+            <span class="stat__label">Plastic Surgery Cases</span>
+            <span class="stat__sub">Performed Annually</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">1,000+</span>
+            <span class="stat__label">Microsurgical Reconstructions</span>
+            <span class="stat__sub">Head &amp;amp; Neck Milestone (2019)</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">7,000+</span>
+            <span class="stat__label">Cleft Lip &amp;amp; Palate Surgeries</span>
+            <span class="stat__sub">Cumulative Milestone (2021)</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">50:50</span>
+            <span class="stat__label">Reconstructive : Aesthetic</span>
+            <span class="stat__sub">Balanced Surgical Excellence</span>
+          </li>
+      </ul>
+
+      <h3 class="h3 h3--center">World-class procedures at Asan Medical Center</h3>
+      <div class="procs">
+          <article class="proc">
+            <div class="proc__media">
+              <img src="assets/img/248e0cd71c45845548c514626afc9eb2.webp" alt="Facial Contouring — Asan Medical Center" loading="lazy" decoding="async" width="640" height="420">
+            </div>
+            <div class="proc__body">
+              <i class="ri-shape-2-line proc__icon" aria-hidden="true"></i>
+              <h3 class="proc__title">Facial Contouring</h3>
+              <p class="proc__subtitle">V-line · Zygoma Reduction · Genioplasty</p>
+              <p class="proc__desc">Asan&#x27;s facial bone surgery team is recognized globally for precision V-line surgery and 3D-guided facial contouring. Over 300 complex facial bone cases handled annually with custom surgical planning.</p>
+            </div>
+          </article>
+          <article class="proc">
+            <div class="proc__media">
+              <img src="assets/img/90cad53d24aa726075e6742dc522168d.webp" alt="Double Jaw Surgery — Asan Medical Center" loading="lazy" decoding="async" width="640" height="420">
+            </div>
+            <div class="proc__body">
+              <i class="ri-emotion-line proc__icon" aria-hidden="true"></i>
+              <h3 class="proc__title">Double Jaw Surgery</h3>
+              <p class="proc__subtitle">Orthognathic · TMJ Correction · Sleep Apnea</p>
+              <p class="proc__desc">Asan&#x27;s oral and maxillofacial plastic surgery team performs complex orthognathic procedures combining functional correction with aesthetic harmony, using virtual surgical planning for predictable outcomes.</p>
+            </div>
+          </article>
+          <article class="proc">
+            <div class="proc__media">
+              <img src="assets/img/6c194fe4e61fc368ae1fbe7682b8bb36.webp" alt="Rhinoplasty — Asan Medical Center" loading="lazy" decoding="async" width="640" height="420">
+            </div>
+            <div class="proc__body">
+              <i class="ri-user-smile-line proc__icon" aria-hidden="true"></i>
+              <h3 class="proc__title">Rhinoplasty</h3>
+              <p class="proc__subtitle">Primary · Revision · Ethnic Asian Rhinoplasty</p>
+              <p class="proc__desc">Specializing in Asian rhinoplasty with autologous tissue techniques. Asan surgeons are internationally invited lecturers on complex revision rhinoplasty — a testament to their mastery in nasal reconstruction.</p>
+            </div>
+          </article>
+          <article class="proc">
+            <div class="proc__media">
+              <img src="assets/img/716bde63ba5e79f6d060bec6ee0d6a0b.webp" alt="Microsurgical Reconstruction — Asan Medical Center" loading="lazy" decoding="async" width="640" height="420">
+            </div>
+            <div class="proc__body">
+              <i class="ri-surgical-mask-line proc__icon" aria-hidden="true"></i>
+              <h3 class="proc__title">Microsurgical Reconstruction</h3>
+              <p class="proc__subtitle">Free Flap · Nerve Repair · Lymphatic Surgery</p>
+              <p class="proc__desc">Asan Medical Center&#x27;s microsurgery program is world-class — with a 98.7% success rate. Surgeons from over 30 countries have completed fellowships here, including MD Anderson Cancer Center alumni returning to learn advanced techniques.</p>
+            </div>
+          </article>
+          <article class="proc">
+            <div class="proc__media">
+              <img src="assets/img/fb3ea42194a653201b9a24eb6fa3b52d.webp" alt="Blepharoplasty — Asan Medical Center" loading="lazy" decoding="async" width="640" height="420">
+            </div>
+            <div class="proc__body">
+              <i class="ri-eye-line proc__icon" aria-hidden="true"></i>
+              <h3 class="proc__title">Blepharoplasty</h3>
+              <p class="proc__subtitle">Double Eyelid · Ptosis Correction · Canthoplasty</p>
+              <p class="proc__desc">Home to world leaders in Asian blepharoplasty. The department&#x27;s oculoplastic specialists handle over 1,000 eyelid procedures annually, from subtle double-eyelid creation to complex revision ptosis repair.</p>
+            </div>
+          </article>
+          <article class="proc">
+            <div class="proc__media">
+              <img src="assets/img/b1b8c1050a7c94620af81a6ad676037f.webp" alt="Anti-Aging &amp;amp; Lifting — Asan Medical Center" loading="lazy" decoding="async" width="640" height="420">
+            </div>
+            <div class="proc__body">
+              <i class="ri-restart-line proc__icon" aria-hidden="true"></i>
+              <h3 class="proc__title">Anti-Aging &amp;amp; Lifting</h3>
+              <p class="proc__subtitle">Facelift · Fat Grafting · Thread Lifting</p>
+              <p class="proc__desc">Combining surgical precision with aesthetic artistry, Asan&#x27;s anti-aging team offers deep-plane facelifts, structural fat grafting, and minimally invasive lifting — all backed by hospital-grade safety protocols private clinics cannot match.</p>
+            </div>
+          </article>
+          <article class="proc">
+            <div class="proc__media">
+              <img src="assets/img/edited_33def93e7d5518c6b374651dfe36a633_56307f57.jpg" alt="Breast Aesthetic Surgery — Asan Medical Center" loading="lazy" decoding="async" width="640" height="420">
+            </div>
+            <div class="proc__body">
+              <i class="ri-heart-2-line proc__icon" aria-hidden="true"></i>
+              <h3 class="proc__title">Breast Aesthetic Surgery</h3>
+              <p class="proc__subtitle">Augmentation · Mastopexy · Reduction · Reconstruction</p>
+              <p class="proc__desc">Asan&#x27;s breast surgery specialists provide the full spectrum of aesthetic and reconstructive breast procedures — from augmentation mammoplasty and mastopexy to reduction and microsurgical reconstruction — delivering natural-looking results with oncologic safety.</p>
+            </div>
+          </article>
+      </div>
+
+      <h3 class="h3 h3--center">Trusted by patients &amp; surgeons worldwide</h3>
+      <div class="grid grid--4">
+          <article class="card">
+            <i class="ri-global-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Global Fellowship Hub</h3>
+            <p class="card__body">Surgeons from 30+ countries have trained at Asan&#x27;s Plastic Surgery Department — including MD Anderson, Johns Hopkins, and European university hospitals.</p>
+          </article>
+          <article class="card">
+            <i class="ri-article-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Scientific Publications</h3>
+            <p class="card__body">Published in Plastic and Reconstructive Surgery, JAMA Facial Plastic Surgery, and other top-tier journals — setting clinical standards adopted worldwide.</p>
+          </article>
+          <article class="card">
+            <i class="ri-mic-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">International Congress Faculty</h3>
+            <p class="card__body">Asan plastic surgeons are regularly invited as keynote speakers and live surgery demonstrators at ASPS, ISAPS, and other global plastic surgery congresses.</p>
+          </article>
+          <article class="card">
+            <i class="ri-flight-takeoff-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">50% International Patients</h3>
+            <p class="card__body">Half of all aesthetic procedures at Asan are performed on international patients — a testament to their global reputation for safety, skill, and natural results.</p>
+          </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SERVICES ============================ -->
+  <section class="section section--surface" id="services">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Our services</p>
+        <h2 class="h2">Premium Medical Services</h2>
+        <p class="lede">From booking appointments to interpretation and accommodation — Camnemi delivers personalised one-stop medical care.</p>
+      </header>
+      <div class="grid grid--4">
+          <article class="card card--service">
+            <i class="ri-heart-pulse-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Premium Medical Coordination</h3>
+            <p class="card__body">One-stop care from booking appointments with Asan Medical Center&#x27;s top doctors to interpretation, accommodation, and transportation — we handle everything.</p>
+            <ul class="ticks ticks--sm">
+              <li>Direct booking with top Asan doctors</li>
+              <li>Interpretation &amp; concierge support</li>
+              <li>Accommodation &amp; transportation arranged</li>
+            </ul>
+          </article>
+          <article class="card card--service">
+            <i class="ri-clipboard-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Custom Health Checkup Packages</h3>
+            <p class="card__body">We design premium comprehensive health screening programs with world-class diagnostic equipment and medical professionals.</p>
+            <ul class="ticks ticks--sm">
+              <li>Comprehensive screening programs</li>
+              <li>World-class diagnostic equipment</li>
+              <li>Same-day results &amp; English reports</li>
+            </ul>
+          </article>
+          <article class="card card--service">
+            <i class="ri-hospital-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Critical Care Treatment</h3>
+            <p class="card__body">Rapid connection to Asan Medical Center&#x27;s world-class treatment for critical conditions including cancer, heart disease, and neurological disorders.</p>
+            <ul class="ticks ticks--sm">
+              <li>Cancer, heart &amp; neuro treatment</li>
+              <li>Rapid access to specialists</li>
+              <li>Multidisciplinary care teams</li>
+            </ul>
+          </article>
+          <article class="card card--service">
+            <i class="ri-mental-health-line card__icon" aria-hidden="true"></i>
+            <h3 class="card__title">Rehabilitation &amp; Recovery Care</h3>
+            <p class="card__body">Systematic post-surgery rehabilitation programs and recovery care to help patients return to daily life as quickly as possible.</p>
+            <ul class="ticks ticks--sm">
+              <li>Post-surgery rehab programs</li>
+              <li>Personalized recovery plans</li>
+              <li>Return to daily life faster</li>
+            </ul>
+          </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SPECIALTIES ============================ -->
+  <section class="section" id="specialties">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Clinical specialties</p>
+        <h2 class="h2">Key Medical Specialties</h2>
+        <p class="lede">Asan Medical Center has been ranked in the World TOP 10 across 6 clinical specialties. Experience world-class treatment through Camnemi.</p>
+      </header>
+      <ul class="spec-grid">
+          <li class="spec">
+            <i class="ri-heart-pulse-line spec__icon" aria-hidden="true"></i>
+            <span class="spec__name">Cardiology</span>
+            <span class="spec__kr" lang="ko">심장내과</span>
+            <span class="spec__rank">Korea No.1</span>
+          </li>
+          <li class="spec">
+            <i class="ri-heart-add-line spec__icon" aria-hidden="true"></i>
+            <span class="spec__name">Cardiac Surgery</span>
+            <span class="spec__kr" lang="ko">심장외과</span>
+            <span class="spec__rank">Korea No.1</span>
+          </li>
+          <li class="spec">
+            <i class="ri-virus-line spec__icon" aria-hidden="true"></i>
+            <span class="spec__name">Oncology</span>
+            <span class="spec__kr" lang="ko">종양내과</span>
+            <span class="spec__rank">World No.4</span>
+          </li>
+          <li class="spec">
+            <i class="ri-brain-line spec__icon" aria-hidden="true"></i>
+            <span class="spec__name">Neurology</span>
+            <span class="spec__kr" lang="ko">신경과</span>
+            <span class="spec__rank">Korea No.1</span>
+          </li>
+          <li class="spec">
+            <i class="ri-test-tube-line spec__icon" aria-hidden="true"></i>
+            <span class="spec__name">Endocrinology</span>
+            <span class="spec__kr" lang="ko">내분비내과</span>
+            <span class="spec__rank">Korea No.1</span>
+          </li>
+          <li class="spec">
+            <i class="ri-run-line spec__icon" aria-hidden="true"></i>
+            <span class="spec__name">Orthopedics</span>
+            <span class="spec__kr" lang="ko">정형외과</span>
+            <span class="spec__rank">Korea No.1</span>
+          </li>
+          <li class="spec">
+            <i class="ri-stethoscope-line spec__icon" aria-hidden="true"></i>
+            <span class="spec__name">Gastroenterology</span>
+            <span class="spec__kr" lang="ko">소화기내과</span>
+            <span class="spec__rank">World No.4</span>
+          </li>
+          <li class="spec">
+            <i class="ri-drop-line spec__icon" aria-hidden="true"></i>
+            <span class="spec__name">Urology</span>
+            <span class="spec__kr" lang="ko">비뇨기과</span>
+            <span class="spec__rank">World No.6</span>
+          </li>
+      </ul>
+      <div class="callout callout--wide">
+        <h3 class="h3">52 specialized departments</h3>
+        <p>Asan Medical Center comprises 52 specialized departments in total, delivering comprehensive, multidisciplinary care across every medical and surgical discipline.</p>
+        <a class="btn btn--ghost" href="#contact">Contact us for department or treatment details</a>
+      </div>
+      <p class="note">※ Based on Newsweek World's Best Hospitals 2026 Clinical Rankings.</p>
+    </div>
+  </section>
+
+  <!-- ============================ CONTACT ============================ -->
+  <section class="section section--cta" id="contact">
+    <img class="cta__bg" src="assets/img/8f96211b28ca3ffbcb33f42d39179448.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+    <div class="wrap split split--contact">
+      <div class="split__body">
+        <h2 class="h2">Start your consultation now</h2>
+        <p class="lede">Consult with Camnemi's experienced medical coordinators and receive a personalised treatment plan designed around your specific needs and goals.</p>
+        <ul class="contact-list">
+          <li><i class="ri-mail-line" aria-hidden="true"></i><span class="contact-list__k">Email</span><a href="mailto:medical@camnemi.com">medical@camnemi.com</a></li>
+          <li><i class="ri-phone-line" aria-hidden="true"></i><span class="contact-list__k">Phone</span><a href="tel:+855969909079">+855 96 990 9079</a></li>
+          <li><i class="ri-send-plane-line" aria-hidden="true"></i><span class="contact-list__k">Telegram</span><a href="https://t.me/+855969909079">+855 96 990 9079</a></li>
+        </ul>
+      </div>
+      <div class="split__form">
+        <h3 class="h3">Send an inquiry by email</h3>
+        <p class="form-hint">This form opens your email app with your details filled in — nothing is sent to a third party.</p>
+        <form id="contact-form" class="form" novalidate>
+          <div class="field">
+            <label for="f-name">Name <span aria-hidden="true">*</span></label>
+            <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="f-email">Email <span aria-hidden="true">*</span></label>
+            <input id="f-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+855 …">
+          </div>
+          <div class="field">
+            <label for="f-interest">Area of interest</label>
+            <select id="f-interest" name="interest">
+              <option value="">Select an option</option>
+              <option>Plastic Surgery</option>
+              <option>Cardiology</option>
+              <option>Oncology</option>
+              <option>Neurology</option>
+              <option>Orthopedics</option>
+              <option>Health Checkup</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" rows="4" placeholder="Tell us briefly what you need"></textarea>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit">Send Inquiry by Email</button>
+          <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <span class="site-footer__mark"><img src="assets/img/camnemi-mark.webp" alt="Camnemi Korea" width="44" height="44"></span>
+      <p class="site-footer__tag">Premium medical, surgical &amp; health check-up platform — partnered with Korea's No.1 hospital.</p>
+    </div>
+    <nav aria-label="Footer">
+      <h4>Services</h4>
+      <ul>
+        <li>Medical Coordination</li>
+        <li>Visa Preparation</li>
+        <li>Accommodation</li>
+        <li>Transportation</li>
+        <li>Interpretation</li>
+      </ul>
+    </nav>
+    <div>
+      <h4>Partners</h4>
+      <ul><li>Asan Medical Center, Seoul</li></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:medical@camnemi.com">medical@camnemi.com</a></li>
+        <li><a href="tel:+855969909079">+855 96 990 9079</a></li>
+      </ul>
+      <a class="btn btn--ghost" href="#contact">Request Consultation</a>
+    </div>
+  </div>
+  <p class="site-footer__legal">© 2026 Camnemi Korea. All rights reserved.</p>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
 </html>

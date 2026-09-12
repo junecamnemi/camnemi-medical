@@ -1,61 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-        <script>
-      /*
-       * Resolve the SPA base path at runtime.
-       * The original build (Readdy) assumed it was served from a domain root.
-       * This lets the identical bundle run either at a root or under a
-       * GitHub Pages project subpath (e.g. /camnemi-medical/).
-       */
-      (function () {
-        var p = location.pathname;
-        var m = p.match(/^(\/[^\/]+\/)/);
-        window.__APP_BASE__ = m ? m[1] : (p.slice(-1) === "/" ? p : p + "/");
-        var b = document.createElement("base");
-        b.href = window.__APP_BASE__;
-        document.head.insertBefore(b, document.head.firstChild);
-      })();
-    </script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Camnemi Korea - Get Beautiful at Korea&apos;s No.1 Hospital | Plastic Surgery &amp; Aesthetic Services</title>
-    <meta name="description" content="Camnemi Korea connects you to Asan Medical Center&apos;s Plastic Surgery Department — Korea&apos;s largest team of board-certified surgeons with a 98.7% success rate. Premium beauty and aesthetic services including facial contouring, rhinoplasty, eye surgery, skin rejuvenation, and more at Korea&apos;s No.1 hospital." />
-    <meta name="keywords" content="Camnemi Korea, Korean plastic surgery, Asan Medical Center, beauty Korea, aesthetic surgery, facial contouring, rhinoplasty Korea, skin care Korea, K-beauty, cosmetic surgery Korea" />
-    <link rel="canonical" href="https://camnemi.com/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
-    <meta property="og:title" content="Camnemi Korea - Get Beautiful at Korea&apos;s No.1 Hospital | Plastic Surgery &amp; Aesthetic" />
-    <meta property="og:description" content="Premium beauty platform partnered with Korea&apos;s No.1 hospital — Asan Medical Center Plastic Surgery" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://camnemi.com/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Camnemi Korea - Get Beautiful at Korea&apos;s No.1 Hospital | Plastic Surgery" />
-    <meta name="twitter:description" content="Premium beauty platform partnered with Korea&apos;s No.1 hospital — Asan Medical Center Plastic Surgery" />
-    <meta name="geo.region" content="KR-11" />
-    <meta name="geo.placename" content="Seoul" />
-    <meta name="geo.position" content="37.5265;127.1082" />
-    <meta http-equiv="Last-Modified" content="2026-08-10T00:00:00Z" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MedicalOrganization",
-        "name": "Camnemi Korea",
-        "description": "Premium beauty and plastic surgery platform with official MoU with Asan Medical Center&apos;s Plastic Surgery Department",
-        "url": "https://camnemi.com",
-        "areaServed": {
-          "@type": "Country",
-          "name": "South Korea"
-        }
-      }
-    </script>
-          <script type="module" crossorigin src="assets/index-6zuHScgl.js"></script>
-          <link rel="stylesheet" crossorigin href="assets/index-gS4WCt3f.css">
-        </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Camnemi Korea</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .notfound { min-height: 100svh; display: grid; place-items: center; text-align: center; padding: 3rem 0; }
+  .notfound__code { font-family: var(--font-display); font-size: clamp(4rem, 18vw, 9rem); color: var(--primary); line-height: 1; }
+  .notfound p { color: var(--ink-500); max-width: 44ch; margin: 1rem auto 2rem; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/">
+      <img class="brand__mark" src="assets/img/camnemi-mark.webp" alt="" width="44" height="44">
+      <span class="brand__name">Camnemi Korea</span>
+    </a>
+  </div>
+</header>
+<main class="wrap notfound">
+  <div>
+    <p class="notfound__code">404</p>
+    <h1 class="h2">That page isn't here</h1>
+    <p>The page you were looking for doesn't exist or has moved. Everything on this site lives on the home page.</p>
+    <a class="btn btn--primary" href="/">Back to Camnemi Korea</a>
+  </div>
+</main>
+</body>
 </html>
