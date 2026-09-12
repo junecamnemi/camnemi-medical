@@ -67,6 +67,7 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden; /* guard against any single element forcing a sideways scroll */
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -231,7 +232,7 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 /* mobile nav */
 .nav-toggle {
   display: none;
-  width: 42px; height: 42px; padding: 0;
+  width: 44px; height: 44px; padding: 0;
   border: 1px solid var(--line); border-radius: var(--r-sm);
   background: var(--surface); cursor: pointer;
   flex-direction: column; align-items: center; justify-content: center; gap: 5px;
@@ -246,17 +247,22 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 @media (max-width: 960px) {
   .nav-toggle { display: flex; }
   .site-nav {
-    position: fixed; inset: 0 0 auto 0;
-    top: calc(4.25rem + 2rem);
-    margin: 0; padding: 1rem 1.25rem 1.5rem;
+    /* anchor flush under the whole header (inner + agency strip), so we
+       never hardcode the header height — robust when the strip wraps */
+    position: absolute; top: 100%; left: 0; right: 0;
+    margin: 0; padding: .5rem 1.25rem 1rem;
     background: var(--surface);
     border-bottom: 1px solid var(--line);
     box-shadow: var(--sh-md);
+    max-height: calc(100dvh - 100%);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     display: none;
   }
   .site-nav.is-open { display: block; }
   .site-nav ul { flex-direction: column; align-items: stretch; gap: 0; }
-  .site-nav a { padding: .85rem .25rem; border-bottom: 1px solid var(--line-soft); }
+  .site-nav a { padding: .95rem .25rem; border-bottom: 1px solid var(--line-soft); }
+  .site-nav a::after { display: none; }
   .site-nav li:last-child a { border-bottom: 0; }
 }
 
@@ -551,6 +557,9 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 
 /* --- 12. Comparison table ----------------------------------------------- */
 .table-wrap { margin-top: clamp(2.5rem, 5vw, 4rem); }
+/* let a narrow phone scroll the table sideways instead of squashing it */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-scroll .compare { min-width: 34rem; }
 .table-wrap .h3 { margin-bottom: 1rem; }
 .compare {
   width: 100%; border-collapse: collapse;
@@ -575,9 +584,6 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 .compare tbody tr:nth-child(even) { background: var(--bg); }
 .compare a { color: var(--ink-900); }
 .compare a:hover { color: var(--primary); }
-@media (max-width: 640px) {
-  .compare thead th:nth-child(4), .compare td:nth-child(4) { display: none; }
-}
 
 /* --- 13. Includes / callouts ------------------------------------------- */
 .includes { margin-top: clamp(2.5rem, 5vw, 4rem); }
@@ -689,6 +695,9 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: start;
 }
+@media (max-width: 860px) {
+  .split--contact { grid-template-columns: 1fr; }
+}
 .contact-list { display: grid; gap: 1rem; margin-top: 1.75rem; }
 .contact-list li {
   display: grid;
@@ -726,7 +735,7 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 .field input, .field select, .field textarea {
   width: 100%;
   padding: .7rem .85rem;
-  font-size: .94rem;
+  font-size: 16px; /* >=16px so iOS Safari does not zoom the page on focus */
   background: var(--bg);
   border: 1px solid var(--line);
   border-radius: var(--r-sm);
@@ -801,4 +810,32 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
     transition-duration: .001ms !important;
   }
   .reveal { opacity: 1; transform: none; }
+}
+
+/* --- 19. Small phones (<=480px) ---------------------------------------- */
+@media (max-width: 480px) {
+  :root { --section-y: clamp(2.75rem, 2rem + 5vw, 4rem); }
+  .wrap { width: min(100% - 1.75rem, var(--wrap)); }
+
+  /* header: keep only the mark; the "Book Now" pill would crowd the toggle */
+  .brand__name { font-size: 1.05rem; }
+  .site-header__inner { gap: .75rem; }
+  .site-header__cta .btn--primary { display: none; }
+
+  /* hero: one full-width CTA stack reads better than wrapped pills */
+  .hero__actions .btn { width: 100%; }
+  .badge-card { min-width: 0; flex: 1 1 100%; }
+
+  /* stats: two-up instead of one giant column */
+  .stat-row { grid-template-columns: 1fr 1fr; }
+  .hero__stats { grid-template-columns: 1fr 1fr; }
+
+  .btn--lg { padding: .8rem 1.3rem; }
+  .contact-strip { gap: .6rem 1rem; }
+}
+
+/* comfortable tap targets on any touch device */
+@media (hover: none) {
+  .site-nav a, .btn, .contact-list a, .compare a { min-height: 44px; }
+  .btn { min-height: 44px; }
 }
