@@ -1,48 +1,71 @@
-# Camnemi × Asan Medical Center — Website
+# Camnemi Korea × Asan Medical Center — Website
 
-A static mirror of the Camnemi / Asan Medical Center platform
+A static mirror of the Camnemi Korea / Asan Medical Center platform
 (`https://mfbcbt.readdy.co`), published to GitHub Pages.
 
-## Pages
+**Live:** https://junecamnemi.github.io/camnemi-medical/
 
-| Route | Content |
-|-------|---------|
-| `/` | Home — Asan Medical Center overview, health check-up programs, plastic surgery, medical specialties, inquiry form |
-| `/about-asan` | About Asan Medical Center |
-| `/plastic-surgery` | Plastic surgery procedures |
+## Source
 
-The app is a client-routed single page application, so deep links such as
-`/about-asan` are served through `404.html` (a byte-identical copy of
-`index.html`), which boots the SPA at that route.
+The original is a Readdy-built Vite/React single-page app. Its whole
+front-end is three files plus imagery:
 
-## Structure
+| File in this repo | Origin |
+|---|---|
+| `index.html` | `/` (shell, modified — see below) |
+| `assets/index-6zuHScgl.js` | `/assets/index-6zuHScgl.js` |
+| `assets/index-gS4WCt3f.css` | `/assets/index-gS4WCt3f.css` |
+| `assets/img/*` | 13 images from `public.readdy.ai` |
 
-```
-index.html                  entry point (SPA shell)
-404.html                    copy of index.html — deep-link fallback for GitHub Pages
-assets/index-*.js           application bundle (single chunk, self-contained)
-assets/index-*.css          application stylesheet
-assets/img/*                18 images localized from the original CDN
-```
+Rebranded to "Camnemi Korea" and collapsed to a single page (route `/`)
+in the build this mirror tracks — the earlier `/about-asan` and
+`/plastic-surgery` routes no longer exist upstream.
 
-All imagery was downloaded from the original host and is served from
-`assets/img/` so the mirror has no third-party asset dependency.
+## Changes made to the original
+
+1. **Images localized.** All 13 images were downloaded from
+   `public.readdy.ai` and rewritten to `assets/img/`, so the mirror has no
+   dependency on Readdy's CDN.
+2. **Runtime base path.** The original bundle hardcoded
+   `basename: "/"`, which breaks under a GitHub Pages project subpath.
+   The bundle now reads `basename: window.__APP_BASE__ || "/"`, and
+   `index.html` sets `window.__APP_BASE__` (plus a `<base>` tag) from the
+   current URL before the bundle loads. The same files therefore work at a
+   domain root *or* under `/camnemi-medical/`.
+3. **Telemetry removed.** Readdy's `event-reporting.min.js`,
+   `EventReportingConfig` and the `readdy-project-version` meta tag were
+   dropped.
+4. **`404.html`** — a copy of `index.html`, so any stray path still boots
+   the app (GitHub Pages serves it for 404s under this project path).
+5. **Broken favicon link removed** — `/vite.svg` returns the SPA shell on
+   the origin, not an icon.
+
 Fonts (Google Fonts) and icon fonts (Font Awesome, Remixicon) still load
-from their public CDNs, and the YouTube embeds are unchanged.
+from their public CDNs; YouTube embeds are untouched.
+
+## Still Readdy-dependent
+
+* The inquiry form posts to `readdy.ai/api/form/daieo3roh653ivfvoch0`.
+* The Readdy footer badge/watermark is retained.
+
+Repoint both if this mirror ever becomes the production site.
 
 ## Local preview
 
 ```bash
-# from the parent directory, so the subpath matches GitHub Pages
+# run from the PARENT directory so the subpath matches GitHub Pages
 python -m http.server 8080
-# open http://localhost:8080/camnemi-medical/
+# http://localhost:8080/camnemi-medical/
 ```
 
-## Notes
+## Re-syncing when the upstream site changes
 
-* The bundle's router basename is resolved at runtime from the URL, so the
-  same files work at a domain root or under the `/camnemi-medical/` project
-  subpath.
-* The original readdy.ai telemetry/event-reporting script was removed. The
-  inquiry form still posts to the original endpoint, and the Readdy footer
-  badge is retained — replace both if this mirror becomes the production site.
+The upstream bundle is content-hashed, so a stale mirror is detectable:
+
+```bash
+curl -s https://mfbcbt.readdy.co/ | grep -oE 'assets/index-[A-Za-z0-9_-]+\.(js|css)'
+```
+
+If those filenames differ from the ones in this repo, the origin has been
+rebuilt: fetch the new shell + bundle + CSS, re-run the image
+localization and the `basename` patch, swap the files, then commit.
