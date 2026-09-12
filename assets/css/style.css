@@ -983,3 +983,16 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 .site-footer__addr { line-height: 1.5; color: oklch(1 0 0 / .6); margin-top: .2rem; }
 .site-footer__addr strong { display: block; color: oklch(1 0 0 / .82); font-weight: 600; font-size: .78rem; margin-top: .5rem; }
 .site-footer__addr a { display: inline-block; margin-top: .25rem; }
+
+/* --- 23. Doctor profile: match photo height to the text block ---------- */
+.split--profile { align-items: stretch; }
+.split--profile .split__media { height: 100%; }
+.split--profile .split__media img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+@media (max-width: 860px) {
+  /* stacked on mobile: give the photo a sensible fixed height */
+  .split--profile .split__media img { height: auto; max-height: 26rem; }
+}
