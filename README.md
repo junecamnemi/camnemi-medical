@@ -66,6 +66,21 @@ The upstream bundle is content-hashed, so a stale mirror is detectable:
 curl -s https://mfbcbt.readdy.co/ | grep -oE 'assets/index-[A-Za-z0-9_-]+\.(js|css)'
 ```
 
-If those filenames differ from the ones in this repo, the origin has been
-rebuilt: fetch the new shell + bundle + CSS, re-run the image
-localization and the `basename` patch, swap the files, then commit.
+If those differ from the filenames in this repo, the origin was rebuilt.
+Re-sync in one step:
+
+```bash
+python tools/sync_from_origin.py   # then: git diff --stat, commit, push
+```
+
+That script re-does steps 1–4 above from scratch: it discovers the new
+asset names, downloads the new bundle/CSS/images, re-applies the image
+localization and basename patch, regenerates `index.html` + `404.html`
+from the upstream shell, and deletes superseded files.
+
+> **Windows pitfall:** the script writes everything in *binary* mode on
+> purpose. A text-mode write translates `\n` → `\r\n` **inside the
+> minified JS string literals**, silently corrupting the bundle (it slipped
+> through once, adding 10 stray CR bytes). Keep it binary; `.gitattributes`
+> pins LF in the repo.
+
