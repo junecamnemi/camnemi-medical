@@ -100,9 +100,7 @@
 
       var name = form.elements.name;
       var email = form.elements.email;
-      var phone = form.elements.phone;
-      var interest = form.elements.interest;
-      var message = form.elements.message;
+      var submitBtn = form.querySelector('button[type="submit"]');
 
       [name, email].forEach(function (el) {
         el.setAttribute("aria-invalid", el.value.trim() ? "false" : "true");
@@ -122,23 +120,33 @@
         return;
       }
 
-      var lines = [
-        "Name: " + name.value.trim(),
-        "Email: " + email.value.trim(),
-        "Phone: " + (phone.value.trim() || "-"),
-        "Area of Interest: " + (interest.value || "-"),
-        "",
-        message.value.trim()
-      ].join("\r\n");
+      // POST to Web3Forms (no page reload); it relays the inquiry to Camnemi.
+      var payload = JSON.stringify(Object.fromEntries(new FormData(form).entries()));
+      var origLabel = submitBtn ? submitBtn.textContent : "";
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
+      setStatus("Sending your inquiry…", null);
 
-      var href = "mailto:" + EMAIL +
-        "?subject=" + encodeURIComponent("Camnemi Korea - Medical Inquiry") +
-        "&body=" + encodeURIComponent(lines);
-
-      window.location.href = href;
-      setStatus("Your email app is opening with your inquiry. Send it to reach " + EMAIL + ".", "ok");
-      form.reset();
-      [name, email].forEach(function (el) { el.setAttribute("aria-invalid", "false"); });
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: payload
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          if (res.ok && res.d && res.d.success) {
+            setStatus("Thank you — your inquiry has been sent. Our coordinators will reply shortly.", "ok");
+            form.reset();
+            [name, email].forEach(function (el) { el.setAttribute("aria-invalid", "false"); });
+          } else {
+            setStatus("Sorry, something went wrong. Please email us directly at " + EMAIL + ".", "err");
+          }
+        })
+        .catch(function () {
+          setStatus("Network error. Please email us directly at " + EMAIL + ".", "err");
+        })
+        .finally(function () {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = origLabel || "Send Inquiry"; }
+        });
     });
 
     form.addEventListener("input", function (e) {

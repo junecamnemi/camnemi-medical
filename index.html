@@ -958,9 +958,13 @@
         </ul>
       </div>
       <div class="split__form">
-        <h3 class="h3">Send an inquiry by email</h3>
-        <p class="form-hint">This form opens your email app with your details filled in — nothing is sent to a third party.</p>
+        <h3 class="h3">Send an inquiry</h3>
+        <p class="form-hint">Fill in your details and we'll reply to medical@camnemi.com — usually within one business day.</p>
         <form id="contact-form" class="form" novalidate>
+          <input type="hidden" name="access_key" value="4bee4d58-9f58-4bfa-aa77-f2d4444e94fe">
+          <input type="hidden" name="subject" value="Camnemi Korea — New Medical Inquiry">
+          <input type="hidden" name="from_name" value="Camnemi Korea Website">
+          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="field">
             <label for="f-name">Name <span aria-hidden="true">*</span></label>
             <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Your name">
@@ -990,7 +994,7 @@
             <label for="f-message">Message</label>
             <textarea id="f-message" name="message" rows="4" placeholder="Tell us briefly what you need"></textarea>
           </div>
-          <button class="btn btn--primary btn--block" type="submit">Send Inquiry by Email</button>
+          <button class="btn btn--primary btn--block" type="submit">Send Inquiry</button>
           <p class="form-status" role="status" aria-live="polite" data-form-status></p>
         </form>
       </div>
