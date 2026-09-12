@@ -751,12 +751,6 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
   gap: clamp(1.5rem, 3vw, 3rem);
   padding-bottom: 2.5rem;
 }
-/* the mark sits on a white chip so it stays legible on the dark footer */
-.site-footer__mark {
-  display: inline-flex; padding: 8px;
-  background: #fff; border-radius: 14px;
-}
-.site-footer__mark img { width: 48px; height: 48px; }
 .site-footer__tag {
   margin-top: 1rem; font-size: .88rem; max-width: 34ch;
   color: oklch(1 0 0 / .55);
@@ -951,3 +945,37 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 @media (max-width: 560px) {
   .modal__includes-list { columns: 1; }
 }
+
+/* --- 22. Asan partner lockups (hero + footer) -------------------------- */
+.hero__partner {
+  display: inline-flex; align-items: center; gap: .7rem;
+  margin-bottom: 1.1rem;
+  padding: .4rem .9rem .4rem .45rem;
+  border-radius: 999px;
+  background: oklch(1 0 0 / .12);
+  border: 1px solid oklch(1 0 0 / .28);
+  backdrop-filter: blur(8px);
+}
+.hero__partner-logo {
+  display: inline-flex; padding: 3px;
+  background: #fff; border-radius: 50%;
+}
+.hero__partner-logo img { width: 34px; height: 34px; border-radius: 50%; }
+.hero__partner-text {
+  font-size: .8rem; line-height: 1.25; color: oklch(1 0 0 / .82);
+  text-align: left;
+}
+.hero__partner-text strong { color: #fff; font-weight: 700; }
+
+.site-footer__lockup { display: flex; align-items: center; gap: .6rem; margin-bottom: .9rem; }
+.site-footer__x { color: oklch(1 0 0 / .45); font-size: 1.1rem; }
+.site-footer__mark {
+  display: inline-flex; padding: 7px;
+  background: #fff; border-radius: 12px;
+}
+.site-footer__mark img { width: 40px; height: 40px; }
+.site-footer__badge {
+  font-size: .8rem; font-weight: 600; color: oklch(0.9 0.09 150);
+  margin-bottom: .7rem;
+}
+.site-footer__badge span { color: oklch(0.86 0.15 85); }
