@@ -312,8 +312,24 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
   backdrop-filter: blur(8px);
   text-align: center; align-items: center;
   transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
+  position: relative;
 }
 .award:hover { transform: translateY(-3px); background: oklch(1 0 0 / .14); }
+.award__link {
+  display: flex; flex-direction: column; align-items: center; gap: .1rem;
+  color: inherit; text-decoration: none;
+}
+.award__link:hover { text-decoration: none; }
+.award:has(.award__link) { padding: 0; }
+.award:has(.award__link) .award__link { padding: .95rem 1rem 1rem; width: 100%; }
+.award:has(.award__link) .award__src { color: oklch(0.9 0.09 150); font-weight: 600; }
+.award:has(.award__link)::after {
+  content: "92"; /* subtle affordance that this chip navigates */
+  position: absolute; top: .55rem; right: .7rem;
+  font-size: .8rem; color: oklch(1 0 0 / .5);
+  transition: transform .2s ease, color .2s ease;
+}
+.award:has(.award__link):hover::after { transform: translateX(2px); color: oklch(0.9 0.09 150); }
 .award__icon {
   display: inline-flex; align-items: center; justify-content: center;
   width: 2.5rem; height: 2.5rem; margin-bottom: .55rem;
