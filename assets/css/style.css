@@ -295,38 +295,45 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 .hero .lede { color: oklch(1 0 0 / .94); margin-top: 1.4rem; max-width: 60ch; text-shadow: 0 1px 10px oklch(0.12 0.04 262 / .5); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.1rem; }
 
-.hero__stats { margin-top: clamp(2.5rem, 5vw, 4rem); }
-.hero .stat {
-  background: oklch(1 0 0 / .10);
-  border-color: oklch(1 0 0 / .22);
-  backdrop-filter: blur(8px);
-}
-.hero .stat__value { color: #fff; }
-.hero .stat__label { color: oklch(1 0 0 / .92); }
-.hero .stat__sub { color: oklch(1 0 0 / .62); }
-
-.badge-row {
-  display: flex; flex-wrap: wrap; gap: .75rem;
-  margin-top: 1.5rem;
+.hero__awards {
+  display: flex; flex-wrap: wrap; gap: .7rem;
+  margin-top: clamp(2.25rem, 4vw, 3.25rem);
   padding-top: 1.75rem;
   border-top: 1px solid oklch(1 0 0 / .18);
 }
-.badge-card {
-  display: flex; flex-direction: column; gap: .15rem;
-  padding: .85rem 1.15rem;
+/* prize / award chips: a single row of laurel-style trophies */
+.award {
+  flex: 1 1 0; min-width: 8.5rem;
+  display: flex; flex-direction: column; gap: .1rem;
+  padding: .95rem 1rem 1rem;
   border-radius: var(--r);
   background: oklch(1 0 0 / .10);
   border: 1px solid oklch(1 0 0 / .2);
   backdrop-filter: blur(8px);
-  min-width: 11rem;
+  text-align: center; align-items: center;
+  transition: transform .2s ease, border-color .2s ease, background-color .2s ease;
 }
-.badge-card__value {
+.award:hover { transform: translateY(-3px); background: oklch(1 0 0 / .14); }
+.award__icon {
+  font-size: 1.15rem; margin-bottom: .35rem;
+  color: oklch(0.9 0.09 150);
+}
+.award__value {
   font-family: var(--font-display);
-  font-size: 1.6rem; font-weight: 700; color: #fff; line-height: 1.1;
+  font-size: clamp(1.4rem, 1.1rem + .9vw, 1.85rem);
+  font-weight: 700; color: #fff; line-height: 1.05;
 }
-.badge-card__title { font-size: .82rem; font-weight: 600; color: oklch(1 0 0 / .95); }
-.badge-card__src { font-size: .74rem; color: oklch(0.9 0.09 150); font-weight: 600; }
-.badge-card__sub { font-size: .72rem; color: oklch(1 0 0 / .6); }
+.award__title { font-size: .8rem; font-weight: 600; color: oklch(1 0 0 / .95); }
+.award__src { font-size: .7rem; color: oklch(1 0 0 / .6); font-weight: 500; }
+
+/* the three ranking awards get the gold 'prize' treatment */
+.award--rank {
+  background: linear-gradient(160deg, oklch(0.82 0.14 85 / .22), oklch(1 0 0 / .08));
+  border-color: oklch(0.82 0.15 85 / .45);
+}
+.award--rank:hover { background: linear-gradient(160deg, oklch(0.82 0.14 85 / .30), oklch(1 0 0 / .10)); }
+.award--rank .award__icon { color: oklch(0.86 0.15 85); }
+.award--rank .award__value { color: oklch(0.94 0.10 88); }
 
 /* --- 7. Stat rows / figures --------------------------------------------- */
 .stat-row {
@@ -358,22 +365,6 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 .section--ink .stat__label { color: #fff; }
 .section--ink .stat__sub { color: oklch(1 0 0 / .6); }
 
-.staff { margin-top: 2.5rem; }
-.staff .h3 { color: #fff; }
-.staff__row {
-  display: flex; flex-wrap: wrap; gap: 1rem 2.5rem;
-  padding: 1.25rem 1.5rem;
-  border-radius: var(--r);
-  background: oklch(1 0 0 / .06);
-  border: 1px solid oklch(1 0 0 / .14);
-}
-.staff__row li { display: flex; flex-direction: column; }
-.staff__value {
-  font-family: var(--font-display);
-  font-size: 1.5rem; font-weight: 700; color: #fff;
-}
-.staff__label { font-size: .82rem; color: oklch(1 0 0 / .65); }
-.staff__total { margin-top: .9rem; font-size: .86rem; color: oklch(1 0 0 / .7); }
 
 /* --- 8. Sections -------------------------------------------------------- */
 .section { padding-block: var(--section-y); }
@@ -825,11 +816,11 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 
   /* hero: one full-width CTA stack reads better than wrapped pills */
   .hero__actions .btn { width: 100%; }
-  .badge-card { min-width: 0; flex: 1 1 100%; }
 
-  /* stats: two-up instead of one giant column */
+  /* award chips: two per row on phones */
   .stat-row { grid-template-columns: 1fr 1fr; }
-  .hero__stats { grid-template-columns: 1fr 1fr; }
+  .hero__awards { gap: .55rem; }
+  .award { flex: 1 1 42%; min-width: 0; padding: .8rem .6rem .85rem; }
 
   .btn--lg { padding: .8rem 1.3rem; }
   .contact-strip { gap: .6rem 1rem; }
