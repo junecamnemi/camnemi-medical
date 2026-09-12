@@ -275,8 +275,8 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 .hero__scrim {
   position: absolute; inset: 0; z-index: -1;
   background:
-    linear-gradient(100deg, oklch(0.15 0.05 262 / .90) 0%, oklch(0.18 0.06 262 / .70) 42%, oklch(0.2 0.05 262 / .32) 100%),
-    linear-gradient(to top, oklch(0.15 0.05 262 / .55), transparent 55%);
+    linear-gradient(100deg, oklch(0.15 0.05 262 / .68) 0%, oklch(0.18 0.06 262 / .34) 45%, oklch(0.2 0.05 262 / .06) 100%),
+    linear-gradient(to top, oklch(0.13 0.04 262 / .45), transparent 45%);
 }
 .hero__inner {
   padding-block: clamp(4.5rem, 3rem + 9vw, 8.5rem) clamp(3rem, 5vw, 5rem);
@@ -285,13 +285,14 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 .hero .eyebrow { color: oklch(0.9 0.09 150); }
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.3rem, 1.2rem + 5.4vw, 5rem);
+  font-size: clamp(2.1rem, 1.1rem + 4vw, 4rem);
   font-weight: 600; color: #fff;
-  letter-spacing: -0.02em; line-height: 1.04;
-  max-width: 20ch;
+  letter-spacing: -0.02em; line-height: 1.08;
+  max-width: 24ch;
+  text-shadow: 0 2px 18px oklch(0.12 0.04 262 / .55);
 }
 .hero__title em { font-style: italic; color: oklch(0.92 0.07 150); }
-.hero .lede { color: oklch(1 0 0 / .88); margin-top: 1.4rem; max-width: 60ch; }
+.hero .lede { color: oklch(1 0 0 / .94); margin-top: 1.4rem; max-width: 60ch; text-shadow: 0 1px 10px oklch(0.12 0.04 262 / .5); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2.1rem; }
 
 .hero__stats { margin-top: clamp(2.5rem, 5vw, 4rem); }
