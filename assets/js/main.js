@@ -113,8 +113,11 @@
         name.focus();
         return;
       }
-      if (!email.value.trim() || email.value.indexOf("@") === -1) {
-        setStatus("Please enter a valid email address.", "err");
+      // proper email format check: local@domain.tld (no spaces, real TLD)
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim());
+      if (!emailOk) {
+        email.setAttribute("aria-invalid", "true");
+        setStatus("Please enter a valid email address (e.g. you@example.com).", "err");
         email.focus();
         return;
       }
