@@ -154,4 +154,65 @@
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
+
+  /* --- 6. Package detail modals ----------------------------------------- */
+  /* Each "View details" button carries data-pkg="N" -> opens #modal-N.
+     Uses the native <dialog> element: Esc-to-close and focus trapping are
+     free; we add backdrop-click-to-close and a graceful fallback. */
+  var lastTrigger = null;
+
+  function openModal(id, trigger) {
+    var dlg = document.getElementById("modal-" + id);
+    if (!dlg) return;
+    lastTrigger = trigger || null;
+    if (typeof dlg.showModal === "function") {
+      dlg.showModal();
+    } else {
+      dlg.setAttribute("open", "");        // very old browsers
+      dlg.style.position = "fixed";
+      dlg.style.top = "50%";
+      dlg.style.left = "50%";
+      dlg.style.transform = "translate(-50%,-50%)";
+    }
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal(dlg) {
+    if (!dlg) return;
+    if (typeof dlg.close === "function") dlg.close();
+    else dlg.removeAttribute("open");
+    document.body.style.overflow = "";
+    if (lastTrigger) { try { lastTrigger.focus(); } catch (e) {} }
+  }
+
+  document.addEventListener("click", function (e) {
+    var opener = e.target.closest("[data-pkg]");
+    if (opener) {
+      e.preventDefault();
+      openModal(opener.getAttribute("data-pkg"), opener);
+      return;
+    }
+    // click on the dialog's own backdrop (the element itself, outside content)
+    if (e.target.tagName === "DIALOG" && e.target.classList.contains("modal")) {
+      var r = e.target.getBoundingClientRect();
+      var inside = e.clientX >= r.left && e.clientX <= r.right &&
+                   e.clientY >= r.top && e.clientY <= r.bottom;
+      if (!inside) closeModal(e.target);
+      return;
+    }
+    // "Book this package" inside a modal -> close it, then follow the anchor
+    var bookLink = e.target.closest("[data-close-modal]");
+    if (bookLink) {
+      var open = document.querySelector(".modal[open]");
+      if (open) closeModal(open);
+    }
+  });
+
+  // restore scroll lock whenever a dialog closes by any means (Esc, form)
+  document.querySelectorAll(".modal").forEach(function (dlg) {
+    dlg.addEventListener("close", function () {
+      document.body.style.overflow = "";
+      if (lastTrigger) { try { lastTrigger.focus(); } catch (e) {} }
+    });
+  });
 })();
