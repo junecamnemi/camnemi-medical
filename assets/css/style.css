@@ -1000,3 +1000,34 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 /* multiple entries under one category label */
 .facts dt { margin-bottom: .35rem; }
 .facts dd + dd { margin-top: .3rem; }
+
+/* --- 24. Why Asan: collapsible cards on mobile ------------------------- */
+.why-acc { overflow: hidden; }
+.why-acc > summary { list-style: none; cursor: default; }
+.why-acc > summary::-webkit-details-marker { display: none; }
+.why-acc__head { display: block; }
+.why-acc .card__body { margin-top: .5rem; }
+
+@media (max-width: 640px) {
+  .why-acc { cursor: pointer; }
+  .why-acc > summary {
+    cursor: pointer;
+    position: relative;
+    display: flex; align-items: center; gap: .85rem;
+    padding-right: 2rem;
+  }
+  .why-acc__head .card__icon { margin-bottom: 0; }
+  .why-acc__head .card__title { margin-bottom: 0; }
+  /* chevron affordance */
+  .why-acc > summary::after {
+    content: ""; position: absolute; right: .35rem; top: 50%;
+    width: .55rem; height: .55rem; margin-top: -.35rem;
+    border-right: 2px solid var(--primary); border-bottom: 2px solid var(--primary);
+    transform: rotate(45deg);
+    transition: transform .2s ease;
+  }
+  .why-acc[open] > summary::after { transform: rotate(-135deg); }
+  .why-acc .card__body { margin-top: .9rem; }
+  /* neutralize the card hover-lift while acting as a button */
+  .why-acc:hover { transform: none; }
+}

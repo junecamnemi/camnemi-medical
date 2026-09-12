@@ -237,4 +237,20 @@
       if (lastTrigger) { try { lastTrigger.focus(); } catch (e) {} }
     });
   });
+
+  /* --- 7. Why Asan cards: collapsed on mobile, open on desktop ---------- */
+  /* <details> default to open; on narrow screens we close them so they act
+     as an accordion. Re-sync on resize (debounced). */
+  var whyCards = document.querySelectorAll(".why-acc");
+  if (whyCards.length) {
+    var mq = window.matchMedia("(max-width: 640px)");
+    var syncWhy = function () {
+      var mobile = mq.matches;
+      whyCards.forEach(function (d) { d.open = !mobile; });
+    };
+    syncWhy();
+    // matchMedia change fires only when crossing the breakpoint — cheap + correct
+    if (mq.addEventListener) mq.addEventListener("change", syncWhy);
+    else if (mq.addListener) mq.addListener(syncWhy);
+  }
 })();
