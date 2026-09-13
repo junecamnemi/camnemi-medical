@@ -1169,5 +1169,24 @@
 <script src="assets/js/chat.js" defer></script>
 
 <a class="tg-fab" href="https://t.me/+855969909079" target="_blank" rel="noopener" aria-label="Chat on Telegram"><i class="ri-send-plane-line" aria-hidden="true"></i></a>
+  <!-- GA4 conversion events: contact clicks -->
+  <script>
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a');
+      if (!a) return;
+      var h = a.getAttribute('href') || '';
+      var ev = null;
+      if (h.indexOf('https://t.me/') === 0) ev = 'contact_telegram';
+      else if (h.indexOf('mailto:') === 0) ev = 'contact_email';
+      else if (h.indexOf('tel:') === 0) ev = 'contact_phone';
+      if (ev && typeof gtag === 'function') {
+        gtag('event', ev, {
+          link_url: h,
+          link_text: (a.textContent || '').trim().slice(0, 60),
+          page_location: location.href
+        });
+      }
+    });
+  </script>
 </body>
 </html>
