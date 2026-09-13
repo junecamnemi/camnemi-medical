@@ -171,6 +171,17 @@
   fab.addEventListener("click", function () { panel.hidden ? openPanel() : closePanel(); });
   root.querySelector(".cchat__close").addEventListener("click", closePanel);
 
+  // Escape key closes the chat
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !panel.hidden) closePanel();
+  });
+  // clicking anywhere outside the widget closes the chat
+  document.addEventListener("click", function (e) {
+    if (panel.hidden) return;
+    if (root.contains(e.target)) return;
+    closePanel();
+  });
+
   /* ---- start a new session --------------------------------------------- */
   startBtn.addEventListener("click", function () {
     var nm = nameEl.value.trim();
