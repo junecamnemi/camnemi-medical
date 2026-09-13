@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# no crawlable paths to exclude; keep the 404 page out of the index
+Disallow: /404.html
+
+Sitemap: https://medical.camnemi.com/sitemap.xml

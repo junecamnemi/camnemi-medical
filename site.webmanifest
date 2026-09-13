@@ -1,0 +1,14 @@
+{
+  "name": "Camnemi Korea — Medical Service",
+  "short_name": "Camnemi",
+  "description": "Official agency of Asan Medical Center, Seoul, for Cambodian patients — health check-ups, surgery and medical coordination.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3c3a94",
+  "lang": "en",
+  "icons": [
+    { "src": "assets/img/favicon-64.png", "sizes": "64x64", "type": "image/png" }
+  ]
+}

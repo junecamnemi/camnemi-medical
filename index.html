@@ -5,22 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Camnemi Korea — Asan Medical Center, Seoul | Health Check-ups, Surgery &amp; Medical Coordination</title>
 <meta name="description" content="Camnemi Korea is the official agency connecting Cambodian patients to Asan Medical Center in Seoul — Korea's No.1 hospital. Comprehensive health check-ups, plastic &amp; reconstructive surgery, and full medical coordination in Khmer, Korean and English.">
-<link rel="canonical" href="https://camnemi.com/">
+<link rel="canonical" href="https://medical.camnemi.com/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Camnemi Korea">
 <meta name="theme-color" content="#3c3a94">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Camnemi Korea">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="Camnemi Korea — Asan Medical Center, Seoul">
 <meta property="og:description" content="Official agency connecting Cambodian patients to Korea's No.1 hospital. Health check-ups, plastic surgery, and end-to-end medical coordination.">
-<meta property="og:url" content="https://camnemi.com/">
-<meta property="og:image" content="assets/img/og-cover.jpg">
+<meta property="og:url" content="https://medical.camnemi.com/">
+<meta property="og:image" content="https://medical.camnemi.com/assets/img/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Asan Medical Center, Seoul — Korea's No.1 hospital">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Camnemi Korea — Asan Medical Center, Seoul">
 <meta name="twitter:description" content="Official agency connecting Cambodian patients to Korea's No.1 hospital.">
-<meta name="twitter:image" content="assets/img/og-cover.jpg">
+<meta name="twitter:image" content="https://medical.camnemi.com/assets/img/og-cover.jpg">
 <link rel="icon" href="assets/img/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon-64.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
@@ -29,14 +34,57 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MedicalOrganization",
-  "name": "Camnemi Korea",
-  "description": "Official agency of Asan Medical Center, Seoul, for Cambodian patients.",
-  "url": "https://camnemi.com",
-  "email": "medical@camnemi.com",
-  "telephone": "+855969909079",
-  "areaServed": {"@type": "Country", "name": "Cambodia"},
-  "parentOrganization": {"@type": "Hospital", "name": "Asan Medical Center", "address": {"@type": "PostalAddress", "addressLocality": "Seoul", "addressCountry": "KR"}}
+  "@graph": [
+    {
+      "@type": ["MedicalOrganization", "MedicalBusiness"],
+      "@id": "https://medical.camnemi.com/#org",
+      "name": "Camnemi Korea",
+      "alternateName": "Camnemi Medical Service",
+      "description": "Official agency of Asan Medical Center, Seoul, for Cambodian patients — health check-ups, plastic & reconstructive surgery, and full medical coordination in Khmer, Korean and English.",
+      "url": "https://medical.camnemi.com/",
+      "logo": "https://medical.camnemi.com/assets/img/camnemi-mark.webp",
+      "image": "https://medical.camnemi.com/assets/img/og-cover.jpg",
+      "email": "medical@camnemi.com",
+      "telephone": "+855969909079",
+      "medicalSpecialty": ["PlasticSurgery", "Surgical", "Diagnostic"],
+      "knowsLanguage": ["km", "ko", "en"],
+      "areaServed": {"@type": "Country", "name": "Cambodia"},
+      "address": {"@type": "PostalAddress", "streetAddress": "Diamond Island, G1109", "addressLocality": "Phnom Penh", "addressCountry": "KH"},
+      "sameAs": ["https://t.me/+855969909079"],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "medical@camnemi.com",
+        "telephone": "+855969909079",
+        "availableLanguage": ["Khmer", "Korean", "English"],
+        "areaServed": "KH"
+      }],
+      "parentOrganization": {"@id": "https://medical.camnemi.com/#asan"}
+    },
+    {
+      "@type": "Hospital",
+      "@id": "https://medical.camnemi.com/#asan",
+      "name": "Asan Medical Center",
+      "url": "https://www.amc.seoul.kr/asan/en/main.do",
+      "address": {"@type": "PostalAddress", "streetAddress": "88 Olympic-ro 43-gil, Songpa-gu", "addressLocality": "Seoul", "addressCountry": "KR"}
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://medical.camnemi.com/#physician",
+      "name": "Dr. Chea Siek Ai",
+      "medicalSpecialty": "PlasticSurgery",
+      "worksFor": {"@id": "https://medical.camnemi.com/#org"},
+      "knowsLanguage": ["km", "ko", "en"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://medical.camnemi.com/#site",
+      "url": "https://medical.camnemi.com/",
+      "name": "Camnemi Korea",
+      "inLanguage": "en",
+      "publisher": {"@id": "https://medical.camnemi.com/#org"}
+    }
+  ]
 }
 </script>
 </head>
