@@ -168,8 +168,15 @@
     opened = false;
   }
 
-  fab.addEventListener("click", function () { panel.hidden ? openPanel() : closePanel(); });
-  root.querySelector(".cchat__close").addEventListener("click", closePanel);
+  // FAB toggle — bind both click and touch so mobile always responds
+  function togglePanel(e) { if (e) e.preventDefault(); panel.hidden ? openPanel() : closePanel(); }
+  fab.addEventListener("click", function (e) { e.preventDefault(); togglePanel(); });
+  fab.addEventListener("touchend", togglePanel, { passive: false });
+
+  // Close button — bind both click and touch, stop the outside-click handler firing
+  function onClose(e) { if (e) { e.preventDefault(); e.stopPropagation(); } closePanel(); }
+  root.querySelector(".cchat__close").addEventListener("click", onClose);
+  root.querySelector(".cchat__close").addEventListener("touchend", onClose, { passive: false });
 
   // Escape key closes the chat
   document.addEventListener("keydown", function (e) {
