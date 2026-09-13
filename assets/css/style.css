@@ -1033,6 +1033,9 @@ h1, h2, h3, h4 { color: var(--ink-950); line-height: 1.15; font-weight: 600; }
 }
 
 /* --- 25. Live chat widget --------------------------------------------- */
+/* IMPORTANT: class rules like display:flex would override the HTML `hidden`
+   attribute, so the panel could never visually close. Force hidden. */
+.cchat [hidden] { display: none !important; }
 .cchat { position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem); z-index: 200; }
 .cchat__fab {
   display: inline-flex; align-items: center; gap: .5rem;
