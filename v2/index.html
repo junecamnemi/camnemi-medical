@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Camnemi Medical Service — Official Agency of Asan Medical Center</title>
+<meta name="description" content="Camnemi Medical Service is the Official Agency of Asan Medical Center (AMC), Seoul. We coordinate your inquiry for video consultation, second opinion and health screening, in English or Khmer.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#00256C">
+<link rel="icon" href="assets/favicon-64.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/tokens.css">
+<meta property="og:title" content="Camnemi Medical Service — Official Agency of Asan Medical Center">
+<meta property="og:description" content="We coordinate your inquiry to Asan Medical Center, Seoul — in English or Khmer.">
+<meta property="og:type" content="website">
+<style>
+/* Site layer on top of tokens.css (CAMNEMI design guide v3b). Colours come only from tokens. */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--canvas);color:var(--text-primary);font:var(--type-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ink-primary);text-underline-offset:3px}
+a:hover{color:var(--ink-strong)}
+:focus-visible{outline:3px solid var(--ink-primary);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink-strong);color:var(--canvas);padding:12px 16px;border-radius:var(--radius-control);z-index:100}
+.skip:focus{left:8px}
+.wrap{max-width:var(--grid-web-max);margin-inline:auto;padding-inline:24px}
+h1,h2,h3,h4,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+h1{font-weight:700;font-size:clamp(38px,5.6vw,68px);line-height:1.06;letter-spacing:-.02em;color:var(--ink-strong)}
+h2{font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;letter-spacing:-.015em;color:var(--ink-strong)}
+h3{font:var(--type-title);color:var(--ink-strong)}
+h4{font:var(--type-headline);color:var(--ink-strong)}
+.lead{font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:var(--text-secondary);max-width:58ch}
+.kick{display:flex;align-items:center;gap:10px;font:700 12px/16px var(--font-sans);letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-primary);margin-bottom:14px}
+.kick i{display:block;width:24px;height:2px;background:var(--accent-sky)}
+.lb{font:600 12px/16px var(--font-sans);letter-spacing:.8px;text-transform:uppercase;color:var(--text-secondary)}
+.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none;display:block}
+.ic.s16{width:16px;height:16px;stroke-width:1.8}.ic.s20{width:20px;height:20px}.ic.s32{width:32px;height:32px;stroke-width:1.4}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:22px;padding:2px 8px;border:1px solid var(--ink-primary);border-radius:var(--radius-chip);background:var(--canvas);color:var(--ink-primary);font:700 12px/16px var(--font-sans);letter-spacing:.6px;text-transform:uppercase;white-space:nowrap}
+.chip.f{background:var(--ink-strong);border-color:var(--ink-strong);color:var(--canvas)}
+.chip.t{background:var(--stub-tint);border-color:var(--stub-tint);color:var(--ink-strong)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--touch-min);padding:0 22px;border-radius:var(--radius-control);border:1px solid var(--ink-strong);background:var(--filled-button-bg);color:var(--filled-button-fg);font:var(--type-button);text-decoration:none;cursor:pointer;transition:background var(--motion-fast),color var(--motion-fast)}
+.btn:hover{background:var(--ink-primary);border-color:var(--ink-primary);color:var(--canvas)}
+.btn.ghost{background:var(--canvas);color:var(--ink-strong)}
+.btn.ghost:hover{background:var(--stub-tint);color:var(--ink-strong);border-color:var(--ink-strong)}
+.btn.sm{min-height:44px;padding:0 18px;font-size:15px}
+
+/* emergency strip */
+.alert{background:var(--surface-muted);border-bottom:1px solid var(--hairline);font-size:14px;line-height:20px;color:var(--text-primary)}
+.alert .wrap{display:flex;gap:10px;align-items:center;padding-block:9px}
+.alert svg{color:var(--danger)}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:50;background:var(--canvas);border-bottom:1px solid var(--hairline)}
+.site-header .wrap{display:flex;align-items:center;gap:28px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink-strong)}
+.brand img{height:52px;width:auto}
+.nav{display:flex;gap:26px;margin-left:auto;align-items:center}
+.nav a:not(.btn){color:var(--text-primary);text-decoration:none;font:600 15px/20px var(--font-sans);padding:8px 0;border-bottom:2px solid transparent}
+.nav a.btn{color:var(--filled-button-fg);text-decoration:none}
+.nav a.btn:hover{color:var(--canvas)}
+.nav a:not(.btn):hover,.nav a[aria-current="true"]{border-bottom-color:var(--accent-sky);color:var(--ink-strong)}
+.nav-cta{margin-left:6px}
+.menu-btn{display:none;margin-left:auto;min-width:48px;min-height:48px;border:1px solid var(--hairline);background:var(--canvas);border-radius:var(--radius-control);color:var(--ink-strong);cursor:pointer;align-items:center;justify-content:center}
+
+/* hero */
+.hero{background:var(--surface-muted);border-bottom:1px solid var(--hairline);padding:72px 0 80px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:56px;align-items:center}
+.hero h1 em{font-style:normal;color:var(--ink-primary);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;bottom:2px;width:2.3ch;height:5px;background:var(--accent-sky)}
+.hero .lead{margin:26px 0 30px}
+.badge{display:inline-flex;align-items:center;gap:14px;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:10px 16px 10px 12px;margin-bottom:26px}
+.badge img{height:34px;width:auto}
+.badge span{font:700 13px/18px var(--font-sans);letter-spacing:.4px;color:var(--ink-strong);border-left:1px solid var(--perforation);padding-left:14px}
+.badge small{display:block;font:600 11px/14px var(--font-sans);letter-spacing:.8px;color:var(--text-secondary);text-transform:uppercase}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-note{margin-top:22px;display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:20px;color:var(--text-secondary);max-width:54ch}
+
+/* ticket component (guide §2.1 / p.08) */
+.ticket{--notch-bg:var(--surface-muted);position:relative;display:grid;grid-template-columns:minmax(0,1fr) var(--stub-w,200px);background:var(--canvas);border:1px solid var(--ink-primary);border-radius:var(--radius-card)}
+.ticket .main{padding:20px 24px 22px;min-width:0}
+.ticket .stub{background:var(--stub-tint);border-left:1px dashed var(--perforation);border-radius:0 var(--radius-card) var(--radius-card) 0;padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center}
+.notch{position:absolute;right:calc(var(--stub-w,200px) - 7px);width:14px;height:8px;overflow:hidden;z-index:2}
+.notch::before{content:"";position:absolute;left:0;width:14px;height:14px;border-radius:50%;background:var(--notch-bg);border:1px solid var(--ink-primary);box-sizing:border-box}
+.notch.t{top:-1px}.notch.t::before{top:-7px}
+.notch.b{bottom:-1px}.notch.b::before{bottom:-7px}
+.tk-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding-bottom:10px;border-bottom:2px solid var(--ink-strong);position:relative}
+.tk-head::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--accent-sky)}
+.tk-head b{display:flex;align-items:center;gap:8px;font:700 12px/16px var(--font-sans);letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-primary)}
+.tk-head b i{display:block;width:18px;height:2px;background:var(--accent-sky)}
+.tk-head span{font:700 12px/16px var(--font-sans);letter-spacing:1px;text-transform:uppercase;color:var(--ink-strong)}
+.route{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:10px;margin:22px 0 20px}
+.route .big{font-weight:700;font-size:clamp(24px,2.6vw,32px);line-height:1.05;letter-spacing:-.01em;color:var(--ink-strong)}
+.route .sm{font-size:13px;line-height:18px;color:var(--text-secondary);margin-top:4px}
+.route .arrow{display:flex;align-items:center;gap:6px;color:var(--ink-primary);padding-bottom:22px}
+.route .arrow::before,.route .arrow::after{content:"";width:16px;border-top:2px dashed var(--perforation)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin:4px 0 6px}
+.steps::before{content:"";position:absolute;left:10%;right:10%;top:15px;border-top:2px solid var(--hairline)}
+.steps li{position:relative;text-align:center;font:700 11px/14px var(--font-sans);letter-spacing:.6px;text-transform:uppercase;color:var(--text-secondary)}
+.steps li span{display:flex;align-items:center;justify-content:center;width:32px;height:32px;margin:0 auto 8px;border-radius:50%;border:2px solid var(--perforation);background:var(--canvas);font-size:12px;color:var(--text-secondary);font-variant-numeric:tabular-nums;position:relative}
+.steps li.on span{border-color:var(--accent-sky);color:var(--ink-strong)}
+.steps li.on{color:var(--ink-strong)}
+.tk-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px solid var(--hairline)}
+.tk-meta div b{display:block;font:600 14px/20px var(--font-sans);color:var(--ink-strong)}
+.stub img{width:100%;max-width:190px;aspect-ratio:3/4;object-fit:cover;object-position:50% 12%;border-radius:var(--radius-control);border:1px solid var(--hairline);background:var(--surface-muted)}
+.stub .nm{font:700 15px/20px var(--font-sans);color:var(--ink-strong)}
+.stub .rl{font-size:12px;line-height:16px;color:var(--text-secondary)}
+
+/* sections */
+section{scroll-margin-top:84px}
+.block{padding:96px 0}
+.block.alt{background:var(--surface-muted);border-block:1px solid var(--hairline)}
+.sec-head{max-width:720px;margin-bottom:44px}
+.sec-head p{margin-top:16px;font-size:18px;color:var(--text-secondary)}
+
+/* official agency band */
+.agency{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center}
+.agency-card{background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:36px;display:grid;gap:24px}
+.agency-card img{height:64px;width:auto}
+.agency-card hr{border:0;border-top:1px dashed var(--perforation);margin:0}
+.agency-card p{color:var(--text-secondary)}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.role{border:1px solid var(--hairline);border-radius:var(--radius-card);background:var(--canvas);padding:22px}
+.role .chip{margin-bottom:14px}
+.role li{display:flex;gap:10px;align-items:flex-start;padding:6px 0;font-size:15px;line-height:22px}
+.role li svg{color:var(--ink-primary);margin-top:2px}
+.agency .roles{margin-top:0}
+
+/* services */
+.svc-list{display:grid;gap:20px}
+.svc{--notch-bg:var(--canvas);--stub-w:220px}
+.svc.altbg{--notch-bg:var(--surface-muted)}
+.svc .main{padding:26px 30px 28px}
+.svc h3{font-size:24px;line-height:30px;margin:6px 0 10px}
+.svc p{color:var(--text-secondary);max-width:62ch}
+.svc ul{margin:16px 0 0;display:grid;gap:8px}
+.svc li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:22px}
+.svc li svg{color:var(--ink-primary);margin-top:2px}
+.svc .req{margin-top:18px;display:flex;gap:10px;align-items:flex-start;background:var(--stub-tint);border-radius:var(--radius-control);padding:12px 14px;font-size:14px;line-height:20px;color:var(--ink-strong)}
+.svc .stub{gap:14px}
+.svc .stub .ic{color:var(--ink-strong)}
+.svc .stub .lb{color:var(--ink-primary)}
+.svc .stub .no{font-size:34px;line-height:1;font-weight:700;color:var(--ink-strong);font-variant-numeric:tabular-nums}
+.svc .stub a.btn{width:100%}
+.diff{margin-top:26px;border:1px solid var(--hairline);border-radius:var(--radius-card);background:var(--canvas);overflow:auto}
+.diff table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+.diff th,.diff td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--hairline);vertical-align:top}
+.diff thead th{font:700 12px/16px var(--font-sans);letter-spacing:1px;text-transform:uppercase;color:var(--ink-primary);background:var(--surface-muted)}
+.diff tbody th{font:600 14px/20px var(--font-sans);color:var(--ink-strong);width:22%}
+.diff tr:last-child th,.diff tr:last-child td{border-bottom:0}
+.fine{margin-top:16px;display:flex;gap:10px;font-size:14px;line-height:20px;color:var(--text-secondary)}
+
+/* doctor */
+.doctor{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:64px;align-items:center}
+.portrait{position:relative}
+.portrait .frame{border:1px solid var(--ink-primary);border-radius:var(--radius-card);background:var(--stub-tint);padding:14px}
+.portrait img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 10%;border-radius:var(--radius-control)}
+.portrait .cap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 4px 2px}
+.portrait .cap b{font:700 17px/22px var(--font-sans);color:var(--ink-strong)}
+.portrait .cap span{font-size:13px;line-height:18px;color:var(--text-secondary)}
+.doctor h2{margin-bottom:6px}
+.doctor .role-line{font:600 18px/26px var(--font-sans);color:var(--ink-primary);margin-bottom:24px}
+.cv{display:grid;gap:0;border-top:1px solid var(--hairline)}
+.cv div{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--hairline)}
+.cv dt{font:600 12px/20px var(--font-sans);letter-spacing:.8px;text-transform:uppercase;color:var(--text-secondary)}
+.cv dd{font-size:15px;line-height:22px}
+.cv dd span{display:block;color:var(--text-secondary);font-size:14px}
+.doctor .note{margin-top:22px;padding:16px 18px;border-left:3px solid var(--accent-sky);background:var(--surface-muted);border-radius:0 var(--radius-control) var(--radius-control) 0;font-size:15px;color:var(--text-primary)}
+
+/* IHC band */
+.ihc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:center;background:var(--stub-tint);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:32px 36px}
+.ihc h3{margin:10px 0 8px;font-size:22px}
+.ihc p{color:var(--text-secondary)}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pills li{display:flex;align-items:center;gap:8px;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-control);padding:9px 14px;font:600 14px/18px var(--font-sans);color:var(--ink-strong)}
+.pills li svg{color:var(--ink-primary)}
+
+/* process */
+.proc{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--ink-primary);border-radius:var(--radius-card);background:var(--canvas);position:relative}
+.proc li{padding:26px 22px 26px;position:relative;border-left:1px dashed var(--perforation)}
+.proc li:first-child{border-left:0}
+.proc .n{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--ink-strong);color:var(--canvas);font:700 14px/1 var(--font-sans);margin-bottom:16px;font-variant-numeric:tabular-nums}
+.proc li:nth-child(n+4) .n{background:var(--canvas);color:var(--ink-strong);border:2px solid var(--ink-strong)}
+.proc h4{font-size:17px;margin-bottom:8px}
+.proc p{font-size:14px;line-height:21px;color:var(--text-secondary)}
+.proc .chip{margin-top:14px}
+.proc a{font-weight:600;font-size:14px}
+.proc-note{margin-top:20px;display:flex;gap:10px;font-size:15px;color:var(--text-secondary)}
+
+/* inquiry */
+.inq{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:36px;align-items:start}
+.form-card{background:var(--canvas);border:1px solid var(--ink-primary);border-radius:var(--radius-card);padding:32px}
+.form-card .tk-head{margin-bottom:26px}
+.field{margin-bottom:20px}
+.field label,.field legend{display:block;font:600 14px/20px var(--font-sans);color:var(--ink-strong);margin-bottom:8px;padding:0}
+.field .hint{display:block;font-size:13px;line-height:18px;color:var(--text-secondary);margin-top:6px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+input[type=text],input[type=email],select,textarea{width:100%;min-height:var(--touch-min);padding:12px 14px;border:1px solid var(--perforation);border-radius:var(--radius-control);background:var(--canvas);color:var(--text-primary);font:var(--type-body);font-size:16px}
+textarea{min-height:104px;resize:vertical;line-height:22px}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--ink-primary);outline-offset:1px;border-color:var(--ink-primary)}
+[aria-invalid="true"]{border-color:var(--danger)!important}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.opt span{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:1px solid var(--perforation);border-radius:var(--radius-control);font:600 15px/20px var(--font-sans);color:var(--text-primary);background:var(--canvas)}
+.opt input:checked+span{background:var(--stub-tint);border-color:var(--ink-strong);color:var(--ink-strong)}
+.opt input:focus-visible+span{outline:3px solid var(--ink-primary);outline-offset:2px}
+.opt input:checked+span::before{content:"";width:14px;height:8px;border-left:2px solid var(--ink-strong);border-bottom:2px solid var(--ink-strong);transform:rotate(-45deg) translate(1px,-2px);margin-right:2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:21px;color:var(--text-primary);margin:6px 0 22px}
+.consent input{width:22px;height:22px;margin-top:0;flex:none;accent-color:var(--ink-strong)}
+.err{color:var(--danger);font-weight:600;font-size:14px;line-height:20px;margin-bottom:14px;display:none}
+.err.show{display:flex;gap:8px}
+.ok{display:none;margin-top:20px;background:var(--stub-tint);border:1px solid var(--ink-primary);border-radius:var(--radius-control);padding:16px 18px;color:var(--ink-strong)}
+.ok.show{display:block}
+.side{display:grid;gap:16px}
+.side .card{border:1px solid var(--hairline);border-radius:var(--radius-card);background:var(--canvas);padding:24px}
+.side h4{margin-bottom:12px}
+.contact li{display:flex;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--hairline);font-size:15px}
+.contact li:first-child{border-top:0}
+.contact svg{color:var(--ink-primary)}
+.contact a{font-weight:600}
+.next li{display:flex;gap:12px;font-size:15px;line-height:22px;padding:6px 0;color:var(--text-secondary)}
+.next li b{color:var(--ink-strong);font-variant-numeric:tabular-nums;min-width:20px}
+.safe{display:flex;gap:12px;background:var(--surface-muted);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:18px 20px;font-size:14px;line-height:21px}
+.safe svg{color:var(--danger)}
+
+/* FAQ */
+.faq{max-width:820px;display:grid;gap:10px}
+.faq details{border:1px solid var(--hairline);border-radius:var(--radius-card);background:var(--canvas)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;font:600 17px/24px var(--font-sans);color:var(--ink-strong);min-height:56px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:10px;height:10px;border-right:2px solid var(--ink-primary);border-bottom:2px solid var(--ink-primary);transform:rotate(45deg);transition:transform var(--motion-fast);flex:none;margin-right:4px}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq details[open]{border-color:var(--ink-primary)}
+.faq .a{padding:0 22px 20px;color:var(--text-secondary);font-size:16px}
+
+/* footer */
+.site-footer{background:var(--surface-muted);border-top:1px solid var(--hairline);padding:56px 0 34px}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px}
+.foot img.fl{height:56px;width:auto;margin-bottom:16px}
+.foot p{font-size:14px;line-height:21px;color:var(--text-secondary);max-width:44ch}
+.foot h4{font:700 12px/16px var(--font-sans);letter-spacing:1px;text-transform:uppercase;color:var(--ink-primary);margin-bottom:14px}
+.foot li{padding:5px 0;font-size:15px}
+.foot a{text-decoration:none;font-weight:500;color:var(--text-primary)}
+.foot a:hover{color:var(--ink-primary);text-decoration:underline}
+.legal{margin-top:40px;padding-top:22px;border-top:1px dashed var(--perforation);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:13px;line-height:19px;color:var(--text-secondary)}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity var(--motion-base-in),transform var(--motion-base-in)}
+.js .rv.in{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:1020px){
+  .hero .wrap,.agency,.doctor,.inq{grid-template-columns:1fr}
+  .hero .wrap{gap:44px}
+  .doctor{gap:36px}.portrait{max-width:420px}
+  .proc{grid-template-columns:1fr}
+  .proc li{border-left:0;border-top:1px dashed var(--perforation);display:grid;grid-template-columns:48px 1fr;column-gap:14px}
+  .proc li:first-child{border-top:0}
+  .proc .n{grid-row:1/span 6;margin:0}
+  .proc li>*:not(.n){grid-column:2}
+  .proc li .chip{justify-self:start}
+  .ihc{grid-template-columns:1fr;gap:20px}
+  .foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .menu-btn{display:inline-flex}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--canvas);border-bottom:1px solid var(--hairline);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 20px;margin:0}
+  .nav.open{display:flex}
+  .nav a:not(.btn){padding:14px 0;border-bottom:1px solid var(--hairline)}
+  .nav-cta{margin:14px 0 0}.nav a.btn{color:var(--filled-button-fg)}
+}
+@media (max-width:700px){
+  .wrap{padding-inline:16px}
+  .block{padding:64px 0}.hero{padding:44px 0 56px}
+  .ticket{grid-template-columns:1fr}
+  .ticket .stub{border-left:0;border-top:1px dashed var(--perforation);border-radius:0 0 var(--radius-card) var(--radius-card);flex-direction:row;text-align:left;justify-content:flex-start}
+  .notch{display:none}
+  .hero .stub img{max-width:96px}
+  .svc .stub{flex-direction:column;align-items:flex-start}
+  .roles,.two{grid-template-columns:1fr}
+  .cv div{grid-template-columns:1fr;gap:2px}
+  .form-card{padding:22px 18px}
+  .route{grid-template-columns:1fr;gap:6px}.route .arrow{padding:0;transform:rotate(90deg);justify-self:start;margin-left:10px}
+  .steps li{font-size:10px;letter-spacing:.2px}
+  .agency-card{padding:24px}
+  .foot{grid-template-columns:1fr;gap:30px}
+  .brand img{height:44px}
+  .ihc{padding:24px 20px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}}
+@media print{.site-header,.menu-btn{position:static}.js .rv{opacity:1;transform:none}.btn{border:1px solid #000}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10.5l5-3v9l-5-3z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></symbol>
+    <symbol id="i-check-doc" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 13l2 2 4-4"/></symbol>
+    <symbol id="i-hospital" viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13zM10 21v-5h4v5M12 9v4M10 11h4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 5-2 1.5a11 11 0 005 5L15.5 12.5l5 1.5v3a2 2 0 01-2 2C10 19 5 14 4.5 5a2 2 0 012-2z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L3 10.5l7 3 3 7z"/><path d="M10 13.5L21 3"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.5 6.8 19.2l1-5.9L3.5 9.2l5.9-.8z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="alert" role="note">
+  <div class="wrap">
+    <svg class="ic s20"><use href="#i-alert"/></svg>
+    <p><b>Urgent or emergency symptoms?</b> Contact your local emergency services or the nearest medical facility now. This website and our chat channels are not for emergencies.</p>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Camnemi Medical Service — home"><img src="assets/camnemi-medical-logo.webp" alt="Camnemi Medical Service" width="52" height="54"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#agency">Official Agency</a>
+      <a href="#services">Services</a>
+      <a href="#doctor">Dr. Chea</a>
+      <a href="#process">How it works</a>
+      <a href="#faq">Questions</a>
+      <a class="btn sm nav-cta" href="#inquire">Start an inquiry</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <div class="badge">
+        <img src="assets/amc-logo.webp" alt="Asan Medical Center" width="124" height="34">
+        <span><small>Camnemi is the</small>Official Agency of Asan Medical Center</span>
+      </div>
+      <h1 id="h1">One inquiry.<br><em>Cambodia</em><br>to Asan Medical Center.</h1>
+      <p class="lead">Camnemi Medical Service coordinates your inquiry to Asan Medical Center (AMC), Seoul — and stays with you through each step, in English or Khmer. Dr. Chea Siek Ai leads our medical service team.</p>
+      <div class="cta-row">
+        <a class="btn" href="#inquire">Start an inquiry <svg class="ic s20"><use href="#i-arrow"/></svg></a>
+        <a class="btn ghost" href="#services">See what AMC offers</a>
+      </div>
+      <p class="hero-note"><svg class="ic s20"><use href="#i-info"/></svg><span>Camnemi coordinates your inquiry. Clinical services, medical decisions and appointments belong to Asan Medical Center.</span></p>
+    </div>
+
+    <div class="ticket rv" style="--stub-w:230px" aria-label="Your inquiry journey">
+      <span class="notch t"></span><span class="notch b"></span>
+      <div class="main">
+        <div class="tk-head"><b><i></i>Inquiry ticket</b><span>Korea medical</span></div>
+        <div class="route">
+          <div><div class="lb">From</div><div class="big">Your inquiry</div><div class="sm">Cambodia</div></div>
+          <div class="arrow" aria-hidden="true"><svg class="ic s20"><use href="#i-arrow"/></svg></div>
+          <div><div class="lb">To</div><div class="big">AMC</div><div class="sm">Asan Medical Center, Seoul</div></div>
+        </div>
+        <ol class="steps" aria-label="Five steps of an inquiry">
+          <li class="on"><span>01</span>Inquire</li>
+          <li><span>02</span>Clarify</li>
+          <li><span>03</span>Docs</li>
+          <li><span>04</span>Review</li>
+          <li><span>05</span>Next</li>
+        </ol>
+        <div class="tk-meta">
+          <div><span class="lb">Coordinated by</span><b>Camnemi</b></div>
+          <div><span class="lb">Decided by</span><b>Asan Medical Center</b></div>
+          <div><span class="lb">Reply in</span><b>English · Khmer</b></div>
+        </div>
+      </div>
+      <div class="stub">
+        <img src="assets/doctor-chea.webp" alt="Dr. Chea Siek Ai, Director of Medical Service at Camnemi" width="574" height="765" fetchpriority="high">
+        <div><div class="lb">Your coordinator</div><div class="nm">Dr. Chea Siek Ai</div><div class="rl">Director of Medical Service</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFFICIAL AGENCY ================= -->
+<section class="block" id="agency" aria-labelledby="h-agency">
+  <div class="wrap agency">
+    <div class="rv">
+      <div class="kick"><i></i>Official Agency</div>
+      <h2 id="h-agency">Your way into Asan Medical Center, Seoul.</h2>
+      <p class="lead" style="margin-top:18px">Camnemi is the Official Agency of Asan Medical Center. We are not the hospital: we are the team that listens to your question first, explains the right service, prepares your documents, and passes your case to AMC.</p>
+      <div class="cta-row" style="margin-top:26px"><a class="btn ghost" href="#process">See how an inquiry works</a></div>
+    </div>
+    <div class="agency-card rv">
+      <img src="assets/amc-logo.webp" alt="Asan Medical Center, Seoul" width="233" height="64">
+      <hr>
+      <p>Asan Medical Center (AMC) is a hospital in Seoul with a dedicated International Healthcare Center for patients from abroad. Every clinical service on this page is provided by AMC.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><span class="chip f"><svg class="ic s16"><use href="#i-star"/></svg>Official Agency of AMC</span><span class="chip t">Seoul, Korea</span></div>
+    </div>
+  </div>
+
+  <div class="wrap" style="margin-top:56px">
+    <div class="roles rv">
+      <div class="role">
+        <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+        <ul>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Clinical services and medical decisions</li>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Reviewing each case and deciding whether a service is possible</li>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Appointments, examinations, billing and medical reports</li>
+        </ul>
+      </div>
+      <div class="role">
+        <span class="chip f"><svg class="ic s16"><use href="#i-chat"/></svg>Coordinated by Camnemi</span>
+        <ul>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Listening to your question and explaining your options</li>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Replies in English or Khmer, with Dr. Chea Siek Ai</li>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Guiding you to the secure page for the documents AMC needs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="block alt" id="services" aria-labelledby="h-services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kick"><i></i>What AMC offers</div>
+      <h2 id="h-services">Three ways to begin.</h2>
+      <p>Video consultation, second opinion and health screening are different services with different requirements. Whether any of them is possible is decided by AMC after review.</p>
+    </div>
+
+    <div class="svc-list">
+      <article class="ticket svc rv" id="video">
+        <span class="notch t"></span><span class="notch b"></span>
+        <div class="main">
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+          <h3>Video consultation</h3>
+          <p>A real-time video consultation between you, your local physician and an AMC physician.</p>
+          <ul>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>AMC case coordinators and interpreters support the session</li>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>A full written report follows the consultation</li>
+          </ul>
+          <div class="req"><svg class="ic s20"><use href="#i-info"/></svg><span><b>Requirement:</b> a local physician must be present during the consultation.</span></div>
+        </div>
+        <div class="stub"><svg class="ic s32"><use href="#i-video"/></svg><span class="lb">Service</span><span class="no">01</span><a class="btn sm ghost" href="#inquire" data-service="Video consultation">Ask about this</a></div>
+      </article>
+
+      <article class="ticket svc rv" id="second">
+        <span class="notch t"></span><span class="notch b"></span>
+        <div class="main">
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+          <h3>Second opinion</h3>
+          <p>A written opinion from AMC specialists, based on the medical records you submit.</p>
+          <ul>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>Written only — there is no video element</li>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>Records go through Camnemi's secure registration page, never through chat</li>
+          </ul>
+          <div class="req"><svg class="ic s20"><use href="#i-info"/></svg><span>This is a different service from video consultation.</span></div>
+        </div>
+        <div class="stub"><svg class="ic s32"><use href="#i-check-doc"/></svg><span class="lb">Service</span><span class="no">02</span><a class="btn sm ghost" href="#inquire" data-service="Second opinion">Ask about this</a></div>
+      </article>
+
+      <article class="ticket svc rv" id="screening">
+        <span class="notch t"></span><span class="notch b"></span>
+        <div class="main">
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+          <h3>Health screening</h3>
+          <p>The Health Screening and Promotion Center offers programs tailored by gender, age and disease.</p>
+          <ul>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>Depending on the schedule, a variety of comprehensive examinations can be done in a single day</li>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>Appointment scheduling, guidance and interpretation are provided for overseas patients</li>
+          </ul>
+          <div class="req"><svg class="ic s20"><use href="#i-info"/></svg><span>Program options and scheduling are confirmed by Asan Medical Center.</span></div>
+        </div>
+        <div class="stub"><svg class="ic s32"><use href="#i-pulse"/></svg><span class="lb">Service</span><span class="no">03</span><a class="btn sm ghost" href="#inquire" data-service="Health screening">Ask about this</a></div>
+      </article>
+    </div>
+
+    <div class="diff rv" role="region" aria-label="Video consultation compared with second opinion" tabindex="0">
+      <table>
+        <caption class="lb" style="text-align:left;padding:16px 18px 0;background:var(--surface-muted)">Video consultation vs second opinion</caption>
+        <thead><tr><th scope="col"></th><th scope="col">Video consultation</th><th scope="col">Second opinion</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Format</th><td>Real-time video</td><td>Written only</td></tr>
+          <tr><th scope="row">Who takes part</th><td>You, your local physician and an AMC physician</td><td>AMC specialists, reviewing your records</td></tr>
+          <tr><th scope="row">You receive</th><td>A full written report after the consultation</td><td>A written opinion</td></tr>
+          <tr><th scope="row">Requirement</th><td>A local physician must be present</td><td>Medical records submitted through the secure page</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine"><svg class="ic s20"><use href="#i-info"/></svg><span>Availability is confirmed only by Asan Medical Center after its medical team reviews your case.</span></p>
+
+    <div class="ihc rv" style="margin-top:44px" id="ihc">
+      <div>
+        <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+        <h3>AMC International Healthcare Center</h3>
+        <p>The hospital's dedicated department for international patients, with concierge coordinators.</p>
+      </div>
+      <ul class="pills" aria-label="Areas the International Healthcare Center supports">
+        <li><svg class="ic s16"><use href="#i-calendar"/></svg>Appointments</li>
+        <li><svg class="ic s16"><use href="#i-pulse"/></svg>Examinations</li>
+        <li><svg class="ic s16"><use href="#i-doc"/></svg>Billing</li>
+        <li><svg class="ic s16"><use href="#i-hospital"/></svg>Admission and discharge</li>
+        <li><svg class="ic s16"><use href="#i-check-doc"/></svg>Medical reports</li>
+        <li><svg class="ic s16"><use href="#i-doc"/></svg>CDs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOCTOR ================= -->
+<section class="block" id="doctor" aria-labelledby="h-doc">
+  <div class="wrap doctor">
+    <figure class="portrait rv" style="margin:0">
+      <div class="frame">
+        <img src="assets/doctor-chea.webp" alt="Portrait of Dr. Chea Siek Ai" width="574" height="765" loading="lazy">
+        <figcaption class="cap"><div><b>Chea Siek Ai, MD</b><br><span>Director of Medical Service</span></div><span class="chip t">Camnemi</span></figcaption>
+      </div>
+    </figure>
+    <div class="rv">
+      <div class="kick"><i></i>Your point of contact</div>
+      <h2 id="h-doc">Dr. Chea Siek Ai</h2>
+      <p class="role-line">Director of Medical Service · Cambodian Medical Director, Camnemi</p>
+      <dl class="cv">
+        <div><dt>Education</dt><dd>Master of Plastic &amp; Reconstructive Surgery — University of Ulsan College of Medicine (2025~)<span>Bachelor of Medicine — Faculty of Medicine, University of Puthisastra (2020)</span></dd></div>
+        <div><dt>Experience</dt><dd>Asan Medical Center, Dept. of Plastic and Reconstructive Surgery — Training &amp; Fellowship (2025~)<span>Sunrise Japan Hospital — Junior Surgeon (2021–2024)</span><span>Sihanouk Hospital Center of HOPE — Trainee Surgeon (2020–2021)</span></dd></div>
+        <div><dt>Clinical focus</dt><dd>Plastic &amp; Reconstructive Surgery · Microsurgery · General Surgery · Emergency Medicine</dd></div>
+        <div><dt>Languages</dt><dd>Khmer · Korean · English</dd></div>
+      </dl>
+      <p class="note">Dr. Chea coordinates Cambodian patients' inquiries and accompanies them through the process. Clinical decisions are made by the treating medical team at Asan Medical Center.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="block alt" id="process" aria-labelledby="h-proc">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kick"><i></i>How an inquiry works</div>
+      <h2 id="h-proc">Five steps, one ticket.</h2>
+      <p>No time frames are promised — each case moves at the hospital's pace.</p>
+    </div>
+    <ol class="proc rv">
+      <li><span class="n">01</span><h4>Send an inquiry</h4><p>To Camnemi, without medical details.</p><span class="chip">Camnemi</span></li>
+      <li><span class="n">02</span><h4>We clarify your question</h4><p>And explain which AMC service may be relevant.</p><span class="chip">Camnemi</span></li>
+      <li><span class="n">03</span><h4>You prepare your documents</h4><p>Through Camnemi's secure registration page — your details, passport page and the signed AMC consent form. Never in chat.</p><p style="margin-top:10px"><a href="https://registeramc.camnemi.com/" rel="noopener">Open the secure registration page</a></p><span class="chip">Camnemi</span></li>
+      <li><span class="n">04</span><h4>AMC's medical team reviews</h4><p>And decides whether a service is possible.</p><span class="chip f">Asan Medical Center</span></li>
+      <li><span class="n">05</span><h4>AMC confirms next steps</h4><p>Including appointments, if applicable.</p><span class="chip f">Asan Medical Center</span></li>
+    </ol>
+    <p class="proc-note"><svg class="ic s20"><use href="#i-lock"/></svg><span>Camnemi does not collect medical records in Telegram, WhatsApp or email. Records are sent only through the secure page that our medical team gives you.</span></p>
+  </div>
+</section>
+
+<!-- ================= INQUIRY ================= -->
+<section class="block" id="inquire" aria-labelledby="h-inq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kick"><i></i>Start an inquiry</div>
+      <h2 id="h-inq">Tell us what you would like to explore.</h2>
+      <p>Your inquiry goes to Camnemi, not to the hospital. Please do not include medical details — we will explain how records are submitted if needed.</p>
+    </div>
+    <div class="inq">
+      <div class="form-card rv">
+        <div class="tk-head"><b><i></i>Inquiry ticket</b><span>Step 01 / 05</span></div>
+        <form id="inq" novalidate>
+          <p class="err" id="err" role="alert"><svg class="ic s20"><use href="#i-alert"/></svg><span></span></p>
+          <div class="two">
+            <div class="field"><label for="f-name">Full name</label><input type="text" id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-country">Country of residence</label><select id="f-country" name="country"><option>Cambodia</option><option>Other</option></select></div>
+          </div>
+          <fieldset class="field"><legend>Preferred language for our reply</legend>
+            <div class="opts"><label class="opt"><input type="radio" name="lang" value="English" checked><span>English</span></label><label class="opt"><input type="radio" name="lang" value="Khmer"><span>Khmer</span></label></div>
+          </fieldset>
+          <div class="two">
+            <div class="field"><label for="f-channel">How should we contact you?</label><select id="f-channel" name="channel"><option>Email</option><option>Phone</option><option>Telegram</option><option>WhatsApp</option></select></div>
+            <div class="field"><label for="f-contact">Email address or phone number</label><input type="text" id="f-contact" name="contact" autocomplete="email" required><span class="hint">Messenger channels are for general replies only.</span></div>
+          </div>
+          <fieldset class="field"><legend>Service of interest</legend>
+            <div class="opts" id="svc-opts">
+              <label class="opt"><input type="radio" name="service" value="Video consultation"><span>Video consultation</span></label>
+              <label class="opt"><input type="radio" name="service" value="Second opinion"><span>Second opinion</span></label>
+              <label class="opt"><input type="radio" name="service" value="Health screening"><span>Health screening</span></label>
+              <label class="opt"><input type="radio" name="service" value="Not sure yet"><span>Not sure yet</span></label>
+            </div>
+          </fieldset>
+          <div class="field" id="local-doc" hidden>
+            <label for="f-local">Can a local physician join a video consultation?</label>
+            <select id="f-local" name="localdoc"><option>Not sure</option><option>Yes</option><option>No</option></select>
+            <span class="hint">A local physician must be present for a video consultation.</span>
+          </div>
+          <div class="field"><label for="f-q">Your question (optional)</label><textarea id="f-q" name="question"></textarea><span class="hint">Please do not include diagnoses, test results or medical records. There is no file upload here.</span></div>
+          <label class="consent"><input type="checkbox" id="f-consent" name="consent"><span>I understand that Camnemi coordinates inquiries only, and that availability is decided by Asan Medical Center after review.</span></label>
+          <button class="btn" type="submit">Prepare my inquiry <svg class="ic s20"><use href="#i-send"/></svg></button>
+          <p class="hint" style="display:block;margin-top:12px;font-size:13px;line-height:19px;color:var(--text-secondary)">This button opens a ready-to-send email in your own email app. Nothing is sent until you press send there.</p>
+          <div class="ok" id="ok" role="status" aria-live="polite"><b>Almost done.</b> Your email app should open with your inquiry. If it does not, write to <a href="mailto:medical@camnemi.com">medical@camnemi.com</a> or message us on Telegram. Your inquiry goes to Camnemi, not to the hospital.</div>
+        </form>
+      </div>
+
+      <aside class="side rv" aria-label="Other ways to reach us">
+        <div class="card">
+          <h4>Other ways to reach us</h4>
+          <ul class="contact">
+            <li><svg class="ic s20"><use href="#i-mail"/></svg><a href="mailto:medical@camnemi.com">medical@camnemi.com</a></li>
+            <li><svg class="ic s20"><use href="#i-send"/></svg><a href="https://t.me/+855969909079" rel="noopener">Telegram · +855 96 990 9079</a></li>
+            <li><svg class="ic s20"><use href="#i-phone"/></svg><a href="tel:+855969909079">+855 96 990 9079</a></li>
+          </ul>
+          <p style="font-size:13px;line-height:19px;color:var(--text-secondary);margin-top:10px">For general questions only. Please do not send medical records or images in chat.</p>
+        </div>
+        <div class="card">
+          <h4>What happens next</h4>
+          <ol class="next">
+            <li><b>01</b>Camnemi replies to your question in your preferred language.</li>
+            <li><b>02</b>We explain which AMC service may be relevant.</li>
+            <li><b>03</b>If records are needed, our medical team tells you exactly what to send and gives you the secure page.</li>
+          </ol>
+        </div>
+        <div class="safe"><svg class="ic s20"><use href="#i-alert"/></svg><p><b>Urgent or emergency symptoms?</b> Contact your local emergency services or the nearest medical facility now. This form cannot triage urgent symptoms.</p></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="block alt" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="kick"><i></i>Questions</div><h2 id="h-faq">Good to know before you write.</h2></div>
+    <div class="faq rv">
+      <details><summary>Is Camnemi the hospital?</summary><div class="a">No. Camnemi is the Official Agency of Asan Medical Center. We coordinate your inquiry and explain each step. Clinical services, medical decisions, appointments and billing are handled by Asan Medical Center.</div></details>
+      <details><summary>Can Camnemi tell me which treatment is right for me?</summary><div class="a">No. Camnemi and this website do not give medical advice, diagnose or recommend treatment. Clinical decisions are made by the treating medical professionals at AMC.</div></details>
+      <details><summary>Where do I send my medical records?</summary><div class="a">Not in chat and not in this form. If records are needed, our medical team will give you Camnemi's secure registration page and tell you exactly what to prepare.</div></details>
+      <details><summary>Which language can I use?</summary><div class="a">You can write to Camnemi in English or Khmer. Interpretation inside the hospital is provided by AMC's international services; Khmer support is provided by Camnemi's own coordinators.</div></details>
+      <details><summary>Is a video consultation the same as a second opinion?</summary><div class="a">No. A video consultation is a real-time session with a local physician present. A second opinion is a written opinion from AMC specialists based on submitted records. Whether either is possible is decided by AMC after review.</div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img class="fl" src="assets/camnemi-medical-logo.webp" alt="Camnemi Medical Service" width="54" height="56" loading="lazy">
+        <p>Camnemi Medical Service coordinates Korea medical-tourism inquiries connected with Asan Medical Center, Seoul. Clinical services, medical decisions, appointments and billing are handled by Asan Medical Center.</p>
+        <p style="margin-top:14px"><span class="chip f"><svg class="ic s16"><use href="#i-star"/></svg>Official Agency of Asan Medical Center</span></p>
+      </div>
+      <div><h4>Explore</h4><ul>
+        <li><a href="#agency">Official Agency</a></li><li><a href="#services">Services</a></li><li><a href="#doctor">Dr. Chea Siek Ai</a></li><li><a href="#process">How an inquiry works</a></li><li><a href="#faq">Questions</a></li></ul></div>
+      <div><h4>Contact</h4><ul>
+        <li><a href="mailto:medical@camnemi.com">medical@camnemi.com</a></li><li><a href="https://t.me/+855969909079" rel="noopener">Telegram</a></li><li><a href="tel:+855969909079">+855 96 990 9079</a></li><li><a href="https://registeramc.camnemi.com/" rel="noopener">Secure registration page</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>© Camnemi Korea · Camnemi Medical Service</span>
+      <span style="max-width:62ch">Availability is confirmed only by Asan Medical Center after review. Camnemi does not make medical decisions and does not collect medical records in chat.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Close menu':'Open menu');btn.querySelector('use').setAttribute('href',o?'#i-close':'#i-menu')});
+  nav.addEventListener('click',function(e){if(e.target.closest('a')){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')nav.classList.remove('open')});
+
+  // reveal
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});rv.forEach(function(e){io.observe(e)})}else{rv.forEach(function(e){e.classList.add('in')})}
+
+  // scroll spy
+  var links=[].slice.call(nav.querySelectorAll('a[href^="#"]:not(.btn)'));
+  var map=links.map(function(a){return{a:a,el:document.querySelector(a.getAttribute('href'))}}).filter(function(x){return x.el});
+  function spy(){var y=window.scrollY+120,cur=null;map.forEach(function(m){if(m.el.offsetTop<=y)cur=m});links.forEach(function(a){a.removeAttribute('aria-current')});if(cur)cur.a.setAttribute('aria-current','true')}
+  window.addEventListener('scroll',spy,{passive:true});spy();
+
+  // form
+  var form=document.getElementById('inq'),err=document.getElementById('err'),ok=document.getElementById('ok'),local=document.getElementById('local-doc');
+  function sync(){var v=(form.querySelector('input[name=service]:checked')||{}).value;local.hidden=v!=='Video consultation'}
+  form.addEventListener('change',sync);
+  document.querySelectorAll('[data-service]').forEach(function(a){a.addEventListener('click',function(){var v=a.getAttribute('data-service');var r=form.querySelector('input[name=service][value="'+v+'"]');if(r){r.checked=true;sync()}})});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();ok.classList.remove('show');
+    var d=new FormData(form),miss=[];
+    ['name','contact'].forEach(function(k){var i=form.elements[k];var bad=!String(d.get(k)||'').trim();i.setAttribute('aria-invalid',bad);if(bad)miss.push(k)});
+    if(!d.get('service'))miss.push('service');
+    var c=document.getElementById('f-consent');c.setAttribute('aria-invalid',!c.checked);if(!c.checked)miss.push('consent');
+    if(miss.length){err.querySelector('span').textContent='Please complete the required fields: name, contact, service of interest, and the confirmation.';err.classList.add('show');(form.querySelector('[aria-invalid=true]')||form.elements.name).focus();return}
+    err.classList.remove('show');
+    var svc=d.get('service');
+    var body=['Hello Camnemi,','','I would like to start an inquiry.','','Name: '+d.get('name'),'Country of residence: '+d.get('country'),'Preferred reply language: '+d.get('lang'),'Contact via: '+d.get('channel')+' — '+d.get('contact'),'Service of interest: '+svc].concat(svc==='Video consultation'?['Local physician can join: '+d.get('localdoc')]:[]).concat(['','Question: '+(d.get('question')||'—'),'','(No medical details or records in this message.)']).join('\n');
+    window.location.href='mailto:medical@camnemi.com?subject='+encodeURIComponent('Inquiry — '+svc)+'&body='+encodeURIComponent(body);
+    ok.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>
