@@ -1,0 +1,20 @@
+# Refreshes v3/feed/amc-feed.json (AMC newsroom + AMC YouTube) every 3 hours and commits it when it changed.
+# Copy this folder's .github/ and tools/ into the repository that serves medical.camnemi.com.
+name: amc-feed
+on:
+  schedule: [{ cron: '17 */3 * * *' }]
+  workflow_dispatch: {}
+permissions: { contents: write }
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python tools/update_feed.py v3/feed/amc-feed.json
+      - name: Commit if changed
+        run: |
+          git config user.name "camnemi-feed-bot"; git config user.email "bot@camnemi.com"
+          git add v3/feed/amc-feed.json
+          git diff --cached --quiet || (git commit -m "chore: refresh AMC feed" && git push)

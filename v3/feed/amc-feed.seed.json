@@ -1,0 +1,110 @@
+{
+ "news": [
+  {
+   "id": 3307,
+   "date": "2026-10-27",
+   "title": "Asan Medical Center Launches Integrated Care Clinic for Inflammatory Myositis",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3307"
+  },
+  {
+   "id": 3306,
+   "date": "2026-10-26",
+   "title": "Asan Medical Center Establishes Pediatric Rapid Response Team 48 Hour ICU Readmission Rate",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3306"
+  },
+  {
+   "id": 3304,
+   "date": "2026-10-23",
+   "title": "Asan Medical Center Introduces Mona Lisa System for More Precise Prostate Cancer Biopsies",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3304"
+  },
+  {
+   "id": 3305,
+   "date": "2026-10-23",
+   "title": "Asan Medical Center Showcases Korean Medical Excellence to Global Hospital Leaders",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3305"
+  },
+  {
+   "id": 3303,
+   "date": "2026-10-22",
+   "title": "Fewer Radiation Treatments Offer Similar Cancer Control After Prostate Cancer Surgery",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3303"
+  },
+  {
+   "id": 3302,
+   "date": "2026-10-16",
+   "title": "Skin Tone Conversion Technology Aims to Reduce Performance Gaps in AI for Skin Disease Diagnosis",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3302"
+  }
+ ],
+ "videos": [
+  {
+   "id": "cgOwQtGAYpM",
+   "title": "암 치료 중 직장 복귀, 어떻게 하면 좋을까요?",
+   "published": "2026-10-28",
+   "url": "https://www.youtube.com/watch?v=cgOwQtGAYpM"
+  },
+  {
+   "id": "86CuwCh6XCo",
+   "title": "젊은 암환자 4명 중 1명이 우울증을 겪는다?｜우울 증상의 신호와 치료법",
+   "published": "2026-10-28",
+   "url": "https://www.youtube.com/watch?v=86CuwCh6XCo"
+  },
+  {
+   "id": "pmdxv1FyshQ",
+   "title": "국소성 GIST에 대한 치료｜2026 GIST 건강강좌",
+   "published": "2026-10-26",
+   "url": "https://www.youtube.com/watch?v=pmdxv1FyshQ"
+  },
+  {
+   "id": "SmJuZzwTcS0",
+   "title": "이마티닙 요법에 실패한 환자에서의 치료｜2026 GIST 건강강좌",
+   "published": "2026-10-26",
+   "url": "https://www.youtube.com/watch?v=SmJuZzwTcS0"
+  },
+  {
+   "id": "C31kzhe8wsg",
+   "title": "GIST의 정의 및 전이성 GIST에 대한 1차 치료｜2026 GIST 건강강좌",
+   "published": "2026-10-26",
+   "url": "https://www.youtube.com/watch?v=C31kzhe8wsg"
+  },
+  {
+   "id": "mcfjS0ep4e0",
+   "title": "GIST 환자의 정신건강 관리｜2026 GIST 건강강좌",
+   "published": "2026-10-26",
+   "url": "https://www.youtube.com/watch?v=mcfjS0ep4e0"
+  }
+ ],
+ "updated": "2026-10-29T14:02:24Z",
+ "channel": {
+  "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
+  "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
+ },
+ "excluded": [
+  {
+   "src": "news",
+   "title": "Kyrgyzstani Child Attacked by Three Large Dogs Receives Reconstructive Surgery in Korea"
+  },
+  {
+   "src": "news",
+   "title": "Peruvian American Philanthropist Travels 10,000 Kilometers to Korea for Life Saving Liver Transplantation"
+  },
+  {
+   "src": "video",
+   "title": "키르기스스탄에서 치료가 어려웠던 아이, 한국에 오기까지 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "두피 80%를 잃었던 소년, 다시 꿈을 이야기하다 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "아이의 일상을 앗아간 대형견 세 마리의 공격 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "대형견의 공격으로 두피 80%를 잃은 여섯 살 소년 | 리얼스토리"
+  }
+ ],
+ "errors": []
+}

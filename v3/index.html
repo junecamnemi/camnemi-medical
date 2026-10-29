@@ -1,0 +1,1888 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Camnemi Medical Service — Official Agency of Asan Medical Center</title>
+<meta name="description" content="Camnemi Medical Service is the Official Agency of Asan Medical Center (AMC), Seoul. We coordinate your inquiry for video consultation, second opinion and health screening, in English or Khmer.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#00256C">
+<link rel="icon" href="assets/favicon-64.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/tokens.css">
+<meta property="og:title" content="Camnemi Medical Service — Official Agency of Asan Medical Center">
+<meta property="og:description" content="We coordinate your inquiry to Asan Medical Center, Seoul — in English or Khmer.">
+<meta property="og:type" content="website">
+<style>
+/* Site layer on top of tokens.css (CAMNEMI design guide v3b). Colours come only from tokens. */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--canvas);color:var(--text-primary);font:var(--type-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ink-primary);text-underline-offset:3px}
+a:hover{color:var(--ink-strong)}
+:focus-visible{outline:3px solid var(--ink-primary);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink-strong);color:var(--canvas);padding:12px 16px;border-radius:var(--radius-control);z-index:100}
+.skip:focus{left:8px}
+.wrap{max-width:var(--grid-web-max);margin-inline:auto;padding-inline:24px}
+h1,h2,h3,h4,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+h1{font-weight:700;font-size:clamp(38px,5.6vw,68px);line-height:1.06;letter-spacing:-.02em;color:var(--ink-strong)}
+h2{font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.15;letter-spacing:-.015em;color:var(--ink-strong)}
+h3{font:var(--type-title);color:var(--ink-strong)}
+h4{font:var(--type-headline);color:var(--ink-strong)}
+.lead{font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:var(--text-secondary);max-width:58ch}
+.kick{display:flex;align-items:center;gap:10px;font:700 12px/16px var(--font-sans);letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-primary);margin-bottom:14px}
+.kick i{display:block;width:24px;height:2px;background:var(--accent-sky)}
+.lb{font:600 12px/16px var(--font-sans);letter-spacing:.8px;text-transform:uppercase;color:var(--text-secondary)}
+.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none;display:block}
+.ic.s16{width:16px;height:16px;stroke-width:1.8}.ic.s20{width:20px;height:20px}.ic.s32{width:32px;height:32px;stroke-width:1.4}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:22px;padding:2px 8px;border:1px solid var(--ink-primary);border-radius:var(--radius-chip);background:var(--canvas);color:var(--ink-primary);font:700 12px/16px var(--font-sans);letter-spacing:.6px;text-transform:uppercase;white-space:nowrap}
+.chip.f{background:var(--ink-strong);border-color:var(--ink-strong);color:var(--canvas)}
+.chip.t{background:var(--stub-tint);border-color:var(--stub-tint);color:var(--ink-strong)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--touch-min);padding:0 22px;border-radius:var(--radius-control);border:1px solid var(--ink-strong);background:var(--filled-button-bg);color:var(--filled-button-fg);font:var(--type-button);text-decoration:none;cursor:pointer;transition:background var(--motion-fast),color var(--motion-fast)}
+.btn:hover{background:var(--ink-primary);border-color:var(--ink-primary);color:var(--canvas)}
+.btn.ghost{background:var(--canvas);color:var(--ink-strong)}
+.btn.ghost:hover{background:var(--stub-tint);color:var(--ink-strong);border-color:var(--ink-strong)}
+.btn.sm{min-height:44px;padding:0 18px;font-size:15px}
+
+/* emergency strip */
+.alert{background:var(--surface-muted);border-bottom:1px solid var(--hairline);font-size:14px;line-height:20px;color:var(--text-primary)}
+.alert .wrap{display:flex;gap:10px;align-items:center;padding-block:9px}
+.alert svg{color:var(--danger)}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:50;background:var(--canvas);border-bottom:1px solid var(--hairline)}
+.site-header .wrap{display:flex;align-items:center;gap:28px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink-strong)}
+.brand img{height:52px;width:auto}
+.nav{display:flex;gap:26px;margin-left:auto;align-items:center}
+.nav a:not(.btn){color:var(--text-primary);text-decoration:none;font:600 15px/20px var(--font-sans);padding:8px 0;border-bottom:2px solid transparent}
+.nav a.btn{color:var(--filled-button-fg);text-decoration:none}
+.nav a.btn:hover{color:var(--canvas)}
+.nav a:not(.btn):hover,.nav a[aria-current="true"]{border-bottom-color:var(--accent-sky);color:var(--ink-strong)}
+.nav-cta{margin-left:6px}
+.menu-btn{display:none;margin-left:auto;min-width:48px;min-height:48px;border:1px solid var(--hairline);background:var(--canvas);border-radius:var(--radius-control);color:var(--ink-strong);cursor:pointer;align-items:center;justify-content:center}
+
+/* hero — full-bleed immersive (v3): campus photo + animated SVG layer. Readability never depends on color-mix: photo is dimmed by opacity on a navy base. */
+.hero{position:relative;isolation:isolate;background:var(--ink-strong);color:var(--canvas);padding:96px 0 112px;overflow:hidden}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);gap:56px;align-items:center}
+.hero-bg{position:absolute;inset:0;z-index:-3;overflow:hidden}
+.hero-bg .px{position:absolute;inset:-8% 0;transform:translate3d(0,var(--py,0px),0)}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 55%;opacity:.42}
+.mo-ok .hero-bg img{animation:kenburns 32s ease-in-out infinite alternate}
+.hero-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(100deg,var(--ink-strong) 10%,transparent 72%),linear-gradient(0deg,var(--ink-strong) 0%,transparent 42%)}
+.hero-shade::after{content:"";position:absolute;inset:0;background:radial-gradient(40% 55% at 78% 42%,var(--accent-sky),transparent 70%);opacity:.2}
+.hero-fx{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;overflow:visible}
+.hero-fx .grid-ln{fill:none;stroke:var(--canvas);stroke-opacity:.06;stroke-width:1}
+.hero-fx .ring{fill:none;stroke:var(--canvas);stroke-opacity:.22;stroke-width:1.2;transform-box:fill-box;transform-origin:center}
+.hero-fx .ring.r1{stroke-dasharray:2 10}.hero-fx .ring.r2{stroke-dasharray:28 14;stroke:var(--accent-sky);stroke-opacity:.35}.hero-fx .ring.r3{stroke-dasharray:1 6}
+.mo-ok .hero-fx .ring.r1{animation:spin 70s linear infinite}
+.mo-ok .hero-fx .ring.r2{animation:spin 46s linear infinite reverse}
+.mo-ok .hero-fx .ring.r3{animation:spin 110s linear infinite}
+.hero-fx .arc-base{fill:none;stroke:var(--canvas);stroke-opacity:.3;stroke-width:1.5;stroke-dasharray:3 9}
+.hero-fx .arc-flow{fill:none;stroke:var(--accent-sky);stroke-opacity:.75;stroke-width:2;stroke-dasharray:8 14}
+.mo-ok .hero-fx .arc-flow{animation:dashflow 2.4s linear infinite}
+.hero-fx .arc-comet{fill:none;stroke:var(--accent-sky);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:110 2000;stroke-dashoffset:-510;filter:url(#hglow)}
+.hero-fx .arc-dot{fill:none;stroke:var(--canvas);stroke-width:10;stroke-linecap:round;stroke-dasharray:.1 2000;stroke-dashoffset:-620}
+.mo-ok .hero-fx .arc-comet{animation:comet 6s cubic-bezier(.5,0,.3,1) infinite}
+.mo-ok .hero-fx .arc-dot{animation:cometdot 6s cubic-bezier(.5,0,.3,1) infinite}
+.hero-fx .node .core{fill:var(--canvas)}
+.hero-fx .node .halo{fill:var(--accent-sky);opacity:.25;transform-box:fill-box;transform-origin:center}
+.mo-ok .hero-fx .node .halo{animation:halo 2.8s ease-out infinite}
+.mo-ok .hero-fx .node.seoul .halo{animation-delay:1.4s}
+.hero-fx text{fill:var(--canvas);fill-opacity:.7;font:700 13px/1 var(--font-sans);letter-spacing:2px}
+.hero-fx .ecg-base{fill:none;stroke:var(--canvas);stroke-opacity:.16;stroke-width:1.5;stroke-linejoin:round}
+.hero-fx .ecg-beat{fill:none;stroke:var(--accent-sky);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:140 2000;stroke-dashoffset:-430}
+.mo-ok .hero-fx .ecg-beat{animation:beat 5.5s linear infinite}
+.mo-ok .hero-fx .ecg-float{animation:floaty 9s ease-in-out infinite}
+.hero h1{color:var(--canvas)}
+.hero h1 .w{display:inline-block}
+.mo-ok .hero h1 .w{animation:wordIn .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.15s + var(--i) * 90ms)}
+.hero h1 em{font-style:normal;color:var(--canvas);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--accent-sky),var(--l-stub-tint));transform-origin:left}
+.mo-ok .hero h1 em::after{animation:uline 1s .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .lead{margin:26px 0 30px;color:var(--canvas);opacity:.88}
+.mo-ok .hero .lead,.mo-ok .hero .cta-row,.mo-ok .hero .hero-note{animation:riseIn .8s cubic-bezier(.2,.7,.2,1) both}
+.mo-ok .hero .lead{animation-delay:.75s}.mo-ok .hero .cta-row{animation-delay:.9s}.mo-ok .hero .hero-note{animation-delay:1.05s}
+.hero .btn{position:relative;overflow:hidden;background:var(--canvas);color:var(--ink-strong);border-color:var(--canvas)}
+.hero .btn:hover{background:var(--stub-tint);border-color:var(--stub-tint);color:var(--ink-strong)}
+.hero .btn.ghost{background:transparent;color:var(--canvas);border-color:var(--canvas)}
+.hero .btn.ghost:hover{background:var(--canvas);color:var(--ink-strong)}
+.hero .btn:not(.ghost)::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,var(--stub-tint),transparent);opacity:.7;transform:skewX(-18deg) translateX(-120%)}
+.mo-ok .hero .btn:not(.ghost)::after{animation:sheen 5s 2s ease-in-out infinite}
+.hero :focus-visible{outline-color:var(--accent-sky)}
+.hero .hero-note{color:var(--canvas);opacity:.82}
+.hero .ticket{--notch-bg:var(--ink-strong);border-color:var(--canvas);box-shadow:0 40px 90px -40px var(--accent-sky),0 0 0 6px var(--ink-primary)}
+.mo-ok .hero .ticket.in{animation:bob 8s 1.2s ease-in-out infinite}
+.hero .steps::after{content:"";position:absolute;left:10%;right:10%;top:15px;border-top:2px solid var(--accent-sky);transform-origin:left;transform:scaleX(0);z-index:0}
+.hero .steps li span{z-index:1}
+.mo-ok .hero .steps::after{animation:stepfill 7s 1.5s ease-in-out infinite}
+.hero .steps li.on span::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--accent-sky);opacity:0}
+.mo-ok .hero .steps li.on span::after{animation:ping 2.4s ease-out infinite}
+.hero-cap{position:absolute;right:24px;bottom:18px;z-index:1}
+@media (min-width:1021px){.hero{min-height:min(860px,calc(100vh - 110px));display:flex;align-items:center}.hero>.wrap{width:100%}}
+.badge{display:inline-flex;align-items:center;gap:14px;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:10px 16px 10px 12px;margin-bottom:26px}
+.badge img{height:34px;width:auto}
+.badge span{font:700 13px/18px var(--font-sans);letter-spacing:.4px;color:var(--ink-strong);border-left:1px solid var(--perforation);padding-left:14px}
+.badge small{display:block;font:600 11px/14px var(--font-sans);letter-spacing:.8px;color:var(--text-secondary);text-transform:uppercase}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-note{margin-top:22px;display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:20px;color:var(--text-secondary);max-width:54ch}
+
+/* ticket component (guide §2.1 / p.08) */
+.ticket{--notch-bg:var(--surface-muted);position:relative;display:grid;grid-template-columns:minmax(0,1fr) var(--stub-w,200px);background:var(--canvas);border:1px solid var(--ink-primary);border-radius:var(--radius-card)}
+.ticket .main{padding:20px 24px 22px;min-width:0}
+.ticket .stub{background:var(--stub-tint);border-left:1px dashed var(--perforation);border-radius:0 var(--radius-card) var(--radius-card) 0;padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center}
+.notch{position:absolute;right:calc(var(--stub-w,200px) - 7px);width:14px;height:8px;overflow:hidden;z-index:2}
+.notch::before{content:"";position:absolute;left:0;width:14px;height:14px;border-radius:50%;background:var(--notch-bg);border:1px solid var(--ink-primary);box-sizing:border-box}
+.notch.t{top:-1px}.notch.t::before{top:-7px}
+.notch.b{bottom:-1px}.notch.b::before{bottom:-7px}
+.tk-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding-bottom:10px;border-bottom:2px solid var(--ink-strong);position:relative}
+.tk-head::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--accent-sky)}
+.tk-head b{display:flex;align-items:center;gap:8px;font:700 12px/16px var(--font-sans);letter-spacing:1.2px;text-transform:uppercase;color:var(--ink-primary)}
+.tk-head b i{display:block;width:18px;height:2px;background:var(--accent-sky)}
+.tk-head span{font:700 12px/16px var(--font-sans);letter-spacing:1px;text-transform:uppercase;color:var(--ink-strong)}
+.route{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:10px;margin:22px 0 20px}
+.route .big{font-weight:700;font-size:clamp(24px,2.6vw,32px);line-height:1.05;letter-spacing:-.01em;color:var(--ink-strong)}
+.route .sm{font-size:13px;line-height:18px;color:var(--text-secondary);margin-top:4px}
+.route .arrow{display:flex;align-items:center;gap:6px;color:var(--ink-primary);padding-bottom:22px}
+.route .arrow::before,.route .arrow::after{content:"";width:16px;border-top:2px dashed var(--perforation)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin:4px 0 6px}
+.steps::before{content:"";position:absolute;left:10%;right:10%;top:15px;border-top:2px solid var(--hairline)}
+.steps li{position:relative;text-align:center;font:700 11px/14px var(--font-sans);letter-spacing:.6px;text-transform:uppercase;color:var(--text-secondary)}
+.steps li span{display:flex;align-items:center;justify-content:center;width:32px;height:32px;margin:0 auto 8px;border-radius:50%;border:2px solid var(--perforation);background:var(--canvas);font-size:12px;color:var(--text-secondary);font-variant-numeric:tabular-nums;position:relative}
+.steps li.on span{border-color:var(--accent-sky);color:var(--ink-strong)}
+.steps li.on{color:var(--ink-strong)}
+.tk-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px solid var(--hairline)}
+.tk-meta div b{display:block;font:600 14px/20px var(--font-sans);color:var(--ink-strong)}
+.stub img{width:100%;max-width:190px;aspect-ratio:3/4;object-fit:cover;object-position:50% 12%;border-radius:var(--radius-control);border:1px solid var(--hairline);background:var(--surface-muted)}
+.stub .nm{font:700 15px/20px var(--font-sans);color:var(--ink-strong)}
+.stub .rl{font-size:12px;line-height:16px;color:var(--text-secondary)}
+
+/* sections */
+section{scroll-margin-top:84px}
+.block{padding:96px 0}
+.block.alt{background:var(--surface-muted);border-block:1px solid var(--hairline)}
+.sec-head{max-width:720px;margin-bottom:44px}
+.sec-head p{margin-top:16px;font-size:18px;color:var(--text-secondary)}
+
+/* official agency band */
+.agency{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center}
+.agency-card{background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:36px;display:grid;gap:24px}
+.agency-card img{height:64px;width:auto}
+.agency-card hr{border:0;border-top:1px dashed var(--perforation);margin:0}
+.agency-card p{color:var(--text-secondary)}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.role{border:1px solid var(--hairline);border-radius:var(--radius-card);background:var(--canvas);padding:22px}
+.role .chip{margin-bottom:14px}
+.role li{display:flex;gap:10px;align-items:flex-start;padding:6px 0;font-size:15px;line-height:22px}
+.role li svg{color:var(--ink-primary);margin-top:2px}
+.agency .roles{margin-top:0}
+
+/* services */
+.svc-list{display:grid;gap:20px}
+.svc{--notch-bg:var(--canvas);--stub-w:220px}
+.svc.altbg{--notch-bg:var(--surface-muted)}
+.svc .main{padding:26px 30px 28px}
+.svc h3{font-size:24px;line-height:30px;margin:6px 0 10px}
+.svc p{color:var(--text-secondary);max-width:62ch}
+.svc ul{margin:16px 0 0;display:grid;gap:8px}
+.svc li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:22px}
+.svc li svg{color:var(--ink-primary);margin-top:2px}
+.svc .req{margin-top:18px;display:flex;gap:10px;align-items:flex-start;background:var(--stub-tint);border-radius:var(--radius-control);padding:12px 14px;font-size:14px;line-height:20px;color:var(--ink-strong)}
+.svc .stub{gap:14px}
+.svc .stub .ic{color:var(--ink-strong)}
+.svc .stub .lb{color:var(--ink-primary)}
+.svc .stub .no{font-size:34px;line-height:1;font-weight:700;color:var(--ink-strong);font-variant-numeric:tabular-nums}
+.svc .stub a.btn{width:100%}
+.diff{margin-top:26px;border:1px solid var(--hairline);border-radius:var(--radius-card);background:var(--canvas);overflow:auto}
+.diff table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+.diff th,.diff td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--hairline);vertical-align:top}
+.diff thead th{font:700 12px/16px var(--font-sans);letter-spacing:1px;text-transform:uppercase;color:var(--ink-primary);background:var(--surface-muted)}
+.diff tbody th{font:600 14px/20px var(--font-sans);color:var(--ink-strong);width:22%}
+.diff tr:last-child th,.diff tr:last-child td{border-bottom:0}
+.fine{margin-top:16px;display:flex;gap:10px;font-size:14px;line-height:20px;color:var(--text-secondary)}
+
+/* doctor */
+.doctor{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:64px;align-items:center}
+.portrait{position:relative}
+.portrait .frame{border:1px solid var(--ink-primary);border-radius:var(--radius-card);background:var(--stub-tint);padding:14px}
+.portrait img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 10%;border-radius:var(--radius-control)}
+.portrait .cap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 4px 2px}
+.portrait .cap b{font:700 17px/22px var(--font-sans);color:var(--ink-strong)}
+.portrait .cap span{font-size:13px;line-height:18px;color:var(--text-secondary)}
+.doctor h2{margin-bottom:6px}
+.doctor .role-line{font:600 18px/26px var(--font-sans);color:var(--ink-primary);margin-bottom:24px}
+.cv{display:grid;gap:0;border-top:1px solid var(--hairline)}
+.cv div{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--hairline)}
+.cv dt{font:600 12px/20px var(--font-sans);letter-spacing:.8px;text-transform:uppercase;color:var(--text-secondary)}
+.cv dd{font-size:15px;line-height:22px}
+.cv dd span{display:block;color:var(--text-secondary);font-size:14px}
+.doctor .note{margin-top:22px;padding:16px 18px;border-left:3px solid var(--accent-sky);background:var(--surface-muted);border-radius:0 var(--radius-control) var(--radius-control) 0;font-size:15px;color:var(--text-primary)}
+
+/* IHC band */
+.ihc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:center;background:var(--stub-tint);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:32px 36px}
+.ihc h3{margin:10px 0 8px;font-size:22px}
+.ihc p{color:var(--text-secondary)}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pills li{display:flex;align-items:center;gap:8px;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-control);padding:9px 14px;font:600 14px/18px var(--font-sans);color:var(--ink-strong)}
+.pills li svg{color:var(--ink-primary)}
+
+/* process */
+.proc{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--ink-primary);border-radius:var(--radius-card);background:var(--canvas);position:relative}
+.proc li{padding:26px 22px 26px;position:relative;border-left:1px dashed var(--perforation)}
+.proc li:first-child{border-left:0}
+.proc .n{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--ink-strong);color:var(--canvas);font:700 14px/1 var(--font-sans);margin-bottom:16px;font-variant-numeric:tabular-nums}
+.proc li:nth-child(n+4) .n{background:var(--canvas);color:var(--ink-strong);border:2px solid var(--ink-strong)}
+.proc h4{font-size:17px;margin-bottom:8px}
+.proc p{font-size:14px;line-height:21px;color:var(--text-secondary)}
+.proc .chip{margin-top:14px}
+.proc a{font-weight:600;font-size:14px}
+.proc-note{margin-top:20px;display:flex;gap:10px;font-size:15px;color:var(--text-secondary)}
+
+/* inquiry */
+.inq{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:36px;align-items:start}
+.form-card{background:var(--canvas);border:1px solid var(--ink-primary);border-radius:var(--radius-card);padding:32px}
+.form-card .tk-head{margin-bottom:26px}
+.field{margin-bottom:20px}
+.field label,.field legend{display:block;font:600 14px/20px var(--font-sans);color:var(--ink-strong);margin-bottom:8px;padding:0}
+.field .hint{display:block;font-size:13px;line-height:18px;color:var(--text-secondary);margin-top:6px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+input[type=text],input[type=email],select,textarea{width:100%;min-height:var(--touch-min);padding:12px 14px;border:1px solid var(--perforation);border-radius:var(--radius-control);background:var(--canvas);color:var(--text-primary);font:var(--type-body);font-size:16px}
+textarea{min-height:104px;resize:vertical;line-height:22px}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--ink-primary);outline-offset:1px;border-color:var(--ink-primary)}
+[aria-invalid="true"]{border-color:var(--danger)!important}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer;margin:0}
+.opt span{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:1px solid var(--perforation);border-radius:var(--radius-control);font:600 15px/20px var(--font-sans);color:var(--text-primary);background:var(--canvas)}
+.opt input:checked+span{background:var(--stub-tint);border-color:var(--ink-strong);color:var(--ink-strong)}
+.opt input:focus-visible+span{outline:3px solid var(--ink-primary);outline-offset:2px}
+.opt input:checked+span::before{content:"";width:14px;height:8px;border-left:2px solid var(--ink-strong);border-bottom:2px solid var(--ink-strong);transform:rotate(-45deg) translate(1px,-2px);margin-right:2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:21px;color:var(--text-primary);margin:6px 0 22px}
+.consent input{width:22px;height:22px;margin-top:0;flex:none;accent-color:var(--ink-strong)}
+.err{color:var(--danger);font-weight:600;font-size:14px;line-height:20px;margin-bottom:14px;display:none}
+.err.show{display:flex;gap:8px}
+.ok{display:none;margin-top:20px;background:var(--stub-tint);border:1px solid var(--ink-primary);border-radius:var(--radius-control);padding:16px 18px;color:var(--ink-strong)}
+.ok.show{display:block}
+.side{display:grid;gap:16px}
+.side .card{border:1px solid var(--hairline);border-radius:var(--radius-card);background:var(--canvas);padding:24px}
+.side h4{margin-bottom:12px}
+.contact li{display:flex;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--hairline);font-size:15px}
+.contact li:first-child{border-top:0}
+.contact svg{color:var(--ink-primary)}
+.contact a{font-weight:600}
+.next li{display:flex;gap:12px;font-size:15px;line-height:22px;padding:6px 0;color:var(--text-secondary)}
+.next li b{color:var(--ink-strong);font-variant-numeric:tabular-nums;min-width:20px}
+.safe{display:flex;gap:12px;background:var(--surface-muted);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:18px 20px;font-size:14px;line-height:21px}
+.safe svg{color:var(--danger)}
+
+/* FAQ */
+.faq{max-width:820px;display:grid;gap:10px}
+.faq details{border:1px solid var(--hairline);border-radius:var(--radius-card);background:var(--canvas)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 22px;font:600 17px/24px var(--font-sans);color:var(--ink-strong);min-height:56px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:10px;height:10px;border-right:2px solid var(--ink-primary);border-bottom:2px solid var(--ink-primary);transform:rotate(45deg);transition:transform var(--motion-fast);flex:none;margin-right:4px}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq details[open]{border-color:var(--ink-primary)}
+.faq .a{padding:0 22px 20px;color:var(--text-secondary);font-size:16px}
+
+/* footer */
+.site-footer{background:var(--surface-muted);border-top:1px solid var(--hairline);padding:56px 0 34px}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px}
+.foot img.fl{height:56px;width:auto;margin-bottom:16px}
+.foot p{font-size:14px;line-height:21px;color:var(--text-secondary);max-width:44ch}
+.foot h4{font:700 12px/16px var(--font-sans);letter-spacing:1px;text-transform:uppercase;color:var(--ink-primary);margin-bottom:14px}
+.foot li{padding:5px 0;font-size:15px}
+.foot a{text-decoration:none;font-weight:500;color:var(--text-primary)}
+.foot a:hover{color:var(--ink-primary);text-decoration:underline}
+.legal{margin-top:40px;padding-top:22px;border-top:1px dashed var(--perforation);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:13px;line-height:19px;color:var(--text-secondary)}
+
+
+/* motion-graphic slots - each <figure class="mg"> is a reserved frame; set data-src to fill it */
+.mg{margin:0}
+.mg-frame{position:relative;aspect-ratio:var(--mg-ratio,16/9);width:100%;border:1px dashed var(--perforation);border-radius:var(--radius-card);background:var(--stub-tint);overflow:hidden;display:grid;place-items:center}
+.mg-frame>video,.mg-frame>img,.mg-frame>dotlottie-player{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mg-ph{display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px;text-align:center;color:var(--ink-primary)}
+.mg-ph svg{width:36px;height:36px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.mg-ph b{font:700 12px/16px var(--font-sans);letter-spacing:1.2px;text-transform:uppercase}
+.mg-ph span{font-size:14px;line-height:20px;color:var(--text-secondary);max-width:44ch}
+.mg-ph code{font:500 12px/16px ui-monospace,Consolas,monospace;color:var(--text-secondary)}
+.mg.is-filled .mg-frame{border-style:solid;border-color:var(--hairline)}
+.mg.is-filled .mg-ph,.mg.is-filled .mg-live,.mg.is-filled .mg-cap{display:none}
+/* v3: inline motion fills each slot until a real file is set in data-src (then .is-filled hides it) */
+.mg-frame:has(.mg-live){border-style:solid;border-color:var(--hairline)}
+.mg-live{position:absolute;inset:0;overflow:hidden}
+.mg-cap{margin-top:10px;display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:19px;color:var(--text-secondary)}
+.mg-cap svg{margin-top:1px}
+
+/* MG-01 — ranking marquee over moving wave lines */
+.mg1{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(14px,3vw,34px) 0;color:var(--canvas);background:radial-gradient(55% 90% at 50% 50%,var(--ink-primary),transparent 75%),linear-gradient(120deg,var(--ink-strong),var(--ink-primary) 55%,var(--ink-strong))}
+.mg1-wave{position:absolute;left:0;top:0;width:200%;height:100%;pointer-events:none}
+.mg1-wave path{fill:none;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.mg1-wave .w1{stroke:var(--accent-sky);stroke-opacity:.55;stroke-width:2}
+.mg1-wave .w2{stroke:var(--canvas);stroke-opacity:.18;stroke-width:1.5}
+.mg1-wave.ecg path{stroke:var(--accent-sky);stroke-width:2.5;filter:drop-shadow(0 0 6px var(--accent-sky))}
+.mo-ok .mg1-wave{animation:slideHalf 22s linear infinite}
+.mo-ok .mg1-wave.ecg{animation-duration:9s}
+.mq{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,var(--canvas) 8%,var(--canvas) 92%,transparent);mask-image:linear-gradient(90deg,transparent,var(--canvas) 8%,var(--canvas) 92%,transparent)}
+.mq-track{display:flex;gap:14px;width:max-content;padding-inline:7px}
+.mo-ok .mq-track{animation:slideHalf 38s linear infinite}
+.mo-ok .mq.rev .mq-track{animation-direction:reverse;animation-duration:46s}
+.mq-i{display:inline-flex;align-items:baseline;gap:10px;padding:10px 18px;border:1px solid var(--ink-primary);border-radius:999px;background:linear-gradient(135deg,var(--ink-primary),transparent);white-space:nowrap}
+.mq-i small{font:600 12px/16px var(--font-sans);letter-spacing:1px;text-transform:uppercase;opacity:.85}
+.mq-i b{font-weight:700;font-size:clamp(20px,2.2vw,30px);line-height:1;font-variant-numeric:tabular-nums}
+.mq.rev .mq-i{padding:6px 14px;border-color:transparent;background:none;align-items:center;font:600 clamp(13px,1.2vw,16px)/20px var(--font-sans)}
+.mq.rev .mq-i i{display:block;width:6px;height:6px;border-radius:50%;background:var(--accent-sky)}
+.mg1-mid{position:relative;text-align:center;padding:0 20px}
+.mg1-mid .lb{color:var(--canvas);opacity:.8}
+.mg1-mid b{display:block;margin-top:6px;font-weight:700;font-size:clamp(20px,3vw,40px);line-height:1.15;letter-spacing:-.015em}
+
+/* MG-02 — layered parallax campus photo + line drawing + glass cards */
+.mg2{background:var(--ink-strong);color:var(--canvas)}
+.mg2-photo{position:absolute;inset:-10% 0;transform:translate3d(0,var(--py,0px),0)}
+.mg2-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;opacity:.75}
+.mo-ok .mg2-photo img{animation:kenburns 40s ease-in-out infinite alternate}
+.mg2-shade{position:absolute;inset:0;background:linear-gradient(90deg,var(--ink-strong) 5%,transparent 70%),linear-gradient(0deg,var(--ink-strong),transparent 50%)}
+.mg2-lines{position:absolute;inset:0;width:100%;height:100%}
+.mg2-lines .dl{fill:none;stroke:var(--canvas);stroke-opacity:.55;stroke-width:1.5;stroke-dasharray:1000;stroke-dashoffset:0;transition:stroke-dashoffset 2.4s cubic-bezier(.6,0,.2,1)}
+.mg2-lines .dl.sky{stroke:var(--accent-sky);stroke-opacity:.9;stroke-width:2.5}
+.mg2-lines .dl:nth-child(2){transition-delay:.25s}.mg2-lines .dl:nth-child(3){transition-delay:.5s}.mg2-lines .dl:nth-child(4){transition-delay:.75s}.mg2-lines .dl:nth-child(5){transition-delay:1s}
+.mo-ok .mg:not(.in) .mg2-lines .dl{stroke-dashoffset:1000}
+.mg2-lines .spin{fill:none;stroke:var(--accent-sky);stroke-opacity:.7;stroke-width:1.5;stroke-dasharray:6 10;transform-box:fill-box;transform-origin:center}
+.mo-ok .mg2-lines .spin{animation:spin 30s linear infinite}
+.mg2-lines .tgt{fill:var(--accent-sky);transform-box:fill-box;transform-origin:center}
+.mo-ok .mg2-lines .tgt{animation:halo 2.6s ease-out infinite}
+.mg2-cards{position:absolute;left:clamp(16px,4vw,48px);bottom:clamp(16px,4vw,48px);top:clamp(16px,4vw,48px);display:flex;flex-direction:column;justify-content:flex-end;gap:12px;width:min(340px,70%)}
+.glass{transform:translate3d(0,var(--py,0px),0);padding:14px 18px;border:1px solid var(--ink-primary);border-radius:var(--radius-card);background:linear-gradient(135deg,var(--ink-primary),transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:opacity .8s,translate .8s cubic-bezier(.2,.7,.2,1)}
+.glass .lb{color:var(--canvas);opacity:.8;display:block}
+.glass b{display:block;font:700 clamp(16px,1.7vw,22px)/1.25 var(--font-sans);margin-top:4px}
+.glass.g2{transition-delay:.2s;margin-left:clamp(0px,3vw,36px)}.glass.g3{transition-delay:.4s;margin-left:clamp(0px,6vw,72px)}
+.mo-ok .mg:not(.in) .glass{opacity:0;translate:-24px 0}
+.mg2-cap{position:absolute;right:14px;top:14px}
+
+/* MG-03 — specialties orbiting AMC */
+.mg3{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:100%;align-items:center;gap:24px;padding:0 clamp(20px,4vw,56px);background:radial-gradient(45% 80% at 72% 50%,var(--canvas),transparent 70%),linear-gradient(135deg,var(--stub-tint),var(--surface-muted))}
+.mg3-copy .lb{color:var(--ink-primary)}
+.mg3-copy b{display:block;margin:8px 0 18px;font-weight:700;font-size:clamp(22px,2.4vw,32px);line-height:1.2;letter-spacing:-.01em;color:var(--ink-strong)}
+.mg3-copy li{display:flex;gap:12px;align-items:center;padding:8px 0;border-top:1px dashed var(--perforation);font:600 15px/20px var(--font-sans);color:var(--ink-strong)}
+.mg3-copy li svg{color:var(--ink-primary)}
+.mg3-copy li i{margin-left:auto;width:8px;height:8px;border-radius:50%;background:var(--accent-sky)}
+.mo-ok .mg3-copy li i{animation:ping2 2.4s ease-out infinite}
+.mo-ok .mg3-copy li:nth-child(2) i{animation-delay:.8s}.mo-ok .mg3-copy li:nth-child(3) i{animation-delay:1.6s}
+.orbit{position:relative;height:88%;aspect-ratio:1;justify-self:center}
+.orb-ring{position:absolute;border-radius:50%;border:1px dashed var(--perforation)}
+.orb-ring.r1{inset:4%}.orb-ring.r2{inset:23%;border-style:solid;border-color:var(--hairline)}.orb-ring.r3{inset:-4%;border-color:var(--hairline)}
+.orb-ring.r2::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:2px solid transparent;border-top-color:var(--accent-sky)}
+.mo-ok .orb-ring.r2::after{animation:spin 6s linear infinite}
+.orb-hub{position:absolute;inset:36%;display:grid;place-items:center;border-radius:50%;background:var(--canvas);border:1px solid var(--hairline);box-shadow:0 20px 50px -24px var(--ink-primary)}
+.orb-hub img{width:78%;height:auto}
+.orb-hub::before,.orb-hub::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:2px solid var(--accent-sky);opacity:0}
+.mo-ok .orb-hub::before{animation:ping 3s ease-out infinite}.mo-ok .orb-hub::after{animation:ping 3s 1.5s ease-out infinite}
+.orb-spin{position:absolute;inset:0}
+.mo-ok .orb-spin{animation:spin 48s linear infinite}
+.mo-ok .orb-spin.rev{animation-duration:30s;animation-direction:reverse}
+.orb-i{position:absolute;inset:0;transform:rotate(var(--a));pointer-events:none}
+.orb-i i{position:absolute;left:50%;top:4%;display:grid;place-items:center;width:clamp(34px,4vw,50px);aspect-ratio:1;border-radius:50%;background:var(--canvas);color:var(--ink-strong);border:1px solid var(--hairline);box-shadow:0 8px 20px -10px var(--ink-primary);transform:translate(-50%,-50%) rotate(calc(var(--a) * -1))}
+.orb-spin.rev .orb-i i{top:23%;background:var(--ink-strong);color:var(--canvas);border-color:var(--ink-strong)}
+.orb-i i svg{width:56%;height:56%}
+.mo-ok .orb-spin .orb-i i svg{animation:spin 48s linear infinite reverse}
+.mo-ok .orb-spin.rev .orb-i i svg{animation:spin 30s linear infinite}
+
+/* MG-04 — five-step ticket flow, drawn on scroll */
+.mg4{display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,3vw,34px);padding:0 clamp(16px,4vw,56px);color:var(--canvas);background:radial-gradient(50% 90% at 20% 0%,var(--ink-primary),transparent 70%),radial-gradient(50% 90% at 90% 100%,var(--ink-primary),transparent 70%),var(--ink-strong)}
+.mg4-head{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+.mg4-head .lb{color:var(--canvas);opacity:.85}
+.mg4-legend{display:flex;gap:14px;align-items:center;font:600 12px/16px var(--font-sans);opacity:.85}
+.mg4-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;border:2px solid var(--accent-sky)}
+.mg4-legend i.a{background:var(--canvas);border-color:var(--canvas)}
+.mg4-row{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(6px,1.4vw,18px)}
+.mg4-line{position:absolute;left:10%;right:10%;top:clamp(22px,2.6vw,30px);height:2px;background:var(--ink-primary)}
+.mg4-fill{position:absolute;inset:0;background:linear-gradient(90deg,var(--accent-sky),var(--canvas));transform-origin:left;transition:transform 2.2s cubic-bezier(.6,0,.2,1) .2s}
+.mo-ok .mg:not(.in) .mg4-fill{transform:scaleX(0)}
+.mg4-run{position:absolute;inset:0;display:none}
+.mg4-run i{position:absolute;left:0;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--canvas);box-shadow:0 0 0 4px var(--accent-sky),0 0 18px 4px var(--accent-sky)}
+.mo-ok .mg.in .mg4-run{display:block;animation:runAcross 7.5s 2.4s linear infinite both}
+.tk4{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;transition:opacity .6s,transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:calc(.3s + var(--i) * .35s)}
+.mo-ok .mg:not(.in) .tk4{opacity:0;transform:translateY(16px)}
+.tk4 .n{display:grid;place-items:center;width:clamp(44px,5.2vw,60px);aspect-ratio:1;border-radius:50%;background:var(--ink-strong);border:2px solid var(--accent-sky);font:700 clamp(13px,1.3vw,17px)/1 var(--font-sans);font-variant-numeric:tabular-nums;position:relative}
+.tk4.amc .n{background:var(--canvas);color:var(--ink-strong);border-color:var(--canvas)}
+.mo-ok .mg.in .tk4 .n{animation:lit 7.5s infinite;animation-delay:calc(2.4s + var(--i) * 1.5s)}
+.tk4 .card{width:100%;padding:10px 8px;border:1px solid var(--ink-primary);border-radius:var(--radius-control);background:linear-gradient(160deg,var(--ink-primary),transparent);border-right-style:dashed}
+.tk4 b{display:block;font:700 clamp(12px,1.35vw,17px)/1.2 var(--font-sans)}
+.tk4 small{display:block;margin-top:4px;font:600 clamp(9px,.9vw,11px)/1.2 var(--font-sans);letter-spacing:.6px;text-transform:uppercase;opacity:.8}
+.mg4-foot{font-size:13px;line-height:18px;opacity:.85;text-align:center}
+@media (max-width:700px){
+  .mg3{grid-template-columns:1fr;padding:0}
+  .mg3-copy{display:none}
+  .orbit{height:90%}
+  .glass.g3{display:none}
+  .mg4 .tk4 .card{padding:6px 2px;border-right-style:solid}
+  .mg4-head .mg4-legend{display:none}
+  .mg4-foot{display:none}
+}
+.mg-band{padding:40px 0 0}
+.mg-inline{margin-bottom:44px}
+@media (max-width:700px){.mg-band{padding-top:28px}.mg-inline{margin-bottom:28px}.mg-frame{--mg-ratio:var(--mg-ratio-m,4/3)}}
+
+/* why AMC */
+.wa-photo{position:relative;margin:0;border-top:1px solid var(--hairline);background:var(--stub-tint);overflow:hidden}
+.wa-photo .px{transform:translate3d(0,var(--py,0px),0) scale(1.2)}
+.wa-photo img{width:100%;height:clamp(300px,42vw,600px);object-fit:cover;object-position:50% 58%}
+.wa-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--canvas),transparent 38%);pointer-events:none}
+.wa-photo figcaption{position:absolute;top:16px;left:max(16px,calc((100% - var(--grid-web-max))/2 + 24px));z-index:1}
+.wa-intro{position:relative;margin-top:-150px;background:var(--canvas);border:1px solid var(--ink-primary);border-radius:var(--radius-card);padding:44px 48px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:48px;align-items:center}
+.wa-intro h2 em{font-style:normal;color:var(--ink-primary)}
+.wa-intro .lead{margin-top:18px}
+.wa-keys{display:grid;border-left:1px dashed var(--perforation);padding-left:36px}
+.wa-keys img{height:44px;width:auto;margin-bottom:12px}
+#ihc-support{scroll-margin-top:84px}
+.wa-keys dl div{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:baseline;padding:14px 0;border-top:1px solid var(--hairline)}
+.wa-keys dl div:first-child{border-top:0}
+.wa-keys b{font-weight:700;font-size:40px;line-height:1;letter-spacing:-.02em;color:var(--ink-strong);font-variant-numeric:tabular-nums}
+.wa-keys span{font-size:14px;line-height:20px;color:var(--text-secondary)}
+.wa-keys span strong{display:block;font:600 15px/20px var(--font-sans);color:var(--ink-strong)}
+.wa-first{padding-top:0}
+.wa-gap{margin-top:80px}
+.src{margin-top:16px;display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:19px;color:var(--text-secondary);max-width:96ch}
+.src svg{margin-top:1px}
+
+/* ranking strip */
+.rank-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.rank{position:relative;display:flex;flex-direction:column;gap:6px;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:22px 18px 18px}
+.rank.top{border-color:var(--ink-primary)}
+.rank::before{content:"";position:absolute;left:18px;top:-1px;width:28px;height:3px;background:var(--accent-sky)}
+.rank .num{font-weight:700;font-size:clamp(52px,5vw,72px);line-height:1;letter-spacing:-.03em;color:var(--ink-strong);font-variant-numeric:tabular-nums;margin-top:6px}
+.rank .num small{font-size:.42em;vertical-align:top;line-height:1.4;margin-right:2px;color:var(--ink-primary)}
+.rank .wd{font-size:13px;line-height:18px;color:var(--text-secondary)}
+.rank .chip{align-self:flex-start;margin-top:10px}
+.rank>*{position:relative;z-index:1}
+.rank::before{z-index:2;transform-origin:left;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.rank::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(180px circle at var(--mx,50%) var(--my,0%),var(--stub-tint),transparent 70%);opacity:0;transition:opacity .25s;pointer-events:none;z-index:0}
+.rank{transition:opacity .6s,transform .6s cubic-bezier(.2,.7,.2,1),border-color .2s,box-shadow .25s}
+.rank:hover{border-color:var(--accent-sky);box-shadow:0 22px 44px -26px var(--ink-primary)}
+.rank:hover::after{opacity:1}
+.rank-grid .rank:nth-child(2){transition-delay:90ms}.rank-grid .rank:nth-child(3){transition-delay:180ms}.rank-grid .rank:nth-child(4){transition-delay:270ms}.rank-grid .rank:nth-child(5){transition-delay:360ms}.rank-grid .rank:nth-child(6){transition-delay:450ms}
+.mo-ok .rank-grid:not(.in) .rank{opacity:0;transform:translateY(28px) scale(.95)}
+.mo-ok .rank-grid:not(.in) .rank::before{transform:scaleX(0)}
+.rank-grid.settled .rank{transition:transform .25s ease-out,border-color .2s,box-shadow .25s;transition-delay:0s;transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
+.cu{font-variant-numeric:tabular-nums}
+.rank-also{margin-top:14px;font-size:14px;line-height:20px;color:var(--text-primary)}
+.rank-also b{color:var(--ink-strong)}
+
+/* AMC-published volumes (gated) */
+.vol{margin-top:56px;background:var(--canvas);border:1px solid var(--ink-primary);border-radius:var(--radius-card);padding:22px 26px 24px}
+.vol-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:18px}
+.vol-grid div{padding:6px 22px;border-left:1px dashed var(--perforation)}
+.vol-grid div:first-child{border-left:0;padding-left:0}
+.vol-grid b{display:block;font-weight:700;font-size:clamp(28px,2.8vw,40px);line-height:1.1;letter-spacing:-.02em;color:var(--ink-strong);font-variant-numeric:tabular-nums}
+.vol-grid span{display:block;margin-top:6px;font-size:14px;line-height:20px;color:var(--text-secondary)}
+
+/* recognition & training */
+.trust{margin-top:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));background:var(--stub-tint);border-radius:var(--radius-card);padding:8px 0}
+.trust div{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;padding:20px 28px}
+.trust div+div{border-left:1px dashed var(--perforation)}
+.trust b{font-weight:700;font-size:clamp(36px,3.4vw,48px);line-height:1;letter-spacing:-.02em;color:var(--ink-strong);font-variant-numeric:tabular-nums}
+.trust p{font-size:15px;line-height:22px;color:var(--text-primary)}
+.trust p span{display:block;font-size:13px;line-height:18px;color:var(--text-secondary);margin-top:4px}
+
+/* departments */
+.dept-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.dept{display:flex;flex-direction:column;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-card);overflow:hidden}
+.dept-media{position:relative;margin:0;aspect-ratio:16/9;background:var(--stub-tint);border-bottom:1px solid var(--hairline);display:grid;place-items:center;color:var(--ink-primary)}
+.dept-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dept-media .ic.big{width:56px;height:56px;stroke-width:1.2}
+.dept-media .chip{position:absolute;top:10px;left:10px}
+.ill{position:absolute;right:8px;bottom:8px;background:var(--canvas);color:var(--text-secondary);font:600 11px/14px var(--font-sans);letter-spacing:.3px;padding:3px 7px;border-radius:var(--radius-chip)}
+.dept-body{padding:18px 18px 16px}
+.dept h3{display:flex;gap:10px;align-items:center;font-size:18px;line-height:24px}
+.dept h3 svg{color:var(--ink-primary)}
+.dept .cnt{display:block;margin:6px 0 8px;font:600 12px/16px var(--font-sans);letter-spacing:.8px;text-transform:uppercase;color:var(--text-secondary)}
+.dept li{padding:7px 0;border-top:1px dashed var(--hairline);font-size:14px;line-height:20px;overflow-wrap:anywhere}
+
+/* institutes, centres, programs */
+.inst-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.inst{--notch-bg:var(--canvas);--stub-w:112px}
+.inst .main{padding:22px 22px 20px}
+.inst h3{margin:10px 0 6px}
+.inst p{font-size:14px;line-height:20px;color:var(--text-secondary)}
+.inst .stub .ic{color:var(--ink-strong)}
+.inst .stub .no{font-size:26px;line-height:1;font-weight:700;color:var(--ink-strong);font-variant-numeric:tabular-nums}
+.centres{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:44px;align-items:center;margin-top:48px}
+.ph{position:relative;margin:0;border:1px solid var(--hairline);border-radius:var(--radius-card);overflow:hidden;background:var(--stub-tint)}
+.ph img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.centres h3{margin-bottom:6px}
+.centres>div>p{color:var(--text-secondary);margin-bottom:18px}
+.prog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:48px}
+.prog{display:flex;flex-direction:column;gap:10px;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:22px}
+.prog .ib{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:var(--radius-control);background:var(--stub-tint);color:var(--ink-strong)}
+.prog h4{font-size:18px;line-height:24px;margin-top:4px}
+.prog p{font-size:14px;line-height:21px;color:var(--text-secondary)}
+.prog .btn{margin-top:auto;align-self:flex-start}
+.prog .chip{align-self:flex-start}
+
+/* screening facility */
+.scr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:56px;align-items:center}
+.scr .lead{margin-top:16px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+.feat li{display:flex;gap:12px;align-items:flex-start;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-control);padding:14px 16px;font-size:15px;line-height:21px}
+.feat li svg{color:var(--ink-primary);margin-top:-1px}
+.feat li.wide{grid-column:1/-1}
+
+/* international patient support */
+.proc.wa-flow{grid-template-columns:repeat(4,1fr)}
+.wa-flow li .n,.wa-flow li:nth-child(n+4) .n{background:var(--ink-strong);color:var(--canvas);border:0}
+.wa-flow ul{margin-top:10px;display:grid;gap:6px}
+.wa-flow ul li{padding:0;border:0;display:flex;gap:8px;font-size:14px;line-height:20px;color:var(--text-primary)}
+.wa-flow ul li svg{color:var(--ink-primary);margin-top:2px}
+.sup{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px;margin-top:20px}
+.sup .card{border:1px solid var(--hairline);border-radius:var(--radius-card);background:var(--canvas);padding:26px}
+.sup .card.km{border-color:var(--ink-primary);background:var(--stub-tint)}
+.sup h4{margin:12px 0 8px}
+.sup p{font-size:15px;line-height:22px;color:var(--text-secondary)}
+.sup .pills{margin-top:16px}
+.sup .bill{display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding-top:16px;border-top:1px solid var(--hairline);font-size:15px;line-height:22px;color:var(--text-primary)}
+.sup .bill svg{color:var(--ink-primary);margin-top:1px}
+.km-who{display:flex;gap:14px;align-items:center;margin-top:18px}
+.km-who img{width:56px;height:56px;object-fit:cover;object-position:50% 12%;border-radius:var(--radius-control);border:1px solid var(--hairline)}
+.km-who b{display:block;font:700 15px/20px var(--font-sans);color:var(--ink-strong)}
+.km-who span{font-size:13px;line-height:18px;color:var(--text-secondary)}
+
+@media (max-width:1100px){.nav{gap:18px}}
+@media (max-width:1020px){
+  .wa-intro{grid-template-columns:1fr;gap:28px;margin-top:-90px;padding:32px}
+  .wa-keys{border-left:0;padding-left:0;border-top:1px dashed var(--perforation);padding-top:20px}
+  .rank-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .dept-grid,.prog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .inst-grid,.centres,.scr,.sup{grid-template-columns:1fr}
+  .centres,.scr{gap:28px}
+  .vol-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:18px}
+  .vol-grid div:nth-child(3){border-left:0;padding-left:0}
+  .proc.wa-flow{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .wa-photo img{height:260px}
+  .wa-intro{margin-top:-40px;padding:24px 20px}
+  .wa-keys dl div{grid-template-columns:76px 1fr}
+  .wa-keys b{font-size:32px}
+  .wa-gap{margin-top:56px}
+  .rank-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .rank{padding:20px 14px 16px}
+  .dept-grid,.prog-grid,.feat{grid-template-columns:1fr}
+  .vol{padding:20px 18px}
+  .vol-grid div{padding:4px 0 4px 14px}
+  .trust{grid-template-columns:1fr}
+  .trust div{padding:18px 20px}
+  .trust div+div{border-left:0;border-top:1px dashed var(--perforation)}
+  .sup .card{padding:22px 18px}
+}
+
+
+/* AMC news + official channels */
+.news{position:relative;isolation:isolate;overflow:hidden;background:var(--ink-strong);color:var(--canvas);padding:96px 0}
+.news::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(var(--ink-primary) 1px,transparent 1px),linear-gradient(90deg,var(--ink-primary) 1px,transparent 1px);background-size:56px 56px;opacity:.35;-webkit-mask-image:radial-gradient(70% 60% at 50% 30%,var(--canvas),transparent);mask-image:radial-gradient(70% 60% at 50% 30%,var(--canvas),transparent)}
+.news::after{content:"";position:absolute;z-index:-1;width:60vw;height:60vw;max-width:820px;max-height:820px;left:55%;top:-20%;border-radius:50%;background:radial-gradient(closest-side,var(--accent-sky),transparent);opacity:.18}
+.mo-ok .news.is-on::after{animation:drift 18s ease-in-out infinite alternate}
+.news-upd{display:inline-flex;gap:10px;align-items:center;margin-top:16px;font:600 13px/18px var(--font-sans);color:var(--canvas)}
+.news-upd[hidden]{display:none}
+.live-dot{position:relative;width:8px;height:8px;border-radius:50%;background:var(--accent-sky)}
+.live-dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--accent-sky);opacity:0}
+.mo-ok .news.is-on .live-dot::after{animation:ping 2s ease-out infinite}
+.news-grid[data-n="3"],.news-grid[data-n="5"],.news-grid[data-n="6"]{grid-template-columns:repeat(3,minmax(0,1fr))}
+.ncard{transition:transform .25s cubic-bezier(.2,.7,.2,1),border-color .2s,box-shadow .25s,opacity var(--motion-base-in)}
+.ncard:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px var(--accent-sky)}
+.vid-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.vcard{display:flex;flex-direction:column;background:var(--canvas);color:var(--text-primary);border-radius:var(--radius-card);overflow:hidden;text-decoration:none;border:1px solid var(--canvas);transition:transform .25s cubic-bezier(.2,.7,.2,1),border-color .2s,box-shadow .25s,opacity var(--motion-base-in)}
+.vcard:hover{border-color:var(--accent-sky);transform:translateY(-4px);box-shadow:0 24px 50px -28px var(--accent-sky)}
+.vcard:focus-visible{outline-color:var(--accent-sky)}
+.js .ncard.rv.in:hover,.js .vcard.rv.in:hover{transform:translateY(-4px)}
+.vthumb{position:relative;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--stub-tint),var(--surface-muted));color:var(--ink-primary);overflow:hidden}
+.vthumb>svg{width:44px;height:44px}
+.vthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.vcard:hover .vthumb img{transform:scale(1.06)}
+.vthumb .play{position:absolute;left:14px;bottom:14px;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--canvas);color:var(--ink-strong);box-shadow:0 0 0 6px var(--ink-strong)}
+.vthumb .play svg{width:22px;height:22px}
+.vbody{display:flex;flex-direction:column;gap:8px;flex:1;padding:16px 18px 18px}
+.vbody time{font:600 12px/16px var(--font-sans);letter-spacing:.8px;text-transform:uppercase;color:var(--text-secondary);font-variant-numeric:tabular-nums}
+.vbody b{font:700 16px/23px var(--font-sans);color:var(--ink-strong)}
+.vbody small{margin-top:auto;padding-top:10px;border-top:1px dashed var(--perforation);display:flex;gap:8px;align-items:center;font:600 13px/18px var(--font-sans);color:var(--ink-primary)}
+.news-sub a{margin-left:auto;color:var(--canvas);font:600 13px/18px var(--font-sans);letter-spacing:0;text-transform:none;display:inline-flex;gap:6px;align-items:center}
+@media (max-width:1020px){.vid-grid,.news-grid[data-n]{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){.vid-grid,.news-grid[data-n]{grid-template-columns:1fr}}
+.news .kick{color:var(--canvas)}
+.news h2{color:var(--canvas)}
+.news .lead{color:var(--canvas);opacity:.85}
+.news-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end;margin-bottom:40px}
+.news-head .btn{background:var(--canvas);color:var(--ink-strong);border-color:var(--canvas)}
+.news-head .btn:hover{background:var(--stub-tint);color:var(--ink-strong);border-color:var(--stub-tint)}
+.news-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ncard{display:flex;flex-direction:column;gap:14px;background:var(--canvas);color:var(--text-primary);border-radius:var(--radius-card);padding:22px 22px 20px;text-decoration:none;border:1px solid var(--canvas)}
+.ncard:hover{border-color:var(--accent-sky)}
+.ncard .meta{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ncard time{font:600 12px/16px var(--font-sans);letter-spacing:.8px;text-transform:uppercase;color:var(--text-secondary);font-variant-numeric:tabular-nums}
+.ncard h3{font-size:17px;line-height:24px;color:var(--ink-strong);margin:0}
+.ncard .go{margin-top:auto;display:flex;align-items:center;gap:8px;font:700 13px/18px var(--font-sans);color:var(--ink-primary);padding-top:12px;border-top:1px dashed var(--perforation)}
+.news-sub{margin:56px 0 18px;display:flex;align-items:center;gap:14px;font:700 12px/16px var(--font-sans);letter-spacing:1.2px;text-transform:uppercase;color:var(--canvas)}
+.news-sub i{display:block;width:24px;height:2px;background:var(--accent-sky)}
+.soc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.soc{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center;background:var(--canvas);color:var(--text-primary);border-radius:var(--radius-card);padding:20px;text-decoration:none;border:1px solid var(--canvas)}
+.soc:hover{border-color:var(--accent-sky)}
+.soc .ic{width:36px;height:36px;color:var(--ink-strong);grid-row:1/span 2;stroke-width:1.4}
+.soc b{font:700 16px/22px var(--font-sans);color:var(--ink-strong)}
+.soc span{font-size:13px;line-height:18px;color:var(--text-secondary);overflow-wrap:anywhere}
+.vid-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.vid{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;color:var(--canvas);border:1px dashed var(--perforation);border-radius:var(--radius-card);padding:16px 20px;text-decoration:none}
+.vid:hover{border-color:var(--accent-sky);border-style:solid}
+.vid .ic{color:var(--canvas)}
+.vid b{display:block;font:700 16px/22px var(--font-sans)}
+.vid small{display:block;font-size:13px;line-height:18px;opacity:.85}
+.news-note{margin-top:30px;display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:19px;color:var(--canvas);opacity:.9;max-width:100ch}
+.news-note a{color:var(--canvas)}
+.news :focus-visible{outline-color:var(--canvas)}
+.ncard:focus-visible,.soc:focus-visible{outline-color:var(--accent-sky)}
+@media (max-width:1020px){.news-grid,.soc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.news-head{grid-template-columns:1fr;align-items:start}}
+@media (max-width:700px){.news{padding:64px 0}.news-grid,.soc-grid,.vid-row{grid-template-columns:1fr}}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity var(--motion-base-in),transform var(--motion-base-in)}
+.js .rv.in{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:1020px){
+  .hero .wrap,.agency,.doctor,.inq{grid-template-columns:1fr}
+  .hero .wrap{gap:44px}
+  .doctor{gap:36px}.portrait{max-width:420px}
+  .proc{grid-template-columns:1fr}
+  .proc li{border-left:0;border-top:1px dashed var(--perforation);display:grid;grid-template-columns:48px 1fr;column-gap:14px}
+  .proc li:first-child{border-top:0}
+  .proc .n{grid-row:1/span 6;margin:0}
+  .proc li>*:not(.n){grid-column:2}
+  .proc li .chip{justify-self:start}
+  .ihc{grid-template-columns:1fr;gap:20px}
+  .foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .menu-btn{display:inline-flex}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--canvas);border-bottom:1px solid var(--hairline);flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 20px;margin:0}
+  .nav.open{display:flex}
+  .nav a:not(.btn){padding:14px 0;border-bottom:1px solid var(--hairline)}
+  .nav-cta{margin:14px 0 0}.nav a.btn{color:var(--filled-button-fg)}
+}
+@media (max-width:700px){
+  .wrap{padding-inline:16px}
+  .block{padding:64px 0}.hero{padding:44px 0 56px}
+  .ticket{grid-template-columns:1fr}
+  .ticket .stub{border-left:0;border-top:1px dashed var(--perforation);border-radius:0 0 var(--radius-card) var(--radius-card);flex-direction:row;text-align:left;justify-content:flex-start}
+  .notch{display:none}
+  .hero .stub img{max-width:96px}
+  .svc .stub{flex-direction:column;align-items:flex-start}
+  .roles,.two{grid-template-columns:1fr}
+  .cv div{grid-template-columns:1fr;gap:2px}
+  .form-card{padding:22px 18px}
+  .route{grid-template-columns:1fr;gap:6px}.route .arrow{padding:0;transform:rotate(90deg);justify-self:start;margin-left:10px}
+  .steps li{font-size:10px;letter-spacing:.2px}
+  .agency-card{padding:24px}
+  .foot{grid-template-columns:1fr;gap:30px}
+  .brand img{height:44px}
+  .ihc{padding:24px 20px}
+}
+/* ---------- v3 motion points outside the hero/MG slots ---------- */
+main{overflow-x:clip}
+/* section dividers: heart-rhythm line drawn on scroll, and moving waves into/out of the dark news band */
+.ecg-div{height:56px;margin:64px 0 0}
+.ecg-div.top{margin:0 0 48px}
+.ecg-div svg{display:block;width:100%;height:100%}
+.ecg-div .base{fill:none;stroke:var(--perforation);stroke-width:1.5;stroke-linejoin:round;stroke-dasharray:1000;stroke-dashoffset:0;transition:stroke-dashoffset 2s cubic-bezier(.6,0,.2,1)}
+.mo-ok .ecg-div:not(.in) .base{stroke-dashoffset:1000}
+.ecg-div .beat{fill:none;stroke:var(--accent-sky);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:90 2000;stroke-dashoffset:-470;filter:drop-shadow(0 0 4px var(--accent-sky))}
+.mo-ok .ecg-div.in .beat{animation:beatS 4.5s 1.6s linear infinite both}
+.wave-div{position:relative;height:72px;overflow:hidden;background:var(--canvas);margin-bottom:-1px}
+.wave-div.flip{background:var(--surface-muted);transform:scaleY(-1);margin:-1px 0 0}
+.wave-div svg{position:absolute;left:0;bottom:0;width:200%;height:100%}
+.wave-div .wa{fill:var(--ink-primary)}
+.wave-div .wb{fill:var(--ink-strong)}
+.mo-ok .wave-div.is-on svg{animation:slideHalf 24s linear infinite}
+.mo-ok .wave-div.is-on svg+svg{animation-duration:15s;animation-direction:reverse}
+#services{border-top:0}
+
+/* services: progress line fills while scrolling, stub icons pulse */
+.svc-list{position:relative}
+.svc-list[data-progress]::before,.svc-list[data-progress]::after{content:"";position:absolute;left:-12px;top:0;bottom:0;width:2px;border-radius:2px}
+.svc-list[data-progress]::before{background:var(--hairline)}
+.svc-list[data-progress]::after{background:linear-gradient(var(--accent-sky),var(--ink-primary));transform-origin:top;transform:scaleY(var(--p,1))}
+.mo-ok [data-progress]{--p:0}
+.pi{position:relative;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--canvas);border:1px solid var(--hairline)}
+.pi::before,.pi::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:2px solid var(--accent-sky);opacity:0}
+.mo-ok .svc.in .pi::before{animation:ping 3s ease-out infinite}
+.mo-ok .svc.in .pi::after{animation:ping 3s 1.5s ease-out infinite}
+.svc{transition:opacity var(--motion-base-in),transform var(--motion-base-in),box-shadow .3s}
+.svc:hover{box-shadow:0 26px 60px -36px var(--ink-primary)}
+
+/* doctor: orbit rings behind the portrait, CV rows stagger in */
+#doctor{overflow:hidden}
+.portrait{isolation:isolate}
+.portrait::before,.portrait::after{content:"";position:absolute;left:50%;top:46%;aspect-ratio:1;border-radius:50%;translate:-50% -50%;z-index:-1;pointer-events:none}
+.portrait::before{width:118%;border:1px dashed var(--perforation)}
+.portrait::after{width:104%;border:2px solid transparent;border-top-color:var(--accent-sky);border-right-color:var(--accent-sky)}
+.mo-ok .portrait.in::before{animation:spin 80s linear infinite}
+.mo-ok .portrait.in::after{animation:spin 14s linear infinite reverse}
+.portrait .frame{position:relative;background:linear-gradient(160deg,var(--stub-tint),var(--canvas))}
+.doctor .role-line{position:relative;padding-bottom:12px}
+.doctor .role-line::after{content:"";position:absolute;left:0;bottom:0;width:72px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--accent-sky),var(--ink-primary));transform-origin:left;transition:transform .9s .3s cubic-bezier(.2,.7,.2,1)}
+.mo-ok .doctor .rv:not(.in) .role-line::after{transform:scaleX(0)}
+.cv>div{transition:opacity .5s,transform .5s cubic-bezier(.2,.7,.2,1)}
+.cv>div:nth-child(2){transition-delay:.12s}.cv>div:nth-child(3){transition-delay:.24s}.cv>div:nth-child(4){transition-delay:.36s}
+.mo-ok .doctor .rv:not(.in) .cv>div{opacity:0;transform:translateX(-14px)}
+
+/* process: progress bar fills while scrolling, step numbers pulse in sequence */
+.proc[data-progress]::before{content:"";position:absolute;left:-1px;right:-1px;top:-2px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--accent-sky),var(--ink-primary));transform-origin:left;transform:scaleX(var(--p,1));z-index:1}
+.proc .n{position:relative}
+#process .proc .n::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--accent-sky);opacity:0}
+.mo-ok #process .proc.in .n::after{animation:ping 7.5s ease-out infinite}
+#process .proc li:nth-child(2) .n::after{animation-delay:1.5s}#process .proc li:nth-child(3) .n::after{animation-delay:3s}#process .proc li:nth-child(4) .n::after{animation-delay:4.5s}#process .proc li:nth-child(5) .n::after{animation-delay:6s}
+@media (max-width:1020px){.proc[data-progress]::before{left:-2px;right:auto;top:-1px;bottom:-1px;width:3px;height:auto;transform-origin:top;transform:scaleY(var(--p,1))}}
+
+/* inquiry: form progress (required fields done / 4), focus glow, send icon */
+.fprog{position:relative;height:3px;margin:-14px 0 24px;border-radius:3px;background:var(--hairline);overflow:hidden}
+.fprog i{position:absolute;inset:0;background:linear-gradient(90deg,var(--accent-sky),var(--ink-primary));transform-origin:left;transform:scaleX(var(--fp,0));transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.form-card{transition:box-shadow .3s}
+.form-card:focus-within{box-shadow:0 0 0 4px var(--stub-tint),0 30px 70px -44px var(--ink-primary)}
+.form-card .btn .ic{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.form-card .btn:hover .ic{transform:translate(4px,-4px)}
+
+/* keyframes (all decorative; none of them changes a figure or a word) */
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes kenburns{from{transform:scale(1.04) translate3d(0,0,0)}to{transform:scale(1.16) translate3d(-2%,-1.5%,0)}}
+@keyframes dashflow{to{stroke-dashoffset:-44}}
+@keyframes comet{0%{stroke-dashoffset:110}85%,100%{stroke-dashoffset:-1000}}
+@keyframes cometdot{0%{stroke-dashoffset:0}85%,100%{stroke-dashoffset:-1110}}
+@keyframes halo{0%{transform:scale(.4);opacity:.55}100%{transform:scale(1.9);opacity:0}}
+@keyframes beat{0%{stroke-dashoffset:140}100%{stroke-dashoffset:-1000}}
+@keyframes beatS{0%{stroke-dashoffset:90}100%{stroke-dashoffset:-1000}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes wordIn{from{opacity:0;transform:translateY(.45em);filter:blur(8px)}}
+@keyframes riseIn{from{opacity:0;transform:translateY(16px)}}
+@keyframes uline{from{transform:scaleX(0)}}
+@keyframes sheen{0%,70%{transform:skewX(-18deg) translateX(-120%)}100%{transform:skewX(-18deg) translateX(520%)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes stepfill{0%{transform:scaleX(0);opacity:1}55%,80%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+@keyframes ping{0%{transform:scale(.85);opacity:.8}70%,100%{transform:scale(1.5);opacity:0}}
+@keyframes ping2{0%{box-shadow:0 0 0 0 var(--accent-sky)}70%,100%{box-shadow:0 0 0 10px transparent}}
+@keyframes slideHalf{to{transform:translateX(-50%)}}
+@keyframes runAcross{0%{transform:translateX(0);opacity:0}5%{opacity:1}90%{opacity:1}100%{transform:translateX(100%);opacity:0}}
+@keyframes lit{0%,16%{box-shadow:0 0 0 0 var(--accent-sky)}4%{box-shadow:0 0 0 6px var(--accent-sky),0 0 28px 6px var(--accent-sky)}100%{box-shadow:0 0 0 0 var(--accent-sky)}}
+@keyframes drift{from{transform:translate(0,0)}to{transform:translate(-18vw,12%)}}
+
+/* zones (.mo) only animate while on screen */
+.mo-ok .mo:not(.is-on),.mo-ok .mo:not(.is-on)::before,.mo-ok .mo:not(.is-on)::after,.mo-ok .mo:not(.is-on) *,.mo-ok .mo:not(.is-on) *::before,.mo-ok .mo:not(.is-on) *::after{animation-play-state:paused!important}
+
+/* phones: fewer simultaneous loops */
+@media (max-width:700px){
+  .hero{padding:44px 0 72px}
+  .hero-cap{left:16px;right:16px;bottom:16px}.hero-cap .chip{white-space:normal}
+  .mo-ok .hero-fx .ring,.mo-ok .hero-fx .ecg-float,.mo-ok .hero .ticket.in,.mo-ok .hero-bg img{animation:none}
+  .hero-fx .arc-comet{filter:none}
+  .mo-ok .orb-spin,.mo-ok .orb-spin .orb-i i svg,.mo-ok .mg2-photo img,.mo-ok .mg1-wave:not(.ecg){animation:none}
+  .mg1-wave.ecg path{filter:none}
+  .mo-ok .portrait.in::before{animation:none}
+  .svc-list[data-progress]::before,.svc-list[data-progress]::after{left:-9px}
+  .wave-div{height:44px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+@media print{.site-header,.menu-btn{position:static}.js .rv{opacity:1;transform:none}.btn{border:1px solid #000}.hero-bg,.hero-shade,.hero-fx,.wave-div,.ecg-div{display:none}.hero{background:none;color:var(--text-primary)}.hero h1,.hero .lead,.hero .hero-note{color:var(--ink-strong)}}
+</style>
+</head>
+<body data-variant="global">
+<script>(function(d){d.classList.add('js');if(!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))d.classList.add('mo-ok')})(document.documentElement)</script>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10.5l5-3v9l-5-3z"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></symbol>
+    <symbol id="i-check-doc" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 13l2 2 4-4"/></symbol>
+    <symbol id="i-hospital" viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13zM10 21v-5h4v5M12 9v4M10 11h4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 5-2 1.5a11 11 0 005 5L15.5 12.5l5 1.5v3a2 2 0 01-2 2C10 19 5 14 4.5 5a2 2 0 012-2z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L3 10.5l7 3 3 7z"/><path d="M10 13.5L21 3"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2-6 4 12 2-6h6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-news" viewBox="0 0 24 24"><path d="M5 4h11a2 2 0 0 1 2 2v13H7a2 2 0 0 1-2-2z"/><path d="M18 9h2v8a2 2 0 0 1-2 2M8.5 8h6M8.5 11.5h6M8.5 15h3.5"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10.2 9.2l4.6 2.8-4.6 2.8z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M13.2 20.8v-7.4h2.4l.4-2.8h-2.8V8.9c0-.8.3-1.3 1.4-1.3H16V5.1c-.3 0-1.1-.1-2-.1-2.1 0-3.4 1.2-3.4 3.4v2.2H8.2v2.8h2.4v7.4"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><path d="M16.8 7.2h.01"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 10.5V16M8 7.8h.01M11.5 16v-5.5M11.5 13c0-1.6 1-2.6 2.4-2.6s2.1.9 2.1 2.5V16"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.5 6.8 19.2l1-5.9L3.5 9.2l5.9-.8z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0112 7.4a4.2 4.2 0 017.5 2.4C19.5 15.4 12 20 12 20z"/><path d="M4.5 12.5h4l1.5-2.5 2 4 1.5-1.5h6"/></symbol>
+    <symbol id="i-ribbon" viewBox="0 0 24 24"><path d="M12 13.5c-2-2.2-3.2-4.4-3.2-6.4a3.2 3.2 0 016.4 0c0 2-1.2 4.2-3.2 6.4z"/><path d="M10 11L6 20.5M14 11l4 9.5M12 13.5l-3.2 5"/></symbol>
+    <symbol id="i-gut" viewBox="0 0 24 24"><path d="M9 3v3.5c0 1.5 1 2.5 2.5 2.5H14a5 5 0 015 5v.5a6.5 6.5 0 01-6.5 6.5H9a4 4 0 01-4-4v-.5a3 3 0 013-3h3"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M11.5 4.5A3 3 0 006 6a3.2 3.2 0 00-2 5.5A3.2 3.2 0 006 17a3 3 0 005.5 2.5z"/><path d="M12.5 4.5A3 3 0 0118 6a3.2 3.2 0 012 5.5 3.2 3.2 0 01-2 5.5 3 3 0 01-5.5 2.5z"/><path d="M8 10h2M14 14h2"/></symbol>
+    <symbol id="i-bone" viewBox="0 0 24 24"><path d="M6.6 3.6a2.2 2.2 0 00-2.4 3.1 2.2 2.2 0 00.9 3.2l9 9a2.2 2.2 0 003.2.9 2.2 2.2 0 003.1-2.4 2.2 2.2 0 00-2.3-2.5l-8.9-8.9A2.2 2.2 0 006.6 3.6z"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.4 6 11a6 6 0 01-12 0c0-4.6 6-11 6-11z"/><path d="M9.5 14.5A2.5 2.5 0 0012 17"/></symbol>
+    <symbol id="i-kidney" viewBox="0 0 24 24"><path d="M9 4C5.8 4 4 7.2 4 11.5S5.8 20 8.6 20c2.6 0 2.8-2.6 1.6-4.4-1-1.6-1-3.6 0-5.2C11.6 8 11.6 4 9 4z"/><path d="M15 4c3.2 0 5 3.2 5 7.5S18.2 20 15.4 20c-2.6 0-2.8-2.6-1.6-4.4 1-1.6 1-3.6 0-5.2C12.4 8 12.4 4 15 4z"/></symbol>
+    <symbol id="i-lungs" viewBox="0 0 24 24"><path d="M12 3v8l-2.5 2M12 11l2.5 2"/><path d="M9 7c-3 0-5 5-5 10 0 2 1 3 2.8 3C8.6 20 10 19 10 17V9.5"/><path d="M15 7c3 0 5 5 5 10 0 2-1 3-2.8 3C15.4 20 14 19 14 17V9.5"/></symbol>
+    <symbol id="i-family" viewBox="0 0 24 24"><circle cx="8.5" cy="7" r="3"/><circle cx="17" cy="9.5" r="2.2"/><path d="M3 20c0-3.6 2.4-6 5.5-6s5.5 2.4 5.5 6M14.5 20c0-2.6 1.1-4.4 2.5-4.4s2.5 1.8 2.5 4.4"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M12 8v8M8 12h8"/></symbol>
+    <symbol id="i-micro" viewBox="0 0 24 24"><path d="M5 21h14M9 17.5h6M12 17.5V15"/><path d="M9.5 3h3v9h-3z"/><path d="M12.5 7.5a5.5 5.5 0 014 8.5"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.6 14L7 21l5-2.8 5 2.8-1.6-7"/><path d="M12 6.5v5"/></symbol>
+    <symbol id="i-child" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4.5"/><path d="M10.2 8h.01M13.8 8h.01M10.5 10.5a2 2 0 003 0"/><path d="M6.5 21c.5-3.2 2.7-5.5 5.5-5.5s5 2.3 5.5 5.5"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-2a3 3 0 00-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/></symbol>
+    <symbol id="i-river" viewBox="0 0 24 24"><path d="M3 15.5c2-1.4 4-1.4 6 0s4 1.4 6 0 4-1.4 6 0M3 19.5c2-1.4 4-1.4 6 0s4 1.4 6 0 4-1.4 6 0"/><path d="M5 11.5l4-5 3 3 2-2 4 4"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><path d="M12 3v18"/><circle cx="6.5" cy="8" r="2.3"/><circle cx="17.5" cy="8" r="2.3"/><path d="M3.5 18c0-3 1.3-5 3-5s3 2 3 5M14.5 18c0-3 1.3-5 3-5s3 2 3 5"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><circle cx="12" cy="11" r="7.5"/><circle cx="12" cy="11" r="2.8"/><path d="M4 21h16"/></symbol>
+    <symbol id="i-lounge" viewBox="0 0 24 24"><path d="M5 11V8a2 2 0 012-2h10a2 2 0 012 2v3"/><path d="M3 12a2 2 0 014 0v2h10v-2a2 2 0 014 0v5H3z"/><path d="M5.5 17v2M18.5 17v2"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3A4 4 0 0013 5.3l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></symbol>
+    <symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6"/><path d="M15.5 4.8a3.2 3.2 0 010 6.4M17.5 14.3c2 .8 3.5 2.8 3.5 5.7"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="alert" role="note">
+  <div class="wrap">
+    <svg class="ic s20"><use href="#i-alert"/></svg>
+    <p><b>Urgent or emergency symptoms?</b> Contact your local emergency services or the nearest medical facility now. This website and our chat channels are not for emergencies.</p>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Camnemi Medical Service — home"><img src="assets/camnemi-medical-logo.webp" alt="Camnemi Medical Service" width="52" height="54"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#agency">Official Agency</a>
+      <a href="#why-amc">Why AMC</a>
+      <a href="#services">Services</a>
+      <a href="#doctor">Dr. Chea</a>
+      <a href="#process">How it works</a>
+      <a href="#faq">Questions</a>
+      <a class="btn sm nav-cta" href="#inquire">Start an inquiry</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero mo" id="top" aria-labelledby="h1">
+  <div class="hero-bg" aria-hidden="true"><div class="px" data-parallax="0.22"><img src="assets/photos/amc-campus.webp" alt="" width="1000" height="667" fetchpriority="high"></div></div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <!-- decorative motion layer: route arc Phnom Penh -> Seoul, pulse nodes, rotating rings, heart-rhythm line -->
+  <svg class="hero-fx" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs><filter id="hglow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+    <path class="grid-ln" d="M0 205H1440M0 410H1440M0 615H1440M360 0V820M720 0V820M1080 0V820"/>
+    <circle class="ring r3" cx="1290" cy="120" r="230"/>
+    <circle class="ring r1" cx="1290" cy="120" r="150"/>
+    <circle class="ring r2" cx="1290" cy="120" r="88"/>
+    <path class="arc-base" pathLength="1000" d="M170 740 C 520 520, 860 140, 1290 120"/>
+    <path class="arc-flow" pathLength="1000" d="M170 740 C 520 520, 860 140, 1290 120"/>
+    <path class="arc-comet" pathLength="1000" d="M170 740 C 520 520, 860 140, 1290 120"/>
+    <path class="arc-dot" pathLength="1000" d="M170 740 C 520 520, 860 140, 1290 120"/>
+    <g class="node pp"><circle class="halo" cx="170" cy="740" r="26"/><circle class="core" cx="170" cy="740" r="6"/></g>
+    <g class="node seoul"><circle class="halo" cx="1290" cy="120" r="30"/><circle class="core" cx="1290" cy="120" r="7"/></g>
+    <text x="196" y="772">PHNOM PENH</text>
+    <text x="1180" y="70">SEOUL</text>
+    <g class="ecg-float">
+      <path class="ecg-base" pathLength="1000" d="M0 640H400l16-10 14 22 16-74 18 118 14-64 12 8H860l14-8 12 18 14-56 16 84 12-44 10 6H1440"/>
+      <path class="ecg-beat" pathLength="1000" d="M0 640H400l16-10 14 22 16-74 18 118 14-64 12 8H860l14-8 12 18 14-56 16 84 12-44 10 6H1440"/>
+    </g>
+  </svg>
+  <span class="hero-cap" aria-hidden="true"><span class="chip t">Asan Medical Center campus, Seoul</span></span>
+  <div class="wrap">
+    <div>
+      <div class="badge">
+        <img src="assets/amc-logo.webp" alt="Asan Medical Center" width="124" height="34">
+        <span><small>Camnemi is the</small>Official Agency of Asan Medical Center</span>
+      </div>
+      <h1 id="h1"><span class="w" style="--i:0">One</span> <span class="w" style="--i:1">inquiry.</span><br><em class="w" style="--i:2">Cambodia</em><br><span class="w" style="--i:3">to</span> <span class="w" style="--i:4">Asan</span> <span class="w" style="--i:5">Medical</span> <span class="w" style="--i:6">Center.</span></h1>
+      <p class="lead">Camnemi Medical Service coordinates your inquiry to Asan Medical Center (AMC), Seoul — and stays with you through each step, in English or Khmer. Dr. Chea Siek Ai leads our medical service team.</p>
+      <div class="cta-row">
+        <a class="btn" href="#inquire">Start an inquiry <svg class="ic s20"><use href="#i-arrow"/></svg></a>
+        <a class="btn ghost" href="#services">See what AMC offers</a>
+      </div>
+      <p class="hero-note"><svg class="ic s20"><use href="#i-info"/></svg><span>Camnemi coordinates your inquiry. Clinical services, medical decisions and appointments belong to Asan Medical Center.</span></p>
+    </div>
+
+    <div class="ticket rv" style="--stub-w:230px" aria-label="Your inquiry journey">
+      <span class="notch t"></span><span class="notch b"></span>
+      <div class="main">
+        <div class="tk-head"><b><i></i>Inquiry ticket</b><span>Korea medical</span></div>
+        <div class="route">
+          <div><div class="lb">From</div><div class="big">Your inquiry</div><div class="sm">Cambodia</div></div>
+          <div class="arrow" aria-hidden="true"><svg class="ic s20"><use href="#i-arrow"/></svg></div>
+          <div><div class="lb">To</div><div class="big">AMC</div><div class="sm">Asan Medical Center, Seoul</div></div>
+        </div>
+        <ol class="steps" aria-label="Five steps of an inquiry">
+          <li class="on"><span>01</span>Inquire</li>
+          <li><span>02</span>Clarify</li>
+          <li><span>03</span>Docs</li>
+          <li><span>04</span>Review</li>
+          <li><span>05</span>Next</li>
+        </ol>
+        <div class="tk-meta">
+          <div><span class="lb">Coordinated by</span><b>Camnemi</b></div>
+          <div><span class="lb">Decided by</span><b>Asan Medical Center</b></div>
+          <div><span class="lb">Reply in</span><b>English · Khmer</b></div>
+        </div>
+      </div>
+      <div class="stub">
+        <img src="assets/doctor-chea.webp" alt="Dr. Chea Siek Ai, Director of Medical Service at Camnemi" width="574" height="765" fetchpriority="high">
+        <div><div class="lb">Your coordinator</div><div class="nm">Dr. Chea Siek Ai</div><div class="rl">Director of Medical Service</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MOTION SLOT MG-01 (band under hero) ================= -->
+<div class="mg-band"><div class="wrap">
+    <figure class="mg rv" data-mg="MG-01" data-src="" data-poster="" data-alt="Hero introduction" style="--mg-ratio:21/9;--mg-ratio-m:4/3">
+      <!-- inline motion until a file is supplied: set data-src="assets/motion/mg-01.mp4" (21:9 desktop, 4:3 mobile) -->
+      <div class="mg-frame" role="img" aria-label="Animated band: Asan Medical Center in Newsweek's 2027 specialty rankings — Endocrinology #2, Gastroenterology #5, Urology #5, Oncology #6, Neurology #9, Orthopedics #11 — over a moving heart-rhythm line, with the inquiry route from Phnom Penh to Seoul.">
+        <div class="mg-live mg1 mo" aria-hidden="true">
+          <svg class="mg1-wave" viewBox="0 0 2880 300" preserveAspectRatio="none" focusable="false">
+            <path class="w1" d="M0 150q90-90 180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0t180 0"/>
+            <path class="w2" d="M0 165q120-50 240 0t240 0t240 0t240 0t240 0t240 0t240 0t240 0t240 0t240 0t240 0t240 0"/>
+          </svg>
+          <svg class="mg1-wave ecg" viewBox="0 0 2880 300" preserveAspectRatio="none" focusable="false">
+            <path d="M0 150h600l20-30 20 60 20-110 25 150 20-90 15 20h600l20-30 20 60 20-110 25 150 20-90 15 20h600l20-30 20 60 20-110 25 150 20-90 15 20h600l20-30 20 60 20-110 25 150 20-90 15 20"/>
+          </svg>
+          <div class="mq"><div class="mq-track">
+            <span class="mq-i"><small>Endocrinology</small><b>#2</b></span><span class="mq-i"><small>Gastroenterology</small><b>#5</b></span><span class="mq-i"><small>Urology</small><b>#5</b></span><span class="mq-i"><small>Oncology</small><b>#6</b></span><span class="mq-i"><small>Neurology</small><b>#9</b></span><span class="mq-i"><small>Orthopedics</small><b>#11</b></span><span class="mq-i"><small>Cardiology</small><b>#13</b></span><span class="mq-i"><small>Cardiac Surgery</small><b>#23</b></span>
+            <span class="mq-i"><small>Endocrinology</small><b>#2</b></span><span class="mq-i"><small>Gastroenterology</small><b>#5</b></span><span class="mq-i"><small>Urology</small><b>#5</b></span><span class="mq-i"><small>Oncology</small><b>#6</b></span><span class="mq-i"><small>Neurology</small><b>#9</b></span><span class="mq-i"><small>Orthopedics</small><b>#11</b></span><span class="mq-i"><small>Cardiology</small><b>#13</b></span><span class="mq-i"><small>Cardiac Surgery</small><b>#23</b></span>
+          </div></div>
+          <div class="mg1-mid"><span class="lb">Newsweek · specialty rankings 2027</span><b>Asan Medical Center, Seoul — five specialties in the global top 10.</b></div>
+          <div class="mq rev"><div class="mq-track">
+            <span class="mq-i">Phnom Penh <svg class="ic s16"><use href="#i-arrow"/></svg> Seoul</span><i class="mq-i"><i></i></i><span class="mq-i">One inquiry</span><i class="mq-i"><i></i></i><span class="mq-i">English · Khmer</span><i class="mq-i"><i></i></i><span class="mq-i">Video consultation</span><i class="mq-i"><i></i></i><span class="mq-i">Second opinion</span><i class="mq-i"><i></i></i><span class="mq-i">Health screening</span><i class="mq-i"><i></i></i><span class="mq-i">Coordinated by Camnemi</span><i class="mq-i"><i></i></i><span class="mq-i">Decided by Asan Medical Center</span><i class="mq-i"><i></i></i>
+            <span class="mq-i">Phnom Penh <svg class="ic s16"><use href="#i-arrow"/></svg> Seoul</span><i class="mq-i"><i></i></i><span class="mq-i">One inquiry</span><i class="mq-i"><i></i></i><span class="mq-i">English · Khmer</span><i class="mq-i"><i></i></i><span class="mq-i">Video consultation</span><i class="mq-i"><i></i></i><span class="mq-i">Second opinion</span><i class="mq-i"><i></i></i><span class="mq-i">Health screening</span><i class="mq-i"><i></i></i><span class="mq-i">Coordinated by Camnemi</span><i class="mq-i"><i></i></i><span class="mq-i">Decided by Asan Medical Center</span><i class="mq-i"><i></i></i>
+          </div></div>
+        </div>
+      </div>
+      <figcaption class="mg-cap"><svg class="ic s16" aria-hidden="true"><use href="#i-info"/></svg><span>Rankings: Newsweek with Statista, 2027 specialty rankings — see sources under <a href="#why-amc">Why AMC</a>. Each figure is a ranking within one specialty, not an overall hospital ranking, and not an outcome for any individual patient.</span></figcaption>
+    </figure>
+</div></div>
+
+<!-- ================= OFFICIAL AGENCY ================= -->
+<section class="block" id="agency" aria-labelledby="h-agency">
+  <div class="wrap agency">
+    <div class="rv">
+      <div class="kick"><i></i>Official Agency</div>
+      <h2 id="h-agency">Your way into Asan Medical Center, Seoul.</h2>
+      <p class="lead" style="margin-top:18px">Camnemi is the Official Agency of Asan Medical Center. We are not the hospital: we are the team that listens to your question first, explains the right service, prepares your documents, and passes your case to AMC.</p>
+      <div class="cta-row" style="margin-top:26px"><a class="btn ghost" href="#process">See how an inquiry works</a></div>
+    </div>
+    <div class="agency-card rv">
+      <img src="assets/amc-logo.webp" alt="Asan Medical Center, Seoul" width="233" height="64">
+      <hr>
+      <p>Asan Medical Center (AMC) is a hospital in Seoul with a dedicated International Healthcare Center for patients from abroad. Every clinical service on this page is provided by AMC.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><span class="chip f"><svg class="ic s16"><use href="#i-star"/></svg>Official Agency of AMC</span><span class="chip t">Seoul, Korea</span></div>
+    </div>
+  </div>
+
+  <!-- MOTION SLOT MG-02 -->
+  <div class="wrap" style="margin-top:56px">
+    <figure class="mg rv" data-mg="MG-02" data-src="" data-poster="" data-alt="About Asan Medical Center" style="--mg-ratio:16/9;--mg-ratio-m:4/3">
+      <!-- inline motion until a file is supplied: set data-src="assets/motion/mg-02.mp4" (16:9 desktop, 4:3 mobile) -->
+      <div class="mg-frame" role="img" aria-label="Animated photo of the Asan Medical Center campus in Seoul, with line drawings and three facts: Asan Medical Center, Seoul, Korea; International Healthcare Center, since 1989; 43 clinical departments.">
+        <div class="mg-live mg2 mo" aria-hidden="true">
+          <div class="mg2-photo" data-parallax="-0.14"><img src="assets/photos/amc-campus.webp" alt="" width="1000" height="667" loading="lazy"></div>
+          <div class="mg2-shade"></div>
+          <svg class="mg2-lines" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <path class="dl" pathLength="1000" d="M0 690H1600"/>
+            <path class="dl sky" pathLength="1000" d="M-20 860C380 760 760 520 1130 380"/>
+            <path class="dl" pathLength="1000" d="M1130 120V640M870 380H1390"/>
+            <path class="dl" pathLength="1000" d="M1040 290h-40v-40M1220 290h40v-40M1040 470h-40v40M1220 470h40v40"/>
+            <path class="dl" pathLength="1000" d="M1460 120v60M1430 150h60M140 180h220M140 210h140"/>
+            <circle class="spin" cx="1130" cy="380" r="150"/>
+            <circle class="tgt" cx="1130" cy="380" r="10"/>
+          </svg>
+          <div class="mg2-cards">
+            <div class="glass g1" data-parallax="0.05"><span class="lb">Seoul, Korea</span><b>Asan Medical Center</b></div>
+            <div class="glass g2" data-parallax="0.1"><span class="lb">Since 1989</span><b>International Healthcare Center</b></div>
+            <div class="glass g3" data-parallax="0.15"><span class="lb">As listed on AMC's English website</span><b>43 clinical departments</b></div>
+          </div>
+          <span class="chip t mg2-cap">Asan Medical Center campus</span>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+  <div class="wrap" style="margin-top:56px">
+    <div class="roles rv">
+      <div class="role">
+        <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+        <ul>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Clinical services and medical decisions</li>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Reviewing each case and deciding whether a service is possible</li>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Appointments, examinations, billing and medical reports</li>
+        </ul>
+      </div>
+      <div class="role">
+        <span class="chip f"><svg class="ic s16"><use href="#i-chat"/></svg>Coordinated by Camnemi</span>
+        <ul>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Listening to your question and explaining your options</li>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Replies in English or Khmer, with Dr. Chea Siek Ai</li>
+          <li><svg class="ic s20"><use href="#i-check"/></svg>Guiding you to the secure page for the documents AMC needs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY ASAN MEDICAL CENTER ================= -->
+<section id="why-amc" aria-labelledby="h-why">
+  <!-- A. Campus photo (the only real photograph) + headline -->
+  <figure class="wa-photo">
+    <div class="px" data-parallax="0.16"><img src="assets/photos/amc-campus.webp" alt="Aerial view of the Asan Medical Center campus in Seoul, with hospital buildings, green space and the Hangang River in the distance" width="1000" height="667" loading="lazy"></div>
+    <figcaption><span class="chip t">Asan Medical Center campus · Seoul, Korea</span></figcaption>
+  </figure>
+
+  <div class="block wa-first">
+    <div class="wrap">
+      <div class="wa-intro rv">
+        <div>
+          <div class="kick"><i></i>Why Asan Medical Center</div>
+          <h2 id="h-why">In Seoul, Korea: a hospital in the world's <em>top 10</em> for five specialties.</h2>
+          <p class="lead">This is what Korean medical care looks like in published numbers. In Newsweek's World's Best Specialized Hospitals 2027, compiled with Statista, Asan Medical Center is ranked #2 in the world for endocrinology, and in the global top 10 for gastroenterology, urology, oncology and neurology.</p>
+        </div>
+        <div class="wa-keys">
+          <img src="assets/amc-logo.webp" alt="Asan Medical Center" width="161" height="44" loading="lazy">
+          <dl>
+            <div><dt><b class="cu" data-count>5</b></dt><dd><span><strong>Specialties in the global top 10</strong>Newsweek 2027, ranked by specialty</span></dd></div>
+            <div><dt><b class="cu" data-count>43</b></dt><dd><span><strong>Clinical departments</strong>As listed on AMC's English website</span></dd></div>
+            <div><dt><b class="cu" data-count data-from="1950">1989</b></dt><dd><span><strong>International Healthcare Center opened</strong>AMC's department for patients from abroad</span></dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <!-- B. Newsweek 2027 specialty rankings -->
+      <div class="wa-gap">
+        <div class="sec-head rv">
+          <div class="kick"><i></i>Newsweek · 2027</div>
+          <h2>Five specialties in the global top 10.</h2>
+          <p>Newsweek and Statista rank hospitals one specialty at a time. These are Asan Medical Center's positions worldwide in the 2027 edition.</p>
+        </div>
+        <ul class="rank-grid rv" aria-label="Asan Medical Center in Newsweek World's Best Specialized Hospitals 2027">
+          <li class="rank top"><span class="lb">Endocrinology</span><span class="num"><small>#</small><span class="cu" data-count data-from="40">2</span></span><span class="wd">in the world</span><span class="chip f">Global top 10</span></li>
+          <li class="rank top"><span class="lb">Gastroenterology</span><span class="num"><small>#</small><span class="cu" data-count data-from="40">5</span></span><span class="wd">in the world</span><span class="chip f">Global top 10</span></li>
+          <li class="rank top"><span class="lb">Urology</span><span class="num"><small>#</small><span class="cu" data-count data-from="40">5</span></span><span class="wd">in the world</span><span class="chip f">Global top 10</span></li>
+          <li class="rank top"><span class="lb">Oncology</span><span class="num"><small>#</small><span class="cu" data-count data-from="40">6</span></span><span class="wd">in the world</span><span class="chip f">Global top 10</span></li>
+          <li class="rank top"><span class="lb">Neurology</span><span class="num"><small>#</small><span class="cu" data-count data-from="40">9</span></span><span class="wd">in the world</span><span class="chip f">Global top 10</span></li>
+          <li class="rank"><span class="lb">Orthopedics</span><span class="num"><small>#</small><span class="cu" data-count data-from="40">11</span></span><span class="wd">in the world</span><span class="chip">Newsweek 2027</span></li>
+        </ul>
+        <p class="rank-also">Also ranked in the same edition: <b>Cardiology #13</b> · <b>Cardiac Surgery #23</b>.</p>
+        <p class="src"><svg class="ic s16"><use href="#i-info"/></svg><span>Source: Newsweek with Statista, <a href="https://rankings.newsweek.com/worlds-best-specialized-hospitals-2027" rel="noopener">World's Best Specialized Hospitals 2027</a>, Asan Medical Center, Seoul (checked 29 Oct 2026). Each figure is a ranking within one specialty, not an overall hospital ranking. Rankings reflect Newsweek/Statista's evaluation, not an outcome for any individual patient.</span></p>
+
+        <!-- GATE-VOLUMES-START -->
+        <div class="vol rv" role="group" aria-label="AMC-published figures, as of 2025">
+          <div class="tk-head"><b><i></i>AMC-published figures</b><span>As of 2025</span></div>
+          <div class="vol-grid">
+            <div><b>19,152</b><span>International patients per year</span></div>
+            <div><b>52,838</b><span>Surgeries per year</span></div>
+            <div><b>11,377</b><span>Outpatients per day</span></div>
+            <div><b>654,536</b><span>Inpatients per year</span></div>
+          </div>
+          <p class="src"><svg class="ic s16"><use href="#i-info"/></svg><span>Source: Asan Medical Center English website, "Medical Information (As of 2025)". Figures as published by AMC.</span></p>
+        </div>
+        <!-- GATE-VOLUMES-END -->
+
+        <!-- F. Recognition and physician training -->
+        <div class="trust rv">
+          <div><b>#25</b><p>In Newsweek's World's Best Hospitals 2026, overall — the highest-placed hospital in Korea.<span>Newsweek 2026, World's Best Hospitals — as announced by AMC.</span></p></div>
+          <div><b>3,500+</b><p>Physicians from 88 countries have trained at AMC over the past decade.<span>As announced by AMC.</span></p></div>
+        </div>
+        <div class="ecg-div rv mo" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="xMidYMid slice" focusable="false"><path class="base" pathLength="1000" d="M0 34H520l12-8 10 18 12-38 14 52 10-30 8 6H1200"/><path class="beat" pathLength="1000" d="M0 34H520l12-8 10 18 12-38 14 52 10-30 8 6H1200"/></svg></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C. Clinical departments -->
+  <div class="block alt">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div class="kick"><i></i>Clinical departments</div>
+        <h2>43 departments, grouped by body system.</h2>
+        <p>Every department listed on AMC's English website, grouped by Camnemi for easier reading. Department names are AMC's own.</p>
+      </div>
+      <div class="dept-grid">
+        <article class="dept rv">
+          <figure class="dept-media"><img src="assets/photos/spec-cardiology.webp" alt="Illustration of a heart model in front of a heart-rhythm line" width="800" height="450" loading="lazy"><span class="chip f">Cardiology #13 · 2027</span><figcaption class="ill">Illustrative image</figcaption></figure>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-heart"/></svg>Heart &amp; Vessels</h3><span class="cnt">3 departments</span>
+            <ul><li>Cardiology</li><li>Thoracic and Cardiovascular Surgery</li><li>Vascular Surgery</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <div class="dept-media"><svg class="ic big" aria-hidden="true"><use href="#i-ribbon"/></svg><span class="chip f">Oncology #6 · 2027</span></div>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-ribbon"/></svg>Cancer</h3><span class="cnt">4 departments</span>
+            <ul><li>Oncology</li><li>Hematology</li><li>Radiation Oncology</li><li>Breast Surgery</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <figure class="dept-media"><img src="assets/photos/spec-gastroenterology.webp" alt="Illustration of an endoscope in front of an imaging monitor" width="800" height="450" loading="lazy"><span class="chip f">Gastroenterology #5 · 2027</span><figcaption class="ill">Illustrative image</figcaption></figure>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-gut"/></svg>Digestive &amp; Liver</h3><span class="cnt">5 departments</span>
+            <ul><li>Gastroenterology</li><li>Gastrointestinal Surgery</li><li>Colon and Rectal Surgery</li><li>Hepatobiliary and Pancreatic Surgery</li><li>Liver Transplantation and Hepatobiliary Surgery</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <figure class="dept-media"><img src="assets/photos/spec-neurology.webp" alt="Illustration of a glowing brain model surrounded by monitors" width="800" height="450" loading="lazy"><span class="chip f">Neurology #9 · 2027</span><figcaption class="ill">Illustrative image</figcaption></figure>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-brain"/></svg>Brain, Nerves &amp; Mind</h3><span class="cnt">3 departments</span>
+            <ul><li>Neurology</li><li>Neurosurgery</li><li>Psychiatry</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <figure class="dept-media"><img src="assets/photos/spec-orthopedics.webp" alt="Illustration of a knee-joint model beside a skeletal X-ray display" width="800" height="450" loading="lazy"><span class="chip f">Orthopedics #11 · 2027</span><figcaption class="ill">Illustrative image</figcaption></figure>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-bone"/></svg>Bones, Joints &amp; Movement</h3><span class="cnt">3 departments</span>
+            <ul><li>Orthopedic Surgery</li><li>Rheumatology</li><li>Rehabilitation Medicine</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <figure class="dept-media"><img src="assets/photos/spec-endocrinology.webp" alt="Illustration of blood sample tubes and a laboratory analyser" width="800" height="450" loading="lazy"><span class="chip f">Endocrinology #2 · 2027</span><figcaption class="ill">Illustrative image</figcaption></figure>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-drop"/></svg>Hormones &amp; Metabolism</h3><span class="cnt">2 departments</span>
+            <ul><li>Endocrinology and Metabolism</li><li>Endocrine Surgery</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <figure class="dept-media"><img src="assets/photos/spec-urology.webp" alt="Illustration of a kidney model beside an ultrasound machine" width="800" height="450" loading="lazy"><span class="chip f">Urology #5 · 2027</span><figcaption class="ill">Illustrative image</figcaption></figure>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-kidney"/></svg>Kidney &amp; Urology</h3><span class="cnt">3 departments</span>
+            <ul><li>Nephrology</li><li>Kidney and Pancreas Transplantation</li><li>Urology</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <div class="dept-media"><svg class="ic big" aria-hidden="true"><use href="#i-lungs"/></svg></div>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-lungs"/></svg>Lungs, Allergy &amp; Infection</h3><span class="cnt">3 departments</span>
+            <ul><li>Pulmonology and Critical Care Medicine</li><li>Allergy</li><li>Infectious Diseases</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <div class="dept-media"><svg class="ic big" aria-hidden="true"><use href="#i-family"/></svg></div>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-family"/></svg>Women &amp; Family</h3><span class="cnt">4 departments</span>
+            <ul><li>Obstetrics and Gynecology</li><li>Family Medicine</li><li>Geriatrics</li><li>Health Medicine</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <div class="dept-media"><svg class="ic big" aria-hidden="true"><use href="#i-eye"/></svg></div>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-eye"/></svg>Eyes, ENT, Skin &amp; Dental</h3><span class="cnt">5 departments</span>
+            <ul><li>Ophthalmology</li><li>Otorhinolaryngology–Head and Neck Surgery</li><li>Dermatology</li><li>Plastic Surgery</li><li>Dentistry</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <div class="dept-media"><svg class="ic big" aria-hidden="true"><use href="#i-plus"/></svg></div>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-plus"/></svg>Emergency &amp; Acute Care</h3><span class="cnt">3 departments</span>
+            <ul><li>Emergency Medicine</li><li>Acute Care Surgery</li><li>Anesthesiology and Pain Medicine</li></ul></div>
+        </article>
+        <article class="dept rv">
+          <div class="dept-media"><svg class="ic big" aria-hidden="true"><use href="#i-micro"/></svg></div>
+          <div class="dept-body"><h3><svg class="ic"><use href="#i-micro"/></svg>Diagnostics</h3><span class="cnt">5 departments</span>
+            <ul><li>Radiology</li><li>Nuclear Medicine</li><li>Laboratory Medicine</li><li>Pathology</li><li>Clinical Pharmacology and Therapeutics</li></ul></div>
+        </article>
+      </div>
+      <p class="fine"><svg class="ic s20"><use href="#i-info"/></svg><span>Which service is possible for you is decided by AMC after review. Grouping by Camnemi; rankings shown are Newsweek 2027 specialty rankings.</span></p>
+    </div>
+  </div>
+
+  <!-- D. Specialized institutes, centres and programs -->
+  <div class="block">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div class="kick"><i></i>Specialized centres &amp; programs</div>
+        <h2>Three specialized institutes, and centres focused by condition.</h2>
+        <p>Alongside its departments, AMC runs dedicated institutes and specialized centres, plus programs for patients from abroad.</p>
+      </div>
+      <div class="inst-grid">
+        <article class="ticket inst rv">
+          <span class="notch t"></span><span class="notch b"></span>
+          <div class="main"><span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Institute</span><h3>AMC Cancer Institute</h3><p>AMC in Newsweek 2027: Oncology #6 in the world.</p></div>
+          <div class="stub"><svg class="ic s32"><use href="#i-ribbon"/></svg><span class="no">01</span></div>
+        </article>
+        <article class="ticket inst rv">
+          <span class="notch t"></span><span class="notch b"></span>
+          <div class="main"><span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Institute</span><h3>Heart Institute</h3><p>AMC in Newsweek 2027: Cardiology #13 and Cardiac Surgery #23 in the world.</p></div>
+          <div class="stub"><svg class="ic s32"><use href="#i-heart"/></svg><span class="no">02</span></div>
+        </article>
+        <article class="ticket inst rv">
+          <span class="notch t"></span><span class="notch b"></span>
+          <div class="main"><span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Institute</span><h3>Children's Hospital</h3><p>One of AMC's three specialized institutes.</p></div>
+          <div class="stub"><svg class="ic s32"><use href="#i-child"/></svg><span class="no">03</span></div>
+        </article>
+      </div>
+
+      <div class="centres">
+        <figure class="ph rv">
+          <img src="assets/photos/or-illustration.webp" alt="Illustration of a surgical team working in an operating room" width="750" height="500" loading="lazy">
+          <figcaption class="ill">Illustrative image</figcaption>
+        </figure>
+        <div class="rv">
+          <h3>Specialized centres at AMC</h3>
+          <p>A selection from the specialized centres listed on AMC's English website.</p>
+          <ul class="pills" aria-label="Selected AMC specialized centres">
+            <li><svg class="ic s16"><use href="#i-link"/></svg>Organ Transplantation Center</li>
+            <li><svg class="ic s16"><use href="#i-brain"/></svg>Stroke Center</li>
+            <li><svg class="ic s16"><use href="#i-plus"/></svg>Robotic Surgery Center</li>
+            <li><svg class="ic s16"><use href="#i-drop"/></svg>Asan Diabetes Center</li>
+            <li><svg class="ic s16"><use href="#i-gut"/></svg>Pancreatobiliary Disease Center</li>
+            <li><svg class="ic s16"><use href="#i-gut"/></svg>Inflammatory Bowel Disease Center</li>
+            <li><svg class="ic s16"><use href="#i-gut"/></svg>Liver Center</li>
+            <li><svg class="ic s16"><use href="#i-heart"/></svg>Congenital Heart Disease Center</li>
+            <li><svg class="ic s16"><use href="#i-heart"/></svg>Pulmonary Hypertension &amp; Venous Thrombosis Center</li>
+            <li><svg class="ic s16"><use href="#i-child"/></svg>Fetal Treatment Center</li>
+            <li><svg class="ic s16"><use href="#i-child"/></svg>Pediatric Emergency Center</li>
+            <li><svg class="ic s16"><use href="#i-kidney"/></svg>Prostate Center</li>
+            <li><svg class="ic s16"><use href="#i-micro"/></svg>Medical Genetics Center</li>
+            <li><svg class="ic s16"><use href="#i-lungs"/></svg>Asthma Center</li>
+            <li><svg class="ic s16"><use href="#i-bone"/></svg>Sports Health Medicine Center</li>
+            <li><svg class="ic s16"><use href="#i-pulse"/></svg>Health Screening and Promotion Center</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog-grid">
+        <article class="prog rv">
+          <span class="ib"><svg class="ic"><use href="#i-pulse"/></svg></span>
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>AMC program</span>
+          <h4>Health screening programs</h4>
+          <p>Programs tailored by gender, age and disease at the Health Screening and Promotion Center.</p>
+          <a class="btn sm ghost" href="#inquire" data-service="Health screening">Ask about this</a>
+        </article>
+        <article class="prog rv">
+          <span class="ib"><svg class="ic"><use href="#i-globe"/></svg></span>
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>AMC program</span>
+          <h4>International Healthcare Center concierge</h4>
+          <p>One-stop help with appointments, examinations, billing, admission and discharge, medical reports and CDs.</p>
+          <a class="btn sm ghost" href="#ihc-support">How it works</a>
+        </article>
+        <article class="prog rv">
+          <span class="ib"><svg class="ic"><use href="#i-check-doc"/></svg></span>
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>AMC program</span>
+          <h4>Remote second opinion</h4>
+          <p>Written only, based on records in English or Korean. AMC excludes certain conditions, and it is not for emergencies.</p>
+          <a class="btn sm ghost" href="#inquire" data-service="Second opinion">Ask about this</a>
+        </article>
+        <article class="prog rv">
+          <span class="ib"><svg class="ic"><use href="#i-video"/></svg></span>
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>AMC program</span>
+          <h4>Video consultation</h4>
+          <p>A real-time session with an AMC physician. A local physician must be present.</p>
+          <a class="btn sm ghost" href="#inquire" data-service="Video consultation">Ask about this</a>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- D (cont.). Health Screening and Promotion Center facility -->
+  <div class="block alt">
+    <div class="wrap scr">
+      <figure class="ph rv">
+        <img src="assets/photos/spec-oncology.webp" alt="Illustration of a scanner in a bright imaging room" width="800" height="450" loading="lazy">
+        <figcaption class="ill">Illustrative image</figcaption>
+      </figure>
+      <div class="rv">
+        <div class="kick"><i></i>Health Screening and Promotion Center</div>
+        <h2>A dedicated screening facility, with views of the Hangang River.</h2>
+        <p class="lead">Opened in 1990, with programs tailored by gender, age and disease. Depending on your schedule, a variety of comprehensive examinations can be done in a single day.</p>
+        <ul class="feat">
+          <li><svg class="ic s20"><use href="#i-river"/></svg>8,300 m² dedicated facility with views of the Hangang River</li>
+          <li><svg class="ic s20"><use href="#i-split"/></svg>Separate examination areas for men and women</li>
+          <li><svg class="ic s20"><use href="#i-bed"/></svg>Hotel-style rooms for overnight screening</li>
+          <li><svg class="ic s20"><use href="#i-lounge"/></svg>Guest lounge</li>
+          <li class="wide"><svg class="ic s20"><use href="#i-scan"/></svg>Dedicated CT, MR, PET, gastroscopy, colonoscopy, echocardiography, treadmill and ultrasonography</li>
+          <li><svg class="ic s20"><use href="#i-team"/></svg>Over 50 physicians in 13 specialties</li>
+          <li><svg class="ic s20"><use href="#i-link"/></svg>When needed, results connect to AMC's specialized centres for treatment or referral</li>
+        </ul>
+        <p class="src"><svg class="ic s16"><use href="#i-info"/></svg><span>Source: AMC English website, Health Screening and Promotion Center. Program options and scheduling are confirmed by AMC.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- E. International patient support -->
+  <div class="block" id="ihc-support">
+    <div class="wrap">
+      <div class="ecg-div top rv mo" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="xMidYMid slice" focusable="false"><path class="base" pathLength="1000" d="M0 34H600l12-8 10 18 12-38 14 52 10-30 8 6H1200"/><path class="beat" pathLength="1000" d="M0 34H600l12-8 10 18 12-38 14 52 10-30 8 6H1200"/></svg></div>
+      <div class="sec-head rv">
+        <div class="kick"><i></i>International patient support</div>
+        <h2>Since 1989, a department for patients from abroad.</h2>
+        <p>AMC's International Healthcare Center supports international patients in four stages, from before the visit to follow-up at home.</p>
+      </div>
+      <ol class="proc wa-flow rv" aria-label="Four stages of AMC international patient support">
+        <li><span class="n">01</span><h4>Pre-visit</h4>
+          <ul><li><svg class="ic s16"><use href="#i-check"/></svg>Reviewing medical reports</li><li><svg class="ic s16"><use href="#i-check"/></svg>Treatment plan and cost estimation</li><li><svg class="ic s16"><use href="#i-check"/></svg>Lodging and transportation arrangement</li></ul></li>
+        <li><span class="n">02</span><h4>Treatment</h4><p>Appointments and examinations, with concierge coordinators in the hospital.</p></li>
+        <li><span class="n">03</span><h4>Discharge</h4><p>Admission and discharge, billing, medical reports and CDs, handled in one place.</p></li>
+        <li><span class="n">04</span><h4>Follow-up</h4><p>Follow-up care by call or email.</p></li>
+      </ol>
+      <div class="sup">
+        <div class="card rv">
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+          <h4>Interpretation, escort and counselling</h4>
+          <p>AMC's in-hospital concierge coordinators support patients in these languages:</p>
+          <ul class="pills" aria-label="AMC interpretation languages">
+            <li><svg class="ic s16"><use href="#i-globe"/></svg>English</li><li><svg class="ic s16"><use href="#i-globe"/></svg>Chinese</li><li><svg class="ic s16"><use href="#i-globe"/></svg>Japanese</li><li><svg class="ic s16"><use href="#i-globe"/></svg>Russian</li><li><svg class="ic s16"><use href="#i-globe"/></svg>Arabic</li><li><svg class="ic s16"><use href="#i-globe"/></svg>Mongolian</li><li><svg class="ic s16"><use href="#i-globe"/></svg>Vietnamese</li>
+          </ul>
+          <p class="bill"><svg class="ic s20"><use href="#i-doc"/></svg><span>Direct billing to embassies and insurers is available for most organisations.</span></p>
+        </div>
+        <div class="card km rv">
+          <span class="chip f"><svg class="ic s16"><use href="#i-chat"/></svg>Coordinated by Camnemi</span>
+          <h4>Khmer support comes from Camnemi</h4>
+          <p>Khmer is not one of AMC's interpretation languages. Camnemi's own coordinators support Cambodian patients in Khmer and English, alongside AMC's international services.</p>
+          <div class="km-who"><img src="assets/doctor-chea.webp" alt="Dr. Chea Siek Ai" width="574" height="765" loading="lazy"><div><b>Dr. Chea Siek Ai</b><span>Director of Medical Service, Camnemi · Khmer · Korean · English</span></div></div>
+        </div>
+      </div>
+      <p class="src"><svg class="ic s16"><use href="#i-info"/></svg><span>Source: AMC English website, International Healthcare Center and Our Services. Clinical services, medical decisions and appointments belong to AMC.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AMC NEWS & OFFICIAL CHANNELS ================= -->
+<div class="wave-div mo" aria-hidden="true">
+  <svg viewBox="0 0 2880 80" preserveAspectRatio="none" focusable="false"><path class="wa" d="M0 34q240-30 480 0t480 0t480 0t480 0t480 0t480 0V80H0Z"/></svg>
+  <svg viewBox="0 0 2880 80" preserveAspectRatio="none" focusable="false"><path class="wb" d="M0 48q180-36 360 0t360 0t360 0t360 0t360 0t360 0t360 0t360 0V80H0Z"/></svg>
+</div>
+<!-- News + videos are rendered at runtime from feed/amc-feed.json (refreshed every 3 hours by .github/workflows/amc-feed.yml).
+     The static cards below are the fallback: they stay if JS is off or the feed cannot be read. -->
+<section class="news mo" id="amc-news" aria-labelledby="h-news">
+  <div class="wrap">
+    <div class="news-head rv">
+      <div>
+        <div class="kick"><i></i>From Asan Medical Center</div>
+        <h2 id="h-news">News from Asan Medical Center.</h2>
+        <p class="lead" style="margin-top:16px">Recent announcements from AMC's own English newsroom and recent videos from AMC's YouTube channel, with the hospital's official social channels. Headlines are shown exactly as AMC published them.</p>
+        <p class="news-upd" id="news-upd" hidden><span class="live-dot" aria-hidden="true"></span><span>Last updated <time id="news-upd-t"></time></span></p>
+      </div>
+      <a class="btn" id="news-room" href="https://news-en.amc.seoul.kr/news/eng/main.do" target="_blank" rel="noopener noreferrer">Open AMC Newsroom <svg class="ic s20"><use href="#i-ext"/></svg></a>
+    </div>
+
+    <div class="news-grid" id="news-list">
+      <a class="ncard rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3307" target="_blank" rel="noopener noreferrer">
+        <div class="meta"><span class="chip t"><svg class="ic s16"><use href="#i-news"/></svg>News</span><time datetime="2026-10-27">27 Oct 2026</time></div>
+        <h3>Asan Medical Center Launches Integrated Care Clinic for Inflammatory Myositis</h3>
+        <span class="go">Read on AMC Newsroom <svg class="ic s16"><use href="#i-ext"/></svg></span>
+      </a>
+      <a class="ncard rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3305" target="_blank" rel="noopener noreferrer">
+        <div class="meta"><span class="chip t"><svg class="ic s16"><use href="#i-news"/></svg>News</span><time datetime="2026-10-23">23 Oct 2026</time></div>
+        <h3>Asan Medical Center Showcases Korean Medical Excellence to Global Hospital Leaders</h3>
+        <span class="go">Read on AMC Newsroom <svg class="ic s16"><use href="#i-ext"/></svg></span>
+      </a>
+      <a class="ncard rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3304" target="_blank" rel="noopener noreferrer">
+        <div class="meta"><span class="chip t"><svg class="ic s16"><use href="#i-news"/></svg>News</span><time datetime="2026-10-23">23 Oct 2026</time></div>
+        <h3>Asan Medical Center Introduces Mona Lisa System for More Precise Prostate Cancer Biopsies</h3>
+        <span class="go">Read on AMC Newsroom <svg class="ic s16"><use href="#i-ext"/></svg></span>
+      </a>
+      <a class="ncard rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3301" target="_blank" rel="noopener noreferrer">
+        <div class="meta"><span class="chip t"><svg class="ic s16"><use href="#i-news"/></svg>News</span><time datetime="2026-10-12">12 Oct 2026</time></div>
+        <h3>Professor In-Ho Jeon from Asan Medical Center Named President-Elect of the International Society of Orthopaedic Surgery and Traumatology (SICOT)</h3>
+        <span class="go">Read on AMC Newsroom <svg class="ic s16"><use href="#i-ext"/></svg></span>
+      </a>
+    </div>
+
+    <div class="news-sub rv"><i></i>Videos from AMC's YouTube channel<a id="yt-more" href="https://www.youtube.com/user/AsanMedicalCenter" target="_blank" rel="noopener noreferrer">Open channel <svg class="ic s16" aria-hidden="true"><use href="#i-ext"/></svg></a></div>
+    <div class="vid-row" id="vid-list">
+      <a class="vid rv" href="https://youtu.be/rPVG2QCIk0M" target="_blank" rel="noopener noreferrer"><svg class="ic s32" aria-hidden="true"><use href="#i-play"/></svg><span><b>About Asan Medical International</b><small>Video on AMC's YouTube channel</small></span><svg class="ic s20" aria-hidden="true"><use href="#i-ext"/></svg></a>
+      <a class="vid rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=2653" target="_blank" rel="noopener noreferrer"><svg class="ic s32" aria-hidden="true"><use href="#i-play"/></svg><span><b>Asan Medical Center introductory video</b><small>On AMC's English newsroom</small></span><svg class="ic s20" aria-hidden="true"><use href="#i-ext"/></svg></a>
+    </div>
+
+    <div class="news-sub rv"><i></i>AMC's official channels</div>
+    <div class="soc-grid">
+      <a class="soc rv" href="https://www.facebook.com/asanmedicalcenter" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#i-fb"/></svg><b>Facebook</b><span>Asan Medical Center</span></a>
+      <a class="soc rv" href="https://www.instagram.com/asanmedicalcenter_int/" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg><b>Instagram</b><span>@asanmedicalcenter_int</span></a>
+      <a class="soc rv" href="https://kr.linkedin.com/company/asan-medical-center" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#i-in"/></svg><b>LinkedIn</b><span>Asan Medical Center (AMC)</span></a>
+      <a class="soc rv" href="https://www.youtube.com/user/AsanMedicalCenter" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg><b>YouTube</b><span>서울아산병원 · Asan Medical Center</span></a>
+    </div>
+
+    <p class="news-note"><svg class="ic s20"><use href="#i-info"/></svg><span>Headlines and videos are published by AMC and refreshed automatically. A news item or video describes AMC; it does not mean a service is available to you. Availability is decided by AMC after review. Camnemi does not operate AMC's channels. Links open AMC's own pages on <a href="https://news-en.amc.seoul.kr/news/eng/list.do" target="_blank" rel="noopener noreferrer">news-en.amc.seoul.kr</a> and YouTube; videos may be in Korean.</span></p>
+  </div>
+</section>
+<div class="wave-div flip mo" aria-hidden="true">
+  <svg viewBox="0 0 2880 80" preserveAspectRatio="none" focusable="false"><path class="wa" d="M0 34q240-30 480 0t480 0t480 0t480 0t480 0t480 0V80H0Z"/></svg>
+  <svg viewBox="0 0 2880 80" preserveAspectRatio="none" focusable="false"><path class="wb" d="M0 48q180-36 360 0t360 0t360 0t360 0t360 0t360 0t360 0t360 0V80H0Z"/></svg>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section class="block alt" id="services" aria-labelledby="h-services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kick"><i></i>What AMC offers</div>
+      <h2 id="h-services">Three ways to begin.</h2>
+      <p>Video consultation, second opinion and health screening are different services with different requirements. Whether any of them is possible is decided by AMC after review.</p>
+    </div>
+
+    <!-- MOTION SLOT MG-03 -->
+    <div class="mg-inline">
+    <figure class="mg rv" data-mg="MG-03" data-src="" data-poster="" data-alt="AMC services and specialties" style="--mg-ratio:21/9;--mg-ratio-m:4/3">
+      <!-- inline motion until a file is supplied: set data-src="assets/motion/mg-03.mp4" (21:9 desktop, 4:3 mobile) -->
+      <div class="mg-frame" role="img" aria-label="Animated diagram: icons for AMC's specialty areas — heart, cancer, digestive, brain, bones, hormones, kidney and lungs — orbit around Asan Medical Center, with three ways to begin: video consultation, second opinion and health screening.">
+        <div class="mg-live mg3 mo" aria-hidden="true">
+          <div class="mg3-copy">
+            <span class="lb">What AMC offers</span>
+            <b>Three ways to begin, across 43 clinical departments.</b>
+            <ul>
+              <li><svg class="ic s20"><use href="#i-video"/></svg>Video consultation<i></i></li>
+              <li><svg class="ic s20"><use href="#i-check-doc"/></svg>Second opinion<i></i></li>
+              <li><svg class="ic s20"><use href="#i-pulse"/></svg>Health screening<i></i></li>
+            </ul>
+          </div>
+          <div class="orbit">
+            <span class="orb-ring r3"></span><span class="orb-ring r1"></span><span class="orb-ring r2"></span>
+            <div class="orb-spin">
+              <span class="orb-i" style="--a:0deg"><i><svg class="ic"><use href="#i-heart"/></svg></i></span>
+              <span class="orb-i" style="--a:45deg"><i><svg class="ic"><use href="#i-ribbon"/></svg></i></span>
+              <span class="orb-i" style="--a:90deg"><i><svg class="ic"><use href="#i-gut"/></svg></i></span>
+              <span class="orb-i" style="--a:135deg"><i><svg class="ic"><use href="#i-brain"/></svg></i></span>
+              <span class="orb-i" style="--a:180deg"><i><svg class="ic"><use href="#i-bone"/></svg></i></span>
+              <span class="orb-i" style="--a:225deg"><i><svg class="ic"><use href="#i-drop"/></svg></i></span>
+              <span class="orb-i" style="--a:270deg"><i><svg class="ic"><use href="#i-kidney"/></svg></i></span>
+              <span class="orb-i" style="--a:315deg"><i><svg class="ic"><use href="#i-lungs"/></svg></i></span>
+            </div>
+            <div class="orb-spin rev">
+              <span class="orb-i" style="--a:30deg"><i><svg class="ic"><use href="#i-video"/></svg></i></span>
+              <span class="orb-i" style="--a:150deg"><i><svg class="ic"><use href="#i-check-doc"/></svg></i></span>
+              <span class="orb-i" style="--a:270deg"><i><svg class="ic"><use href="#i-pulse"/></svg></i></span>
+            </div>
+            <div class="orb-hub"><img src="assets/amc-logo.webp" alt="" width="124" height="34" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+    </figure>
+    </div>
+
+    <div class="svc-list" data-progress>
+      <article class="ticket svc rv mo" id="video">
+        <span class="notch t"></span><span class="notch b"></span>
+        <div class="main">
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+          <h3>Video consultation</h3>
+          <p>A real-time video consultation between you, your local physician and an AMC physician.</p>
+          <ul>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>AMC case coordinators and interpreters support the session</li>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>A full written report follows the consultation</li>
+          </ul>
+          <div class="req"><svg class="ic s20"><use href="#i-info"/></svg><span><b>Requirement:</b> a local physician must be present during the consultation.</span></div>
+        </div>
+        <div class="stub"><span class="pi" aria-hidden="true"><svg class="ic s32"><use href="#i-video"/></svg></span><span class="lb">Service</span><span class="no">01</span><a class="btn sm ghost" href="#inquire" data-service="Video consultation">Ask about this</a></div>
+      </article>
+
+      <article class="ticket svc rv mo" id="second">
+        <span class="notch t"></span><span class="notch b"></span>
+        <div class="main">
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+          <h3>Second opinion</h3>
+          <p>A written opinion from AMC specialists, based on the medical records you submit.</p>
+          <ul>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>Written only — there is no video element</li>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>Records go through Camnemi's secure registration page, never through chat</li>
+          </ul>
+          <div class="req"><svg class="ic s20"><use href="#i-info"/></svg><span>This is a different service from video consultation.</span></div>
+        </div>
+        <div class="stub"><span class="pi" aria-hidden="true"><svg class="ic s32"><use href="#i-check-doc"/></svg></span><span class="lb">Service</span><span class="no">02</span><a class="btn sm ghost" href="#inquire" data-service="Second opinion">Ask about this</a></div>
+      </article>
+
+      <article class="ticket svc rv mo" id="screening">
+        <span class="notch t"></span><span class="notch b"></span>
+        <div class="main">
+          <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+          <h3>Health screening</h3>
+          <p>The Health Screening and Promotion Center offers programs tailored by gender, age and disease.</p>
+          <ul>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>Depending on the schedule, a variety of comprehensive examinations can be done in a single day</li>
+            <li><svg class="ic s20"><use href="#i-check"/></svg>Appointment scheduling, guidance and interpretation are provided for overseas patients</li>
+          </ul>
+          <div class="req"><svg class="ic s20"><use href="#i-info"/></svg><span>Program options and scheduling are confirmed by Asan Medical Center.</span></div>
+        </div>
+        <div class="stub"><span class="pi" aria-hidden="true"><svg class="ic s32"><use href="#i-pulse"/></svg></span><span class="lb">Service</span><span class="no">03</span><a class="btn sm ghost" href="#inquire" data-service="Health screening">Ask about this</a></div>
+      </article>
+    </div>
+
+    <div class="diff rv" role="region" aria-label="Video consultation compared with second opinion" tabindex="0">
+      <table>
+        <caption class="lb" style="text-align:left;padding:16px 18px 0;background:var(--surface-muted)">Video consultation vs second opinion</caption>
+        <thead><tr><th scope="col"></th><th scope="col">Video consultation</th><th scope="col">Second opinion</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Format</th><td>Real-time video</td><td>Written only</td></tr>
+          <tr><th scope="row">Who takes part</th><td>You, your local physician and an AMC physician</td><td>AMC specialists, reviewing your records</td></tr>
+          <tr><th scope="row">You receive</th><td>A full written report after the consultation</td><td>A written opinion</td></tr>
+          <tr><th scope="row">Requirement</th><td>A local physician must be present</td><td>Medical records submitted through the secure page</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine"><svg class="ic s20"><use href="#i-info"/></svg><span>Availability is confirmed only by Asan Medical Center after its medical team reviews your case.</span></p>
+
+    <div class="ihc rv" style="margin-top:44px" id="ihc">
+      <div>
+        <span class="chip"><svg class="ic s16"><use href="#i-hospital"/></svg>Provided by Asan Medical Center</span>
+        <h3>AMC International Healthcare Center</h3>
+        <p>The hospital's dedicated department for international patients, with concierge coordinators.</p>
+      </div>
+      <ul class="pills" aria-label="Areas the International Healthcare Center supports">
+        <li><svg class="ic s16"><use href="#i-calendar"/></svg>Appointments</li>
+        <li><svg class="ic s16"><use href="#i-pulse"/></svg>Examinations</li>
+        <li><svg class="ic s16"><use href="#i-doc"/></svg>Billing</li>
+        <li><svg class="ic s16"><use href="#i-hospital"/></svg>Admission and discharge</li>
+        <li><svg class="ic s16"><use href="#i-check-doc"/></svg>Medical reports</li>
+        <li><svg class="ic s16"><use href="#i-doc"/></svg>CDs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOCTOR ================= -->
+<section class="block" id="doctor" aria-labelledby="h-doc">
+  <div class="wrap doctor">
+    <figure class="portrait rv mo" style="margin:0">
+      <div class="frame">
+        <img src="assets/doctor-chea.webp" alt="Portrait of Dr. Chea Siek Ai" width="574" height="765" loading="lazy">
+        <figcaption class="cap"><div><b>Chea Siek Ai, MD</b><br><span>Director of Medical Service</span></div><span class="chip t">Camnemi</span></figcaption>
+      </div>
+    </figure>
+    <div class="rv">
+      <div class="kick"><i></i>Your point of contact</div>
+      <h2 id="h-doc">Dr. Chea Siek Ai</h2>
+      
+      <p class="role-line">Director of Medical Service, Camnemi</p>
+      <dl class="cv">
+        <div><dt>Education</dt><dd>Master of Plastic &amp; Reconstructive Surgery — University of Ulsan College of Medicine (2025~)<span>Bachelor of Medicine — Faculty of Medicine, University of Puthisastra (2020)</span></dd></div>
+        <div><dt>Experience</dt><dd>Asan Medical Center, Dept. of Plastic and Reconstructive Surgery — Training &amp; Fellowship (2025~)<span>Sunrise Japan Hospital — Junior Surgeon (2021–2024)</span><span>Sihanouk Hospital Center of HOPE — Trainee Surgeon (2020–2021)</span></dd></div>
+        <div><dt>Clinical focus</dt><dd>Plastic &amp; Reconstructive Surgery · Microsurgery · General Surgery · Emergency Medicine</dd></div>
+        <div><dt>Languages</dt><dd>Khmer · Korean · English</dd></div>
+      </dl>
+      
+      <p class="note">Dr. Chea coordinates patients' inquiries and accompanies them through the process. Clinical decisions are made by the treating medical team at Asan Medical Center.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="block alt" id="process" aria-labelledby="h-proc">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kick"><i></i>How an inquiry works</div>
+      <h2 id="h-proc">Five steps, one ticket.</h2>
+      <p>No time frames are promised — each case moves at the hospital's pace.</p>
+    </div>
+    <!-- MOTION SLOT MG-04 -->
+    <div class="mg-inline">
+    <figure class="mg rv" data-mg="MG-04" data-src="" data-poster="" data-alt="How an inquiry works" style="--mg-ratio:21/9;--mg-ratio-m:4/3">
+      <!-- inline motion until a file is supplied: set data-src="assets/motion/mg-04.mp4" (21:9 desktop, 4:3 mobile) -->
+      <div class="mg-frame" role="img" aria-label="Animated diagram: five inquiry steps joined by a line — 01 Inquire, 02 Clarify and 03 Docs with Camnemi; 04 Review and 05 Next with Asan Medical Center. No time frames are shown.">
+        <div class="mg-live mg4 mo" aria-hidden="true">
+          <div class="mg4-head"><span class="lb">Five steps, one ticket</span><span class="mg4-legend"><span><i></i>Camnemi</span><span><i class="a"></i>Asan Medical Center</span></span></div>
+          <div class="mg4-row">
+            <div class="mg4-line"><span class="mg4-fill"></span><span class="mg4-run"><i></i></span></div>
+            <div class="tk4" style="--i:0"><span class="n">01</span><span class="card"><b>Inquire</b><small>Camnemi</small></span></div>
+            <div class="tk4" style="--i:1"><span class="n">02</span><span class="card"><b>Clarify</b><small>Camnemi</small></span></div>
+            <div class="tk4" style="--i:2"><span class="n">03</span><span class="card"><b>Docs</b><small>Camnemi</small></span></div>
+            <div class="tk4 amc" style="--i:3"><span class="n">04</span><span class="card"><b>Review</b><small>AMC</small></span></div>
+            <div class="tk4 amc" style="--i:4"><span class="n">05</span><span class="card"><b>Next</b><small>AMC</small></span></div>
+          </div>
+          <p class="mg4-foot">Coordinated by Camnemi · Reviewed and decided by Asan Medical Center</p>
+        </div>
+      </div>
+    </figure>
+    </div>
+
+    <ol class="proc rv mo" data-progress>
+      <li><span class="n">01</span><h4>Send an inquiry</h4><p>To Camnemi, without medical details.</p><span class="chip">Camnemi</span></li>
+      <li><span class="n">02</span><h4>We clarify your question</h4><p>And explain which AMC service may be relevant.</p><span class="chip">Camnemi</span></li>
+      <li><span class="n">03</span><h4>You prepare your documents</h4><p>Through Camnemi's secure registration page — your details, passport page and the signed AMC consent form. Never in chat.</p><p style="margin-top:10px"><a href="https://registeramc.camnemi.com/" rel="noopener">Open the secure registration page</a></p><span class="chip">Camnemi</span></li>
+      <li><span class="n">04</span><h4>AMC's medical team reviews</h4><p>And decides whether a service is possible.</p><span class="chip f">Asan Medical Center</span></li>
+      <li><span class="n">05</span><h4>AMC confirms next steps</h4><p>Including appointments, if applicable.</p><span class="chip f">Asan Medical Center</span></li>
+    </ol>
+    <p class="proc-note"><svg class="ic s20"><use href="#i-lock"/></svg><span>Camnemi does not collect medical records in Telegram, WhatsApp or email. Records are sent only through the secure page that our medical team gives you.</span></p>
+  </div>
+</section>
+
+<!-- ================= INQUIRY ================= -->
+<section class="block" id="inquire" aria-labelledby="h-inq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kick"><i></i>Start an inquiry</div>
+      <h2 id="h-inq">Tell us what you would like to explore.</h2>
+      <p>Your inquiry goes to Camnemi, not to the hospital. Please do not include medical details — we will explain how records are submitted if needed.</p>
+    </div>
+    <div class="inq">
+      <div class="form-card rv">
+        <div class="tk-head"><b><i></i>Inquiry ticket</b><span>Step 01 / 05</span></div>
+        <div class="fprog" aria-hidden="true"><i></i></div>
+        <form id="inq" novalidate>
+          <p class="err" id="err" role="alert"><svg class="ic s20"><use href="#i-alert"/></svg><span></span></p>
+          <div class="two">
+            <div class="field"><label for="f-name">Full name</label><input type="text" id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-country">Country of residence</label><select id="f-country" name="country"><option>Cambodia</option><option>Other</option></select></div>
+          </div>
+          <fieldset class="field"><legend>Preferred language for our reply</legend>
+            <div class="opts"><label class="opt"><input type="radio" name="lang" value="English" checked><span>English</span></label><label class="opt"><input type="radio" name="lang" value="Khmer"><span>Khmer</span></label></div>
+          </fieldset>
+          <div class="two">
+            <div class="field"><label for="f-channel">How should we contact you?</label><select id="f-channel" name="channel"><option>Email</option><option>Phone</option><option>Telegram</option><option>WhatsApp</option></select></div>
+            <div class="field"><label for="f-contact">Email address or phone number</label><input type="text" id="f-contact" name="contact" autocomplete="email" required><span class="hint">Messenger channels are for general replies only.</span></div>
+          </div>
+          <fieldset class="field"><legend>Service of interest</legend>
+            <div class="opts" id="svc-opts">
+              <label class="opt"><input type="radio" name="service" value="Video consultation"><span>Video consultation</span></label>
+              <label class="opt"><input type="radio" name="service" value="Second opinion"><span>Second opinion</span></label>
+              <label class="opt"><input type="radio" name="service" value="Health screening"><span>Health screening</span></label>
+              <label class="opt"><input type="radio" name="service" value="Not sure yet"><span>Not sure yet</span></label>
+            </div>
+          </fieldset>
+          <div class="field" id="local-doc" hidden>
+            <label for="f-local">Can a local physician join a video consultation?</label>
+            <select id="f-local" name="localdoc"><option>Not sure</option><option>Yes</option><option>No</option></select>
+            <span class="hint">A local physician must be present for a video consultation.</span>
+          </div>
+          <div class="field"><label for="f-q">Your question (optional)</label><textarea id="f-q" name="question"></textarea><span class="hint">Please do not include diagnoses, test results or medical records. There is no file upload here.</span></div>
+          <label class="consent"><input type="checkbox" id="f-consent" name="consent"><span>I understand that Camnemi coordinates inquiries only, and that availability is decided by Asan Medical Center after review.</span></label>
+          <button class="btn" type="submit">Prepare my inquiry <svg class="ic s20"><use href="#i-send"/></svg></button>
+          <p class="hint" style="display:block;margin-top:12px;font-size:13px;line-height:19px;color:var(--text-secondary)">This button opens a ready-to-send email in your own email app. Nothing is sent until you press send there.</p>
+          <div class="ok" id="ok" role="status" aria-live="polite"><b>Almost done.</b> Your email app should open with your inquiry. If it does not, write to <a href="mailto:medical@camnemi.com">medical@camnemi.com</a> or message us on Telegram. Your inquiry goes to Camnemi, not to the hospital.</div>
+        </form>
+      </div>
+
+      <aside class="side rv" aria-label="Other ways to reach us">
+        <div class="card">
+          <h4>Other ways to reach us</h4>
+          <ul class="contact">
+            <li><svg class="ic s20"><use href="#i-mail"/></svg><a href="mailto:medical@camnemi.com">medical@camnemi.com</a></li>
+            <li><svg class="ic s20"><use href="#i-send"/></svg><a href="https://t.me/+855969909079" rel="noopener">Telegram · +855 96 990 9079</a></li>
+            <li><svg class="ic s20"><use href="#i-phone"/></svg><a href="tel:+855969909079">+855 96 990 9079</a></li>
+          </ul>
+          <p style="font-size:13px;line-height:19px;color:var(--text-secondary);margin-top:10px">For general questions only. Please do not send medical records or images in chat.</p>
+        </div>
+        <div class="card">
+          <h4>What happens next</h4>
+          <ol class="next">
+            <li><b>01</b>Camnemi replies to your question in your preferred language.</li>
+            <li><b>02</b>We explain which AMC service may be relevant.</li>
+            <li><b>03</b>If records are needed, our medical team tells you exactly what to send and gives you the secure page.</li>
+          </ol>
+        </div>
+        <div class="safe"><svg class="ic s20"><use href="#i-alert"/></svg><p><b>Urgent or emergency symptoms?</b> Contact your local emergency services or the nearest medical facility now. This form cannot triage urgent symptoms.</p></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="block alt" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="kick"><i></i>Questions</div><h2 id="h-faq">Good to know before you write.</h2></div>
+    <div class="faq rv">
+      <details><summary>Is Camnemi the hospital?</summary><div class="a">No. Camnemi is the Official Agency of Asan Medical Center. We coordinate your inquiry and explain each step. Clinical services, medical decisions, appointments and billing are handled by Asan Medical Center.</div></details>
+      <details><summary>Can Camnemi tell me which treatment is right for me?</summary><div class="a">No. Camnemi and this website do not give medical advice, diagnose or recommend treatment. Clinical decisions are made by the treating medical professionals at AMC.</div></details>
+      <details><summary>Where do I send my medical records?</summary><div class="a">Not in chat and not in this form. If records are needed, our medical team will give you Camnemi's secure registration page and tell you exactly what to prepare.</div></details>
+      <details><summary>Which language can I use?</summary><div class="a">You can write to Camnemi in English or Khmer. Interpretation inside the hospital is provided by AMC's international services; Khmer support is provided by Camnemi's own coordinators.</div></details>
+      <details><summary>Why Asan Medical Center?</summary><div class="a">Asan Medical Center is in Seoul, Korea. In Newsweek and Statista's World's Best Specialized Hospitals 2027, AMC is ranked in the global top 10 in five specialties: endocrinology (#2), gastroenterology (#5), urology (#5), oncology (#6) and neurology (#9). These are specialty rankings, not an overall hospital ranking, and they do not predict the outcome for any individual patient. Whether a service is possible for you is decided by AMC after review.</div></details>
+      <details><summary>Is a video consultation the same as a second opinion?</summary><div class="a">No. A video consultation is a real-time session with a local physician present. A second opinion is a written opinion from AMC specialists based on submitted records. Whether either is possible is decided by AMC after review.</div></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img class="fl" src="assets/camnemi-medical-logo.webp" alt="Camnemi Medical Service" width="54" height="56" loading="lazy">
+        <p>Camnemi Medical Service coordinates Korea medical-tourism inquiries connected with Asan Medical Center, Seoul. Clinical services, medical decisions, appointments and billing are handled by Asan Medical Center.</p>
+        <p style="margin-top:14px"><span class="chip f"><svg class="ic s16"><use href="#i-star"/></svg>Official Agency of Asan Medical Center</span></p>
+      </div>
+      <div><h4>Explore</h4><ul>
+        <li><a href="#agency">Official Agency</a></li><li><a href="#why-amc">Why Asan Medical Center</a></li><li><a href="#amc-news">News from AMC</a></li><li><a href="#services">Services</a></li><li><a href="#doctor">Dr. Chea Siek Ai</a></li><li><a href="#process">How an inquiry works</a></li><li><a href="#faq">Questions</a></li></ul></div>
+      <div><h4>Contact</h4><ul>
+        <li><a href="mailto:medical@camnemi.com">medical@camnemi.com</a></li><li><a href="https://t.me/+855969909079" rel="noopener">Telegram</a></li><li><a href="tel:+855969909079">+855 96 990 9079</a></li><li><a href="https://registeramc.camnemi.com/" rel="noopener">Secure registration page</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>© Camnemi Korea · Camnemi Medical Service</span>
+      <span style="max-width:62ch">Availability is confirmed only by Asan Medical Center after review. Camnemi does not make medical decisions and does not collect medical records in chat.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Close menu':'Open menu');btn.querySelector('use').setAttribute('href',o?'#i-close':'#i-menu')});
+  nav.addEventListener('click',function(e){if(e.target.closest('a')){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')nav.classList.remove('open')});
+
+  // reveal
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});rv.forEach(function(e){io.observe(e)})}else{rv.forEach(function(e){e.classList.add('in')})}
+
+  // scroll spy
+  var links=[].slice.call(nav.querySelectorAll('a[href^="#"]:not(.btn)'));
+  var map=links.map(function(a){return{a:a,el:document.querySelector(a.getAttribute('href'))}}).filter(function(x){return x.el});
+  function spy(){var y=window.scrollY+120,cur=null;map.forEach(function(m){if(m.el.offsetTop<=y)cur=m});links.forEach(function(a){a.removeAttribute('aria-current')});if(cur)cur.a.setAttribute('aria-current','true')}
+  window.addEventListener('scroll',spy,{passive:true});spy();
+
+  // form
+  var form=document.getElementById('inq'),err=document.getElementById('err'),ok=document.getElementById('ok'),local=document.getElementById('local-doc');
+  function sync(){var v=(form.querySelector('input[name=service]:checked')||{}).value;local.hidden=v!=='Video consultation'}
+  form.addEventListener('change',sync);
+  document.querySelectorAll('[data-service]').forEach(function(a){a.addEventListener('click',function(){var v=a.getAttribute('data-service');var r=form.querySelector('input[name=service][value="'+v+'"]');if(r){r.checked=true;sync()}})});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();ok.classList.remove('show');
+    var d=new FormData(form),miss=[];
+    ['name','contact'].forEach(function(k){var i=form.elements[k];var bad=!String(d.get(k)||'').trim();i.setAttribute('aria-invalid',bad);if(bad)miss.push(k)});
+    if(!d.get('service'))miss.push('service');
+    var c=document.getElementById('f-consent');c.setAttribute('aria-invalid',!c.checked);if(!c.checked)miss.push('consent');
+    if(miss.length){err.querySelector('span').textContent='Please complete the required fields: name, contact, service of interest, and the confirmation.';err.classList.add('show');(form.querySelector('[aria-invalid=true]')||form.elements.name).focus();return}
+    err.classList.remove('show');
+    var svc=d.get('service');
+    var body=['Hello Camnemi,','','I would like to start an inquiry.','','Name: '+d.get('name'),'Country of residence: '+d.get('country'),'Preferred reply language: '+d.get('lang'),'Contact via: '+d.get('channel')+' — '+d.get('contact'),'Service of interest: '+svc].concat(svc==='Video consultation'?['Local physician can join: '+d.get('localdoc')]:[]).concat(['','Question: '+(d.get('question')||'—'),'','(No medical details or records in this message.)']).join('\n');
+    window.location.href='mailto:medical@camnemi.com?subject='+encodeURIComponent('Inquiry — '+svc)+'&body='+encodeURIComponent(body);
+    ok.classList.add('show');
+  });
+})();
+</script>
+<script>
+/* v3 motion layer. Decorative only: every figure is already final in the HTML, so with JS off or
+   prefers-reduced-motion (html without .mo-ok) the page is complete and still. */
+(function(){
+  var root=document.documentElement,hasIO='IntersectionObserver' in window;
+  var mq=window.matchMedia?window.matchMedia('(prefers-reduced-motion: reduce)'):null;
+  function still(){return !root.classList.contains('mo-ok')}
+  if(mq){var chg=function(e){root.classList.toggle('mo-ok',!e.matches);kick()};if(mq.addEventListener)mq.addEventListener('change',chg);else if(mq.addListener)mq.addListener(chg)}
+
+  // 1. looping animations in a .mo zone run only while the zone is on screen
+  var zones=document.querySelectorAll('.mo');
+  if(hasIO){var zio=new IntersectionObserver(function(es){es.forEach(function(x){x.target.classList.toggle('is-on',x.isIntersecting)})},{rootMargin:'60px 0px'});zones.forEach(function(z){zio.observe(z)})}
+  else zones.forEach(function(z){z.classList.add('is-on')});
+
+  // 2. count-up towards the value already in the HTML; always ends on exactly that text
+  function countUp(el){
+    var fin=el.textContent,to=parseInt(fin.replace(/[^0-9]/g,''),10),from=parseInt(el.getAttribute('data-from')||'0',10);
+    if(still()||isNaN(to)||isNaN(from))return;
+    var t0=null,dur=1500,done=false;
+    function end(){if(!done){done=true;el.textContent=fin}}
+    function step(t){if(done)return;if(t0===null)t0=t;var p=Math.min(1,(t-t0)/dur);if(p>=1)return end();el.textContent=String(Math.round(from+(to-from)*(1-Math.pow(1-p,3))));requestAnimationFrame(step)}
+    el.textContent=String(from);requestAnimationFrame(step);setTimeout(end,dur+700);
+  }
+  var cus=document.querySelectorAll('[data-count]');
+  if(hasIO){var cio=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){cio.unobserve(x.target);countUp(x.target)}})},{threshold:.6});cus.forEach(function(el){cio.observe(el)})}
+
+  // 3. ranking cards: staggered reveal (CSS), then a subtle pointer tilt + highlight
+  var grid=document.querySelector('.rank-grid');
+  if(grid){
+    if(hasIO){var gio=new IntersectionObserver(function(es){if(es[0].isIntersecting){gio.disconnect();setTimeout(function(){grid.classList.add('settled')},1300)}},{threshold:.05});gio.observe(grid)}else grid.classList.add('settled');
+    if(window.matchMedia&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+      [].forEach.call(grid.querySelectorAll('.rank'),function(c){
+        c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--mx',(x*100).toFixed(1)+'%');c.style.setProperty('--my',(y*100).toFixed(1)+'%');if(still())return;c.style.setProperty('--ry',((x-.5)*6).toFixed(2)+'deg');c.style.setProperty('--rx',((.5-y)*6).toFixed(2)+'deg')});
+        c.addEventListener('pointerleave',function(){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')});
+      });
+    }
+  }
+
+  // 4. parallax ([data-parallax]) and scroll-progress lines ([data-progress]); one rAF per scroll, on-screen elements only
+  var px=[].slice.call(document.querySelectorAll('[data-parallax]')),pg=[].slice.call(document.querySelectorAll('[data-progress]')),all=px.concat(pg),ticking=false;
+  if(hasIO){var vio=new IntersectionObserver(function(es){es.forEach(function(x){x.target._vis=x.isIntersecting});kick()},{rootMargin:'120px 0px'});all.forEach(function(el){vio.observe(el)})}
+  else all.forEach(function(el){el._vis=true});
+  function update(){
+    ticking=false;var vh=window.innerHeight||document.documentElement.clientHeight;
+    if(still()){all.forEach(function(el){el.style.removeProperty('--py');el.style.removeProperty('--p')});return}
+    px.forEach(function(el){if(!el._vis)return;var r=el.parentNode.getBoundingClientRect(),f=parseFloat(el.getAttribute('data-parallax'))||0,lim=r.height*.06,d=(r.top+r.height/2-vh/2)*f;el.style.setProperty('--py',Math.max(-lim,Math.min(lim,d)).toFixed(1)+'px')});
+    pg.forEach(function(el){if(!el._vis)return;var r=el.getBoundingClientRect(),p=(vh*.85-r.top)/(r.height+vh*.35);el.style.setProperty('--p',Math.max(0,Math.min(1,p)).toFixed(3))});
+  }
+  function kick(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
+  window.addEventListener('scroll',kick,{passive:true});window.addEventListener('resize',kick);kick();
+
+  // 5. inquiry form progress: required items completed out of 4 (name, contact, service, confirmation)
+  var form=document.getElementById('inq'),card=form&&form.closest('.form-card');
+  if(form&&card){
+    var fp=function(){var n=0;if(String(form.elements.name.value).trim())n++;if(String(form.elements.contact.value).trim())n++;if(form.querySelector('input[name=service]:checked'))n++;if(document.getElementById('f-consent').checked)n++;card.style.setProperty('--fp',(n/4).toFixed(2))};
+    form.addEventListener('input',fp);form.addEventListener('change',fp);
+    document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('[data-service]'))setTimeout(fp,0)});
+    fp();
+  }
+})();
+</script>
+<script>
+/* AMC news + YouTube, rendered from feed/amc-feed.json at runtime (the feed is refreshed by update_feed.py every 3 hours).
+   The static cards in #news-list / #vid-list are the fallback and are replaced only after a successful render. */
+(function(){
+  if(!window.fetch||!window.Promise)return;
+  var NEWS='https://news-en.amc.seoul.kr/',YT='https://www.youtube.com/',MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var newsList=document.getElementById('news-list'),vidList=document.getElementById('vid-list');
+  if(!newsList||!vidList)return;
+  function okUrl(u,p){return typeof u==='string'&&u.indexOf(p)===0&&!/[\s"'<>]/.test(u)}
+  function day(s){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(String(s||''));if(!m||+m[2]<1||+m[2]>12)return null;return{iso:m[0],txt:(+m[3])+' '+MON[+m[2]-1]+' '+m[1]}}
+  function h(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
+  function icon(id,cls){var ns='http://www.w3.org/2000/svg',s=document.createElementNS(ns,'svg'),u=document.createElementNS(ns,'use');s.setAttribute('class','ic '+(cls||''));s.setAttribute('aria-hidden','true');u.setAttribute('href','#'+id);s.appendChild(u);return s}
+  function ext(a){a.target='_blank';a.rel='noopener noreferrer'}
+  function newsCard(n,i){
+    var d=day(n.date);if(!d||!okUrl(n.url,NEWS)||typeof n.title!=='string'||!n.title.trim())return null;
+    var a=h('a','ncard rv');a.href=n.url;ext(a);a.style.transitionDelay=(i*70)+'ms';
+    var meta=h('div','meta'),chip=h('span','chip t');chip.appendChild(icon('i-news','s16'));chip.appendChild(document.createTextNode('News'));
+    var t=h('time',null,d.txt);t.dateTime=d.iso;meta.appendChild(chip);meta.appendChild(t);
+    var go=h('span','go','Read on AMC Newsroom ');go.appendChild(icon('i-ext','s16'));
+    a.appendChild(meta);a.appendChild(h('h3',null,n.title.trim()));a.appendChild(go);return a;
+  }
+  function vidCard(v,i){
+    var d=day(v.published);if(!d||!okUrl(v.url,YT)||typeof v.title!=='string'||!v.title.trim()||!/^[A-Za-z0-9_-]{6,20}$/.test(String(v.id||'')))return null;
+    var a=h('a','vcard rv');a.href=v.url;ext(a);a.style.transitionDelay=(i*90)+'ms';
+    var th=h('span','vthumb');th.appendChild(icon('i-play'));
+    var img=document.createElement('img');img.alt='';img.loading='lazy';img.decoding='async';img.width=480;img.height=360;
+    img.onerror=function(){if(img.parentNode)img.parentNode.removeChild(img)};img.src='https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg';th.appendChild(img);
+    var pl=h('span','play');pl.appendChild(icon('i-play'));th.appendChild(pl);
+    var body=h('span','vbody'),t=h('time',null,d.txt);t.dateTime=d.iso;
+    var b=h('b',null,v.title.trim());if(/[가-힣]/.test(v.title))b.lang='ko';
+    var note=h('small',null,"Video on AMC's YouTube channel (Korean) ");note.appendChild(icon('i-ext','s16'));
+    body.appendChild(t);body.appendChild(b);body.appendChild(note);a.appendChild(th);a.appendChild(body);return a;
+  }
+  function reveal(nodes){
+    if(!('IntersectionObserver' in window)){nodes.forEach(function(n){n.classList.add('in')});return}
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var n=x.target;n.classList.add('in');io.unobserve(n);setTimeout(function(){n.style.transitionDelay=''},900)}})},{rootMargin:'0px 0px -6% 0px',threshold:.05});
+    nodes.forEach(function(n){io.observe(n)});
+  }
+  function newest(list,key){return (Array.isArray(list)?list:[]).filter(function(x){return x&&typeof x==='object'}).sort(function(a,b){var x=String(a[key]||''),y=String(b[key]||'');return x<y?1:x>y?-1:0})}
+  function render(f){
+    if(!f||typeof f!=='object')return;
+    var nn=[],vv=[];
+    newest(f.news,'date').forEach(function(n){if(nn.length<6){var c=newsCard(n,nn.length);if(c)nn.push(c)}});
+    newest(f.videos,'published').forEach(function(v){if(vv.length<3){var c=vidCard(v,vv.length);if(c)vv.push(c)}});
+    if(nn.length>=4){newsList.textContent='';nn.forEach(function(c){newsList.appendChild(c)});newsList.setAttribute('data-n',nn.length);reveal(nn)}
+    if(vv.length){vidList.textContent='';vidList.className='vid-grid';vv.forEach(function(c){vidList.appendChild(c)});reveal(vv)}
+    var ch=f.channel||{},yt=document.getElementById('yt-more'),room=document.getElementById('news-room');
+    if(yt&&okUrl(ch.youtube,YT))yt.href=ch.youtube;
+    if(room&&okUrl(ch.newsroom,NEWS))room.href=ch.newsroom;
+    var up=new Date(f.updated);
+    if((nn.length>=4||vv.length)&&f.updated&&!isNaN(up.getTime())){
+      var t=document.getElementById('news-upd-t');t.dateTime=up.toISOString();
+      try{t.textContent=up.toLocaleString('en-GB',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:false})}catch(e){t.textContent=up.toLocaleString()}
+      document.getElementById('news-upd').hidden=false;
+    }
+  }
+  try{fetch('feed/amc-feed.json',{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(render).catch(function(){})}catch(e){}
+})();
+</script>
+<script>
+/* Motion-graphic slot loader. Fill a slot by setting data-src (mp4/webm, Lottie .json/.lottie, or an image) and optional data-poster.
+   Videos play muted + looped only while visible; with prefers-reduced-motion nothing autoplays. */
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  document.querySelectorAll('figure.mg[data-src]').forEach(function(fig){
+    var src=(fig.getAttribute('data-src')||'').trim(); if(!src) return;
+    var poster=fig.getAttribute('data-poster')||'',alt=fig.getAttribute('data-alt')||'',frame=fig.querySelector('.mg-frame'),el;
+    if(/\.(mp4|webm)(\?|$)/i.test(src)){
+      el=document.createElement('video'); el.muted=true; el.loop=true; el.playsInline=true; el.preload='metadata'; el.setAttribute('aria-label',alt);
+      if(poster) el.poster=poster; el.src=src;
+      if(!reduce){ if('IntersectionObserver' in window){ new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){el.play().catch(function(){})}else{el.pause()}})},{threshold:.25}).observe(frame);} else {el.play().catch(function(){});} }
+    } else if(/\.(json|lottie)(\?|$)/i.test(src)){
+      el=document.createElement('dotlottie-player'); el.setAttribute('src',src); el.setAttribute('loop',''); if(!reduce) el.setAttribute('autoplay',''); el.setAttribute('aria-label',alt);
+      if(!window.customElements||!customElements.get('dotlottie-player')){var sc=document.createElement('script');sc.type='module';sc.src='https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs';document.head.appendChild(sc);}
+    } else { el=document.createElement('img'); el.src=src; el.alt=alt; el.loading='lazy'; }
+    frame.removeAttribute('role'); frame.removeAttribute('aria-label'); frame.appendChild(el); fig.classList.add('is-filled');
+  });
+})();
+</script>
+</body>
+</html>
