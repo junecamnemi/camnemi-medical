@@ -13,8 +13,9 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: python tools/update_feed.py v3/feed/amc-feed.json
+      - run: python tools/update_feed.py v5/feed/amc-feed.json
       - name: Commit if changed
         run: |
           git config user.name "camnemi-feed-bot"; git config user.email "bot@camnemi.com"
-          git add v3/feed/amc-feed.json
+          git add v3/feed/amc-feed.json v5/feed/amc-feed.json
           git diff --cached --quiet || (git commit -m "chore: refresh AMC feed" && git push)

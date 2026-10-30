@@ -1,0 +1,150 @@
+/* ==========================================================================
+   CAMNEMI Design guide v3 — tokens.css
+   출처(마스터): camnemi-pdf/_design/DESIGN_SPEC.md §1 (색·서체·형태·모션)
+   이 파일은 CAMNEMI_Design_Guide_v3.html 안 <style id="tokens"> 블록과 글자 단위로 같다.
+   - 색은 스펙 §1.1(라이트)·§1.2(다크) 값만. 새 색 없음.
+   - --l-* / --d-* = 원값, 나머지 = 의미 토큰(테마에 따라 바뀜).
+   - 다크 textDisabled는 스펙에 없다 → 정의하지 않음(DECISIONS.md 참조).
+   ========================================================================== */
+:root {
+  /* ---------- 색 · 라이트 원값 (§1.1) ---------- */
+  --l-canvas: #FFFFFF;
+  --l-surface-muted: #F7F8FA;
+  --l-hairline: #E3E7ED;
+  --l-perforation: #C3CBD6;
+  --l-ink-strong: #00256C;
+  --l-ink-primary: #154D9E;
+  --l-text-primary: #0F1A2A;
+  --l-text-secondary: #5B6472;
+  --l-text-disabled: #9AA3AF;
+  --l-accent-sky: #00A0DF;
+  --l-stub-tint: #EEF5FC;
+  --l-danger: #C62828;
+
+  /* ---------- 색 · 다크 원값 (§1.2) ---------- */
+  --d-canvas: #0B1220;
+  --d-surface-muted: #131C2E;
+  --d-hairline: #253049;
+  --d-perforation: #3A4762;
+  --d-ink-strong: #E8EDF5;
+  --d-ink-primary: #8EC3FF;
+  --d-filled-button-bg: #58B8E8;
+  --d-filled-button-fg: #00256C;
+  --d-text-primary: #E8EDF5;
+  --d-text-secondary: #A9B4C6;
+  --d-accent-sky: #4CC3F0;
+  --d-stub-tint: #15233A;
+  --d-danger: #FF8A80;
+
+  /* ---------- 색 · 의미 토큰(라이트 기본) ---------- */
+  --canvas: var(--l-canvas);
+  --surface-muted: var(--l-surface-muted);
+  --hairline: var(--l-hairline);
+  --perforation: var(--l-perforation);
+  --ink-strong: var(--l-ink-strong);
+  --ink-primary: var(--l-ink-primary);
+  --text-primary: var(--l-text-primary);
+  --text-secondary: var(--l-text-secondary);
+  --text-disabled: var(--l-text-disabled);      /* 비활성 전용. 본문 금지 */
+  --accent-sky: var(--l-accent-sky);            /* 비텍스트 장식 전용. 글자 금지(2.96:1) */
+  --stub-tint: var(--l-stub-tint);
+  --danger: var(--l-danger);                    /* 파괴적 확인·오류 문구만 */
+  --filled-button-bg: var(--l-ink-strong);
+  --filled-button-fg: var(--l-canvas);
+
+  /* ---------- 서체 (§1.3) ---------- */
+  --font-sans: "Pretendard", "Pretendard Variable", "Malgun Gothic", "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+  --font-km: "Leelawadee UI", "Khmer UI", "Noto Sans Khmer", "Khmer OS", sans-serif;
+  --type-display: 700 26px/32px var(--font-sans);
+  --type-title: 700 20px/26px var(--font-sans);
+  --type-headline: 600 17px/22px var(--font-sans);
+  --type-body: 400 15px/22px var(--font-sans);
+  --type-body-strong: 600 15px/20px var(--font-sans);
+  --type-button: 600 16px/20px var(--font-sans);
+  --type-value: 500 13px/18px var(--font-sans);   /* + tabular-nums */
+  --type-label: 600 11px/14px var(--font-sans);   /* + 대문자, 자간 0.8px */
+  --type-caption: 400 12px/16px var(--font-sans);
+  --label-tracking: 0.8px;
+  --numeric: tabular-nums;
+  --date-format: "DD MMM YYYY";                   /* 23 OCT 2026 */
+  --time-format: "HH:mm";                         /* 24시간제 14:32 */
+
+  /* 인쇄·크메르어(가이드 v3 확장 — 색 아님) */
+  --print-min: 12px;                              /* = 9pt. 인쇄물 최소 글자 */
+  --print-label: 600 12px/16px var(--font-sans);  /* 인쇄에서 label 11px → 12px */
+  --km-lh: 1.8;                                   /* 크메르어 행간 하한 */
+  --km-min-screen: 16px;
+  --km-min-print: 11pt;
+
+  /* ---------- 간격 · 형태 (§1.4) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --screen-margin: 16px;
+  --radius-control: 8px;
+  --radius-card: 10px;
+  --radius-chip: 4px;
+  --radius-sheet: 16px;                           /* 위쪽 두 모서리 */
+  --notch-radius: 7px;
+  --hairline-width: 1px;
+  --elevation: none;                              /* 그림자 0 */
+  --touch-min: 48px;
+
+  /* 여정 티켓(BoardingPassCard 일반화, §2.1) */
+  --ticket-min-h: 104px;
+  --ticket-stub-w: 76px;
+  --ticket-gap: 8px;
+  --perf-dash: 4px;
+  --perf-gap: 3px;
+  --chip-h: 20px;
+
+  /* 아이콘(SignGlyph, §1.5) */
+  --icon-grid: 24px;
+  --icon-stroke: 1.5;
+
+  /* 그리드(가이드 v3 제안 — DECISIONS.md) */
+  --grid-a4-margin: 20mm;
+  --grid-a4-cols: 6;
+  --grid-a4-gutter: 5mm;
+  --grid-web-max: 1200px;
+  --grid-web-cols: 12;
+  --grid-web-gutter: 24px;
+  --grid-mobile-cols: 4;
+  --grid-mobile-gutter: 8px;
+
+  /* ---------- 모션 (§1.4) ---------- */
+  --motion-fast: 150ms cubic-bezier(0, 0, 0.58, 1);              /* Curves.easeOut · 누름, 토글 */
+  --motion-base-in: 240ms cubic-bezier(0.215, 0.61, 0.355, 1);   /* easeOutCubic · 등장 */
+  --motion-base-out: 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19); /* easeInCubic · 퇴장 */
+  --motion-slow: 320ms cubic-bezier(0.645, 0.045, 0.355, 1);     /* easeInOutCubic · 체크 획 */
+  --motion-reduced: 0ms linear;                                  /* 동작 줄이기: 0ms 페이드 */
+}
+
+/* ---------- 다크(폰·OS 설정을 따른다) ---------- */
+[data-theme="dark"] {
+  --canvas: var(--d-canvas);
+  --surface-muted: var(--d-surface-muted);
+  --hairline: var(--d-hairline);
+  --perforation: var(--d-perforation);
+  --ink-strong: var(--d-ink-strong);
+  --ink-primary: var(--d-ink-primary);
+  --text-primary: var(--d-text-primary);
+  --text-secondary: var(--d-text-secondary);
+  --accent-sky: var(--d-accent-sky);
+  --stub-tint: var(--d-stub-tint);
+  --danger: var(--d-danger);
+  --filled-button-bg: var(--d-filled-button-bg);
+  --filled-button-fg: var(--d-filled-button-fg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: var(--motion-reduced);
+    --motion-base-in: var(--motion-reduced);
+    --motion-base-out: var(--motion-reduced);
+    --motion-slow: var(--motion-reduced);
+  }
+}
