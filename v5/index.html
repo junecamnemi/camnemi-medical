@@ -98,7 +98,7 @@ section{scroll-margin-top:84px}
 .hero-lines .halo{fill:var(--accent-sky);opacity:.3;transform-box:fill-box;transform-origin:center}
 .mo-ok .hero-lines .halo{animation:halo 2.8s 3s ease-out infinite}
 .hero-in{max-width:760px}
-.hero h1{color:var(--canvas);margin-top:30px}
+.hero h1{color:var(--canvas);margin-top:0}
 .hero h1 em{font-style:normal;position:relative;white-space:nowrap}
 .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--accent-sky),var(--stub-tint));transform-origin:left}
 .mo-ok .hero h1 em::after{animation:uline 1s 1s cubic-bezier(.2,.7,.2,1) both}
@@ -715,6 +715,88 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
   .js .rv{opacity:1;transform:none;transition:none}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+/* ---------- round 3 ---------- */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* header: Official Agency line */
+.hd-agency{display:flex;align-items:center;gap:12px;padding-left:18px;border-left:1px solid var(--perforation);min-width:0}
+.hd-agency img{height:27px;width:auto;flex:none}
+.hd-agency .sep{width:1px;height:28px;background:var(--perforation);flex:none}
+.hd-agency span{font:700 13px/17px var(--font-sans);color:var(--ink-strong);letter-spacing:.2px}
+.hd-agency small{display:block;font:var(--type-label);letter-spacing:var(--label-tracking);text-transform:uppercase;color:var(--text-secondary)}
+@media (max-width:1240px){.hd-agency img,.hd-agency .sep{display:none}.nav{gap:18px}}
+@media (max-width:700px){.hd-agency{padding-left:12px;gap:0}.hd-agency span{font-size:12px;line-height:15px}.site-header .wrap{gap:12px}.brand img{height:42px}}
+/* Why AMC: gallery + departments block */
+#amc-more .sub:first-child{margin-top:0}
+/* three programs, one picture */
+.trio{margin:40px 0 0;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-card);padding:28px 28px 30px;position:relative;overflow:hidden}
+.trio:before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,var(--stub-tint),transparent 55%);opacity:.7;pointer-events:none}
+.trio>*{position:relative}
+.trio-flow{display:flex;align-items:stretch;justify-content:center;gap:0}
+.trio-flow .tn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:150px;padding:12px 18px;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-card);text-align:center;color:var(--ink-strong)}
+.trio-flow .tn b{font:700 15px/20px var(--font-sans)}
+.trio-flow .tn small{font:600 12px/16px var(--font-sans);color:var(--text-secondary)}
+.trio-flow .tn img{height:34px;width:auto}
+.trio-flow .tn .ic{color:var(--ink-primary)}
+.trio-flow .tn.amc{border-color:var(--ink-strong);border-width:2px}
+.trio-flow .ta{flex:0 0 56px;align-self:center;height:2px;background:repeating-linear-gradient(90deg,var(--accent-sky) 0 6px,transparent 6px 12px);position:relative}
+.trio-flow .ta:after{content:"";position:absolute;right:-1px;top:-4px;border-left:8px solid var(--accent-sky);border-block:5px solid transparent}
+.mo-ok .trio.in .ta{animation:dashflow 1.6s linear infinite}
+.trio-cards{list-style:none;margin:0;padding:34px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;position:relative}
+.trio-cards:before{content:"";position:absolute;top:0;left:50%;height:17px;border-left:2px solid var(--accent-sky)}
+.trio-cards:after{content:"";position:absolute;top:17px;left:calc(100%/6);right:calc(100%/6);border-top:2px solid var(--accent-sky)}
+.trio-cards li{position:relative}
+.trio-cards li:before{content:"";position:absolute;top:-17px;left:50%;height:17px;border-left:2px solid var(--accent-sky)}
+.trio-cards a{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;height:100%;padding:20px 18px 18px;background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--radius-card);color:var(--ink-strong);text-decoration:none;transition:border-color .2s,transform .35s cubic-bezier(.2,.7,.2,1)}
+.trio-cards a:hover{border-color:var(--ink-strong);transform:translateY(-3px)}
+.trio-cards a:focus-visible{outline:3px solid var(--accent-sky);outline-offset:2px}
+.trio-cards .ti{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--ink-strong);color:var(--canvas)}
+.trio-cards b{font:700 19px/24px var(--font-sans)}
+.trio-cards .td{font:var(--type-body);color:var(--text-secondary);font-size:14px;line-height:20px;flex:1}
+.trio-cards .chip{margin-top:4px}
+@media (max-width:900px){
+  .trio{padding:20px 16px 20px}
+  .trio-flow{flex-direction:column;align-items:center}
+  .trio-flow .tn{width:100%;max-width:320px}
+  .trio-flow .ta{flex:0 0 28px;width:2px;height:28px;background:repeating-linear-gradient(180deg,var(--accent-sky) 0 5px,transparent 5px 10px)}
+  .trio-flow .ta:after{right:auto;left:-4px;top:auto;bottom:-1px;border:5px solid transparent;border-top:8px solid var(--accent-sky);border-bottom:0}
+  .trio-cards{grid-template-columns:1fr;padding:26px 0 0 18px;gap:12px}
+  .trio-cards:before{top:0;left:0;height:26px}
+  .trio-cards:after{top:26px;left:0;right:auto;bottom:34px;border-top:0;border-left:2px solid var(--accent-sky)}
+  .trio-cards li:before{top:50%;left:-18px;width:18px;height:0;border-left:0;border-top:2px solid var(--accent-sky)}
+  .trio-cards a{flex-direction:row;flex-wrap:wrap;text-align:left;align-items:center;padding:16px;gap:6px 14px}
+  .trio-cards .ti{width:48px;height:48px}
+  .trio-cards b{flex:1 1 0;min-width:0}
+  .trio-cards .td,.trio-cards .chip{flex-basis:100%}
+}
+.trio-flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
+.trio-flow .tl{display:flex;align-items:stretch;justify-content:flex-end}
+.trio-flow .tn.amc{max-width:260px}
+@media (max-width:900px){.trio-flow{display:flex}.trio-flow .tl{display:contents}.trio-flow .tr{display:none}.trio-flow .tn.amc{max-width:320px}}
+
+/* programs: wide cards, price carousel inside Health Checkup */
+.prog.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.prog.wide .vis{padding:14px 0 14px 14px;grid-column:1;grid-row:1;align-self:center}
+.prog.wide .body{grid-column:2;grid-row:1}
+.prog.wide .price{grid-column:1/-1;grid-row:2;margin:0;padding:26px 26px 28px;border-top:1px dashed var(--perforation)}
+.prog.wide .price-head h3{margin:8px 0 6px}
+@media (max-width:1020px){
+  .prog.wide{grid-template-columns:1fr}
+  .prog.wide .vis{grid-column:1;grid-row:1;padding:14px 14px 0}
+  .prog.wide .body{grid-column:1;grid-row:2}
+  .prog.wide .price{grid-row:3;padding:22px 18px 24px}
+}
+/* inquiry section: tighter */
+.proc-wrap{margin-top:28px}
+.proc li{padding-bottom:16px}
+.proc .n{margin-bottom:12px}
+.proc h4{margin:0 0 4px;font-size:16px;line-height:22px}
+.proc li .proc-link{margin-top:6px}
+.inq{margin-top:28px}
+.form-card{padding:26px}
+.field{margin-bottom:18px}
+.faq-wrap{margin-top:44px}
+@media (max-width:900px){.proc li{padding:14px 16px}}
+
 @media print{.site-header,.menu-btn{position:static}.js .rv{opacity:1;transform:none}.hero-photo,.hero-shade,.hero-lines{display:none}.hero,.why-top,.news{background:none;color:var(--text-primary)}.hero h1,.why-top h2,.news h3{color:var(--ink-strong)}}
 </style>
 </head>
@@ -777,6 +859,7 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Camnemi Medical Service — back to top"><img src="assets/camnemi-medical-logo.webp" alt="Camnemi Medical Service" width="52" height="54"></a>
+    <div class="hd-agency"><img src="assets/amc-logo.webp" alt="Asan Medical Center" width="100" height="27"><i class="sep" aria-hidden="true"></i><span><small>Camnemi is the</small>Official Agency of Asan Medical Center</span></div>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg></button>
     <nav class="nav" id="nav" aria-label="Primary">
       <a href="#why-amc">Why AMC</a>
@@ -807,19 +890,13 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
   <span class="hero-cap" aria-hidden="true"><span class="chip t">Asan Medical Center campus, Seoul</span></span>
   <div class="wrap">
     <div class="hero-in">
-      <div class="agency-badge rise" style="--i:0">
-        <img class="amc" src="assets/amc-logo.webp" alt="Asan Medical Center" width="124" height="34">
-        <i class="sep" aria-hidden="true"></i>
-        <img class="cm" src="assets/camnemi-medical-logo.webp" alt="Camnemi Medical Service" width="52" height="54">
-        <span><small>Camnemi is the</small>Official Agency of Asan Medical Center</span>
-      </div>
-      <h1 id="h1" class="rise" style="--i:1">Your way to <em>Asan Medical Center</em>, Seoul.</h1>
-      <p class="hero-sub rise" style="--i:2">Camnemi, the Official Agency of Asan Medical Center, coordinates your inquiry from your home country to Korea.</p>
-      <div class="cta-row rise" style="--i:3">
+      <h1 id="h1" class="rise" style="--i:0">Your way to <em>Asan Medical Center</em>, Seoul.</h1>
+      <p class="hero-sub rise" style="--i:1">Camnemi coordinates your inquiry from your home country to Korea.</p>
+      <div class="cta-row rise" style="--i:2">
         <a class="btn light" href="#contact">Start an inquiry <svg class="ic s20" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn line" href="#why-amc">Why AMC</a>
       </div>
-      <p class="hero-note rise" style="--i:4"><svg class="ic s20" aria-hidden="true"><use href="#i-info"/></svg><span>Clinical decisions and service availability are determined by AMC.</span></p>
+      <p class="hero-note rise" style="--i:3"><svg class="ic s20" aria-hidden="true"><use href="#i-info"/></svg><span>Clinical decisions and service availability are determined by AMC.</span></p>
     </div>
   </div>
 </section>
@@ -827,70 +904,14 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
 <!-- ================= 2. WHY AMC ================= -->
 <section id="why-amc" aria-labelledby="h-why">
 
-  <!-- A. numbers -->
-  <div class="why-top mo">
-    <div class="wrap">
-      <div class="rv">
-        <div class="kick"><i></i>Why AMC</div>
-        <h2 id="h-why">Asan Medical Center, in numbers.</h2>
-        <p class="intro">Figures published by AMC, and specialty rankings with their publisher and edition.</p>
-      </div>
-
-      <div class="stats rv mo" id="amc-numbers">
-        <!-- ① departments -->
-        <div class="stat">
-          <svg class="ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle class="trk" cx="60" cy="60" r="50" pathLength="430" stroke-dasharray="6 4"/><circle class="arc" cx="60" cy="60" r="57" pathLength="100" transform="rotate(-90 60 60)"/></svg>
-          <span class="no" aria-hidden="true">01</span>
-          <span class="big"><span class="sr">43</span><span class="cu" aria-hidden="true" data-to="43">43</span></span>
-          <p class="what">Clinical departments</p>
-          <p class="how">As listed on AMC's English website.</p>
-        </div>
-        <!-- ② AMC-published volumes -->
-        <div class="stat wide">
-          <span class="no" aria-hidden="true">02</span>
-          <p class="what" style="margin-top:10px">Published by AMC, as of 2025</p>
-          <div class="vols">
-            <div><b><span class="sr">19,152</span><span class="cu" aria-hidden="true" data-to="19152">19,152</span></b><span>International patients</span></div>
-            <div><b><span class="sr">52,838</span><span class="cu" aria-hidden="true" data-to="52838">52,838</span></b><span>Surgeries</span></div>
-            <div><b><span class="sr">11,377</span><span class="cu" aria-hidden="true" data-to="11377">11,377</span></b><span>Outpatients</span></div>
-            <div><b><span class="sr">654,536</span><span class="cu" aria-hidden="true" data-to="654536">654,536</span></b><span>Inpatients</span></div>
-          </div>
-          <p class="how">Source: AMC English website, “Medical Information (As of 2025)”. Figures as published by AMC.</p>
-        </div>
-        <!-- ③ world top-10 specialties: counted from the six 2027 badges below (ranks 2, 5, 5, 6, 9, 9) -->
-        <div class="stat">
-          <svg class="ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-            <circle class="dot on" style="--i:0" cx="60" cy="10" r="6"/><circle class="dot on" style="--i:1" cx="89.4" cy="19.6" r="6"/><circle class="dot on" style="--i:2" cx="107.6" cy="44.6" r="6"/><circle class="dot on" style="--i:3" cx="107.6" cy="75.4" r="6"/><circle class="dot on" style="--i:4" cx="89.4" cy="100.4" r="6"/><circle class="dot on" style="--i:5" cx="60" cy="110" r="6"/><circle class="dot" cx="30.6" cy="100.4" r="6"/><circle class="dot" cx="12.4" cy="75.4" r="6"/><circle class="dot" cx="12.4" cy="44.6" r="6"/><circle class="dot" cx="30.6" cy="19.6" r="6"/>
-          </svg>
-          <span class="no" aria-hidden="true">03</span>
-          <span class="big"><span class="sr">6</span><span class="cu" aria-hidden="true" data-to="6" data-derived="world-top10">6</span></span>
-          <p class="what">Specialties in the global top 10</p>
-          <p class="how">World's Best Specialized Hospitals 2027 (Newsweek), by specialty. See the badges below.</p>
-        </div>
-        <!-- ④ international healthcare -->
-        <div class="stat wide">
-          <span class="no" aria-hidden="true">04</span>
-          <div class="yr">
-            <div><span class="big">1989</span><p class="what">International Healthcare Center opened</p></div>
-            <div class="pair">
-              <div><b><span class="sr">88</span><span class="cu" aria-hidden="true" data-to="88">88</span></b><span>Countries</span></div>
-              <div><b><span class="sr">3,500+</span><span class="cu" aria-hidden="true" data-to="3500" data-suffix="+">3,500+</span></b><span>Physicians trained at AMC</span></div>
-            </div>
-            <svg class="tl" viewBox="0 0 800 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="base" d="M6 20H794"/><path class="fill" pathLength="1000" d="M6 20H794"/><circle cx="6" cy="20" r="5"/><circle cx="794" cy="20" r="5"/></svg>
-          </div>
-          <p class="how">Physicians from 88 countries have trained at AMC over the past decade, as announced by AMC. International Healthcare Center: AMC English website.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- B. award badges (AW-01…AW-11). Each badge = one edition, one specialty. Text is always present next to the image slot. -->
-  <div class="sec alt" id="amc-awards" style="border-top:0">
+  <div class="sec alt" id="amc-awards">
     <div class="wrap">
       <div class="sub-head rv">
         <div>
-          <div class="kick"><i></i>Rankings by specialty</div>
-          <h3>Ranked one specialty at a time.</h3>
+          <div class="kick"><i></i>Why AMC</div>
+          <h2 id="h-why">Ranked one specialty at a time.</h2>
+          <p>Specialty rankings, each with its publisher and edition.</p>
         </div>
       </div>
 
@@ -986,6 +1007,68 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
       <p class="aw-note rv">Newsweek / Statista, edition as labelled, by specialty — not an outcome measure.</p>
       <p class="src rv"><svg class="ic s16" aria-hidden="true"><use href="#i-info"/></svg><span>Sources: <a href="https://rankings.newsweek.com/best-specialized-hospitals-asia-pacific-2026" target="_blank" rel="noopener">Best Specialized Hospitals Asia-Pacific 2026</a> and <a href="https://rankings.newsweek.com/worlds-best-specialized-hospitals-2027" target="_blank" rel="noopener">World's Best Specialized Hospitals 2027</a>, entries for Asan Medical Center. Rankings within one specialty, never an overall hospital ranking.</span></p>
 
+    </div>
+  </div>
+
+  <!-- A. numbers -->
+  <div class="why-top mo">
+    <div class="wrap">
+      <div class="rv">
+        <div class="kick"><i></i>In numbers</div>
+        <h2 id="h-nums">Asan Medical Center, in numbers.</h2>
+        <p class="intro">Figures published by AMC, each with its source and year.</p>
+      </div>
+
+      <div class="stats rv mo" id="amc-numbers">
+        <!-- ① departments -->
+        <div class="stat">
+          <svg class="ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle class="trk" cx="60" cy="60" r="50" pathLength="430" stroke-dasharray="6 4"/><circle class="arc" cx="60" cy="60" r="57" pathLength="100" transform="rotate(-90 60 60)"/></svg>
+          <span class="no" aria-hidden="true">01</span>
+          <span class="big"><span class="sr">43</span><span class="cu" aria-hidden="true" data-to="43">43</span></span>
+          <p class="what">Clinical departments</p>
+          <p class="how">As listed on AMC's English website.</p>
+        </div>
+        <!-- ② AMC-published volumes -->
+        <div class="stat wide">
+          <span class="no" aria-hidden="true">02</span>
+          <p class="what" style="margin-top:10px">Published by AMC, as of 2025</p>
+          <div class="vols">
+            <div><b><span class="sr">19,152</span><span class="cu" aria-hidden="true" data-to="19152">19,152</span></b><span>International patients</span></div>
+            <div><b><span class="sr">52,838</span><span class="cu" aria-hidden="true" data-to="52838">52,838</span></b><span>Surgeries</span></div>
+            <div><b><span class="sr">11,377</span><span class="cu" aria-hidden="true" data-to="11377">11,377</span></b><span>Outpatients</span></div>
+            <div><b><span class="sr">654,536</span><span class="cu" aria-hidden="true" data-to="654536">654,536</span></b><span>Inpatients</span></div>
+          </div>
+          <p class="how">Source: AMC English website, “Medical Information (As of 2025)”. Figures as published by AMC.</p>
+        </div>
+        <!-- ③ world top-10 specialties: counted from the six 2027 badges above (ranks 2, 5, 5, 6, 9, 9) -->
+        <div class="stat">
+          <svg class="ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+            <circle class="dot on" style="--i:0" cx="60" cy="10" r="6"/><circle class="dot on" style="--i:1" cx="89.4" cy="19.6" r="6"/><circle class="dot on" style="--i:2" cx="107.6" cy="44.6" r="6"/><circle class="dot on" style="--i:3" cx="107.6" cy="75.4" r="6"/><circle class="dot on" style="--i:4" cx="89.4" cy="100.4" r="6"/><circle class="dot on" style="--i:5" cx="60" cy="110" r="6"/><circle class="dot" cx="30.6" cy="100.4" r="6"/><circle class="dot" cx="12.4" cy="75.4" r="6"/><circle class="dot" cx="12.4" cy="44.6" r="6"/><circle class="dot" cx="30.6" cy="19.6" r="6"/>
+          </svg>
+          <span class="no" aria-hidden="true">03</span>
+          <span class="big"><span class="sr">6</span><span class="cu" aria-hidden="true" data-to="6" data-derived="world-top10">6</span></span>
+          <p class="what">Specialties in the global top 10</p>
+          <p class="how">World's Best Specialized Hospitals 2027 (Newsweek), by specialty. See the badges above.</p>
+        </div>
+        <!-- ④ international healthcare -->
+        <div class="stat wide">
+          <span class="no" aria-hidden="true">04</span>
+          <div class="yr">
+            <div><span class="big">1989</span><p class="what">International Healthcare Center opened</p></div>
+            <div class="pair">
+              <div><b><span class="sr">88</span><span class="cu" aria-hidden="true" data-to="88">88</span></b><span>Countries</span></div>
+              <div><b><span class="sr">3,500+</span><span class="cu" aria-hidden="true" data-to="3500" data-suffix="+">3,500+</span></b><span>Physicians trained at AMC</span></div>
+            </div>
+            <svg class="tl" viewBox="0 0 800 40" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="base" d="M6 20H794"/><path class="fill" pathLength="1000" d="M6 20H794"/><circle cx="6" cy="20" r="5"/><circle cx="794" cy="20" r="5"/></svg>
+          </div>
+          <p class="how">Physicians from 88 countries have trained at AMC over the past decade, as announced by AMC. International Healthcare Center: AMC English website.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec alt" id="amc-more">
+    <div class="wrap">
       <!-- C. photo + motion gallery: MG-01 is the default view; PH-01…PH-03 appear only once a file is set (or in ?preview) -->
       <div class="sub" id="amc-gallery">
         <div class="gal">
@@ -1058,38 +1141,6 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
     </div>
   </div>
 
-  <!-- E. News of Asan: 3 cards, rendered from feed/amc-feed.json; the static cards below are the fallback -->
-  <div class="news mo" id="amc-news">
-    <div class="wrap">
-      <div class="sub-head rv">
-        <div>
-          <div class="kick"><i></i>News of Asan</div>
-          <h3>Latest from Asan Medical Center.</h3>
-          <p>Headlines exactly as published in AMC's English newsroom.</p>
-          <p class="news-upd" id="news-upd" hidden><span class="live-dot" aria-hidden="true"></span><span>Last updated <time id="news-upd-t"></time></span></p>
-        </div>
-        <a class="btn light" href="https://news-en.amc.seoul.kr/news/eng/list.do" target="_blank" rel="noopener">More news <svg class="ic s20" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr"> (opens AMC's newsroom in a new tab)</span></a>
-      </div>
-      <div class="news-grid" id="news-list">
-        <a class="ncard rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3307" target="_blank" rel="noopener noreferrer">
-          <div class="meta"><span class="chip t"><svg class="ic s16" aria-hidden="true"><use href="#i-news"/></svg>News</span><time datetime="2026-10-27">27 Oct 2026</time></div>
-          <h4>Asan Medical Center Launches Integrated Care Clinic for Inflammatory Myositis</h4>
-          <span class="go">Read on AMC Newsroom <svg class="ic s16" aria-hidden="true"><use href="#i-ext"/></svg></span>
-        </a>
-        <a class="ncard rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3304" target="_blank" rel="noopener noreferrer">
-          <div class="meta"><span class="chip t"><svg class="ic s16" aria-hidden="true"><use href="#i-news"/></svg>News</span><time datetime="2026-10-23">23 Oct 2026</time></div>
-          <h4>Asan Medical Center Introduces Mona Lisa System for More Precise Prostate Cancer Biopsies</h4>
-          <span class="go">Read on AMC Newsroom <svg class="ic s16" aria-hidden="true"><use href="#i-ext"/></svg></span>
-        </a>
-        <a class="ncard rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3305" target="_blank" rel="noopener noreferrer">
-          <div class="meta"><span class="chip t"><svg class="ic s16" aria-hidden="true"><use href="#i-news"/></svg>News</span><time datetime="2026-10-23">23 Oct 2026</time></div>
-          <h4>Asan Medical Center Showcases Korean Medical Excellence to Global Hospital Leaders</h4>
-          <span class="go">Read on AMC Newsroom <svg class="ic s16" aria-hidden="true"><use href="#i-ext"/></svg></span>
-        </a>
-      </div>
-      <p class="news-note"><svg class="ic s20" aria-hidden="true"><use href="#i-info"/></svg><span>A news item describes AMC; it does not mean a service is available to you. Camnemi does not operate AMC's newsroom.</span></p>
-    </div>
-  </div>
 </section>
 
 <!-- ================= 3. RECOMMENDED PROGRAMS ================= -->
@@ -1101,9 +1152,28 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
       <p class="intro">Each is a different service at AMC, with its own requirements.</p>
     </div>
 
+    <figure class="trio rv" aria-labelledby="trio-cap">
+      <figcaption id="trio-cap" class="sr">How the three programs fit together: your inquiry goes to Camnemi, Camnemi coordinates it with Asan Medical Center, and AMC offers three separate services.</figcaption>
+      <div class="trio-flow" aria-hidden="true">
+        <div class="tl">
+          <span class="tn"><svg class="ic s24"><use href="#i-user"/></svg><b>You</b></span>
+          <i class="ta"></i>
+          <span class="tn"><img src="assets/camnemi-medical-logo.webp" alt="" width="52" height="54"><b>Camnemi</b><small>coordinates your inquiry</small></span>
+          <i class="ta"></i>
+        </div>
+        <span class="tn amc"><img src="assets/amc-logo.webp" alt="" width="124" height="34"><small>offers the three services; decides after medical review</small></span>
+        <div class="tr"></div>
+      </div>
+      <ul class="trio-cards">
+        <li style="--i:0"><a href="#prog-video"><span class="ti"><svg class="ic s32" aria-hidden="true"><use href="#i-video"/></svg></span><b>Video Consultation</b><span class="td">With you, your local physician and an AMC physician</span><span class="chip t">Separate service</span></a></li>
+        <li style="--i:1"><a href="#prog-checkup"><span class="ti"><svg class="ic s32" aria-hidden="true"><use href="#i-pulse"/></svg></span><b>Health Checkup</b><span class="td">Programs at AMC's Health Screening and Promotion Center</span><span class="chip t">Separate service</span></a></li>
+        <li style="--i:2"><a href="#prog-plastic"><span class="ti"><svg class="ic s32" aria-hidden="true"><use href="#i-plus"/></svg></span><b>Plastic Surgery</b><span class="td">Reconstructive and aesthetic, as listed by AMC</span><span class="chip t">Separate service</span></a></li>
+      </ul>
+    </figure>
+
     <div class="prog-grid">
       <!-- Video Consultation -->
-      <article class="prog rv mo" id="prog-video" aria-labelledby="h-pv">
+      <article class="prog wide rv mo" id="prog-video" aria-labelledby="h-pv">
         <div class="vis">
           <figure class="slot mg" data-mg="MG-02" data-src="" data-poster="" data-alt="Motion graphic: you, your local physician and an AMC physician connected by video" style="--r-d:16/9;--r-m:16/10">
             <div class="slot-frame" role="img" aria-label="Animated diagram: you and your local physician connected in real time to an AMC physician.">
@@ -1141,7 +1211,7 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
       </article>
 
       <!-- Health Checkup -->
-      <article class="prog rv mo" id="prog-checkup" aria-labelledby="h-ph">
+      <article class="prog wide rv mo" id="prog-checkup" aria-labelledby="h-ph">
         <div class="vis">
           <figure class="slot mg" data-mg="MG-03" data-src="" data-poster="" data-alt="Motion graphic: health checkup examinations at AMC" style="--r-d:16/9;--r-m:4/3">
             <div class="slot-frame">
@@ -1174,6 +1244,197 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
           <p class="must"><svg class="ic s20" aria-hidden="true"><use href="#i-info"/></svg><span>Program options, prices and scheduling are confirmed by AMC.</span></p>
           <div class="cta"><a class="btn" href="#contact" data-program="Health Checkup">Ask about Health Checkup <svg class="ic s20" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
+      <!-- HEALTH CHECKUP PRICES — CEO-approved 2026-10-30 (health checkup only). Source: Camnemi price sheet "Comprehensive Health Evaluation Program" (asan_price_en.html / AMC_Health Checkup Program.pdf, Sep-Oct 2026). Re-confirm with AMC before publishing. -->
+      <div class="price" id="checkup-prices" aria-labelledby="h-price">
+        <div class="price-head">
+          <div class="kick"><i></i>Prices</div>
+          <h3 id="h-price">Listed program prices</h3>
+          <p>Reference prices for the programs at AMC's Health Screening and Promotion Center, in US dollars and Korean won.</p>
+        </div>
+        <div class="pc-wrap" id="pc-wrap">
+          <div class="pc-nav" aria-label="Scroll the program cards">
+            <button type="button" class="pc-btn pc-prev" aria-controls="pc-track" aria-label="Previous programs"><svg class="ic s20" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <button type="button" class="pc-btn pc-next" aria-controls="pc-track" aria-label="Next programs"><svg class="ic s20" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="pc-track" id="pc-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Health checkup programs and listed prices. Scroll sideways to see all nine.">
+            <ul class="pc-list">
+              <li class="pcard" role="group" aria-roledescription="slide" aria-label="1 of 9: Essential A">
+                <div class="pc-top"><span class="pc-no">01</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+                <h4>Essential A</h4>
+                <p class="pc-d">Fundamental check-up</p>
+                <div class="pc-prices">
+                  <div><span class="pc-l">Male</span><b>$1,500</b><span class="pc-k">₩1,980,000</span></div>
+                  <div><span class="pc-l">Female</span><b>$2,100</b><span class="pc-k">₩2,860,000</span></div>
+                </div>
+                <button type="button" class="pc-inc" data-inc="1" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
+              </li>
+              <li class="pcard" role="group" aria-roledescription="slide" aria-label="2 of 9: Essential B">
+                <div class="pc-top"><span class="pc-no">02</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+                <h4>Essential B</h4>
+                <p class="pc-d">Essential A plus colonoscopy, bone and spine exams</p>
+                <div class="pc-prices">
+                  <div><span class="pc-l">Male</span><b>$2,100</b><span class="pc-k">₩2,870,000</span></div>
+                  <div><span class="pc-l">Female</span><b>$2,400</b><span class="pc-k">₩3,240,000</span></div>
+                </div>
+                <button type="button" class="pc-inc" data-inc="2" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
+              </li>
+              <li class="pcard" role="group" aria-roledescription="slide" aria-label="3 of 9: Cancer Specialized">
+                <div class="pc-top"><span class="pc-no">03</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+                <h4>Cancer Specialized</h4>
+                <p class="pc-d">Essential B plus abdominal and pelvic CT</p>
+                <div class="pc-prices">
+                  <div><span class="pc-l">Male</span><b>$2,800</b><span class="pc-k">₩3,810,000</span></div>
+                  <div><span class="pc-l">Female</span><b>$2,800</b><span class="pc-k">₩3,820,000</span></div>
+                </div>
+                <button type="button" class="pc-inc" data-inc="3" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
+              </li>
+              <li class="pcard" role="group" aria-roledescription="slide" aria-label="4 of 9: Heart Specialized">
+                <div class="pc-top"><span class="pc-no">04</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+                <h4>Heart Specialized</h4>
+                <p class="pc-d">Essential B base plus cardiovascular exams</p>
+                <div class="pc-prices">
+                  <div><span class="pc-l">Male</span><b>$3,000</b><span class="pc-k">₩4,020,000</span></div>
+                  <div><span class="pc-l">Female</span><b>$3,300</b><span class="pc-k">₩4,460,000</span></div>
+                </div>
+                <button type="button" class="pc-inc" data-inc="4" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
+              </li>
+              <li class="pcard" role="group" aria-roledescription="slide" aria-label="5 of 9: Intensive">
+                <div class="pc-top"><span class="pc-no">05</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></div>
+                <h4>Intensive</h4>
+                <p class="pc-d">Cancer and heart exams combined</p>
+                <div class="pc-prices">
+                  <div><span class="pc-l">Male</span><b>$3,600</b><span class="pc-k">₩4,840,000</span></div>
+                  <div><span class="pc-l">Female</span><b>$3,900</b><span class="pc-k">₩5,280,000</span></div>
+                </div>
+                <button type="button" class="pc-inc" data-inc="5" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
+              </li>
+              <li class="pcard" role="group" aria-roledescription="slide" aria-label="6 of 9: Platinum">
+                <div class="pc-top"><span class="pc-no">06</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></div>
+                <h4>Platinum</h4>
+                <p class="pc-d">Intensive plus brain MRI and MRA</p>
+                <div class="pc-prices">
+                  <div><span class="pc-l">Male</span><b>$5,800</b><span class="pc-k">₩8,000,000</span></div>
+                  <div><span class="pc-l">Female</span><b>$6,200</b><span class="pc-k">₩8,450,000</span></div>
+                </div>
+                <button type="button" class="pc-inc" data-inc="6" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
+              </li>
+              <li class="pcard feat" role="group" aria-roledescription="slide" aria-label="7 of 9: Premium">
+                <div class="pc-top"><span class="pc-no">07</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></div>
+                <h4>Premium</h4>
+                <p class="pc-d">Most comprehensive program, with an overnight stay</p>
+                <div class="pc-prices">
+                  <div><span class="pc-l">Male</span><b>$6,800</b><span class="pc-k">₩9,250,000</span></div>
+                  <div><span class="pc-l">Female</span><b>$7,100</b><span class="pc-k">₩9,750,000</span></div>
+                </div>
+                <button type="button" class="pc-inc" data-inc="7" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
+              </li>
+              <li class="pcard feat" role="group" aria-roledescription="slide" aria-label="8 of 9: Premium Plus">
+                <div class="pc-top"><span class="pc-no">08</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+                <h4>Premium Plus</h4>
+                <p class="pc-d">Premium plus VIP private suite and PET-CT</p>
+                <div class="pc-prices">
+                  <div><span class="pc-l">Male</span><b>$10,900</b><span class="pc-k">₩15,000,000</span></div>
+                  <div><span class="pc-l">Female</span><b>$11,300</b><span class="pc-k">₩15,500,000</span></div>
+                </div>
+                <button type="button" class="pc-inc" data-inc="8" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
+              </li>
+              <li class="pcard teen" role="group" aria-roledescription="slide" aria-label="9 of 9: Teen Health Screening">
+                <div class="pc-top"><span class="pc-no">09</span><span class="pc-tagline">For adolescents</span></div>
+                <h4>Teen Health Screening</h4>
+                <p class="pc-d">Specialized program for adolescents</p>
+                <div class="pc-prices one">
+                  <div><span class="pc-l">Male and female</span><b>$1,000</b><span class="pc-k">₩1,320,000</span></div>
+                </div>
+                <p class="pc-same">Same price for male and female.</p>
+                <button type="button" class="pc-inc" data-inc="9" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
+              </li>
+            </ul>
+          </div>
+          <div class="pc-prog" aria-hidden="true"><i></i></div>
+          <p class="pc-hint" aria-hidden="true"><span class="h-d">Use the arrows or scroll sideways to see all 9 programs</span><span class="h-m">Swipe sideways to see all 9 programs</span></p>
+        </div>
+
+        <!-- WHAT'S INCLUDED — contents copied from the Camnemi price sheet for AMC's Comprehensive Health Evaluation Program. Durations and age notes in the source are intentionally left out. -->
+        <div class="inc-store" id="inc-store">
+  <article class="inc" id="inc-1" data-title="Essential A" data-sub="Fundamental check-up">
+    <section class="inc-sec"><h5>Included examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Gastroscopy Under Conscious Sedation</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Blood Pressure</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Electrocardiogram</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest X-ray (Front/Lateral)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Ophthalmic Exam</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Urine Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Audiometry Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Body Measurement</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental Assessment</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Result Consultation with a Specialist</span></li><li class="long"><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span><b>Blood Sampling</b><small>Diabetes, Hypercholesteremia, Liver Function, Hepatitis A/B/C, Kidney Function, Electrolyte, Uric Acid, CBC, Blood Coagulation Test, Blood Type, Inflammation, Thyroid Function, H. Pylori, AIDS, Syphilis, Rheumatoid Factor</small></span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Liver, Lung, Digestive Organ)</span></li></ul></section>
+    <div class="inc-sex">
+      <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Testosterone</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Prostate)</span></li></ul></section>
+      <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Pelvic Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Breast Ultrasonography (35+)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Pap Smear</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Mammography (35+)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>HPV</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Ovary)</span></li></ul></section>
+    </div>
+  </article>
+  <article class="inc" id="inc-2" data-title="Essential B" data-sub="Essential A plus colonoscopy, bone and spine exams">
+    <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes everything in Essential A</span></p>
+    <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Colonoscopy Under Conscious Sedation</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Vitamin D</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Bone Densitometry</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>T-L Spine X-ray</span></li></ul></section>
+    <div class="inc-sex">
+      <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li></ul></section>
+      <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li></ul></section>
+    </div>
+  </article>
+  <article class="inc" id="inc-3" data-title="Cancer Specialized" data-sub="Essential B plus abdominal and pelvic CT">
+    <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes everything in Essential B</span></p>
+    <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal &amp; Pelvic CT</span></li></ul></section>
+    <div class="inc-sex">
+      <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Prostate Ultrasonography &amp; DRE</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li></ul></section>
+      <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li></ul></section>
+    </div>
+  </article>
+  <article class="inc" id="inc-4" data-title="Heart Specialized" data-sub="Essential B base plus cardiovascular exams">
+    <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes Essential B, except colonoscopy and, for men, chest CT</span></p>
+    <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Coronary CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Carotid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Treadmill Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Arterial Stiffness and Peripheral Artery Stenosis</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Heart Function (Blood Test)</span></li></ul></section>
+    <div class="inc-sex">
+      <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Prostate Ultrasonography &amp; DRE</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li></ul></section>
+      <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li></ul></section>
+    </div>
+  </article>
+  <article class="inc" id="inc-5" data-title="Intensive" data-sub="Cancer and heart exams combined">
+    <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes everything in Essential B</span></p>
+    <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal &amp; Pelvic CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Coronary CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Carotid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Treadmill Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Arterial Stiffness and Peripheral Artery Stenosis</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Heart Function (Blood Test)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental X-ray</span></li></ul></section>
+    <div class="inc-sex">
+      <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Prostate Ultrasonography &amp; DRE</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li></ul></section>
+      <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li></ul></section>
+    </div>
+  </article>
+  <article class="inc" id="inc-6" data-title="Platinum" data-sub="Intensive plus brain MRI and MRA">
+    <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes everything in Essential B</span></p>
+    <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Brain MRA &amp; MRI</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal &amp; Pelvic CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Coronary CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Carotid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Treadmill Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Arterial Stiffness and Peripheral Artery Stenosis</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental X-ray</span></li><li class="long"><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span><b>Blood Test</b><small>Heart Function, 3 types of Allergy, 3 types of Osteoporosis, 3 types of Anemia</small></span></li></ul></section>
+    <div class="inc-sex">
+      <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Prostate Ultrasonography &amp; DRE</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li></ul></section>
+      <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li></ul></section>
+    </div>
+  </article>
+  <article class="inc" id="inc-7" data-title="Premium" data-sub="Most comprehensive program, with an overnight stay">
+    <section class="inc-sec"><h5>Included examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Assessment by a Specialist</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Escorted by a Nurse</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Provided Meals</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Brain MRI+MRA</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Gastroscopy with Conscious Sedation</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Colonoscopy with Conscious Sedation</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Carotid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal &amp; Pelvic CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Coronary CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Treadmill Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Arterial Stiffness</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Electrocardiogram</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Blood Pressure</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest X-ray (Front/Lateral)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Bone Densitometry</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>T-L Spine X-ray</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Body Measurement</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental X-ray</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental Assessment</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Ophthalmic Exam</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Urine Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Urine albumin-creatinine ratio</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Audiometry Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Blood Sampling (comprehensive panel)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Liver, Lung, Digestive Organ)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Result Consultation with a Specialist</span></li></ul></section>
+    <div class="inc-sex">
+      <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Prostate Ultrasonography &amp; DRE</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Testosterone</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Prostate)</span></li></ul></section>
+      <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Pelvic Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Pap Smear</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Breast Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Mammography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>HPV</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Ovary)</span></li></ul></section>
+    </div>
+  </article>
+  <article class="inc" id="inc-8" data-title="Premium Plus" data-sub="Premium plus VIP private suite and PET-CT">
+    <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes everything in the Premium program</span></p>
+    <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>VIP private suite available</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>PET-CT scan</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Skin care treatment</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental scaling</span></li></ul></section>
+  </article>
+  <article class="inc" id="inc-9" data-title="Teen Health Screening" data-sub="Specialized program for adolescents">
+    <section class="inc-sec"><h5>Included examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Electrocardiogram</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Blood Pressure</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest X-ray (Front/Lateral)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Ophthalmic Exam</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Audiometry Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Body Measurement</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Urine Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental Assessment</span></li><li class="long"><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span><b>Blood Sampling</b><small>Anemia, Diabetes, Hypercholesteremia, Liver Function, Hepatitis A/B/C, Kidney Function, Electrolyte, Blood Coagulation Test, Blood Type, CBC, Thyroid Function, H. Pylori, Measles, Rubella, Mumps, Varicella, Vitamin D, Allergy</small></span></li></ul></section>
+  </article>
+        </div>
+        <dialog class="inc-dialog" id="inc-dialog" aria-labelledby="inc-title">
+          <div class="inc-card">
+            <div class="inc-bar"><div><span class="inc-kick">Health Checkup · What's included</span><h4 id="inc-title"></h4><p id="inc-sub"></p></div><button type="button" class="inc-x" aria-label="Close"><svg class="ic s20" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+            <div class="inc-body" id="inc-body"></div><div class="inc-fade" aria-hidden="true"></div>
+            <p class="inc-foot"><svg class="ic s16" aria-hidden="true"><use href="#i-info"/></svg><span>Contents are listed as in Camnemi's price sheet for AMC's program. AMC sets the final examinations and confirms them after your inquiry.</span></p>
+            <div class="inc-act"><a class="btn" href="#contact" data-program="Health Checkup">Ask about Health Checkup <svg class="ic s20" aria-hidden="true"><use href="#i-arrow"/></svg></a><button type="button" class="btn ghost inc-close">Close</button></div>
+          </div>
+        </dialog>
+        <ul class="price-notes">
+          <li>USD amounts are approximate (1 USD ≈ 1,380 KRW, rounded up to the nearest $100). Won amounts are the listed prices.</li>
+          <li>Actual charges may vary, and the final program, price and schedule are confirmed by AMC.</li>
+          <li>Treatment and checkup costs are paid directly to the hospital. You do not pay Camnemi first.</li>
+          <li>Prices are for the checkup program only. Camnemi coordination services are separate.</li>
+        </ul>
+        <p class="src"><svg class="ic s16" aria-hidden="true"><use href="#i-info"/></svg><span>Source: Camnemi price sheet for AMC's Comprehensive Health Evaluation Program, checked October 2026. Program contents are set by AMC and depend on sex and age.</span></p>
+        <div class="price-cta"><a class="btn" href="#contact" data-program="Health Checkup">Ask about Health Checkup <svg class="ic s20" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </div>
       </article>
 
       <!-- Plastic Surgery (AD-01 stays folded until data-ready="true") -->
@@ -1220,198 +1481,6 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
           </figure>
         </div>
       </article>
-    </div>
-
-    <!-- HEALTH CHECKUP PRICES — CEO-approved 2026-10-30 (health checkup only). Source: Camnemi price sheet "Comprehensive Health Evaluation Program" (asan_price_en.html / AMC_Health Checkup Program.pdf, Sep-Oct 2026). Re-confirm with AMC before publishing. -->
-    <div class="price rv" id="checkup-prices" aria-labelledby="h-price">
-      <div class="price-head">
-        <div class="kick"><i></i>Health Checkup</div>
-        <h3 id="h-price">Listed program prices</h3>
-        <p>Reference prices for the programs at AMC's Health Screening and Promotion Center, in US dollars and Korean won.</p>
-      </div>
-      <div class="pc-wrap" id="pc-wrap">
-        <div class="pc-nav" aria-label="Scroll the program cards">
-          <button type="button" class="pc-btn pc-prev" aria-controls="pc-track" aria-label="Previous programs"><svg class="ic s20" aria-hidden="true"><use href="#i-arrow"/></svg></button>
-          <button type="button" class="pc-btn pc-next" aria-controls="pc-track" aria-label="Next programs"><svg class="ic s20" aria-hidden="true"><use href="#i-arrow"/></svg></button>
-        </div>
-        <div class="pc-track" id="pc-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Health checkup programs and listed prices. Scroll sideways to see all nine.">
-          <ul class="pc-list">
-            <li class="pcard" role="group" aria-roledescription="slide" aria-label="1 of 9: Essential A">
-              <div class="pc-top"><span class="pc-no">01</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
-              <h4>Essential A</h4>
-              <p class="pc-d">Fundamental check-up</p>
-              <div class="pc-prices">
-                <div><span class="pc-l">Male</span><b>$1,500</b><span class="pc-k">₩1,980,000</span></div>
-                <div><span class="pc-l">Female</span><b>$2,100</b><span class="pc-k">₩2,860,000</span></div>
-              </div>
-              <button type="button" class="pc-inc" data-inc="1" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
-            </li>
-            <li class="pcard" role="group" aria-roledescription="slide" aria-label="2 of 9: Essential B">
-              <div class="pc-top"><span class="pc-no">02</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
-              <h4>Essential B</h4>
-              <p class="pc-d">Essential A plus colonoscopy, bone and spine exams</p>
-              <div class="pc-prices">
-                <div><span class="pc-l">Male</span><b>$2,100</b><span class="pc-k">₩2,870,000</span></div>
-                <div><span class="pc-l">Female</span><b>$2,400</b><span class="pc-k">₩3,240,000</span></div>
-              </div>
-              <button type="button" class="pc-inc" data-inc="2" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
-            </li>
-            <li class="pcard" role="group" aria-roledescription="slide" aria-label="3 of 9: Cancer Specialized">
-              <div class="pc-top"><span class="pc-no">03</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
-              <h4>Cancer Specialized</h4>
-              <p class="pc-d">Essential B plus abdominal and pelvic CT</p>
-              <div class="pc-prices">
-                <div><span class="pc-l">Male</span><b>$2,800</b><span class="pc-k">₩3,810,000</span></div>
-                <div><span class="pc-l">Female</span><b>$2,800</b><span class="pc-k">₩3,820,000</span></div>
-              </div>
-              <button type="button" class="pc-inc" data-inc="3" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
-            </li>
-            <li class="pcard" role="group" aria-roledescription="slide" aria-label="4 of 9: Heart Specialized">
-              <div class="pc-top"><span class="pc-no">04</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span></div>
-              <h4>Heart Specialized</h4>
-              <p class="pc-d">Essential B base plus cardiovascular exams</p>
-              <div class="pc-prices">
-                <div><span class="pc-l">Male</span><b>$3,000</b><span class="pc-k">₩4,020,000</span></div>
-                <div><span class="pc-l">Female</span><b>$3,300</b><span class="pc-k">₩4,460,000</span></div>
-              </div>
-              <button type="button" class="pc-inc" data-inc="4" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
-            </li>
-            <li class="pcard" role="group" aria-roledescription="slide" aria-label="5 of 9: Intensive">
-              <div class="pc-top"><span class="pc-no">05</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i><i class=""></i></span></div>
-              <h4>Intensive</h4>
-              <p class="pc-d">Cancer and heart exams combined</p>
-              <div class="pc-prices">
-                <div><span class="pc-l">Male</span><b>$3,600</b><span class="pc-k">₩4,840,000</span></div>
-                <div><span class="pc-l">Female</span><b>$3,900</b><span class="pc-k">₩5,280,000</span></div>
-              </div>
-              <button type="button" class="pc-inc" data-inc="5" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
-            </li>
-            <li class="pcard" role="group" aria-roledescription="slide" aria-label="6 of 9: Platinum">
-              <div class="pc-top"><span class="pc-no">06</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></div>
-              <h4>Platinum</h4>
-              <p class="pc-d">Intensive plus brain MRI and MRA</p>
-              <div class="pc-prices">
-                <div><span class="pc-l">Male</span><b>$5,800</b><span class="pc-k">₩8,000,000</span></div>
-                <div><span class="pc-l">Female</span><b>$6,200</b><span class="pc-k">₩8,450,000</span></div>
-              </div>
-              <button type="button" class="pc-inc" data-inc="6" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
-            </li>
-            <li class="pcard feat" role="group" aria-roledescription="slide" aria-label="7 of 9: Premium">
-              <div class="pc-top"><span class="pc-no">07</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span></div>
-              <h4>Premium</h4>
-              <p class="pc-d">Most comprehensive program, with an overnight stay</p>
-              <div class="pc-prices">
-                <div><span class="pc-l">Male</span><b>$6,800</b><span class="pc-k">₩9,250,000</span></div>
-                <div><span class="pc-l">Female</span><b>$7,100</b><span class="pc-k">₩9,750,000</span></div>
-              </div>
-              <button type="button" class="pc-inc" data-inc="7" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
-            </li>
-            <li class="pcard feat" role="group" aria-roledescription="slide" aria-label="8 of 9: Premium Plus">
-              <div class="pc-top"><span class="pc-no">08</span><span class="pc-meter" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
-              <h4>Premium Plus</h4>
-              <p class="pc-d">Premium plus VIP private suite and PET-CT</p>
-              <div class="pc-prices">
-                <div><span class="pc-l">Male</span><b>$10,900</b><span class="pc-k">₩15,000,000</span></div>
-                <div><span class="pc-l">Female</span><b>$11,300</b><span class="pc-k">₩15,500,000</span></div>
-              </div>
-              <button type="button" class="pc-inc" data-inc="8" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
-            </li>
-            <li class="pcard teen" role="group" aria-roledescription="slide" aria-label="9 of 9: Teen Health Screening">
-              <div class="pc-top"><span class="pc-no">09</span><span class="pc-tagline">For adolescents</span></div>
-              <h4>Teen Health Screening</h4>
-              <p class="pc-d">Specialized program for adolescents</p>
-              <div class="pc-prices one">
-                <div><span class="pc-l">Male and female</span><b>$1,000</b><span class="pc-k">₩1,320,000</span></div>
-              </div>
-              <p class="pc-same">Same price for male and female.</p>
-              <button type="button" class="pc-inc" data-inc="9" aria-haspopup="dialog"><svg class="ic s16" aria-hidden="true"><use href="#i-plus"/></svg>What's included</button>
-            </li>
-          </ul>
-        </div>
-        <div class="pc-prog" aria-hidden="true"><i></i></div>
-        <p class="pc-hint" aria-hidden="true"><span class="h-d">Use the arrows or scroll sideways to see all 9 programs</span><span class="h-m">Swipe sideways to see all 9 programs</span></p>
-      </div>
-
-      <!-- WHAT'S INCLUDED — contents copied from the Camnemi price sheet for AMC's Comprehensive Health Evaluation Program. Durations and age notes in the source are intentionally left out. -->
-      <div class="inc-store" id="inc-store">
-<article class="inc" id="inc-1" data-title="Essential A" data-sub="Fundamental check-up">
-  <section class="inc-sec"><h5>Included examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Gastroscopy Under Conscious Sedation</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Blood Pressure</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Electrocardiogram</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest X-ray (Front/Lateral)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Ophthalmic Exam</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Urine Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Audiometry Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Body Measurement</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental Assessment</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Result Consultation with a Specialist</span></li><li class="long"><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span><b>Blood Sampling</b><small>Diabetes, Hypercholesteremia, Liver Function, Hepatitis A/B/C, Kidney Function, Electrolyte, Uric Acid, CBC, Blood Coagulation Test, Blood Type, Inflammation, Thyroid Function, H. Pylori, AIDS, Syphilis, Rheumatoid Factor</small></span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Liver, Lung, Digestive Organ)</span></li></ul></section>
-  <div class="inc-sex">
-    <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Testosterone</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Prostate)</span></li></ul></section>
-    <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Pelvic Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Breast Ultrasonography (35+)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Pap Smear</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Mammography (35+)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>HPV</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Ovary)</span></li></ul></section>
-  </div>
-</article>
-<article class="inc" id="inc-2" data-title="Essential B" data-sub="Essential A plus colonoscopy, bone and spine exams">
-  <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes everything in Essential A</span></p>
-  <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Colonoscopy Under Conscious Sedation</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Vitamin D</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Bone Densitometry</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>T-L Spine X-ray</span></li></ul></section>
-  <div class="inc-sex">
-    <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li></ul></section>
-    <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li></ul></section>
-  </div>
-</article>
-<article class="inc" id="inc-3" data-title="Cancer Specialized" data-sub="Essential B plus abdominal and pelvic CT">
-  <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes everything in Essential B</span></p>
-  <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal &amp; Pelvic CT</span></li></ul></section>
-  <div class="inc-sex">
-    <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Prostate Ultrasonography &amp; DRE</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li></ul></section>
-    <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li></ul></section>
-  </div>
-</article>
-<article class="inc" id="inc-4" data-title="Heart Specialized" data-sub="Essential B base plus cardiovascular exams">
-  <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes Essential B, except colonoscopy and, for men, chest CT</span></p>
-  <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Coronary CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Carotid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Treadmill Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Arterial Stiffness and Peripheral Artery Stenosis</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Heart Function (Blood Test)</span></li></ul></section>
-  <div class="inc-sex">
-    <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Prostate Ultrasonography &amp; DRE</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li></ul></section>
-    <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li></ul></section>
-  </div>
-</article>
-<article class="inc" id="inc-5" data-title="Intensive" data-sub="Cancer and heart exams combined">
-  <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes everything in Essential B</span></p>
-  <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal &amp; Pelvic CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Coronary CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Carotid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Treadmill Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Arterial Stiffness and Peripheral Artery Stenosis</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Heart Function (Blood Test)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental X-ray</span></li></ul></section>
-  <div class="inc-sex">
-    <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Prostate Ultrasonography &amp; DRE</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li></ul></section>
-    <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li></ul></section>
-  </div>
-</article>
-<article class="inc" id="inc-6" data-title="Platinum" data-sub="Intensive plus brain MRI and MRA">
-  <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes everything in Essential B</span></p>
-  <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Brain MRA &amp; MRI</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal &amp; Pelvic CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Coronary CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Carotid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Treadmill Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Arterial Stiffness and Peripheral Artery Stenosis</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental X-ray</span></li><li class="long"><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span><b>Blood Test</b><small>Heart Function, 3 types of Allergy, 3 types of Osteoporosis, 3 types of Anemia</small></span></li></ul></section>
-  <div class="inc-sex">
-    <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Prostate Ultrasonography &amp; DRE</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li></ul></section>
-    <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li></ul></section>
-  </div>
-</article>
-<article class="inc" id="inc-7" data-title="Premium" data-sub="Most comprehensive program, with an overnight stay">
-  <section class="inc-sec"><h5>Included examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Assessment by a Specialist</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Escorted by a Nurse</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Provided Meals</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Brain MRI+MRA</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Gastroscopy with Conscious Sedation</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Colonoscopy with Conscious Sedation</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Carotid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal &amp; Pelvic CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Coronary CT</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Thyroid Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Echocardiography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Treadmill Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Arterial Stiffness</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Electrocardiogram</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Blood Pressure</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest X-ray (Front/Lateral)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Bone Densitometry</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>T-L Spine X-ray</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Body Measurement</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental X-ray</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental Assessment</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Ophthalmic Exam</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Urine Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Urine albumin-creatinine ratio</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Audiometry Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Blood Sampling (comprehensive panel)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Liver, Lung, Digestive Organ)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Result Consultation with a Specialist</span></li></ul></section>
-  <div class="inc-sex">
-    <section class="inc-sec"><h5>For men</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Prostate Ultrasonography &amp; DRE</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Testosterone</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Prostate)</span></li></ul></section>
-    <section class="inc-sec"><h5>For women</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Pelvic Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Pap Smear</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Breast Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Mammography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>HPV</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Cancer Marker (Ovary)</span></li></ul></section>
-  </div>
-</article>
-<article class="inc" id="inc-8" data-title="Premium Plus" data-sub="Premium plus VIP private suite and PET-CT">
-  <p class="inc-base"><svg class="ic s20" aria-hidden="true"><use href="#i-plus"/></svg><span>Includes everything in the Premium program</span></p>
-  <section class="inc-sec"><h5>Additional examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>VIP private suite available</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>PET-CT scan</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Skin care treatment</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental scaling</span></li></ul></section>
-</article>
-<article class="inc" id="inc-9" data-title="Teen Health Screening" data-sub="Specialized program for adolescents">
-  <section class="inc-sec"><h5>Included examinations</h5><ul class="inc-list"><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Abdominal Ultrasonography</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Electrocardiogram</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Blood Pressure</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Chest X-ray (Front/Lateral)</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Ophthalmic Exam</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Audiometry Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Body Measurement</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Urine Test</span></li><li><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span>Dental Assessment</span></li><li class="long"><svg class="ic s16" aria-hidden="true"><use href="#i-check"/></svg><span><b>Blood Sampling</b><small>Anemia, Diabetes, Hypercholesteremia, Liver Function, Hepatitis A/B/C, Kidney Function, Electrolyte, Blood Coagulation Test, Blood Type, CBC, Thyroid Function, H. Pylori, Measles, Rubella, Mumps, Varicella, Vitamin D, Allergy</small></span></li></ul></section>
-</article>
-      </div>
-      <dialog class="inc-dialog" id="inc-dialog" aria-labelledby="inc-title">
-        <div class="inc-card">
-          <div class="inc-bar"><div><span class="inc-kick">Health Checkup · What's included</span><h4 id="inc-title"></h4><p id="inc-sub"></p></div><button type="button" class="inc-x" aria-label="Close"><svg class="ic s20" aria-hidden="true"><use href="#i-close"/></svg></button></div>
-          <div class="inc-body" id="inc-body"></div><div class="inc-fade" aria-hidden="true"></div>
-          <p class="inc-foot"><svg class="ic s16" aria-hidden="true"><use href="#i-info"/></svg><span>Contents are listed as in Camnemi's price sheet for AMC's program. AMC sets the final examinations and confirms them after your inquiry.</span></p>
-          <div class="inc-act"><a class="btn" href="#contact" data-program="Health Checkup">Ask about Health Checkup <svg class="ic s20" aria-hidden="true"><use href="#i-arrow"/></svg></a><button type="button" class="btn ghost inc-close">Close</button></div>
-        </div>
-      </dialog>
-      <ul class="price-notes">
-        <li>USD amounts are approximate (1 USD ≈ 1,380 KRW, rounded up to the nearest $100). Won amounts are the listed prices.</li>
-        <li>Actual charges may vary, and the final program, price and schedule are confirmed by AMC.</li>
-        <li>Treatment and checkup costs are paid directly to the hospital. You do not pay Camnemi first.</li>
-        <li>Prices are for the checkup program only. Camnemi coordination services are separate.</li>
-      </ul>
-      <p class="src"><svg class="ic s16" aria-hidden="true"><use href="#i-info"/></svg><span>Source: Camnemi price sheet for AMC's Comprehensive Health Evaluation Program, checked October 2026. Program contents are set by AMC and depend on sex and age.</span></p>
-      <div class="price-cta"><a class="btn" href="#contact" data-program="Health Checkup">Ask about Health Checkup <svg class="ic s20" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
     </div>
 
     <p class="prog-common rv"><svg class="ic s20" aria-hidden="true"><use href="#i-hospital"/></svg><span>Whether a service is possible is decided by AMC after medical review.</span></p>
@@ -1508,26 +1577,22 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
     <div class="rv">
       <div class="kick"><i></i>Contact</div>
       <h2 id="h-contact">Start an inquiry.</h2>
-      <p class="intro">Your inquiry goes to Camnemi, not to the hospital. Here is how it works, the form, and answers to common questions.</p>
-      <nav class="sub-nav" aria-label="In this section"><a href="#process">How it works</a><a href="#inquiry-form">Inquiry form</a><a href="#faq">Questions</a></nav>
-      <p class="next-line"><svg class="ic s20" aria-hidden="true"><use href="#i-route"/></svg><span>Camnemi replies in your preferred language and explains the next step; AMC decides after medical review.</span></p>
+      <p class="intro">Your inquiry goes to Camnemi, not to the hospital.</p>
     </div>
 
     <!-- HOW AN INQUIRY WORKS (from v4 "Process"; no time frames) -->
     <div class="proc-wrap rv" id="process" aria-labelledby="h-proc">
-      <div class="cf-head"><span class="cf-kick">Step by step</span><h3 id="h-proc">Five steps, one ticket.</h3><p>No time frames are promised. Each case moves at the hospital's pace.</p></div>
+      <div class="cf-head"><span class="cf-kick">Step by step</span><h3 id="h-proc">Five steps, one ticket.</h3><p>No time frames are promised.</p></div>
       <ol class="proc" data-progress>
-        <li><span class="n">01</span><h4>Send an inquiry</h4><p>To Camnemi, without medical details.</p><span class="chip">Camnemi</span></li>
-        <li><span class="n">02</span><h4>We clarify your question</h4><p>And explain which AMC service may be relevant.</p><span class="chip">Camnemi</span></li>
-        <li><span class="n">03</span><h4>You prepare your documents</h4><p>Through Camnemi's secure registration page: your details, passport page and the signed AMC consent form. Never in chat.</p><a class="proc-link" href="https://registeramc.camnemi.com" target="_blank" rel="noopener">Open the registration page <svg class="ic s16" aria-hidden="true"><use href="#i-ext"/></svg></a><span class="chip">Camnemi</span></li>
-        <li class="amc"><span class="n">04</span><h4>AMC's medical team reviews</h4><p>And decides whether a service is possible.</p><span class="chip f">Asan Medical Center</span></li>
-        <li class="amc"><span class="n">05</span><h4>AMC confirms next steps</h4><p>Including appointments, if applicable.</p><span class="chip f">Asan Medical Center</span></li>
+        <li><span class="n">01</span><h4>Send an inquiry</h4><span class="chip">Camnemi</span></li>
+        <li><span class="n">02</span><h4>We clarify your question</h4><span class="chip">Camnemi</span></li>
+        <li><span class="n">03</span><h4>You prepare your documents</h4><a class="proc-link" href="https://registeramc.camnemi.com" target="_blank" rel="noopener">Secure registration page <svg class="ic s16" aria-hidden="true"><use href="#i-ext"/></svg></a><span class="chip">Camnemi</span></li>
+        <li class="amc"><span class="n">04</span><h4>AMC's medical team reviews</h4><span class="chip f">Asan Medical Center</span></li>
+        <li class="amc"><span class="n">05</span><h4>AMC confirms next steps</h4><span class="chip f">Asan Medical Center</span></li>
       </ol>
-      <p class="proc-note"><svg class="ic s20" aria-hidden="true"><use href="#i-lock"/></svg><span>Camnemi does not collect medical records in Telegram, WhatsApp or email. Records are sent only through the secure page that our medical team gives you.</span></p>
     </div>
 
-    <div class="cf-head fh" id="inquiry-form"><span class="cf-kick">Inquiry</span><h3>Tell us what you are interested in.</h3></div>
-    <div class="inq">
+    <div class="inq" id="inquiry-form">
       <div class="form-card rv">
         <form id="inq" novalidate>
           <p class="err" id="err" role="alert"><svg class="ic s20" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
@@ -1564,10 +1629,9 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
             <div class="field"><label for="f-contact">Email address or phone number</label><input type="text" id="f-contact" name="contact" autocomplete="email" required></div>
           </div>
 
-          <div class="field"><label for="f-area">General area of interest (one line, optional)</label><input type="text" id="f-area" name="area" maxlength="160"><span class="hint">Please do not include medical records or ID numbers. There is no file upload here.</span></div>
 
           <button class="btn" type="submit">Prepare my inquiry email <svg class="ic s20" aria-hidden="true"><use href="#i-send"/></svg></button>
-          <span class="form-foot">This opens a ready-to-send email in your own email app. Nothing is sent until you press send there. Camnemi coordinates inquiries only; service availability is decided by AMC.</span>
+          <span class="form-foot">Opens a ready-to-send email in your own email app. Nothing is sent until you press send. No medical records or ID numbers here.</span>
           <div class="ok" id="ok" role="status" aria-live="polite"><b>Almost done.</b> Your email app should open with your inquiry. If it does not, write to <a href="mailto:medical@camnemi.com">medical@camnemi.com</a>.</div>
         </form>
       </div>
@@ -1576,7 +1640,7 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
         <div class="safe" role="note"><svg class="ic s20" aria-hidden="true"><use href="#i-alert"/></svg><p>This is a non-emergency coordination channel and cannot triage urgent symptoms. In an emergency contact local emergency services or the nearest medical facility immediately.</p></div>
         <div class="card">
           <h3><svg class="ic s20" aria-hidden="true" style="display:inline-block;vertical-align:-4px;margin-right:6px"><use href="#i-lock"/></svg>Medical records</h3>
-          <p>Medical records are handled only through Camnemi's own secure registration page: <a href="https://registeramc.camnemi.com" target="_blank" rel="noopener">https://registeramc.camnemi.com</a> — operated by Camnemi, not by the hospital.</p>
+          <p>Only through <a href="https://registeramc.camnemi.com" target="_blank" rel="noopener">Camnemi's secure registration page</a>, never in chat or this form. Operated by Camnemi, not by the hospital.</p>
         </div>
         <div class="card">
           <h3>Other ways to reach us</h3>
@@ -1585,7 +1649,6 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
             <li><svg class="ic s20" aria-hidden="true"><use href="#i-send"/></svg><a href="https://t.me/+855969909079" target="_blank" rel="noopener">Message Camnemi on Telegram</a></li>
             <li><svg class="ic s20" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+855969909079">Call Camnemi</a></li>
           </ul>
-          <p style="font-size:13px;line-height:19px;color:var(--text-secondary);margin-top:8px">General questions only. Please do not send medical records or images in chat.</p>
         </div>
       </aside>
     </div>
@@ -1598,14 +1661,46 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
         <details><summary>Can Camnemi tell me which treatment is right for me?</summary><div class="a">No. Camnemi and this website do not give medical advice, diagnose or recommend treatment. Clinical decisions are made by the treating medical professionals at AMC.</div></details>
         <details><summary>Where do I send my medical records?</summary><div class="a">Not in chat and not in this form. If records are needed, our medical team will tell you exactly what to prepare, and you send them through <a href="https://registeramc.camnemi.com" target="_blank" rel="noopener">Camnemi's own secure registration page</a>. That page is operated by Camnemi, not by the hospital.</div></details>
         <details><summary>Which language can I use?</summary><div class="a">You can write to Camnemi in English, Khmer or Korean. AMC's website lists its interpretation languages as English, Chinese, Japanese, Russian, Arabic, Vietnamese and Mongolian. Khmer is not on that list, so Khmer support is provided by Camnemi's own coordinators.</div></details>
-        <details><summary>Why Korea, and why Asan Medical Center?</summary><div class="a">Newsweek and Statista rank hospitals one specialty at a time. The editions, positions and sources are shown once, under <a href="#why-amc">Why AMC</a>. These are specialty rankings, not an overall hospital ranking, and they do not predict the outcome for any individual patient.</div></details>
-        <details><summary>Does AMC offer aesthetic (cosmetic) procedures?</summary><div class="a">AMC's Department of Plastic Surgery states on its English website that it provides both reconstructive and aesthetic procedures. See <a href="#programs">Programs</a>. That is a description of what the department offers, not a promise to any individual: whether a procedure is possible for you is decided by AMC after review.</div></details>
-        <details><summary>Is a video consultation the same as a second opinion?</summary><div class="a">No. A video consultation is a real-time session with a local physician present. A second opinion is a written opinion from AMC specialists based on submitted records. Whether either is possible is decided by AMC after review.</div></details>
+                        <details><summary>Is a video consultation the same as a second opinion?</summary><div class="a">No. A video consultation is a real-time session with a local physician present. A second opinion is a written opinion from AMC specialists based on submitted records. Whether either is possible is decided by AMC after review.</div></details>
         <details><summary>Do I pay Camnemi for the checkup?</summary><div class="a">No. Health checkup costs are paid directly to the hospital. See the <a href="#checkup-prices">listed program prices</a> and their notes. Camnemi coordination services are separate.</div></details>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ================= NEWS OF ASAN (last section) ================= -->
+<!-- News of Asan: 3 cards, rendered from feed/amc-feed.json; the static cards below are the fallback -->
+  <div class="news mo" id="amc-news">
+    <div class="wrap">
+      <div class="sub-head rv">
+        <div>
+          <div class="kick"><i></i>News of Asan</div>
+          <h3>Latest from Asan Medical Center.</h3>
+          <p>Headlines exactly as published in AMC's English newsroom.</p>
+          <p class="news-upd" id="news-upd" hidden><span class="live-dot" aria-hidden="true"></span><span>Last updated <time id="news-upd-t"></time></span></p>
+        </div>
+        <a class="btn light" href="https://news-en.amc.seoul.kr/news/eng/list.do" target="_blank" rel="noopener">More news <svg class="ic s20" aria-hidden="true"><use href="#i-ext"/></svg><span class="sr"> (opens AMC's newsroom in a new tab)</span></a>
+      </div>
+      <div class="news-grid" id="news-list">
+        <a class="ncard rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3307" target="_blank" rel="noopener noreferrer">
+          <div class="meta"><span class="chip t"><svg class="ic s16" aria-hidden="true"><use href="#i-news"/></svg>News</span><time datetime="2026-10-27">27 Oct 2026</time></div>
+          <h4>Asan Medical Center Launches Integrated Care Clinic for Inflammatory Myositis</h4>
+          <span class="go">Read on AMC Newsroom <svg class="ic s16" aria-hidden="true"><use href="#i-ext"/></svg></span>
+        </a>
+        <a class="ncard rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3304" target="_blank" rel="noopener noreferrer">
+          <div class="meta"><span class="chip t"><svg class="ic s16" aria-hidden="true"><use href="#i-news"/></svg>News</span><time datetime="2026-10-23">23 Oct 2026</time></div>
+          <h4>Asan Medical Center Introduces Mona Lisa System for More Precise Prostate Cancer Biopsies</h4>
+          <span class="go">Read on AMC Newsroom <svg class="ic s16" aria-hidden="true"><use href="#i-ext"/></svg></span>
+        </a>
+        <a class="ncard rv" href="https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3305" target="_blank" rel="noopener noreferrer">
+          <div class="meta"><span class="chip t"><svg class="ic s16" aria-hidden="true"><use href="#i-news"/></svg>News</span><time datetime="2026-10-23">23 Oct 2026</time></div>
+          <h4>Asan Medical Center Showcases Korean Medical Excellence to Global Hospital Leaders</h4>
+          <span class="go">Read on AMC Newsroom <svg class="ic s16" aria-hidden="true"><use href="#i-ext"/></svg></span>
+        </a>
+      </div>
+      <p class="news-note"><svg class="ic s20" aria-hidden="true"><use href="#i-info"/></svg><span>A news item describes AMC; it does not mean a service is available to you. Camnemi does not operate AMC's newsroom.</span></p>
+    </div>
+  </div>
 
 </main>
 
@@ -1619,7 +1714,7 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
         <p style="margin-top:14px"><span class="chip f"><svg class="ic s16" aria-hidden="true"><use href="#i-star"/></svg>Official Agency of Asan Medical Center</span></p>
       </div>
       <nav aria-label="Footer"><h2>On this page</h2><ul>
-        <li><a href="#why-amc">Why AMC</a></li><li><a href="#amc-news">News of Asan</a></li><li><a href="#programs">Programs</a></li><li><a href="#coordinator">Coordinator</a></li><li><a href="#camnemi-korea">Camnemi Korea</a></li><li><a href="#contact">Contact</a></li><li><a href="#process">How it works</a></li><li><a href="#faq">Questions</a></li></ul></nav>
+        <li><a href="#why-amc">Why AMC</a></li><li><a href="#programs">Programs</a></li><li><a href="#coordinator">Coordinator</a></li><li><a href="#camnemi-korea">Camnemi Korea</a></li><li><a href="#contact">Contact</a></li><li><a href="#process">How it works</a></li><li><a href="#faq">Questions</a></li><li><a href="#amc-news">News of Asan</a></li></ul></nav>
       <div><h2>Links</h2><ul>
         <li><a href="mailto:medical@camnemi.com">medical@camnemi.com</a></li>
         <li><a href="https://registeramc.camnemi.com" target="_blank" rel="noopener">Secure registration page (Camnemi)</a></li>
@@ -1736,7 +1831,7 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
     var lang=(form.querySelector('input[name=lang]:checked')||{}).value||'English',prog=hid.value;
     var body=['Hello Camnemi,','','I would like to start an inquiry.','','Program of interest: '+prog]
       .concat(prog==='Video Consultation'?['Local physician can be present: '+form.elements.localdoc.value]:[])
-      .concat(['Name: '+form.elements.name.value.trim(),'Preferred language: '+lang,'Contact via: '+form.elements.channel.value+' — '+form.elements.contact.value.trim(),'General area of interest: '+(form.elements.area.value.trim()||'—'),'','(No medical records or ID numbers in this message.)']).join('\n');
+      .concat(['Name: '+form.elements.name.value.trim(),'Preferred language: '+lang,'Contact via: '+form.elements.channel.value+' — '+form.elements.contact.value.trim(),'','(No medical records or ID numbers in this message.)']).join('\n');
     window.location.href='mailto:medical@camnemi.com?subject='+encodeURIComponent('Inquiry — '+prog)+'&body='+encodeURIComponent(body);
     ok.classList.add('show');
   });
