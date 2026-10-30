@@ -771,6 +771,8 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
 .trio-flow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
 .trio-flow .tl{display:flex;align-items:stretch;justify-content:flex-end}
 .trio-flow .tn.amc{max-width:260px}
+.trio-flow .tl{min-width:0}
+@media (max-width:1100px){.trio-flow .tn{min-width:0;padding:10px 12px}.trio-flow .ta{flex-basis:32px}}
 @media (max-width:900px){.trio-flow{display:flex}.trio-flow .tl{display:contents}.trio-flow .tr{display:none}.trio-flow .tn.amc{max-width:320px}}
 
 /* programs: wide cards, price carousel inside Health Checkup */
@@ -780,7 +782,7 @@ input:focus,select:focus{outline:3px solid var(--ink-primary);outline-offset:1px
 .prog.wide .price{grid-column:1/-1;grid-row:2;margin:0;padding:26px 26px 28px;border-top:1px dashed var(--perforation)}
 .prog.wide .price-head h3{margin:8px 0 6px}
 @media (max-width:1020px){
-  .prog.wide{grid-template-columns:1fr}
+  .prog.wide{grid-template-columns:minmax(0,1fr)}
   .prog.wide .vis{grid-column:1;grid-row:1;padding:14px 14px 0}
   .prog.wide .body{grid-column:1;grid-row:2}
   .prog.wide .price{grid-row:3;padding:22px 18px 24px}
