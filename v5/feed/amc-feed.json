@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3310,
+   "date": "2026-10-30",
+   "title": "Asan Medical Center Hosts Discussion on Patient Centered, Value Based Healthcare",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3310"
+  },
+  {
    "id": 3307,
    "date": "2026-10-27",
    "title": "Asan Medical Center Launches Integrated Care Clinic for Inflammatory Myositis",
@@ -29,12 +35,6 @@
    "date": "2026-10-16",
    "title": "Skin Tone Conversion Technology Aims to Reduce Performance Gaps in AI for Skin Disease Diagnosis",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3302"
-  },
-  {
-   "id": 3301,
-   "date": "2026-10-12",
-   "title": "Professor In-Ho Jeon from Asan Medical Center Named President-Elect of the International Society of Orthopaedic Surgery and Traumatology (SICOT)",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3301"
   }
  ],
  "videos": [
@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=mcfjS0ep4e0"
   }
  ],
- "updated": "2026-10-29T23:05:22Z",
+ "updated": "2026-10-30T05:42:50Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
