@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=C31kzhe8wsg"
   }
  ],
- "updated": "2026-10-31T00:45:15Z",
+ "updated": "2026-10-31T09:34:09Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -92,9 +92,27 @@
   {
    "src": "news",
    "title": "Asan Medical Center Establishes Pediatric Rapid Response Team 48 Hour ICU Readmission Rate"
+  },
+  {
+   "src": "video",
+   "title": "\"교수님은 정말 황금 손을 가진 분이세요\" 우마르 엄마가 전한 이야기 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "키르기스스탄에서 치료가 어려웠던 아이, 한국에 오기까지 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "두피 80%를 잃었던 소년, 다시 꿈을 이야기하다 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "아이의 일상을 앗아간 대형견 세 마리의 공격 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "대형견의 공격으로 두피 80%를 잃은 여섯 살 소년 | 리얼스토리"
   }
  ],
- "errors": [
-  "video: <HTTPError 500: 'Internal Server Error'>"
- ]
+ "errors": []
 }
