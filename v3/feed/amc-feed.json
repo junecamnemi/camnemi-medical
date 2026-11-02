@@ -39,6 +39,12 @@
  ],
  "videos": [
   {
+   "id": "B5qwNi_80n8",
+   "title": "정신건강의학과 진료 기록, 보험 가입이나 취업에 불리하다?",
+   "published": "2026-11-01",
+   "url": "https://www.youtube.com/watch?v=B5qwNi_80n8"
+  },
+  {
    "id": "D5gE6IR9ttc",
    "title": "암환자의 우울증, 언제 치료가 필요한가요?",
    "published": "2026-10-29",
@@ -67,15 +73,9 @@
    "title": "이마티닙 요법에 실패한 환자에서의 치료｜2026 GIST 건강강좌",
    "published": "2026-10-26",
    "url": "https://www.youtube.com/watch?v=SmJuZzwTcS0"
-  },
-  {
-   "id": "C31kzhe8wsg",
-   "title": "GIST의 정의 및 전이성 GIST에 대한 1차 치료｜2026 GIST 건강강좌",
-   "published": "2026-10-26",
-   "url": "https://www.youtube.com/watch?v=C31kzhe8wsg"
   }
  ],
- "updated": "2026-11-01T19:38:13Z",
+ "updated": "2026-11-02T00:40:50Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
