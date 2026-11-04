@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3312,
+   "date": "2026-11-04",
+   "title": "[Meet AMC Experts] Professor Hee Jeong Kim from the Division of Breast Surgery",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3312"
+  },
+  {
    "id": 3311,
    "date": "2026-11-02",
    "title": "[Welcome to AMC] Khalid Alqurashi, Professor from Saudi Arabia",
@@ -29,12 +35,6 @@
    "date": "2026-10-23",
    "title": "Asan Medical Center Showcases Korean Medical Excellence to Global Hospital Leaders",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3305"
-  },
-  {
-   "id": 3303,
-   "date": "2026-10-22",
-   "title": "Fewer Radiation Treatments Offer Similar Cancer Control After Prostate Cancer Surgery",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3303"
   }
  ],
  "videos": [
@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=86CuwCh6XCo"
   }
  ],
- "updated": "2026-11-03T23:18:06Z",
+ "updated": "2026-11-04T06:11:22Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
