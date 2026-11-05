@@ -39,6 +39,12 @@
  ],
  "videos": [
   {
+   "id": "1RBxYbLv0-w",
+   "title": "심장재활을 해야하는 환자",
+   "published": "2026-11-05",
+   "url": "https://www.youtube.com/watch?v=1RBxYbLv0-w"
+  },
+  {
    "id": "MvFnYEhD0Wo",
    "title": "[심장] 심근경색, 심부전, 부정맥 등 모든 심장 환자가 꼭 알아야 할 치료 ㅣ 비용, 기간, 방법, 시기",
    "published": "2026-11-04",
@@ -67,15 +73,9 @@
    "title": "암환자의 우울증, 언제 치료가 필요한가요?",
    "published": "2026-10-29",
    "url": "https://www.youtube.com/watch?v=D5gE6IR9ttc"
-  },
-  {
-   "id": "cgOwQtGAYpM",
-   "title": "암 치료 중 직장 복귀, 어떻게 하면 좋을까요?",
-   "published": "2026-10-28",
-   "url": "https://www.youtube.com/watch?v=cgOwQtGAYpM"
   }
  ],
- "updated": "2026-11-05T06:40:12Z",
+ "updated": "2026-11-05T17:22:19Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -92,9 +92,23 @@
   {
    "src": "news",
    "title": "Asan Medical Center Establishes Pediatric Rapid Response Team 48 Hour ICU Readmission Rate"
+  },
+  {
+   "src": "video",
+   "title": "\"교수님은 정말 황금 손을 가진 분이세요\" 우마르 엄마가 전한 이야기 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "키르기스스탄에서 치료가 어려웠던 아이, 한국에 오기까지 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "두피 80%를 잃었던 소년, 다시 꿈을 이야기하다 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "아이의 일상을 앗아간 대형견 세 마리의 공격 | 리얼스토리"
   }
  ],
- "errors": [
-  "video: <HTTPError 404: 'Not Found'>"
- ]
+ "errors": []
 }
