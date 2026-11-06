@@ -39,43 +39,43 @@
  ],
  "videos": [
   {
-   "id": "1RBxYbLv0-w",
-   "title": "심장재활을 해야하는 환자",
-   "published": "2026-11-05",
-   "url": "https://www.youtube.com/watch?v=1RBxYbLv0-w"
+   "id": "LB6jiocNwVw",
+   "title": "난소·자궁암 환자 최신 치료약제",
+   "published": "2026-11-06",
+   "url": "https://www.youtube.com/watch?v=LB6jiocNwVw"
   },
   {
-   "id": "MvFnYEhD0Wo",
-   "title": "[심장] 심근경색, 심부전, 부정맥 등 모든 심장 환자가 꼭 알아야 할 치료 ㅣ 비용, 기간, 방법, 시기",
-   "published": "2026-11-04",
-   "url": "https://www.youtube.com/watch?v=MvFnYEhD0Wo"
+   "id": "bczK2WXezks",
+   "title": "난소·자궁암센터 최신 임상연구",
+   "published": "2026-11-06",
+   "url": "https://www.youtube.com/watch?v=bczK2WXezks"
   },
   {
-   "id": "1woP3DPsStw",
-   "title": "암 경험 사실, 어디까지 알려야 하나요?",
-   "published": "2026-11-02",
-   "url": "https://www.youtube.com/watch?v=1woP3DPsStw"
+   "id": "3if7RGxttPI",
+   "title": "난소·자궁암 환자의 올바른 식생활",
+   "published": "2026-11-06",
+   "url": "https://www.youtube.com/watch?v=3if7RGxttPI"
   },
   {
-   "id": "gNJxDGgHYjQ",
-   "title": "연속혈당측정기는 무엇?",
-   "published": "2026-11-02",
-   "url": "https://www.youtube.com/watch?v=gNJxDGgHYjQ"
+   "id": "3xRfTzIESDQ",
+   "title": "난소·자궁암 환자의 슬기로운 복약 생활",
+   "published": "2026-11-06",
+   "url": "https://www.youtube.com/watch?v=3xRfTzIESDQ"
   },
   {
-   "id": "B5qwNi_80n8",
-   "title": "정신건강의학과 진료 기록, 보험 가입이나 취업에 불리하다?",
-   "published": "2026-11-01",
-   "url": "https://www.youtube.com/watch?v=B5qwNi_80n8"
+   "id": "wXXbybipUDo",
+   "title": "난소·자궁암 환자의 스트레스 관리",
+   "published": "2026-11-06",
+   "url": "https://www.youtube.com/watch?v=wXXbybipUDo"
   },
   {
-   "id": "D5gE6IR9ttc",
-   "title": "암환자의 우울증, 언제 치료가 필요한가요?",
-   "published": "2026-10-29",
-   "url": "https://www.youtube.com/watch?v=D5gE6IR9ttc"
+   "id": "OK2AfabMVc8",
+   "title": "병원에서 할 수 있는 심장재활 치료",
+   "published": "2026-11-06",
+   "url": "https://www.youtube.com/watch?v=OK2AfabMVc8"
   }
  ],
- "updated": "2026-11-06T06:36:09Z",
+ "updated": "2026-11-06T16:44:18Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -92,9 +92,19 @@
   {
    "src": "news",
    "title": "Asan Medical Center Establishes Pediatric Rapid Response Team 48 Hour ICU Readmission Rate"
+  },
+  {
+   "src": "video",
+   "title": "난소·자궁암 치료 후 관리"
+  },
+  {
+   "src": "video",
+   "title": "\"교수님은 정말 황금 손을 가진 분이세요\" 우마르 엄마가 전한 이야기 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "키르기스스탄에서 치료가 어려웠던 아이, 한국에 오기까지 | 리얼스토리"
   }
  ],
- "errors": [
-  "video: <HTTPError 404: 'Not Found'>"
- ]
+ "errors": []
 }
