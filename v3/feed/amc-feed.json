@@ -39,6 +39,12 @@
  ],
  "videos": [
   {
+   "id": "EewBjbi_qIM",
+   "title": "심장재활의 비용과 방법, 연구결과",
+   "published": "2026-11-07",
+   "url": "https://www.youtube.com/watch?v=EewBjbi_qIM"
+  },
+  {
    "id": "LB6jiocNwVw",
    "title": "난소·자궁암 환자 최신 치료약제",
    "published": "2026-11-06",
@@ -67,15 +73,9 @@
    "title": "난소·자궁암 환자의 스트레스 관리",
    "published": "2026-11-06",
    "url": "https://www.youtube.com/watch?v=wXXbybipUDo"
-  },
-  {
-   "id": "OK2AfabMVc8",
-   "title": "병원에서 할 수 있는 심장재활 치료",
-   "published": "2026-11-06",
-   "url": "https://www.youtube.com/watch?v=OK2AfabMVc8"
   }
  ],
- "updated": "2026-11-07T05:54:11Z",
+ "updated": "2026-11-07T12:55:17Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -92,9 +92,15 @@
   {
    "src": "news",
    "title": "Asan Medical Center Establishes Pediatric Rapid Response Team 48 Hour ICU Readmission Rate"
+  },
+  {
+   "src": "video",
+   "title": "난소·자궁암 치료 후 관리"
+  },
+  {
+   "src": "video",
+   "title": "\"교수님은 정말 황금 손을 가진 분이세요\" 우마르 엄마가 전한 이야기 | 리얼스토리"
   }
  ],
- "errors": [
-  "video: <HTTPError 404: 'Not Found'>"
- ]
+ "errors": []
 }
