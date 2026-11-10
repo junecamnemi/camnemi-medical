@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3313,
+   "date": "2026-11-10",
+   "title": "Urinary Bladder Disease Difficult to Diagnose Due to Similar Symptoms May Soon Be Identified Through a Simple Urine Test",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3313"
+  },
+  {
    "id": 3312,
    "date": "2026-11-04",
    "title": "[Meet AMC Experts] Professor Hee Jeong Kim from the Division of Breast Surgery",
@@ -29,15 +35,15 @@
    "date": "2026-10-23",
    "title": "Asan Medical Center Introduces Mona Lisa System for More Precise Prostate Cancer Biopsies",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3304"
-  },
-  {
-   "id": 3305,
-   "date": "2026-10-23",
-   "title": "Asan Medical Center Showcases Korean Medical Excellence to Global Hospital Leaders",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3305"
   }
  ],
  "videos": [
+  {
+   "id": "HCEW83vC8fY",
+   "title": "보호자 없이 입원하면, 누가 곁을 지켜줄까요? [간호간병통합서비스 병동 간호사 편 - 하루;병원에 사는 사람들]",
+   "published": "2026-11-10",
+   "url": "https://www.youtube.com/watch?v=HCEW83vC8fY"
+  },
   {
    "id": "EewBjbi_qIM",
    "title": "심장재활의 비용과 방법, 연구결과",
@@ -67,15 +73,9 @@
    "title": "난소·자궁암 환자의 슬기로운 복약 생활",
    "published": "2026-11-06",
    "url": "https://www.youtube.com/watch?v=3xRfTzIESDQ"
-  },
-  {
-   "id": "wXXbybipUDo",
-   "title": "난소·자궁암 환자의 스트레스 관리",
-   "published": "2026-11-06",
-   "url": "https://www.youtube.com/watch?v=wXXbybipUDo"
   }
  ],
- "updated": "2026-11-10T03:32:55Z",
+ "updated": "2026-11-10T14:49:15Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -92,9 +92,15 @@
   {
    "src": "news",
    "title": "Asan Medical Center Establishes Pediatric Rapid Response Team 48 Hour ICU Readmission Rate"
+  },
+  {
+   "src": "video",
+   "title": "난소·자궁암 치료 후 관리"
+  },
+  {
+   "src": "video",
+   "title": "\"교수님은 정말 황금 손을 가진 분이세요\" 우마르 엄마가 전한 이야기 | 리얼스토리"
   }
  ],
- "errors": [
-  "video: <HTTPError 404: 'Not Found'>"
- ]
+ "errors": []
 }
