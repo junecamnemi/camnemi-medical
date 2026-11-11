@@ -39,6 +39,12 @@
  ],
  "videos": [
   {
+   "id": "_fwsgi86aGg",
+   "title": "혹시 약 때문인가요? 다약제 복용 ㅣ백세수업",
+   "published": "2026-11-11",
+   "url": "https://www.youtube.com/watch?v=_fwsgi86aGg"
+  },
+  {
    "id": "HCEW83vC8fY",
    "title": "보호자 없이 입원하면, 누가 곁을 지켜줄까요? [간호간병통합서비스 병동 간호사 편 - 하루;병원에 사는 사람들]",
    "published": "2026-11-10",
@@ -67,15 +73,9 @@
    "title": "난소·자궁암 환자의 올바른 식생활",
    "published": "2026-11-06",
    "url": "https://www.youtube.com/watch?v=3if7RGxttPI"
-  },
-  {
-   "id": "3xRfTzIESDQ",
-   "title": "난소·자궁암 환자의 슬기로운 복약 생활",
-   "published": "2026-11-06",
-   "url": "https://www.youtube.com/watch?v=3xRfTzIESDQ"
   }
  ],
- "updated": "2026-11-11T01:15:58Z",
+ "updated": "2026-11-11T10:50:39Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -92,9 +92,11 @@
   {
    "src": "news",
    "title": "Asan Medical Center Establishes Pediatric Rapid Response Team 48 Hour ICU Readmission Rate"
+  },
+  {
+   "src": "video",
+   "title": "난소·자궁암 치료 후 관리"
   }
  ],
- "errors": [
-  "video: <HTTPError 404: 'Not Found'>"
- ]
+ "errors": []
 }
