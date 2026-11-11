@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3314,
+   "date": "2026-11-11",
+   "title": "Dubai Delegation Visits Asan Medical Center To Explore Expanded Healthcare Cooperation",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3314"
+  },
+  {
    "id": 3313,
    "date": "2026-11-10",
    "title": "Urinary Bladder Disease Difficult to Diagnose Due to Similar Symptoms May Soon Be Identified Through a Simple Urine Test",
@@ -29,12 +35,6 @@
    "date": "2026-10-27",
    "title": "Asan Medical Center Launches Integrated Care Clinic for Inflammatory Myositis",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3307"
-  },
-  {
-   "id": 3304,
-   "date": "2026-10-23",
-   "title": "Asan Medical Center Introduces Mona Lisa System for More Precise Prostate Cancer Biopsies",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3304"
   }
  ],
  "videos": [
@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=3xRfTzIESDQ"
   }
  ],
- "updated": "2026-11-10T21:16:47Z",
+ "updated": "2026-11-11T01:15:58Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -92,15 +92,9 @@
   {
    "src": "news",
    "title": "Asan Medical Center Establishes Pediatric Rapid Response Team 48 Hour ICU Readmission Rate"
-  },
-  {
-   "src": "video",
-   "title": "난소·자궁암 치료 후 관리"
-  },
-  {
-   "src": "video",
-   "title": "\"교수님은 정말 황금 손을 가진 분이세요\" 우마르 엄마가 전한 이야기 | 리얼스토리"
   }
  ],
- "errors": []
+ "errors": [
+  "video: <HTTPError 404: 'Not Found'>"
+ ]
 }
