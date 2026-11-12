@@ -75,12 +75,16 @@
    "url": "https://www.youtube.com/watch?v=3if7RGxttPI"
   }
  ],
- "updated": "2026-11-11T19:33:51Z",
+ "updated": "2026-11-12T02:14:30Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
  },
  "excluded": [
+  {
+   "src": "news",
+   "title": "No Difference in 10-Year Mortality Between Stenting and Surgery for Left Main Coronary Artery Disease"
+  },
   {
    "src": "news",
    "title": "Kyrgyzstani Child Attacked by Three Large Dogs Receives Reconstructive Surgery in Korea"
