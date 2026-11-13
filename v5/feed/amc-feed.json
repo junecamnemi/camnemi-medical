@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=3if7RGxttPI"
   }
  ],
- "updated": "2026-11-12T19:52:15Z",
+ "updated": "2026-11-13T01:48:33Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -96,11 +96,9 @@
   {
    "src": "news",
    "title": "Asan Medical Center Establishes Pediatric Rapid Response Team 48 Hour ICU Readmission Rate"
-  },
-  {
-   "src": "video",
-   "title": "난소·자궁암 치료 후 관리"
   }
  ],
- "errors": []
+ "errors": [
+  "video: <HTTPError 404: 'Not Found'>"
+ ]
 }
