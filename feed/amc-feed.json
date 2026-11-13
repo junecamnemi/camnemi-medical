@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3316,
+   "date": "2026-11-13",
+   "title": "Asan Medical Center Attends Future Health Summit 2026 at Invitation of Abu Dhabi Department of Health",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3316"
+  },
+  {
    "id": 3314,
    "date": "2026-11-11",
    "title": "Dubai Delegation Visits Asan Medical Center To Explore Expanded Healthcare Cooperation",
@@ -29,12 +35,6 @@
    "date": "2026-10-30",
    "title": "Asan Medical Center Hosts Discussion on Patient Centered, Value Based Healthcare",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3310"
-  },
-  {
-   "id": 3307,
-   "date": "2026-10-27",
-   "title": "Asan Medical Center Launches Integrated Care Clinic for Inflammatory Myositis",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3307"
   }
  ],
  "videos": [
@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=3if7RGxttPI"
   }
  ],
- "updated": "2026-11-13T01:48:34Z",
+ "updated": "2026-11-13T10:54:03Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -94,11 +94,9 @@
    "title": "Peruvian American Philanthropist Travels 10,000 Kilometers to Korea for Life Saving Liver Transplantation"
   },
   {
-   "src": "news",
-   "title": "Asan Medical Center Establishes Pediatric Rapid Response Team 48 Hour ICU Readmission Rate"
+   "src": "video",
+   "title": "난소·자궁암 치료 후 관리"
   }
  ],
- "errors": [
-  "video: <HTTPError 404: 'Not Found'>"
- ]
+ "errors": []
 }
