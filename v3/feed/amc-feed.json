@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=3if7RGxttPI"
   }
  ],
- "updated": "2026-11-14T01:26:02Z",
+ "updated": "2026-11-14T10:18:21Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -92,9 +92,11 @@
   {
    "src": "news",
    "title": "Peruvian American Philanthropist Travels 10,000 Kilometers to Korea for Life Saving Liver Transplantation"
+  },
+  {
+   "src": "video",
+   "title": "난소·자궁암 치료 후 관리"
   }
  ],
- "errors": [
-  "video: <HTTPError 404: 'Not Found'>"
- ]
+ "errors": []
 }
