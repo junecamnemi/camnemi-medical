@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3317,
+   "date": "2026-11-16",
+   "title": "Asan Medical Center Signs MOU with Sheba Medical Center for Exchange and Cooperation",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3317"
+  },
+  {
    "id": 3316,
    "date": "2026-11-13",
    "title": "Asan Medical Center Attends Future Health Summit 2026 at Invitation of Abu Dhabi Department of Health",
@@ -29,12 +35,6 @@
    "date": "2026-11-02",
    "title": "[Welcome to AMC] Khalid Alqurashi, Professor from Saudi Arabia",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3311"
-  },
-  {
-   "id": 3310,
-   "date": "2026-10-30",
-   "title": "Asan Medical Center Hosts Discussion on Patient Centered, Value Based Healthcare",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3310"
   }
  ],
  "videos": [
@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=3if7RGxttPI"
   }
  ],
- "updated": "2026-11-15T22:46:37Z",
+ "updated": "2026-11-16T06:21:11Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -92,11 +92,9 @@
   {
    "src": "news",
    "title": "Peruvian American Philanthropist Travels 10,000 Kilometers to Korea for Life Saving Liver Transplantation"
-  },
-  {
-   "src": "video",
-   "title": "난소·자궁암 치료 후 관리"
   }
  ],
- "errors": []
+ "errors": [
+  "video: <HTTPError 404: 'Not Found'>"
+ ]
 }
