@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=3if7RGxttPI"
   }
  ],
- "updated": "2026-11-16T06:21:14Z",
+ "updated": "2026-11-16T19:33:31Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -92,9 +92,15 @@
   {
    "src": "news",
    "title": "Peruvian American Philanthropist Travels 10,000 Kilometers to Korea for Life Saving Liver Transplantation"
+  },
+  {
+   "src": "video",
+   "title": "생후 50일에 급성골수성백혈병을 진단받은 아기, 우리가 기다려 온 오늘💗 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "난소·자궁암 치료 후 관리"
   }
  ],
- "errors": [
-  "video: <HTTPError 404: 'Not Found'>"
- ]
+ "errors": []
 }
