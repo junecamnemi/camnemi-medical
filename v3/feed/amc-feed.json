@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=3if7RGxttPI"
   }
  ],
- "updated": "2026-11-16T19:33:28Z",
+ "updated": "2026-11-17T03:48:42Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -83,15 +83,15 @@
  "excluded": [
   {
    "src": "news",
+   "title": "Lymph Node Metastasis in Lung Cancer: Number of Metastatic Lymph Nodes Also Plays a Key Role in Determining Survival"
+  },
+  {
+   "src": "news",
    "title": "No Difference in 10-Year Mortality Between Stenting and Surgery for Left Main Coronary Artery Disease"
   },
   {
    "src": "news",
    "title": "Kyrgyzstani Child Attacked by Three Large Dogs Receives Reconstructive Surgery in Korea"
-  },
-  {
-   "src": "news",
-   "title": "Peruvian American Philanthropist Travels 10,000 Kilometers to Korea for Life Saving Liver Transplantation"
   },
   {
    "src": "video",
