@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3319,
+   "date": "2026-11-18",
+   "title": "AI-Assisted Diagnosis Improves Residents’ Diagnostic Accuracy for Ear Diseases by Up to 32.2 Percentage Points",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3319"
+  },
+  {
    "id": 3317,
    "date": "2026-11-16",
    "title": "Asan Medical Center Signs MOU with Sheba Medical Center for Exchange and Cooperation",
@@ -29,12 +35,6 @@
    "date": "2026-11-04",
    "title": "[Meet AMC Experts] Professor Hee Jeong Kim from the Division of Breast Surgery",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3312"
-  },
-  {
-   "id": 3311,
-   "date": "2026-11-02",
-   "title": "[Welcome to AMC] Khalid Alqurashi, Professor from Saudi Arabia",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3311"
   }
  ],
  "videos": [
@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=3if7RGxttPI"
   }
  ],
- "updated": "2026-11-17T15:55:51Z",
+ "updated": "2026-11-18T00:56:26Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -88,10 +88,6 @@
   {
    "src": "news",
    "title": "No Difference in 10-Year Mortality Between Stenting and Surgery for Left Main Coronary Artery Disease"
-  },
-  {
-   "src": "news",
-   "title": "Kyrgyzstani Child Attacked by Three Large Dogs Receives Reconstructive Surgery in Korea"
   },
   {
    "src": "video",
