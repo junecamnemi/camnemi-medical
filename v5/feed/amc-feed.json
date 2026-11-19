@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3320,
+   "date": "2026-11-19",
+   "title": "AI Improves Diagnostic Accuracy for Rare Kidney Cancer, but Its Effectiveness Depends on Physician Acceptance",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3320"
+  },
+  {
    "id": 3319,
    "date": "2026-11-18",
    "title": "AI-Assisted Diagnosis Improves Residents’ Diagnostic Accuracy for Ear Diseases by Up to 32.2 Percentage Points",
@@ -29,15 +35,15 @@
    "date": "2026-11-10",
    "title": "Urinary Bladder Disease Difficult to Diagnose Due to Similar Symptoms May Soon Be Identified Through a Simple Urine Test",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3313"
-  },
-  {
-   "id": 3312,
-   "date": "2026-11-04",
-   "title": "[Meet AMC Experts] Professor Hee Jeong Kim from the Division of Breast Surgery",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3312"
   }
  ],
  "videos": [
+  {
+   "id": "nMWxRjIYQvY",
+   "title": "생리가 불규칙하면 자궁내막암 위험 높아진다?",
+   "published": "2026-11-18",
+   "url": "https://www.youtube.com/watch?v=nMWxRjIYQvY"
+  },
   {
    "id": "WpTDQpA7Gm0",
    "title": "젊은 나이에 자궁내막암 진단, 임신은 포기해야 할까요?｜가임력 보존 치료의 조건",
@@ -67,15 +73,9 @@
    "title": "난소·자궁암 환자 최신 치료약제",
    "published": "2026-11-06",
    "url": "https://www.youtube.com/watch?v=LB6jiocNwVw"
-  },
-  {
-   "id": "bczK2WXezks",
-   "title": "난소·자궁암센터 최신 임상연구",
-   "published": "2026-11-06",
-   "url": "https://www.youtube.com/watch?v=bczK2WXezks"
   }
  ],
- "updated": "2026-11-18T20:27:21Z",
+ "updated": "2026-11-19T02:32:24Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
