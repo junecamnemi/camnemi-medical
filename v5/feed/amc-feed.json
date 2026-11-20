@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3322,
+   "date": "2026-11-20",
+   "title": "Chairman Seung-Il Park of Asan Healthcare System and President Je-Hwan Lee of Asan Medical Center",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3322"
+  },
+  {
    "id": 3320,
    "date": "2026-11-19",
    "title": "AI Improves Diagnostic Accuracy for Rare Kidney Cancer, but Its Effectiveness Depends on Physician Acceptance",
@@ -29,15 +35,15 @@
    "date": "2026-11-11",
    "title": "Dubai Delegation Visits Asan Medical Center To Explore Expanded Healthcare Cooperation",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3314"
-  },
-  {
-   "id": 3313,
-   "date": "2026-11-10",
-   "title": "Urinary Bladder Disease Difficult to Diagnose Due to Similar Symptoms May Soon Be Identified Through a Simple Urine Test",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3313"
   }
  ],
  "videos": [
+  {
+   "id": "8SaZ5J-_-rY",
+   "title": "환자·보호자를 위한 퇴원 후 안전한 경관영양 관리❤️‍🩹",
+   "published": "2026-11-20",
+   "url": "https://www.youtube.com/watch?v=8SaZ5J-_-rY"
+  },
   {
    "id": "JHlqjkcHyiA",
    "title": "다낭성난소증후군이 자궁내막암 발생 확률 높인다?",
@@ -67,15 +73,9 @@
    "title": "보호자 없이 입원하면, 누가 곁을 지켜줄까요? [간호간병통합서비스 병동 간호사 편 - 하루;병원에 사는 사람들]",
    "published": "2026-11-10",
    "url": "https://www.youtube.com/watch?v=HCEW83vC8fY"
-  },
-  {
-   "id": "EewBjbi_qIM",
-   "title": "심장재활의 비용과 방법, 연구결과",
-   "published": "2026-11-07",
-   "url": "https://www.youtube.com/watch?v=EewBjbi_qIM"
   }
  ],
- "updated": "2026-11-20T02:17:45Z",
+ "updated": "2026-11-20T11:29:18Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
