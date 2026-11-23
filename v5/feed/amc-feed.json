@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3323,
+   "date": "2026-11-23",
+   "title": "LEFT MAIN SUMMIT-COMPLEX PCI 2026: International Conference on Left Main and Complex Coronary Interventions",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3323"
+  },
+  {
    "id": 3322,
    "date": "2026-11-20",
    "title": "Chairman Seung-Il Park of Asan Healthcare System and President Je-Hwan Lee of Asan Medical Center",
@@ -29,15 +35,15 @@
    "date": "2026-11-13",
    "title": "Asan Medical Center Attends Future Health Summit 2026 at Invitation of Abu Dhabi Department of Health",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3316"
-  },
-  {
-   "id": 3314,
-   "date": "2026-11-11",
-   "title": "Dubai Delegation Visits Asan Medical Center To Explore Expanded Healthcare Cooperation",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3314"
   }
  ],
  "videos": [
+  {
+   "id": "WFF_a4-ptB8",
+   "title": "자라나는 아이들의 더 좋은 움직임을 위해",
+   "published": "2026-11-23",
+   "url": "https://www.youtube.com/watch?v=WFF_a4-ptB8"
+  },
   {
    "id": "59IOthTgYQU",
    "title": "체중이 늘어나면 자궁내막암 위험 높아진다?",
@@ -67,15 +73,9 @@
    "title": "젊은 나이에 자궁내막암 진단, 임신은 포기해야 할까요?｜가임력 보존 치료의 조건",
    "published": "2026-11-18",
    "url": "https://www.youtube.com/watch?v=WpTDQpA7Gm0"
-  },
-  {
-   "id": "_fwsgi86aGg",
-   "title": "혹시 약 때문인가요? 다약제 복용 ㅣ백세수업",
-   "published": "2026-11-11",
-   "url": "https://www.youtube.com/watch?v=_fwsgi86aGg"
   }
  ],
- "updated": "2026-11-23T01:39:42Z",
+ "updated": "2026-11-23T12:26:23Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
