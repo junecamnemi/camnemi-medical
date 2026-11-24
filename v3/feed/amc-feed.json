@@ -39,6 +39,12 @@
  ],
  "videos": [
   {
+   "id": "geh-LR94P-Q",
+   "title": "낯설고 어려운 병원이 조금이라도 편안하게",
+   "published": "2026-11-24",
+   "url": "https://www.youtube.com/watch?v=geh-LR94P-Q"
+  },
+  {
    "id": "0uRG_1viEeA",
    "title": "항암제로 인한 피부 부작용과 치료｜2026 피부암 건강강좌",
    "published": "2026-11-24",
@@ -67,15 +73,9 @@
    "title": "심혈관 중환자의 사망률이 감소한 이유?",
    "published": "2026-11-23",
    "url": "https://www.youtube.com/watch?v=AQg6S5SkJzI"
-  },
-  {
-   "id": "WFF_a4-ptB8",
-   "title": "자라나는 아이들의 더 좋은 움직임을 위해",
-   "published": "2026-11-23",
-   "url": "https://www.youtube.com/watch?v=WFF_a4-ptB8"
   }
  ],
- "updated": "2026-11-24T13:36:51Z",
+ "updated": "2026-11-24T23:52:34Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
