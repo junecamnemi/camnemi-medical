@@ -39,6 +39,24 @@
  ],
  "videos": [
   {
+   "id": "0uRG_1viEeA",
+   "title": "항암제로 인한 피부 부작용과 치료｜2026 피부암 건강강좌",
+   "published": "2026-11-24",
+   "url": "https://www.youtube.com/watch?v=0uRG_1viEeA"
+  },
+  {
+   "id": "HfJTBC3Ac6A",
+   "title": "흑색조갑증의 감별 진단｜2026 피부암 건강강좌",
+   "published": "2026-11-24",
+   "url": "https://www.youtube.com/watch?v=HfJTBC3Ac6A"
+  },
+  {
+   "id": "ioyfk6LQvUE",
+   "title": "피부암 이야기: 모반과 감별 진단｜2026 피부암 건강강좌",
+   "published": "2026-11-24",
+   "url": "https://www.youtube.com/watch?v=ioyfk6LQvUE"
+  },
+  {
    "id": "RC1n6AhgO5o",
    "title": "자궁경부암 검사로 자궁내막암을 발견할 수 있나요?",
    "published": "2026-11-23",
@@ -55,27 +73,9 @@
    "title": "자라나는 아이들의 더 좋은 움직임을 위해",
    "published": "2026-11-23",
    "url": "https://www.youtube.com/watch?v=WFF_a4-ptB8"
-  },
-  {
-   "id": "59IOthTgYQU",
-   "title": "체중이 늘어나면 자궁내막암 위험 높아진다?",
-   "published": "2026-11-22",
-   "url": "https://www.youtube.com/watch?v=59IOthTgYQU"
-  },
-  {
-   "id": "8SaZ5J-_-rY",
-   "title": "환자·보호자를 위한 퇴원 후 안전한 경관영양 관리❤️‍🩹",
-   "published": "2026-11-20",
-   "url": "https://www.youtube.com/watch?v=8SaZ5J-_-rY"
-  },
-  {
-   "id": "JHlqjkcHyiA",
-   "title": "다낭성난소증후군이 자궁내막암 발생 확률 높인다?",
-   "published": "2026-11-19",
-   "url": "https://www.youtube.com/watch?v=JHlqjkcHyiA"
   }
  ],
- "updated": "2026-11-24T02:10:39Z",
+ "updated": "2026-11-24T13:36:52Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -91,11 +91,15 @@
   },
   {
    "src": "video",
-   "title": "생후 50일에 급성골수성백혈병을 진단받은 아기, 우리가 기다려 온 오늘💗 | 리얼스토리"
+   "title": "암 치료 후 건강한 피부 되찾기｜2026 피부암 건강강좌"
   },
   {
    "src": "video",
-   "title": "난소·자궁암 치료 후 관리"
+   "title": "생후 한 달, 예솔이에게 나타난 심상치 않은 징후 | 리얼스토리"
+  },
+  {
+   "src": "video",
+   "title": "생후 50일에 급성골수성백혈병을 진단받은 아기, 우리가 기다려 온 오늘💗 | 리얼스토리"
   }
  ],
  "errors": []
