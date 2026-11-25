@@ -1,6 +1,18 @@
 {
  "news": [
   {
+   "id": 3324,
+   "date": "2026-11-25",
+   "title": "Russian Medical Team Performs First Thyroid Radiofrequency Ablation in Russia After Training at Asan Medical Center",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3324"
+  },
+  {
+   "id": 3325,
+   "date": "2026-11-25",
+   "title": "Asan Foundation Holds 38th Asan Award in Medicine Ceremony",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3325"
+  },
+  {
    "id": 3323,
    "date": "2026-11-23",
    "title": "LEFT MAIN SUMMIT-COMPLEX PCI 2026: International Conference on Left Main and Complex Coronary Interventions",
@@ -23,21 +35,21 @@
    "date": "2026-11-18",
    "title": "AI-Assisted Diagnosis Improves Residents’ Diagnostic Accuracy for Ear Diseases by Up to 32.2 Percentage Points",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3319"
-  },
-  {
-   "id": 3317,
-   "date": "2026-11-16",
-   "title": "Asan Medical Center Signs MOU with Sheba Medical Center for Exchange and Cooperation",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3317"
-  },
-  {
-   "id": 3316,
-   "date": "2026-11-13",
-   "title": "Asan Medical Center Attends Future Health Summit 2026 at Invitation of Abu Dhabi Department of Health",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3316"
   }
  ],
  "videos": [
+  {
+   "id": "hpU0FnD4NcQ",
+   "title": "2026년 췌장암 환자를 위한 건강강좌",
+   "published": "2026-11-25",
+   "url": "https://www.youtube.com/watch?v=hpU0FnD4NcQ"
+  },
+  {
+   "id": "Wku8kPK5u_c",
+   "title": "[뇌전증 바로알기] 뇌전증 발작 없으면 약 그만 먹어도 될까? : 신경과 김효재 교수ㅣ동아아산건강강좌",
+   "published": "2026-11-25",
+   "url": "https://www.youtube.com/watch?v=Wku8kPK5u_c"
+  },
   {
    "id": "geh-LR94P-Q",
    "title": "낯설고 어려운 병원이 조금이라도 편안하게",
@@ -61,21 +73,9 @@
    "title": "피부암 이야기: 모반과 감별 진단｜2026 피부암 건강강좌",
    "published": "2026-11-24",
    "url": "https://www.youtube.com/watch?v=ioyfk6LQvUE"
-  },
-  {
-   "id": "RC1n6AhgO5o",
-   "title": "자궁경부암 검사로 자궁내막암을 발견할 수 있나요?",
-   "published": "2026-11-23",
-   "url": "https://www.youtube.com/watch?v=RC1n6AhgO5o"
-  },
-  {
-   "id": "AQg6S5SkJzI",
-   "title": "심혈관 중환자의 사망률이 감소한 이유?",
-   "published": "2026-11-23",
-   "url": "https://www.youtube.com/watch?v=AQg6S5SkJzI"
   }
  ],
- "updated": "2026-11-24T23:52:35Z",
+ "updated": "2026-11-25T08:25:27Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -91,15 +91,15 @@
   },
   {
    "src": "video",
+   "title": "평범한 하루의 소중함을 알았습니다 | 리얼스토리"
+  },
+  {
+   "src": "video",
    "title": "암 치료 후 건강한 피부 되찾기｜2026 피부암 건강강좌"
   },
   {
    "src": "video",
    "title": "생후 한 달, 예솔이에게 나타난 심상치 않은 징후 | 리얼스토리"
-  },
-  {
-   "src": "video",
-   "title": "생후 50일에 급성골수성백혈병을 진단받은 아기, 우리가 기다려 온 오늘💗 | 리얼스토리"
   }
  ],
  "errors": []
