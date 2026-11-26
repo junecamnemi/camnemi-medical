@@ -39,6 +39,12 @@
  ],
  "videos": [
   {
+   "id": "jjAs9JGEt_c",
+   "title": "환자의 혈액, 소변에서 단서를 찾는 사람들",
+   "published": "2026-11-25",
+   "url": "https://www.youtube.com/watch?v=jjAs9JGEt_c"
+  },
+  {
    "id": "hpU0FnD4NcQ",
    "title": "2026년 췌장암 환자를 위한 건강강좌",
    "published": "2026-11-25",
@@ -67,15 +73,9 @@
    "title": "흑색조갑증의 감별 진단｜2026 피부암 건강강좌",
    "published": "2026-11-24",
    "url": "https://www.youtube.com/watch?v=HfJTBC3Ac6A"
-  },
-  {
-   "id": "ioyfk6LQvUE",
-   "title": "피부암 이야기: 모반과 감별 진단｜2026 피부암 건강강좌",
-   "published": "2026-11-24",
-   "url": "https://www.youtube.com/watch?v=ioyfk6LQvUE"
   }
  ],
- "updated": "2026-11-25T19:13:35Z",
+ "updated": "2026-11-26T03:32:02Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -83,11 +83,15 @@
  "excluded": [
   {
    "src": "news",
-   "title": "Lymph Node Metastasis in Lung Cancer: Number of Metastatic Lymph Nodes Also Plays a Key Role in Determining Survival"
+   "title": "Asan Medical Center Receives National Certification for Its Electronic Medical Record System, AMIS 3.0"
   },
   {
    "src": "news",
-   "title": "No Difference in 10-Year Mortality Between Stenting and Surgery for Left Main Coronary Artery Disease"
+   "title": "Lymph Node Metastasis in Lung Cancer: Number of Metastatic Lymph Nodes Also Plays a Key Role in Determining Survival"
+  },
+  {
+   "src": "video",
+   "title": "생후 50일, 예솔이의 시간이 멈추는 듯했습니다 | 리얼스토리"
   },
   {
    "src": "video",
