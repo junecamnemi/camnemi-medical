@@ -39,6 +39,24 @@
  ],
  "videos": [
   {
+   "id": "s1xp9gZSjcQ",
+   "title": "[ 제38회 아산상 ] 강지헌·주수경 부부 ‘지구촌의 소외된 이웃에게 희망을 전하다’",
+   "published": "2026-11-26",
+   "url": "https://www.youtube.com/watch?v=s1xp9gZSjcQ"
+  },
+  {
+   "id": "xW1ywKx3298",
+   "title": "[제38회 아산상 사회봉사상] 사단법인 별의친구들 김현수 이사장 ‘소외된 청소년과 청년의 회복과 성장을 돕다’",
+   "published": "2026-11-26",
+   "url": "https://www.youtube.com/watch?v=xW1ywKx3298"
+  },
+  {
+   "id": "HXJNdZvh-U4",
+   "title": "[제38회 아산상 의료봉사상] 박가정의학과의원 박철성 원장 '의료 사각지대에서 인술을 실천하다'",
+   "published": "2026-11-25",
+   "url": "https://www.youtube.com/watch?v=HXJNdZvh-U4"
+  },
+  {
    "id": "jjAs9JGEt_c",
    "title": "환자의 혈액, 소변에서 단서를 찾는 사람들",
    "published": "2026-11-25",
@@ -55,27 +73,9 @@
    "title": "[뇌전증 바로알기] 뇌전증 발작 없으면 약 그만 먹어도 될까? : 신경과 김효재 교수ㅣ동아아산건강강좌",
    "published": "2026-11-25",
    "url": "https://www.youtube.com/watch?v=Wku8kPK5u_c"
-  },
-  {
-   "id": "geh-LR94P-Q",
-   "title": "낯설고 어려운 병원이 조금이라도 편안하게",
-   "published": "2026-11-24",
-   "url": "https://www.youtube.com/watch?v=geh-LR94P-Q"
-  },
-  {
-   "id": "0uRG_1viEeA",
-   "title": "항암제로 인한 피부 부작용과 치료｜2026 피부암 건강강좌",
-   "published": "2026-11-24",
-   "url": "https://www.youtube.com/watch?v=0uRG_1viEeA"
-  },
-  {
-   "id": "HfJTBC3Ac6A",
-   "title": "흑색조갑증의 감별 진단｜2026 피부암 건강강좌",
-   "published": "2026-11-24",
-   "url": "https://www.youtube.com/watch?v=HfJTBC3Ac6A"
   }
  ],
- "updated": "2026-11-26T03:32:03Z",
+ "updated": "2026-11-26T16:49:15Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
