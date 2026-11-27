@@ -1,6 +1,12 @@
 {
  "news": [
   {
+   "id": 3327,
+   "date": "2026-11-27",
+   "title": "20,000 People in Their 30s Diagnosed with Cancer Annually, Prompting Discussion on How to Overcome Early-Onset Cancer",
+   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3327"
+  },
+  {
    "id": 3324,
    "date": "2026-11-25",
    "title": "Russian Medical Team Performs First Thyroid Radiofrequency Ablation in Russia After Training at Asan Medical Center",
@@ -29,12 +35,6 @@
    "date": "2026-11-19",
    "title": "AI Improves Diagnostic Accuracy for Rare Kidney Cancer, but Its Effectiveness Depends on Physician Acceptance",
    "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3320"
-  },
-  {
-   "id": 3319,
-   "date": "2026-11-18",
-   "title": "AI-Assisted Diagnosis Improves Residents’ Diagnostic Accuracy for Ear Diseases by Up to 32.2 Percentage Points",
-   "url": "https://news-en.amc.seoul.kr/news/eng/detail.do?cntId=3319"
   }
  ],
  "videos": [
@@ -75,7 +75,7 @@
    "url": "https://www.youtube.com/watch?v=Wku8kPK5u_c"
   }
  ],
- "updated": "2026-11-27T01:41:56Z",
+ "updated": "2026-11-27T12:08:59Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -88,6 +88,10 @@
   {
    "src": "news",
    "title": "Lymph Node Metastasis in Lung Cancer: Number of Metastatic Lymph Nodes Also Plays a Key Role in Determining Survival"
+  },
+  {
+   "src": "video",
+   "title": "오래도록 우리에게 힘이 될 기억 | 리얼스토리"
   },
   {
    "src": "video",
