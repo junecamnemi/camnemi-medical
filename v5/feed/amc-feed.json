@@ -39,6 +39,12 @@
  ],
  "videos": [
   {
+   "id": "4bpa5gp5eVc",
+   "title": "단순 경비 업무인줄...? 안전한 병원을 위한 일들",
+   "published": "2026-11-27",
+   "url": "https://www.youtube.com/watch?v=4bpa5gp5eVc"
+  },
+  {
    "id": "s1xp9gZSjcQ",
    "title": "[ 제38회 아산상 ] 강지헌·주수경 부부 ‘지구촌의 소외된 이웃에게 희망을 전하다’",
    "published": "2026-11-26",
@@ -67,15 +73,9 @@
    "title": "2026년 췌장암 환자를 위한 건강강좌",
    "published": "2026-11-25",
    "url": "https://www.youtube.com/watch?v=hpU0FnD4NcQ"
-  },
-  {
-   "id": "Wku8kPK5u_c",
-   "title": "[뇌전증 바로알기] 뇌전증 발작 없으면 약 그만 먹어도 될까? : 신경과 김효재 교수ㅣ동아아산건강강좌",
-   "published": "2026-11-25",
-   "url": "https://www.youtube.com/watch?v=Wku8kPK5u_c"
   }
  ],
- "updated": "2026-11-27T21:11:50Z",
+ "updated": "2026-11-28T03:16:59Z",
  "channel": {
   "youtube": "https://www.youtube.com/channel/UC08tP3KIyCK9vYNZm5qQuiw",
   "newsroom": "https://news-en.amc.seoul.kr/news/eng/main.do"
@@ -88,6 +88,10 @@
   {
    "src": "news",
    "title": "Lymph Node Metastasis in Lung Cancer: Number of Metastatic Lymph Nodes Also Plays a Key Role in Determining Survival"
+  },
+  {
+   "src": "video",
+   "title": "긴 치료의 시간을 지나 전하는 마음 | 리얼스토리"
   },
   {
    "src": "video",
@@ -104,10 +108,6 @@
   {
    "src": "video",
    "title": "암 치료 후 건강한 피부 되찾기｜2026 피부암 건강강좌"
-  },
-  {
-   "src": "video",
-   "title": "생후 한 달, 예솔이에게 나타난 심상치 않은 징후 | 리얼스토리"
   }
  ],
  "errors": []
